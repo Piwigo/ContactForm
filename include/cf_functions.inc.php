@@ -1,6 +1,9 @@
 <?php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
+// Include language advices
+load_language('plugin.lang', CF_PATH);
+
 /**
  * Include class file
  * @param $aClassName

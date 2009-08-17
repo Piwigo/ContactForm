@@ -3,7 +3,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 class CF_Config_Lang {
   static $default_keys = array();
-  static private $available_languages = null;
+  static protected $available_languages = null;
   protected $defined_languages = array();
   protected $added_languages = array();
   protected $keys = array();
@@ -25,7 +25,7 @@ class CF_Config_Lang {
   /* ** Constructor        ** */
   /* ************************ */
 
-  function CF_Config_Lang() {
+  function __construct() {
     $this->init();
   }
 
@@ -76,7 +76,7 @@ class CF_Config_Lang {
     }
   }
   
-  function get_value($language=null, $key=null) {
+  function get_value($language=null, $key=null, $return_default=true) {
     $values = $this->get_merged_values();
     if (null == $language) {
       return $values;
@@ -88,6 +88,9 @@ class CF_Config_Lang {
       return $values[$language];
     }
     if (!isset($values[$language][$key]) or empty($values[$language][$key])) {
+      if ($return_default) {
+        return $values[CF_LANG_DEFAULT][$key];
+      }
       return null;
     }
     return $values[$language][$key];
@@ -103,6 +106,37 @@ class CF_Config_Lang {
       $this->added_languages[$language][$key] = $value;
     }
     $this->add_key($key);
+  }
+  
+  function get_extended_values($language=null) {
+    $values = $this->get_merged_values();
+    $return_values = array();
+    foreach($values as $language => $keys) {
+      foreach($keys as $key => $value) {
+        if (!isset($return_values[$key])) {
+          $return_values[$key] = '';
+        }
+        if (!empty($value)) {
+          if (strcmp($language, CF_LANG_DEFAULT) != 0) {
+            $language = substr($language, 0, 2);
+          }
+          $return_values[$key] .= '[lang=' . $language . ']';
+          $return_values[$key] .= $value;
+          $return_values[$key] .= '[/lang]';
+        }
+      }
+    }
+    return $return_values;
+  }
+  
+  function mass_update($new_values = array()) {
+    foreach($new_values as $key => $values) {
+      if (is_array($values)) {
+        foreach($values as $language => $content) {
+          $this->set_value($language, $key, $content);
+        }
+      }
+    }
   }
   
   /* ************************ */

@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: Contact Form
- Version: 1.0.0
+ Version: 1.0.1
  Description: Add a "Contact" item in the Menu block to offer a contact form to users
  Plugin URI: http://piwigo.org/ext/extension_view.php?eid=304
  Author: Criss
@@ -9,6 +9,9 @@
 */
 
 /** History **
+
+  2009-08-17 1.0.1
+                    Add default value to language translation
 
   2009-08-17 1.0.0
                     Put under SVN control

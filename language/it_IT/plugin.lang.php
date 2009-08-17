@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.5 2009/08/17 07:30:10 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.6 2009/08/17 14:53:42 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -60,6 +60,7 @@ $lang['cf_label_config'] = 'Configurazione generale';
 // TODO $lang['cf_tab_language'] = '';
 // TODO $lang['cf_language_desc'] = ' ';
 // TODO $lang['cf_select_item'] = ' ';
+$lang['cf_default_lang'] = 'Di default';
 // TODO $lang['contact_form_title_label'] = ' ';
 // TODO $lang['contact_form_label'] = ' ';
 // TODO $lang['contact_form_link_label'] = ' ';

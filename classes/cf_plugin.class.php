@@ -41,7 +41,7 @@ class CF_Plugin {
   function loc_begin_page_header() {
     global $template;
     $cf_values = array(
-        'TEXT'  => $this->config->get_lang_value('contact_form_footer'),
+        'TEXT'  => $this->config->get_lang_value('contact_form_link'),
         'URL'   => make_index_url(array('section' => CF_URL_PARAMETER)),
       );
     $template->assign('CF_FOOTER_VALUES', $cf_values);
