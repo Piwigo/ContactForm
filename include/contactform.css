@@ -1,0 +1,27 @@
+div.contact-form {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+td.contact-form-left {
+	padding-right: 5px;
+	text-align: right;
+	vertical-align: top;
+}
+td.contact-form-right {
+  padding-left: 5px;
+  text-align: left;
+}
+#cf-redirect {
+	margin-left: 10em;
+	margin-right: 10em;
+  padding: 5px;
+}
+.cf-label {
+	font-size: larger;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.cf-lang {
+  display: none;
+  visibility: hidden;
+}
