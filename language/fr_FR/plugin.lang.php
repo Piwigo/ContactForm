@@ -1,7 +1,10 @@
 <?php
-/* $Id: plugin.lang.php,v 1.6 2009/08/17 14:53:42 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.7 2009/08/18 14:10:09 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
+
+$lang['cf_plugin_name'] = 'Contact Form';
+$lang['contact_form_debug'] = 'Affichage des informations de debug';
 
 // ==================================================================
 // Default values if not configured
@@ -55,6 +58,8 @@ $lang['cf_separator_length'] = 'Taille de la barre de séparation';
 $lang['cf_mandatory_name'] = 'Présence du nom obligatoire';
 $lang['cf_mandatory_mail'] = 'Présence de l\'e-mail obligatoire';
 $lang['cf_redirect_delay'] = 'Délai de pause de la redirection';
+$lang['cf_label_link'] = 'Gestion du lien (hors menu) vers le formulaire';
+$lang['cf_define_link'] = 'Définir le lien';
 $lang['cf_link'] = 'Nom de la variable de template contenant le lien HTML vers le formulaire de contact';
 // Language tab
 $lang['cf_tab_language'] = 'Localisation';

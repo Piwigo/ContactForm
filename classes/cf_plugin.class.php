@@ -21,6 +21,7 @@ class CF_Plugin {
     $this->config->set_db_key(CF_CFG_DB_KEY);
     $this->config->load_config();
     $this->config->set_value(CF_CFG_COMMENT, CF_CFG_DB_COMMENT);
+    CF_Log::add_debug($this->config, 'CF_Plugin');
   }
   
   /* ************************ */
@@ -39,6 +40,9 @@ class CF_Plugin {
   }
   
   function loc_begin_page_header() {
+    if (!$this->config->get_value(CF_CFG_DEFINE_LINK)) {
+      return;
+    }
     global $template;
     $cf_values = array(
         'TEXT'  => $this->config->get_lang_value('contact_form_link'),
@@ -128,7 +132,7 @@ class CF_Plugin {
   }
   
   function loc_end_page_tail() {
-    CF_Debug::show_debug();
+    CF_Log::show_debug();
   }
   
   /* ************************ */
@@ -144,7 +148,10 @@ class CF_Plugin {
   }
   
   function get_title() {
-    return $this->plugin_title;
+    // Include language advices
+    load_language('plugin.lang', CF_PATH);
+    
+    return l10n($this->plugin_title);
   }
   
   /* ************************ */

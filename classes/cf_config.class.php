@@ -87,7 +87,7 @@ class CF_Config {
         }
       }
     }
-//    CF_Debug::add_debug($this->config_lang, 'CF_Config::load_config');
+//    CF_Log::add_debug($this->config_lang, 'CF_Config::load_config');
     $this->load_default_config();
   }
   
@@ -95,7 +95,7 @@ class CF_Config {
     if (null == $this->config_lang) {
       $this->config_lang = new CF_Config_Lang();
       $this->config_values['config_lang'] = null;
-      CF_Debug::add_debug($this->config_lang,'CF_Config::load_default_config');
+      CF_Log::add_debug($this->config_lang,'CF_Config::load_default_config');
     }
     $this->config_lang->set_default_values();
     $this->config_lang->update_keys();

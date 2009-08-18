@@ -1,4 +1,4 @@
-{* $Id: cf_config.tab.tpl,v 1.1 2009/08/17 07:24:11 Criss Exp $ *}
+{* $Id: cf_config.tab.tpl,v 1.2 2009/08/18 14:10:09 Criss Exp $ *}
 <div class="titrePage">
     <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_config'|@translate}</h2>
 </div>
@@ -23,6 +23,17 @@
       <label>
         <input type="checkbox" name="cf_mandatory_mail" value="1" {$CF_CONFIG.NEED_MAIL} />
         {'cf_mandatory_mail'|@translate}
+      </label>
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>{'cf_label_link'|@translate}</legend>
+  <ul>
+    <li>
+      <label>
+        <input type="checkbox" name="cf_define_link" value="1" {$CF_CONFIG.DEFINE_LINK} />
+        {'cf_define_link'|@translate}
       </label>
     </li>
     <li>

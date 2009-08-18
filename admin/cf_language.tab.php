@@ -1,5 +1,5 @@
 <?php
-/* $Id: cf_language.tab.php,v 1.2 2009/08/17 14:53:42 Criss Exp $ */
+/* $Id: cf_language.tab.php,v 1.3 2009/08/18 14:10:09 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 
@@ -7,10 +7,9 @@ $all_languages = get_languages();
 $cf_languages = $cf_config->get_config_lang();
 $cf_item_selected='';
 if (isset($_POST['submit'])) {
-  global $page;
 
   if (isset($_POST['cf_item']) and is_array($_POST['cf_item'])) {
-    CF_Debug::add_debug($_POST['cf_item'], 'POST');
+    CF_Log::add_debug($_POST['cf_item'], 'POST');
     $cf_languages->mass_update($_POST['cf_item']);
   }
 
@@ -18,9 +17,9 @@ if (isset($_POST['submit'])) {
   $cf_config->save_config();
   $saved = $cf_config->save_config();
   if ($saved) {
-      array_push($page['infos'], l10n('cf_config_saved'));
+    CF_Log::add_message(l10n('cf_config_saved'));
   } else {
-      array_push($page['errors'], l10n('cf_config_saved_with_errors'));
+    CF_Log::add_error(l10n('cf_config_saved_with_errors'));
   }
   
   if (isset($_POST['cf_select'])) {

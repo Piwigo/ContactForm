@@ -6,8 +6,8 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.0.1');
-define('CF_TITLE',              'Contact Form');
+define('CF_VERSION',            '1.0.2');
+define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
 define('CF_INCLUDE_DIR',        'include/');
@@ -53,6 +53,7 @@ define('CF_CFG_ALLOW_GUEST',    'cf_allow_guest');
 define('CF_CFG_MAIL_MANDATORY', 'cf_mandatory_mail');
 define('CF_CFG_NAME_MANDATORY', 'cf_mandatory_name');
 define('CF_CFG_REDIRECT_DELAY', 'cf_redirect_delay');
+define('CF_CFG_DEFINE_LINK',    'cf_define_link');
 define('CF_CFG_CONTACT_LINK',   'cf_link');
 
 /* ************************** */
@@ -63,7 +64,7 @@ define('CF_CFG_CONTACT_LINK',   'cf_link');
 @include_once(CF_INCLUDE.'cf_functions.inc.php');
 
 // Load class files
-cf_require_class("CF_Debug");
+cf_require_class("CF_Log");
 cf_require_class("CF_Config_Lang");
 cf_require_class("CF_Config");
 cf_require_class("CF_Plugin");
@@ -80,6 +81,7 @@ $cf_config_default[CF_CFG_ALLOW_GUEST] = true;
 $cf_config_default[CF_CFG_MAIL_MANDATORY] = true;
 $cf_config_default[CF_CFG_NAME_MANDATORY] = true;
 $cf_config_default[CF_CFG_REDIRECT_DELAY] = CF_REDIRECT_DELAY;
+$cf_config_default[CF_CFG_DEFINE_LINK] = true;
 $cf_config_default[CF_CFG_CONTACT_LINK] = CF_DEFAULT_LINKNAME;
 CF_Config::$default_config = $cf_config_default;
 

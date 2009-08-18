@@ -27,3 +27,6 @@ td.contact-form-right {
   display: none;
   visibility: hidden;
 }
+.cf-log-infos, .cf-log-errors {
+	font-weight: bold;
+}

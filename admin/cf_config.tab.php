@@ -1,45 +1,53 @@
 <?php
-/* $Id: cf_config.tab.php,v 1.1 2009/08/17 07:24:11 Criss Exp $ */
+/* $Id: cf_config.tab.php,v 1.2 2009/08/18 14:10:09 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 
 
 if (isset($_POST['submit'])) {
-  global $page;
   // Allow guest
   $new_value = false;
   if (isset($_POST['cf_guest_allowed'])) {
-      if ('1' == $_POST['cf_guest_allowed']) {
-          $new_value = true;
-      }
+    if ('1' == $_POST['cf_guest_allowed']) {
+      $new_value = true;
+    }
   }
   $cf_config->set_value(CF_CFG_ALLOW_GUEST, $new_value);
 
   // Mandatory name
   $new_value = false;
   if (isset($_POST['cf_mandatory_name'])) {
-      if ('1' == $_POST['cf_mandatory_name']) {
-          $new_value = true;
-      }
+    if ('1' == $_POST['cf_mandatory_name']) {
+      $new_value = true;
+    }
   }
   $cf_config->set_value(CF_CFG_NAME_MANDATORY, $new_value);
   
   // Mandatory mail
   $new_value = false;
   if (isset($_POST['cf_mandatory_mail'])) {
-      if ('1' == $_POST['cf_mandatory_mail']) {
-          $new_value = true;
-      }
+    if ('1' == $_POST['cf_mandatory_mail']) {
+      $new_value = true;
+    }
   }
   $cf_config->set_value(CF_CFG_MAIL_MANDATORY, $new_value);
 
+  // Define link
+  $new_value = false;
+  if (isset($_POST['cf_define_link'])) {
+    if ('1' == $_POST['cf_define_link']) {
+      $new_value = true;
+    }
+  }
+  $cf_config->set_value(CF_CFG_DEFINE_LINK, $new_value);
+  
   // Link
   $new_value = '';
   if (isset($_POST['cf_link'])) {
     $new_value = trim(stripslashes($_POST['cf_link']));
     $str_valid = preg_match_all('/\w{1}\w*/i', $new_value, $match);
     if (1 != $str_valid) {
-      array_push($page['errors'], l10n('cf_link_error'));
+      CF_Log::add_error(l10n('cf_link_error'));
     } else {
       $cf_config->set_value(CF_CFG_CONTACT_LINK, $new_value);
     }
@@ -63,7 +71,7 @@ if (isset($_POST['submit'])) {
     if (ctype_digit($new_value)) {
       $cf_config->set_value(CF_CFG_SEPARATOR_LEN, $new_value);
     } else {
-      array_push($page['errors'], l10n('cf_length_not_integer'));
+      CF_Log::add_error(l10n('cf_length_not_integer'));
     }
   }
   
@@ -73,7 +81,7 @@ if (isset($_POST['submit'])) {
     if (ctype_digit($new_value)) {
       $cf_config->set_value(CF_CFG_REDIRECT_DELAY, $new_value);
     } else {
-      array_push($page['errors'], l10n('cf_delay_not_integer'));
+      CF_Log::add_error(l10n('cf_delay_not_integer'));
     }
   }
   
@@ -81,9 +89,9 @@ if (isset($_POST['submit'])) {
   $cf_config->save_config();
   $saved = $cf_config->save_config();
   if ($saved) {
-      array_push($page['infos'], l10n('cf_config_saved'));
+    CF_Log::add_message(l10n('cf_config_saved'));
   } else {
-      array_push($page['errors'], l10n('cf_config_saved_with_errors'));
+    CF_Log::add_error(l10n('cf_config_saved_with_errors'));
   }
   
 }
@@ -99,6 +107,8 @@ $config_values = array(
     'SEPARATOR'         => $cf_config->get_value(CF_CFG_SEPARATOR),
     'SEPARATOR_LENGTH'  => $cf_config->get_value(CF_CFG_SEPARATOR_LEN),
     'REDIRECT_DELAY'    => $cf_config->get_value(CF_CFG_REDIRECT_DELAY),
+    'DEFINE_LINK'       => $cf_config->get_value(CF_CFG_DEFINE_LINK)?
+                              CF_CHECKED:'',
     'LINK'              => $cf_config->get_value(CF_CFG_CONTACT_LINK),
   );
 

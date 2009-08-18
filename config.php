@@ -1,8 +1,10 @@
 <?php
-/* $Id: config.php,v 1.1 2009/08/17 07:35:35 Criss Exp $ */
+/* $Id: config.php,v 1.2 2009/08/18 14:10:09 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
+
+CF_Log::reset_messages();
 
 $config_tabs[]='config';
 $config_tabs[]='language';
@@ -65,5 +67,5 @@ $template->assign('CF', $cf);
 include_once (CF_ADMIN . 'cf_' . $page['tab'] . '.tab.php');
 
 $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');
-
+CF_Log::show_messages();
 ?>

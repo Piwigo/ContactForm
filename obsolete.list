@@ -1,1 +1,2 @@
 admin/template/cf_config.tpl
+classes/cf_debug.class.php
