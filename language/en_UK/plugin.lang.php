@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.7 2009/08/18 14:10:09 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.8 2009/08/18 14:40:36 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -51,6 +51,7 @@ $lang['cf_config'] = 'Configuration';
 $lang['cf_config_desc'] = 'Plugin main configuration';
 $lang['cf_label_config'] = 'General configuration';
 $lang['cf_label_mail'] = 'E-mail configuration';
+$lang['cf_menu_link'] = 'Add link in menu';
 $lang['cf_guest_allowed'] = 'Allow guests to see the form';
 $lang['cf_mail_prefix'] = 'Prefix of the sent e-mail subject';
 $lang['cf_separator'] = 'Character(s) used to define a separation bar in the e-mail in text format';

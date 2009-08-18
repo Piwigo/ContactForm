@@ -54,7 +54,7 @@ class CF_Plugin {
   }
   
   function blockmanager_apply($aMenuRefArray) {
-    if (!$this->check_allowed()) {
+    if (!$this->check_menu_adding()) {
       return;
     }
     $menu = &$aMenuRefArray[0];
@@ -425,7 +425,10 @@ class CF_Plugin {
     }
     return $infos;
   }
-
+  protected function check_menu_adding() {
+    return ($this->config->get_value(CF_CFG_MENU_LINK) and
+            $this->check_allowed());
+  }
   protected function check_allowed() {
     if (is_a_guest() and !$this->config->get_value(CF_CFG_ALLOW_GUEST)) {
       // Not allowed

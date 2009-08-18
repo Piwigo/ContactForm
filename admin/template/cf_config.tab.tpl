@@ -1,4 +1,4 @@
-{* $Id: cf_config.tab.tpl,v 1.2 2009/08/18 14:10:09 Criss Exp $ *}
+{* $Id: cf_config.tab.tpl,v 1.3 2009/08/18 14:40:36 Criss Exp $ *}
 <div class="titrePage">
     <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_config'|@translate}</h2>
 </div>
@@ -7,6 +7,12 @@
 <fieldset>
   <legend>{'cf_label_config'|@translate}</legend>
   <ul>
+    <li>
+      <label>
+        <input type="checkbox" name="cf_menu_link" value="1" {$CF_CONFIG.MENU_LINK} />
+        {'cf_menu_link'|@translate}
+      </label>
+    </li>
     <li>
       <label>
         <input type="checkbox" name="cf_guest_allowed" value="1" {$CF_CONFIG.GUEST} />

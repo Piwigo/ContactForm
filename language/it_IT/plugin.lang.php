@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.7 2009/08/18 14:10:09 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.8 2009/08/18 14:40:36 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -51,6 +51,7 @@ $lang['cf_config'] = 'Configurazione';
 $lang['cf_config_desc'] = 'Configurazione principale del plugin';
 $lang['cf_label_config'] = 'Configurazione generale';
 // TODO $lang['cf_label_mail'] = '';
+// TODO $lang['cf_menu_link'] = '';
 // TODO $lang['cf_guest_allowed'] = '';
 // TODO $lang['cf_mail_prefix'] = '';
 // TODO $lang['cf_separator'] = '';

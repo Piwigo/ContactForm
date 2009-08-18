@@ -1,10 +1,20 @@
 <?php
-/* $Id: cf_config.tab.php,v 1.2 2009/08/18 14:10:09 Criss Exp $ */
+/* $Id: cf_config.tab.php,v 1.3 2009/08/18 14:40:36 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 
 
 if (isset($_POST['submit'])) {
+
+  // Menu link
+  $new_value = false;
+  if (isset($_POST['cf_menu_link'])) {
+    if ('1' == $_POST['cf_menu_link']) {
+      $new_value = true;
+    }
+  }
+  $cf_config->set_value(CF_CFG_MENU_LINK, $new_value);
+  
   // Allow guest
   $new_value = false;
   if (isset($_POST['cf_guest_allowed'])) {
@@ -97,6 +107,8 @@ if (isset($_POST['submit'])) {
 }
 
 $config_values = array(
+    'MENU_LINK'         => $cf_config->get_value(CF_CFG_MENU_LINK)?
+                              CF_CHECKED:'',
     'GUEST'             => $cf_config->get_value(CF_CFG_ALLOW_GUEST)?
                               CF_CHECKED:'',
     'NEED_NAME'         => $cf_config->get_value(CF_CFG_NAME_MANDATORY)?

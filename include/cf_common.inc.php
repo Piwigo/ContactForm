@@ -6,7 +6,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.0.2');
+define('CF_VERSION',            '1.0.3');
 define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
@@ -46,6 +46,7 @@ define('CF_CFG_DB_COMMENT',     'Configuration of plugin %s [%s]');
 define('CF_CFG_COMMENT',        'comment');
 define('CF_CFG_VERSION',        'version');
 
+define('CF_CFG_MENU_LINK',      'cf_menu_link');
 define('CF_CFG_SUBJECT_PREFIX', 'cf_subject_prefix');
 define('CF_CFG_SEPARATOR_LEN',  'cf_separator_length');
 define('CF_CFG_SEPARATOR',      'cf_separator');
@@ -74,6 +75,7 @@ cf_require_class("CF_Plugin");
 /* ************************** */
 global $conf;
 $cf_config_default = array();
+$cf_config_default[CF_CFG_MENU_LINK] = true;
 $cf_config_default[CF_CFG_SUBJECT_PREFIX] = CF_DEFAULT_PREFIX;
 $cf_config_default[CF_CFG_SEPARATOR_LEN] = CF_SEPARATOR_LENGTH;
 $cf_config_default[CF_CFG_SEPARATOR] = CF_SEPARATOR;
