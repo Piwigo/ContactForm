@@ -74,11 +74,16 @@ order by
 }
 
 /* Return template for user template/theme*/
-function cf_get_template($file, $dir=CF_TEMPLATE) {
+function cf_get_template($file, $dir=CF_TEMPLATE, $prefix='') {
   global $user, $template;
 
-  $theme_file = $dir.$user['template'].'/'.$user['theme'].'/'.$file;
-  $template_file = $dir.$user['template'].'/'.$file;
+  $theme_file = $dir.
+                $user[$prefix.'template'].'/'.
+                $user[$prefix.'theme'].'/'.
+                $file;
+  $template_file = $dir.
+                   $user[$prefix.'template'].'/'.
+                   $file;
 
   if (file_exists($theme_file))
   {

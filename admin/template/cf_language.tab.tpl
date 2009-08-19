@@ -1,56 +1,53 @@
-{* $Id: cf_language.tab.tpl,v 1.2 2009/08/17 14:53:42 Criss Exp $ *}
-{literal}
+{* $Id: cf_language.tab.tpl,v 1.4 2009/08/19 14:51:59 Criss Exp $ *}
+{known_script id="jquery.ui" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.core.packed.js"}
+{known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.tabs.packed.js"}
 <script type="text/javascript">
-function cf_update_display() {
-  var select_item = document.getElementById('cf_select');
-  for (var i=0 ; i<select_item.length ; i++) {
-    var div_item = document.getElementById('cf_div_' + select_item[i].value);
-    var visible = select_item[i].selected;
-    cf_set_visible(div_item, visible);
-  }
+function set_active(key) {ldelim}
+  var element = document.getElementById('cf_selected');
+  element.value = key;
 }
+jQuery().ready(
+  function(){ldelim}
+    jQuery('#cf-keys').accordion({ldelim}
+      header: '.cf-label',
+      event: 'click',
+      active: {$CF_CONFIG_KEYS_SELECTED}
+    });
+  }
+);
 </script>
-{/literal}<div class="titrePage">
+<div class="titrePage">
     <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_language'|@translate}</h2>
 </div>
-<h3>{'cf_language_desc'|@translate}</h3>
+<h3 style="width: 100%;">{'cf_language_desc'|@translate}</h3>
 
 <form method="post" action="{$CF.F_ACTION}" id="update" enctype="multipart/form-data">
-<table>
-  <tr>
-    <td style="vertical-align: top; text-align: center;">
-      <div class="cf-label">{'cf_select_item'|@translate}</div>
-      <select size="1" name="cf_select" id="cf_select"
-        onclick="cf_update_display();" onchange="cf_update_display();">
-      {html_options options=$CF_CONFIG_KEYS selected=$CF_CONFIG_KEYS_SELECTED}
-      </select>
-    </td>
-    <td style="width: 3px;">&nbsp;</td>
-    <td style="text-align: center; width: 280px">
-      {foreach from=$CF_CONFIG_VALUES item=config_value key=config_key name=config_keys}
-      <div id="cf_div_{$config_key}" class="cf-lang">
-        <div class="cf-label">{$CF_CONFIG_KEYS.$config_key}</div>
-        <table>
-        {foreach from=$config_value item=language_values key=language_key}
-          <tr>
-              <td align="right">{$language_values.NAME}</td>
-              <td>&nbsp;</td>
-              <td>
-                <input type="text" name="cf_item[{$config_key}][{$language_key}]" value="{$language_values.VALUE}"/>
-              </td>
-          </tr>
-        {/foreach}
-        </table>
-      </div>
-      {/foreach}
-    </td>
-  </tr>
-</table>
+<div id="cf-keys">
+<input type="hidden" id ="cf_selected" name="cf_selected" value="{$CF_CONFIG_KEYS_SELECTED}">
+{foreach from=$CF_CONFIG_VALUES item=config_value key=config_key name=config_values}
+  <div class="cf-label" onclick="set_active({$smarty.foreach.config_values.index});">
+    {$config_value.KEY}
+  </div>
+  <div>
+    <table class="checking">
+    {foreach from=$config_value.VALUE item=language_values key=language_key}
+      <tr>
+        <td class="cf-lang">{$language_values.NAME}</td>
+        <td class="cf-input"><input type="text" name="cf_item[{$config_key}][{$language_key}]" value="{$language_values.VALUE}" size="30"/></td>
+      </tr>
+    {/foreach}
+    </table>
+  </div>
+{/foreach}
+</div>
 {* ----------- LANGUAGES ----------- *}
 <p><input class="submit" type="submit" value="{'cf_validate'|@translate}" name="submit"></p>
 </form>
 {literal}
 <script type="text/javascript">
-cf_update_display();
+$(document).ready(function() {
+    $(".infos").fadeOut(800).fadeIn(1200).fadeOut(400).fadeIn(800).fadeOut(400);
+    $(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
+  });
 </script>
 {/literal}

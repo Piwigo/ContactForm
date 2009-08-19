@@ -1,8 +1,10 @@
-{* $Id: cf_config.tab.tpl,v 1.3 2009/08/18 14:40:36 Criss Exp $ *}
+{* $Id: cf_config.tab.tpl,v 1.5 2009/08/19 14:51:59 Criss Exp $ *}
+{known_script id="jquery.ui" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.core.packed.js"}
+{known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.tabs.packed.js"}
 <div class="titrePage">
     <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_config'|@translate}</h2>
 </div>
-<h3>{'cf_config_desc'|@translate}</h3>
+<h3 style="width: 100%;">{'cf_config_desc'|@translate}</h3>
 <form method="post" action="{$CF.F_ACTION}" id="update" enctype="multipart/form-data">
 <fieldset>
   <legend>{'cf_label_config'|@translate}</legend>
@@ -83,3 +85,11 @@
 {* ----------- CONFIGURATION ----------- *}
 <p><input class="submit" type="submit" value="{'cf_validate'|@translate}" name="submit"></p>
 </form>
+{literal}
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".infos").fadeOut(800).fadeIn(1200).fadeOut(400).fadeIn(800).fadeOut(400);
+    $(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
+  });
+</script>
+{/literal}

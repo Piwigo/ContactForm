@@ -1,15 +1,15 @@
 <?php
-/* $Id: cf_language.tab.php,v 1.3 2009/08/18 14:10:09 Criss Exp $ */
+/* $Id: cf_language.tab.php,v 1.5 2009/08/19 14:51:59 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
-
+global $user;
+CF_Log::add_debug($user, 'USER');
 $all_languages = get_languages();
 $cf_languages = $cf_config->get_config_lang();
 $cf_item_selected='';
 if (isset($_POST['submit'])) {
-
+  
   if (isset($_POST['cf_item']) and is_array($_POST['cf_item'])) {
-    CF_Log::add_debug($_POST['cf_item'], 'POST');
     $cf_languages->mass_update($_POST['cf_item']);
   }
 
@@ -22,12 +22,11 @@ if (isset($_POST['submit'])) {
     CF_Log::add_error(l10n('cf_config_saved_with_errors'));
   }
   
-  if (isset($_POST['cf_select'])) {
-    $cf_item_selected = $_POST['cf_select']; 
+  if (isset($_POST['cf_selected'])) {
+    $cf_item_selected = trim(stripslashes($_POST['cf_selected'])); 
   }
 }
 
-$config_keys=array();
 $config_values=array();
 
 foreach($cf_languages->get_keys() as $key) {
@@ -44,11 +43,14 @@ foreach($cf_languages->get_keys() as $key) {
         'VALUE' => $cf_languages->get_value($lang_key, $key, false),
       );
   }
-  $config_keys[$key] = l10n($key . '_label');
-  $config_values[$key] = $current;
+  $config_values[$key] = array(
+      'KEY' => l10n($key . '_label'),
+      'VALUE' => $current,
+    );
+}
+if ('' == $cf_item_selected) {
+  $cf_item_selected = 0;
 }
 $template->assign('CF_CONFIG_KEYS_SELECTED', $cf_item_selected);
-$template->assign('CF_CONFIG_KEYS', $config_keys);
 $template->assign('CF_CONFIG_VALUES', $config_values);
-
 ?>

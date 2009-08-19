@@ -1,5 +1,5 @@
 <?php
-/* $Id: config.php,v 1.2 2009/08/18 14:10:09 Criss Exp $ */
+/* $Id: config.php,v 1.3 2009/08/19 13:30:25 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
@@ -43,6 +43,11 @@ $tabsheet->assign();
 $template->block_html_head( '',
           '<link rel="stylesheet" type="text/css" '.
           'href="' . CF_INCLUDE . 'contactform.css' . '">',
+          $smarty, $repeat);
+$admin_css = cf_get_template('contactform_admin.css', CF_AMDIN_TPL, 'admin_');
+$template->block_html_head( '',
+          '<link rel="stylesheet" type="text/css" '.
+          'href="' . $admin_css . '">',
           $smarty, $repeat);
 $template->block_html_head( '',
           '<script type="text/javascript" '.

@@ -19,7 +19,10 @@ class CF_Log {
     $template->set_filenames(array(
         'contact_form_debug' => realpath(cf_get_template('cf_debug.tpl')),
       ));
-    $template->assign_var_from_handle('CF_DEBUG', 'contact_form_debug');
+    $debug_text = $template->parse('contact_form_debug', true);
+    $template->assign('CF_DEBUG', $debug_text);
+    
+    return $debug_text;
   }
 
   static function add_debug($variable, $label=null, $append=true) {
