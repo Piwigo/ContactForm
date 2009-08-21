@@ -158,8 +158,10 @@ function cf_get_history_list($file_name, &$errors = array()) {
     switch ($pos) {
       case 0:
         // History item
-        if (isset($history[$index]) and is_array($history[$index])) {
-          array_push($history[$index]['CHANGES'], trim($new_line));
+        $change = trim($new_line);
+        if (!empty($change) and
+            isset($history[$index]) and is_array($history[$index])) {
+          array_push($history[$index]['CHANGES'], $change);
         }
         break;
       default:
