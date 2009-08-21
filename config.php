@@ -1,5 +1,5 @@
 <?php
-/* $Id: config.php,v 1.3 2009/08/19 13:30:25 Criss Exp $ */
+/* $Id: config.php,v 1.4 2009/08/21 09:24:18 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
@@ -8,6 +8,7 @@ CF_Log::reset_messages();
 
 $config_tabs[]='config';
 $config_tabs[]='language';
+$config_tabs[]='history';
 
 global $template, $page;
 // Include language advices

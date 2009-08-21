@@ -1,5 +1,35 @@
+{known_script id="jquery" src=$ROOT_URL|@cat:"template-common/lib/jquery.packed.js"}
+{known_script id="jquery.ui" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.core.packed.js"}
+{known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.resizable.packed.js"}
 {literal}
 <script type="text/javascript">
+jQuery().ready(function(){
+    // Resize possible for textarea
+    jQuery("#cf_message").resizable({
+        handles: "all",
+        animate: true,
+        animateDuration: "slow",
+        animateEasing: "swing",
+        preventDefault: true,
+        preserveCursor: true,
+        autoHide: true,
+        ghost: true
+      });
+  });
+jQuery().ready(function(){
+  // Resize possible for textarea
+  jQuery(".cf-input").resizable({
+        handles: "e",
+        animate: true,
+        animateDuration: "slow",
+        animateEasing: "swing",
+        preventDefault: true,
+        preserveCursor: true,
+        autoHide: true,
+        ghost: true
+      });
+  });
+
 function cf_validate() {
   var items = new Array('cf_from_name','cf_from_mail','cf_subject','cf_message');
   var is_mail = new Array(false,true,false,false);
@@ -28,16 +58,16 @@ function cf_validate() {
 {/literal}
 <div id="autre_content" class="contact-form">
   <form  method="post" action="{$CF.F_ACTION}" class="filter" id="contactform" onsubmit="return cf_validate();">
-  <fieldset>
+  <div class="contact-form-content">
     <table>
       <tr>
         <td class="contact-form-left">{'cf_from_name'|@translate}</td>
         <td class="contact-form-right">
         {if $CF.LOGGED}
-          <input type="text" name="cf_from_name_label" id="cf_from_name" size="40" value="{$CF.NAME}" disabled="disabled">
+          <input type="text" name="cf_from_name_label" id="cf_from_name" size="40" value="{$CF.NAME}" disabled="disabled" class="cf-input-disabled">
           <input type="hidden" name="cf_from_name" value="{$CF.NAME}" />
         {else}
-          <input type="text" name="cf_from_name" id="cf_from_name" size="40" value="{$CF.NAME}">
+          <input type="text" name="cf_from_name" id="cf_from_name" size="40" value="{$CF.NAME}" class="cf-input">
         {/if}
         </td>
       </tr>
@@ -45,19 +75,19 @@ function cf_validate() {
         <td class="contact-form-left">{'cf_from_mail'|@translate}</td>
         <td class="contact-form-right">
         {if $CF.LOGGED and ''!=$CF.EMAIL}
-          <input type="text" name="cf_from_mail_label" id="cf_from_mail" size="40" value="{$CF.EMAIL}" disabled="disabled">
+          <input type="text" name="cf_from_mail_label" id="cf_from_mail" size="40" value="{$CF.EMAIL}" disabled="disabled" class="cf-input-disabled">
           <input type="hidden" name="cf_from_mail" value="{$CF.EMAIL}" />
         {else}
-          <input type="text" name="cf_from_mail" id="cf_from_mail" size="40" value="{$CF.EMAIL}"></td>
+          <input type="text" name="cf_from_mail" id="cf_from_mail" size="40" value="{$CF.EMAIL}" class="cf-input"></td>
         {/if}
         </td>
       </tr>
       <tr>
         <td class="contact-form-left">{'cf_subject'|@translate}</td>
-        <td class="contact-form-right"><input type="text" name="cf_subject" id="cf_subject" size="40" value="{$CF.SUBJECT}"></td>
+        <td class="contact-form-right"><input type="text" name="cf_subject" id="cf_subject" size="40" value="{$CF.SUBJECT}" class="cf-input"></td>
       </tr>
       <tr>
-        <td class="contact-form-left">{'cf_message'|@translate}</td>
+        <td class="contact-form-left" id="cf_message_label">{'cf_message'|@translate}</td>
         <td class="contact-form-right"><textarea name="cf_message" id="cf_message" rows="10" cols="40">{$CF.MESSAGE}</textarea></td>
       </tr>
       <tr>
@@ -67,6 +97,6 @@ function cf_validate() {
     </table>
     <input type="hidden" name="cf_key" value="{$CF.KEY}" />
     <input type="hidden" name="cf_id" value="{$CF.ID}" />
-  </fieldset>
+  </div>
   </form>
 </div>

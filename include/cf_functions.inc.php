@@ -131,4 +131,60 @@ function cf_clean_obsolete_list($file_list = array(), &$errors = array()) {
   return $success;
 }
 
+function cf_format_date($year, $month, $day, $format='%M %D, %Y') {
+  $format = str_ireplace('%Y', $year, $format);
+  $format = str_ireplace('%M', $month, $format);
+  $format = str_ireplace('%D', $day, $format);
+  return $format;
+}
+
+function cf_get_history_list($file_name, &$errors = array()) {
+  // Include language advices
+  load_language('plugin.lang', CF_PATH);
+  global $lang;
+  $month_list = $lang['month'];
+  $history = array();
+  if (!file_exists($file_name)) {
+    array_push($errors, sprintf(l10n('cf_file_not_found'), $file_name));
+    return $history;
+  }
+  $raw_history = file($file_name,
+                      FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
+
+  $index = -1;
+  array_push($errors, sprintf(l10n('cf_file_empty'), $file_name));
+  foreach($raw_history as $new_line) {
+    $pos = strpos($new_line, ' ');
+    switch ($pos) {
+      case 0:
+        // History item
+        if (isset($history[$index]) and is_array($history[$index])) {
+          array_push($history[$index]['CHANGES'], trim($new_line));
+        }
+        break;
+      default:
+        // New history date
+        $index++;
+        list($date, $version) = explode(' ', $new_line);
+        list($year, $month, $day) = explode('-', $date);
+        $date_array = array('RAW' => $date);
+        if (isset($month)) {
+          $month = $month_list[intval($month)];
+        }
+        if (isset($year) and isset($month) and isset($day)) {
+          $date_array['FORMATTED'] = cf_format_date($year,
+                                                    $month,
+                                                    $day,
+                                                    l10n('cf_format_date'));
+        }
+        $history[$index] = array(
+            'DATE'     => $date_array,
+            'VERSION'  => $version,
+            'CHANGES'  => array(),
+          );
+    }
+  }
+  return $history;
+}
+
 ?>

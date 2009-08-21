@@ -6,7 +6,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.0.4');
+define('CF_VERSION',            '1.0.5');
 define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
@@ -25,6 +25,7 @@ define('CF_ADMIN',              CF_PATH.CF_ADMIN_DIR);
 define('CF_AMDIN_TPL',          CF_PATH.CF_ADMIN_DIR.CF_TEMPLATE_DIR);
 // Files
 define('CF_OBSOLETE',           'obsolete.list');
+define('CF_CHANGELOG',          'CHANGELOG');
 // Constants
 define('CF_DEBUG_ACTIVE',       false);
 define('CF_MENUBAR_KEY',        'contact_form');

@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.8 2009/08/18 14:40:36 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.9 2009/08/21 09:24:18 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -70,5 +70,15 @@ $lang['cf_default_lang'] = 'Di default';
 // TODO $lang['contact_form_title_label'] = ' ';
 // TODO $lang['contact_form_label'] = ' ';
 // TODO $lang['contact_form_link_label'] = ' ';
+// History tab
+// TODO $lang['cf_tab_history'] = '';
+// TODO $lang['cf_history'] = '';
+// TODO $lang['cf_history_desc'] = '';
+// TODO $lang['cf_history_date'] = '';
+// TODO $lang['cf_history_version'] = '';
+// TODO $lang['cf_history_log'] = '';
+// TODO $lang['cf_file_not_found'] = '';
+// TODO $lang['cf_file_empty'] = '';
+// TODO $lang['cf_format_date'] = '%D %M %Y';
 
 ?>
