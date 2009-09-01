@@ -21,7 +21,6 @@ class CF_Log {
       ));
     $debug_text = $template->parse('contact_form_debug', true);
     $template->assign('CF_DEBUG', $debug_text);
-    
     return $debug_text;
   }
 

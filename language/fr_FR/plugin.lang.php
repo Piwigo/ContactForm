@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.10 2009/09/01 13:25:03 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.11 2009/09/01 17:10:49 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -63,6 +63,12 @@ $lang['cf_redirect_delay'] = 'Délai de pause de la redirection';
 $lang['cf_label_link'] = 'Gestion du lien (hors menu) vers le formulaire';
 $lang['cf_define_link'] = 'Définir le lien';
 $lang['cf_link'] = 'Nom de la variable de template contenant le lien HTML vers le formulaire de contact';
+// Emails tab
+$lang['cf_tab_emails'] = 'E-mails';
+$lang['cf_emails_desc'] = 'Gestion des e-mails de destination';
+$lang['cf_active'] = 'E-mail actif';
+$lang['cf_no_mail'] = 'Aucune adresse e-mail disponible';
+$lang['cf_refresh'] = 'Regénérer la liste des adresses';
 // Language tab
 $lang['cf_tab_language'] = 'Localisation';
 $lang['cf_language_desc'] = 'Traduction des messages';

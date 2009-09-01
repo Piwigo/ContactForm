@@ -57,6 +57,7 @@ define('CF_CFG_NAME_MANDATORY', 'cf_mandatory_name');
 define('CF_CFG_REDIRECT_DELAY', 'cf_redirect_delay');
 define('CF_CFG_DEFINE_LINK',    'cf_define_link');
 define('CF_CFG_CONTACT_LINK',   'cf_link');
+define('CF_CFG_ADMIN_MAILS',    'cf_admin_mails');
 
 /* ************************** */
 /* ** Includes             ** */
@@ -86,6 +87,8 @@ $cf_config_default[CF_CFG_NAME_MANDATORY] = true;
 $cf_config_default[CF_CFG_REDIRECT_DELAY] = CF_REDIRECT_DELAY;
 $cf_config_default[CF_CFG_DEFINE_LINK] = true;
 $cf_config_default[CF_CFG_CONTACT_LINK] = CF_DEFAULT_LINKNAME;
+$cf_config_default[CF_CFG_ADMIN_MAILS] = cf_get_admins_contacts();
+$cf_config_default[CF_CFG_ADMIN_MAILS] = array();
 CF_Config::$default_config = $cf_config_default;
 
 $cf_config_lang_keys = array();

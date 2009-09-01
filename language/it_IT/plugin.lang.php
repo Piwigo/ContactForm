@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.10 2009/09/01 13:25:03 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.11 2009/09/01 17:10:50 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -63,6 +63,12 @@ $lang['cf_redirect_delay'] = 'Limite d\'attesa ';
 $lang['cf_label_link'] = 'Gestione del link (escluso quello del menu) verso il formulario';
 $lang['cf_define_link'] = 'Definire il link';
 $lang['cf_link'] = 'Nome della variabile del template contenente il link HTML verso il formulario di contatto';
+// Emails tab
+// TODO $lang['cf_tab_emails'] = '';
+// TODO $lang['cf_emails_desc'] = '';
+// TODO $lang['cf_active'] = '';
+// TODO $lang['cf_no_mail'] = '';
+// TODO $lang['cf_refresh'] = '';
 // Language tab
 $lang['cf_tab_language'] = 'Localizzazione';
 $lang['cf_language_desc'] = 'Traduzzione dei messaggi';

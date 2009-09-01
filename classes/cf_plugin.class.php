@@ -310,16 +310,33 @@ class CF_Plugin {
     }
   }
   
+  protected function get_active_admin_emails() {
+    //$cf_emails = $cf_config->get_value(CF_CFG_ADMIN_MAILS);
+    $all_mails = $this->config->get_value(CF_CFG_ADMIN_MAILS);
+    $active = array('WEBMASTER' => null, 'ADMINS' => array());
+    foreach($all_mails as $email => $values) {
+      if (1 == $values['ACTIVE']) {
+        if (1 == $values['WEBMASTER']) {
+          $active['WEBMASTER'] = $values['EMAILSTR'];
+        } else {
+          array_push($active['ADMINS'], $values['EMAILSTR']);
+        }
+      }
+    }
+    return $active;
+  }
+  
   protected function send_message(&$infos) {
     //redirect(make_index_url());
 //    include(PHPWG_ROOT_PATH . 'include/functions_mail.inc.php');
-    $webmaster_mail = get_webmaster_mail_address();
-    if (null == $webmaster_mail) {
-      $webmaster_mail = '';
-    }
-    $admin_mails = cf_get_admins_emails($webmaster_mail);
-    if (('' == $webmaster_mail) and (0 == count($admin_mails))) {
+
+    $admin_mails = $this->get_active_admin_emails();
+    if ( empty($admin_mails) or 
+        (empty($admin_mails['WEBMASTER']) and 
+         empty($admin_mails['ADMINS']))
+        ) {
       // No admin mail...
+      array_push( $infos['infos'], l10n('cf_no_mail'));
       return true;
     }
     
@@ -337,7 +354,7 @@ class CF_Plugin {
     $content .= CF_SEPARATOR_PATTERN;
     $mail_args = array(
         'from' => $from,
-        'Bcc' => $admin_mails,
+        'Bcc' => $admin_mails['ADMINS'],
         'subject' => $subject,
         'content' => $content,
         'content_format' => 'text/plain',
@@ -346,10 +363,10 @@ class CF_Plugin {
                       array(&$this, 'send_mail_content'));
 
     $return = true;
-//    $return = @pwg_mail(
-//      $webmaster_mail,
-//      $mail_args
-//    );
+    $return = @pwg_mail(
+      $admin_mails['WEBMASTER'],
+      $mail_args
+    );
 
     cf_switch_back_to_user_lang();
     if (!$return) {

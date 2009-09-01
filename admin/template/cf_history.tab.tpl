@@ -9,7 +9,7 @@
     <th>{'cf_history_log'|@translate}</th>
   </tr>
 {foreach from=$CF_HISTORY item=history_item name=history}
-  <tr class="{if $smarty.foreach.history.index is odd}row1{else}row2{/if}">
+  <tr class="{cycle values="row2,row1"}">
     <td>
     {if isset($history_item.DATE.FORMATTED)}
       {$history_item.DATE.FORMATTED}

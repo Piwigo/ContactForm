@@ -73,6 +73,51 @@ order by
   return $admins;
 }
 
+function cf_get_admins_contacts() {
+  global $conf, $user;
+  $admins = array();
+
+  $query = '
+select
+  U.'.$conf['user_fields']['username'].' as username,
+  U.'.$conf['user_fields']['email'].' as mail_address
+from
+  '.USERS_TABLE.' as U,
+  '.USER_INFOS_TABLE.' as I
+where
+  I.user_id =  U.'.$conf['user_fields']['id'].' and
+  I.status in (\'webmaster\',  \'admin\') and
+  I.adviser = \'false\' and
+  '.$conf['user_fields']['email'].' is not null 
+order by
+  username
+';
+  
+  $webmaster_mail = get_webmaster_mail_address();
+  $datas = pwg_query($query);
+  if (!empty($datas)) {
+    while ($admin = mysql_fetch_array($datas)) {
+      if (!empty($admin['mail_address'])) {
+        $name = $admin['username'];
+        $webmaster = 0;
+        if (0 == strcasecmp($webmaster_mail, $admin['mail_address'])) {
+          $name = l10n('Webmaster');
+          $webmaster = 1;
+        }
+        $admins[$admin['mail_address']] = array(
+            'NAME'     => $name,
+            'EMAILSTR' => format_email($name,
+                                       $admin['mail_address']),
+            'ACTIVE'   => 1,
+            'WEBMASTER'=> $webmaster,
+          );
+      }
+    }
+  }
+  return $admins;
+  
+}
+
 /* Return template for user template/theme*/
 function cf_get_template($file, $dir=CF_TEMPLATE, $prefix='') {
   global $user, $template;
