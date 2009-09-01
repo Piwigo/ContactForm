@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.9 2009/08/21 09:24:18 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.10 2009/09/01 13:25:03 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -41,6 +41,7 @@ $lang['cf_config_saved_with_errors'] = 'Configuration saved with errors';
 $lang['cf_length_not_integer'] = 'Size must be an integer';
 $lang['cf_delay_not_integer'] = 'Delay must be an integer';
 $lang['cf_link_error'] = 'Variable can\'t contain spaces';
+$lang['cf_hide'] = 'Hide';
 
 // ==================================================================
 // Admin page

@@ -1,5 +1,5 @@
 <?php
-/* $Id: plugin.lang.php,v 1.9 2009/08/21 09:24:18 Criss Exp $ */
+/* $Id: plugin.lang.php,v 1.10 2009/09/01 13:25:03 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -32,7 +32,7 @@ $lang['cf_subject_error'] = 'Entrare un soggetto';
 $lang['cf_message_error'] = 'Entrare un messaggio';
 $lang['cf_error_sending_mail'] = 'Errore durante l\'invio dell\'E-mail'; 
 $lang['cf_sending_mail_successful'] = 'Invio dell\'E-mail riuscito';
-TODO $lang['cf_form_error'] = 'Dati errati'; 
+$lang['cf_form_error'] = 'Dati errati'; 
 $lang['cf_inconsistent_version'] = '%s : versioni incoerenti';
 $lang['cf_no_unlink'] = 'La funzione \'unlink\' non è disponibile';
 $lang['cf_unlink_errors'] = 'Errori durante la sopressione dei file';
@@ -41,6 +41,7 @@ $lang['cf_config_saved_with_errors'] = 'Configurazione salvata con errori';
 $lang['cf_length_not_integer'] = 'Le dimensioni devono essere un numero intero';
 $lang['cf_delay_not_integer'] = 'Il limite deve essere un numero intero';
 $lang['cf_link_error'] = 'La variabile non può contenere degli spazi';
+// TODO $lang['cf_hide'] = '';
 
 // ==================================================================
 // Admin page
@@ -50,7 +51,7 @@ $lang['cf_tab_config'] = 'Configurazione';
 $lang['cf_config'] = 'Configurazione';
 $lang['cf_config_desc'] = 'Configurazione principale del plugin';
 $lang['cf_label_config'] = 'Configurazione generale';
-TODO $lang['cf_label_mail'] = 'Configurazione dell\'E-mail';
+$lang['cf_label_mail'] = 'Configurazione dell\'E-mail';
 $lang['cf_menu_link'] = 'Aggiungere un link nel menu';
 $lang['cf_guest_allowed'] = 'Autorizzare gli ospiti ad accedere al formulario';
 $lang['cf_mail_prefix'] = 'Prefisso dell\'E-mail inviata';

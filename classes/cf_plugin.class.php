@@ -39,6 +39,9 @@ class CF_Plugin {
     return $menu;
   }
   
+  function loc_begin_index() {
+    $this->display_message();
+  }
   function loc_begin_page_header() {
     if (!$this->config->get_value(CF_CFG_DEFINE_LINK)) {
       return;
@@ -223,6 +226,7 @@ class CF_Plugin {
         'cf_title'    => realpath(cf_get_template('cf_title.tpl')),
         'cf_messages' => realpath(cf_get_template('cf_messages.tpl')),
       ));
+      
     $template->block_html_head( '',
               '<link rel="stylesheet" type="text/css" '.
               'href="' . CF_INCLUDE . 'contactform.css' . '">',
@@ -241,7 +245,49 @@ class CF_Plugin {
     $template->assign_var_from_handle('CF_MESSAGES', 'cf_messages');
     $redirect_msg = $template->parse('cf_redirect', true);
     $redirect_delay = $this->config->get_value(CF_CFG_REDIRECT_DELAY);
-    redirect_html($redirect_url, $redirect_msg, $redirect_delay);
+//    redirect($redirect_url, $redirect_msg, $redirect_delay);
+    redirect($redirect_url);
+  }
+  
+  protected function display_message() {
+    $infos = pwg_get_session_var('cf_infos');
+    pwg_unset_session_var('cf_infos');
+    if ( null == $infos or
+        (empty($infos['infos']) and
+         empty($infos['errors']))
+        ) {
+      return;
+    }
+    global $template;
+    $template->set_filenames(array(
+        'cf_index'    => realpath(cf_get_template('cf_messages_index.tpl')),
+        'cf_title'    => realpath(cf_get_template('cf_title.tpl')),
+        'cf_button'   => realpath(cf_get_template('cf_button.tpl')),
+        'cf_messages' => realpath(cf_get_template('cf_messages.tpl')),
+      ));
+      
+    $template->block_html_head( '',
+              '<link rel="stylesheet" type="text/css" '.
+              'href="' . CF_INCLUDE . 'contactform.css' . '">',
+              $smarty, $repeat);
+    $cf = array(
+        'TITLE'     => 'contact_form_title',
+      );
+    if (!empty($infos['errors'])) {
+      $template->assign('errors', $infos['errors']);
+    }
+    if (!empty($infos['infos'])) {
+      $template->assign('infos', $infos['infos']);
+    }
+    $template->assign('CF', $cf);
+    $template->assign_var_from_handle('CF_TITLE', 'cf_title');
+    $template->assign_var_from_handle('CF_MESSAGES', 'cf_messages');
+    $template->assign_var_from_handle('CF_BUTTON', 'cf_button');
+    
+    $begin = 'PLUGIN_INDEX_CONTENT_BEFORE';
+    $old_begin = $template->get_template_vars($begin);
+    $template->assign_var_from_handle($begin, 'cf_index');
+    $template->concat($begin, $old_begin);
   }
   
   protected function valid_form() {
@@ -252,7 +298,12 @@ class CF_Plugin {
         load_language('plugin.lang', CF_PATH);
         $this->display_form($infos);
       } else {
-        $this->redirect(make_index_url(),$infos);
+        pwg_set_session_var('cf_infos', array(
+            'infos'  => $infos['infos'],
+            'errors' => $infos['errors'],
+          ));
+        redirect(make_index_url());
+        //$this->redirect(make_index_url(),$infos);
       }
     } else {
       $this->display_form($infos);
@@ -293,10 +344,13 @@ class CF_Plugin {
       );
     add_event_handler('send_mail_content',             
                       array(&$this, 'send_mail_content'));
-    $return = @pwg_mail(
-      $webmaster_mail,
-      $mail_args
-    );
+
+    $return = true;
+//    $return = @pwg_mail(
+//      $webmaster_mail,
+//      $mail_args
+//    );
+
     cf_switch_back_to_user_lang();
     if (!$return) {
       array_push( $infos['errors'], l10n('cf_error_sending_mail'));

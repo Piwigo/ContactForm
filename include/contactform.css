@@ -38,3 +38,6 @@ td.contact-form-right {
 .cf-log-infos, .cf-log-errors {
 	font-weight: bold;
 }
+div.cf-button {
+	margin-left: 5px;
+}
