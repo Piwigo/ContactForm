@@ -65,12 +65,14 @@ $lang['cf_define_link'] = 'Define link';
 $lang['cf_link'] = 'Name of the template variable containing the HTML link to the contact form';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mails';
+$lang['cf_emails'] = 'E-mails';
 $lang['cf_emails_desc'] = 'Destination e-mails management';
 $lang['cf_active'] = 'Active e-mail';
 $lang['cf_no_mail'] = 'No e-mail address available';
 $lang['cf_refresh'] = 'Regenerate e-mail list address';
 // Language tab
 $lang['cf_tab_language'] = 'Localization';
+$lang['cf_language'] = 'Localization';
 $lang['cf_language_desc'] = 'Messages translation';
 $lang['cf_select_item'] = 'Select item to translate';
 $lang['cf_default_lang'] = 'Default';
