@@ -41,7 +41,7 @@ $lang['cf_config_saved_with_errors'] = 'Configurazione salvata con errori';
 $lang['cf_length_not_integer'] = 'Le dimensioni devono essere un numero intero';
 $lang['cf_delay_not_integer'] = 'Il limite deve essere un numero intero';
 $lang['cf_link_error'] = 'La variabile non può contenere degli spazi';
-// TODO $lang['cf_hide'] = '';
+$lang['cf_hide'] = 'Nascondere';
 
 // ==================================================================
 // Admin page
@@ -64,12 +64,12 @@ $lang['cf_label_link'] = 'Gestione del link (escluso quello del menu) verso il f
 $lang['cf_define_link'] = 'Definire il link';
 $lang['cf_link'] = 'Nome della variabile del template contenente il link HTML verso il formulario di contatto';
 // Emails tab
-// TODO $lang['cf_tab_emails'] = '';
-// TODO $lang['cf_emails'] = '';
-// TODO $lang['cf_emails_desc'] = '';
-// TODO $lang['cf_active'] = '';
-// TODO $lang['cf_no_mail'] = '';
-// TODO $lang['cf_refresh'] = '';
+$lang['cf_tab_emails'] = 'E-mails';
+$lang['cf_emails'] = 'E-mails';
+$lang['cf_active'] = 'Gestione delle e-mail di destinazione';
+$lang['cf_emails_desc'] = 'E-mail attive';
+$lang['cf_no_mail'] = 'Nessun\'indirizzo e-mail disponibile';
+$lang['cf_refresh'] = 'Rigenerare la lista degli indirizzi';
 // Language tab
 $lang['cf_tab_language'] = 'Localizzazione';
 $lang['cf_language'] = 'Localizzazione';
