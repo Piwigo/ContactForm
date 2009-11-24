@@ -66,8 +66,8 @@ $lang['cf_link'] = 'Nome della variabile del template contenente il link HTML ve
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mails';
 $lang['cf_emails'] = 'E-mails';
-$lang['cf_active'] = 'Gestione delle e-mail di destinazione';
-$lang['cf_emails_desc'] = 'E-mail attive';
+$lang['cf_emails_desc'] = 'Gestione delle e-mail di destinazione';
+$lang['cf_active'] = 'E-mail attiva';
 $lang['cf_no_mail'] = 'Nessun\'indirizzo e-mail disponibile';
 $lang['cf_refresh'] = 'Rigenerare la lista degli indirizzi';
 // Language tab
