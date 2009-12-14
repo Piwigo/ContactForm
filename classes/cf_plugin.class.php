@@ -178,7 +178,7 @@ class CF_Plugin {
   
   protected function display_form($infos) {
     global $template,$user;
-
+    $template->set_extent(realpath(cf_get_template('cf_index.tpl')), 'index');
     $template->set_filenames(array(
         'index'       => realpath(cf_get_template('cf_index.tpl')),
         'cf_title'    => realpath(cf_get_template('cf_title.tpl')),

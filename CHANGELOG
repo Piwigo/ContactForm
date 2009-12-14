@@ -1,3 +1,6 @@
+2009-12-14 1.0.7
+                  Fix bug: Form not displayed if template-extension is used on index
+
 2009-08-21 1.0.6
                   Replace redirect page by a message on the index one
                   Add e-mail address management
