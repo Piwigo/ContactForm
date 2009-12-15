@@ -43,7 +43,7 @@ function cf_validate() {
     '{/literal}{'cf_subject_error'|@translate|@escape:javascript}{literal}',
     '{/literal}{'cf_message_error'|@translate|@escape:javascript}{literal}');
   var i;
-  for (i in items) {
+  for (i=0 ; i<items.length ; i++) {
     var item = document.getElementById(items[i]);
     var is_ok = cf_check_content(item, is_mail[i]);
     if (!is_ok && is_needed[i]) {

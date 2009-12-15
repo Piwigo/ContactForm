@@ -6,7 +6,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.0.7');
+define('CF_VERSION',            '1.0.8');
 define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
