@@ -8,13 +8,13 @@ $lang['contact_form_debug'] = 'Visualizzare le informazioni di debug';
 
 // ==================================================================
 // Default values if not configured
-$lang['contact_form_title'] = 'Formulario di contatto';
+$lang['contact_form_title'] = 'Modulo di contatto';
 $lang['contact_form'] = 'Contattare';
 $lang['contact_form_link'] = 'Contattare il webmaster';
 
 // ==================================================================
 // Redirect page
-$lang['contact_redirect_title'] = 'Stato d\'invio messaggio';
+$lang['contact_redirect_title'] = 'Stato d\'invio del messaggio';
 
 // ==================================================================
 // Menubar block
@@ -26,10 +26,10 @@ $lang['cf_submit'] = 'Inviare';
 
 // ==================================================================
 // Messages
-$lang['cf_from_name_error'] = 'Entrare un nome';
+$lang['cf_from_name_error'] = 'Inserire un nome';
 $lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
-$lang['cf_subject_error'] = 'Entrare un soggetto';
-$lang['cf_message_error'] = 'Entrare un messaggio';
+$lang['cf_subject_error'] = 'Inserire un soggetto';
+$lang['cf_message_error'] = 'Inserire un messaggio';
 $lang['cf_error_sending_mail'] = 'Errore durante l\'invio dell\'E-mail'; 
 $lang['cf_sending_mail_successful'] = 'Invio dell\'E-mail riuscito';
 $lang['cf_form_error'] = 'Dati errati'; 
@@ -53,16 +53,16 @@ $lang['cf_config_desc'] = 'Configurazione principale del plugin';
 $lang['cf_label_config'] = 'Configurazione generale';
 $lang['cf_label_mail'] = 'Configurazione dell\'E-mail';
 $lang['cf_menu_link'] = 'Aggiungere un link nel menu';
-$lang['cf_guest_allowed'] = 'Autorizzare gli ospiti ad accedere al formulario';
+$lang['cf_guest_allowed'] = 'Autorizzare gli ospiti ad accedere al modulo';
 $lang['cf_mail_prefix'] = 'Prefisso dell\'E-mail inviata';
 $lang['cf_separator'] = 'Carattere(i) usato(i) per definire una barra di separazione nella E-mail al formato testo';
 $lang['cf_separator_length'] = 'Dimenzioni della barra di separazione';
 $lang['cf_mandatory_name'] = 'Nome obbligatorio';
 $lang['cf_mandatory_mail'] = 'E-mail obbligatoria';
 $lang['cf_redirect_delay'] = 'Limite d\'attesa ';
-$lang['cf_label_link'] = 'Gestione del link (escluso quello del menu) verso il formulario';
+$lang['cf_label_link'] = 'Gestione del link (escluso quello del menu) verso il modulo';
 $lang['cf_define_link'] = 'Definire il link';
-$lang['cf_link'] = 'Nome della variabile del template contenente il link HTML verso il formulario di contatto';
+$lang['cf_link'] = 'Nome della variabile del template contenente il link HTML verso il modulo di contatto';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mails';
 $lang['cf_emails'] = 'E-mails';

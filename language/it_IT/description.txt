@@ -1,1 +1,1 @@
-Aggiunge un elemento "Contattare" nel blocco Menu alfine di offrire un formulario di contatto agli utenti
+Aggiunge l'elemento "Contattare" nel blocco Menu alfine di offrire un modulo di contatto per gli utenti
