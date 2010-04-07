@@ -69,7 +69,7 @@ $lang['cf_emails'] = 'E-mails';
 $lang['cf_emails_desc'] = 'Gestione delle e-mail di destinazione';
 $lang['cf_active'] = 'E-mail attiva';
 $lang['cf_no_mail'] = 'Nessun\'indirizzo e-mail disponibile';
-$lang['cf_refresh'] = 'Rigenerare la lista degli indirizzi';
+$lang['cf_refresh'] = 'Rigenerare l\'elenco degli indirizzi';
 // Language tab
 $lang['cf_tab_language'] = 'Localizzazione';
 $lang['cf_language'] = 'Localizzazione';
