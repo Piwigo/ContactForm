@@ -1,1 +1,0 @@
-Ajoute un élément "Contacter" dans le bloc Menu afin d'offrir un formulaire de contact aux utilisateurs

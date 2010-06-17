@@ -1,1 +1,0 @@
-Añade un elemento "Contacter" en el bloque Menudo con el fin de ofrecerles un formulario de contacto a los usuarios

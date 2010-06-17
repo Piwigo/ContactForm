@@ -1,1 +1,0 @@
-<a href="{$CF_LINK.URL}">{$CF_LINK.TEXT}</a>
