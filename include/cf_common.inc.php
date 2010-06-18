@@ -93,15 +93,12 @@ CF_Config::$default_config = $cf_config_default;
 
 $cf_config_lang_keys = array();
 $cf_config_lang_keys['contact_form_title'] = array(
-    CF_LANG_DEFAULT => l10n('contact_form_title'),
-    'fr_FR' => 'Formulaire de contact',
-    'en_UK' => 'Contact form',
-    'it_IT' => '',
+    CF_LANG_DEFAULT => l10n('contact_form'),
 );
 $cf_config_lang_keys['contact_form'] = array(
     CF_LANG_DEFAULT => l10n('contact_form'),
-    'fr_FR' => 'Contacter',
-    'en_UK' => 'Contact',
+    'fr_FR' => 'Formulaire de contact',
+    'en_UK' => 'Contact form',
     'it_IT' => '',
 );
 $cf_config_lang_keys['contact_form_link'] = array(

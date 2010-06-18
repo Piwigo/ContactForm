@@ -9,7 +9,7 @@ $lang['contact_form_debug'] = 'Affichage des informations de debug';
 // ==================================================================
 // Default values if not configured
 $lang['contact_form_title'] = 'Formulaire de contact';
-$lang['contact_form'] = 'Contacter';
+$lang['contact_form'] = 'Formulaire de contact';
 $lang['contact_form_link'] = 'Contacter le webmestre';
 
 // ==================================================================
