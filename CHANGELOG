@@ -1,3 +1,6 @@
+2010-07-26 1.1.0
+                  Fix bug: Localisazion doesn't work in the menubar
+
 2010-06-13 1.0.9
                   Compatibility for Piwigo v2.1.x
 
