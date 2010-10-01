@@ -501,7 +501,12 @@ class CF_Plugin {
       $infos['cf_id'] = rand();
       $infos['cf_from_name'] = is_a_guest()?'':$user['username'];
       $infos['cf_from_mail'] = $user['email'];
-      $infos['cf_subject'] = l10n('title_send_mail');
+
+      $l10n_key = 'title_send_mail';
+      $infos['cf_subject'] = l10n($l10n_key);
+      if ($l10n_key == $infos['cf_subject']) {
+        $infos['cf_subject'] = l10n('A comment on your site');
+      }
     }
     return $infos;
   }
