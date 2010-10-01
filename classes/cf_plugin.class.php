@@ -323,6 +323,15 @@ class CF_Plugin {
         }
       }
     }
+
+    if (empty($all_mails)) {
+      $webmaster_email = get_webmaster_mail_address();
+      $active = array(
+        'WEBMASTER' => $webmaster_email,
+        'ADMINS' => cf_get_admins_emails($webmaster_email),
+        );
+    }
+    
     return $active;
   }
   
