@@ -23,6 +23,7 @@ $lang['cf_from_mail'] = 'Your e-mail';
 $lang['cf_subject'] = 'Subject';
 $lang['cf_message'] = 'Message';
 $lang['cf_submit'] = 'Send';
+$lang['title_send_mail'] = 'A comment on the site';
 
 // ==================================================================
 // Messages
