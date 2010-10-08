@@ -23,6 +23,7 @@ $lang['cf_from_mail'] = 'Váš e-mail';
 $lang['cf_subject'] = 'Predmet';
 $lang['cf_message'] = 'Správa';
 $lang['cf_submit'] = 'Poslať';
+$lang['title_send_mail'] = 'Komentár na stránku';
 
 // ==================================================================
 // Messages
