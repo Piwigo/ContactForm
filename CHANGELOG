@@ -1,16 +1,16 @@
 2010-10-15 1.1.3
-				  * [r7197] Added: the core "Contact Webmaster" link in footer is replaced by a link to the ContactForm page. It works with a smarty prefilter, so it should work with all themes.
-				  * [r7202] Compatible with "Simple" theme (grey - dark - white - sunset).
+                  * [r7197] Added: the core "Contact Webmaster" link in footer is replaced by a link to the ContactForm page. It works with a smarty prefilter, so it should work with all themes.
+                  * [r7202] Compatible with "Simple" theme (grey - dark - white - sunset).
 2010-10-09 1.1.2
-				  * [r7135] Add sk_SK - Slovak (Slovensky). Thanks to Dodo.
-				  * [r7136] Fix bug "Wrong version number".
-				  
+                  * [r7135] Add sk_SK - Slovak (Slovensky). Thanks to Dodo.
+                  * [r7136] Fix bug "Wrong version number".
+                  
 2010-10-01 1.1.1
-                  * set a default list of target emails.
-				  * use default mail subject if not defined at plugin level.
-				  * adds German language (Deutsch) thanks to Sugar888.
-				  * adds Hungarian language (Magyar) thanks to samli.
-				  
+                  * set a default list of target emails
+                  * use default mail subject if not defined at plugin level
+                  * adds German language (Deutsch) thanks to Sugar888
+                  * adds Hungarian language (Magyar) thanks to samli
+                  
 2010-07-26 1.1.0
                   Fix bug: Localisazion doesn't work in the menubar.
 
