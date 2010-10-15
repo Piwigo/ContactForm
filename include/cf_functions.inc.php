@@ -124,7 +124,7 @@ function cf_get_template($file, $dir=CF_TEMPLATE, $prefix='') {
 
   $theme_file = $dir.
                 //$user[$prefix.'template'].'/'.
-                //$user['themes'].'/'.
+                $user['theme'].'/'.
                 $file;
   $template_file = $dir.
                    //$user[$prefix.'template'].'/'.

@@ -1,52 +1,65 @@
+2010-10-15 1.1.3
+				  * [r7197] Added: the core "Contact Webmaster" link in footer is replaced by a link to the ContactForm page. It works with a smarty prefilter, so it should work with all themes.
+				  * [r7200] Compatible with "Simple" theme (grey - dark - white - sunset).
+2010-10-09 1.1.2
+				  * [r7135] Add sk_SK - Slovak (Slovensky). Thanks to Dodo.
+				  * [r7136] Fix bug "Wrong version number".
+				  
+2010-10-01 1.1.1
+                  * set a default list of target emails.
+				  * use default mail subject if not defined at plugin level.
+				  * adds German language (Deutsch) thanks to Sugar888.
+				  * adds Hungarian language (Magyar) thanks to samli.
+				  
 2010-07-26 1.1.0
-                  Fix bug: Localisazion doesn't work in the menubar
+                  Fix bug: Localisazion doesn't work in the menubar.
 
 2010-06-13 1.0.9
                   Compatibility for Piwigo v2.1.x
 
 2009-12-15 1.0.8
-                  Fix minor javascript bug
+                  Fix minor javascript bug.
 
 2009-12-14 1.0.7
-                  Fix bug: Form not displayed if template-extension is used on index
+                  Fix bug: Form not displayed if template-extension is used on index.
 
 2009-08-21 1.0.6
-                  Replace redirect page by a message on the index one
-                  Add e-mail address management
+                  * Replace redirect page by a message on the index one.
+                  * Add e-mail address management.
 
 2009-08-21 1.0.5
-                  Add history tab
+                  Add history tab.
 
 2009-08-19 1.0.4
-                  Update configuration pages
+                  Update configuration pages.
 
 2009-08-18 1.0.3
-                  Add configuration option to define menu link or not
+                  Add configuration option to define menu link or not.
 
 2009-08-18 1.0.2
-                  Add configuration option to define template variable or not
+                  Add configuration option to define template variable or not.
 
 2009-08-17 1.0.1
-                  Add default value to language translation
+                  Add default value to language translation.
 
 2009-08-17 1.0.0
-                  Put under SVN control
+                  Put under SVN control.
 
 2009-08-17 0.1.f
-                  Add obsolete list
+                  Add obsolete list.
 
 2009-08-17 0.1.e
-                  Add language configuration for items texts
-                  Add template variable
+                  * Add language configuration for items texts.
+                  * Add template variable.
 
 2009-08-14 0.1.d
-                  Add a redirection page when successfully sent message
+                  Add a redirection page when successfully sent message.
 
 2009-08-13 0.1.c
-                  Fix regexp bug in mail format check in javascript
+                  Fix regexp bug in mail format check in javascript.
 
 2009-08-13 0.1.b
-                  Add admin management
+                  Add admin management.
 
 2009-08-13 0.1.a
-                  Plugin creation
+                  Plugin creation.
