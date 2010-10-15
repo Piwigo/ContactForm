@@ -41,27 +41,6 @@ if (isset($_POST['submit'])) {
     }
   }
   $cf_config->set_value(CF_CFG_MAIL_MANDATORY, $new_value);
-
-  // Define link
-  $new_value = false;
-  if (isset($_POST['cf_define_link'])) {
-    if ('1' == $_POST['cf_define_link']) {
-      $new_value = true;
-    }
-  }
-  $cf_config->set_value(CF_CFG_DEFINE_LINK, $new_value);
-  
-  // Link
-  $new_value = '';
-  if (isset($_POST['cf_link'])) {
-    $new_value = trim(stripslashes($_POST['cf_link']));
-    $str_valid = preg_match_all('/\w{1}\w*/i', $new_value, $match);
-    if (1 != $str_valid) {
-      CF_Log::add_error(l10n('cf_link_error'));
-    } else {
-      $cf_config->set_value(CF_CFG_CONTACT_LINK, $new_value);
-    }
-  }
   
   // Prefix
   $new_value = '';
@@ -119,9 +98,6 @@ $config_values = array(
     'SEPARATOR'         => $cf_config->get_value(CF_CFG_SEPARATOR),
     'SEPARATOR_LENGTH'  => $cf_config->get_value(CF_CFG_SEPARATOR_LEN),
     'REDIRECT_DELAY'    => $cf_config->get_value(CF_CFG_REDIRECT_DELAY),
-    'DEFINE_LINK'       => $cf_config->get_value(CF_CFG_DEFINE_LINK)?
-                              CF_CHECKED:'',
-    'LINK'              => $cf_config->get_value(CF_CFG_CONTACT_LINK),
   );
 
 $template->assign('CF_CONFIG', $config_values);  

@@ -139,6 +139,13 @@ function cf_get_template($file, $dir=CF_TEMPLATE, $prefix='') {
     return $dir.$file;
   }
 }
+
+function contactForm_prefilter($content, &$smarty) {
+  $search = '#{if\s+isset\s*\(\s*\$CONTACT_MAIL\s*\)\s*}.*?{/if}#s';
+  $replacement = '{if isset($ContactFormLink)}{$ContactFormLink}{/if}';
+
+  return preg_replace($search, $replacement, $content);
+}
   
 function cf_clean_obsolete_files($obsolete_file_list) {
   if (!file_exists(CF_PATH.$obsolete_file_list)) {

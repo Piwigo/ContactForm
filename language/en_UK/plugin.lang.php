@@ -61,9 +61,6 @@ $lang['cf_separator_length'] = 'Size of the bar';
 $lang['cf_mandatory_name'] = 'Name is mandatory';
 $lang['cf_mandatory_mail'] = 'E-mail address is mandatory';
 $lang['cf_redirect_delay'] = 'Pause delay of redirection';
-$lang['cf_label_link'] = 'Link management (outside menubar)';
-$lang['cf_define_link'] = 'Define link';
-$lang['cf_link'] = 'Name of the template variable containing the HTML link to the contact form';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mails';
 $lang['cf_emails'] = 'E-mails';

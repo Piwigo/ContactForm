@@ -43,17 +43,21 @@ class CF_Plugin {
     $this->display_message();
   }
   function loc_begin_page_header() {
-    if (!$this->config->get_value(CF_CFG_DEFINE_LINK)) {
+    global $template;
+    
+    $template->set_prefilter('tail', 'contactForm_prefilter');
+
+    if (!$this->check_allowed()) {
       return;
     }
-    global $template;
+    
     $cf_values = array(
         'TEXT'  => $this->config->get_lang_value('contact_form_link'),
         'URL'   => make_index_url(array('section' => CF_URL_PARAMETER)),
       );
     $template->assign('CF_FOOTER_VALUES', $cf_values);
-    $template->assign($this->config->get_value(CF_CFG_CONTACT_LINK),
-                      $this->get_html_contact_form_link());
+
+    $template->assign('ContactFormLink', $this->get_html_contact_form_link());
   }
   
   function blockmanager_apply($aMenuRefArray) {

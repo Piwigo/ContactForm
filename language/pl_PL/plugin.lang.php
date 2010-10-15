@@ -61,9 +61,6 @@ $lang['cf_separator_length'] = 'Wielkość menubar';
 $lang['cf_mandatory_name'] = 'Nazwisko jest wymagane';
 $lang['cf_mandatory_mail'] = 'Adres e-mail address is wymagany';
 $lang['cf_redirect_delay'] = 'Wstrzymaj opóźnienie przekierowania';
-$lang['cf_label_link'] = 'Zarządzanie linkiem (poza menubar)';
-$lang['cf_define_link'] = 'Zdefiniuj link';
-$lang['cf_link'] = 'Nazwa zmiennej zawierającej link HTML do formularza kontaktu';
 // Emails tab
 $lang['cf_tab_emails'] = 'Adresy';
 $lang['cf_emails'] = 'Adresy';

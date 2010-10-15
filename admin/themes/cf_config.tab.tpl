@@ -36,23 +36,6 @@
   </ul>
 </fieldset>
 <fieldset>
-  <legend>{'cf_label_link'|@translate}</legend>
-  <ul>
-    <li>
-      <label>
-        <input type="checkbox" name="cf_define_link" value="1" {$CF_CONFIG.DEFINE_LINK} />
-        {'cf_define_link'|@translate}
-      </label>
-    </li>
-    <li>
-      <label>
-        <input type="text" name="cf_link" value="{$CF_CONFIG.LINK}" />
-        {'cf_link'|@translate}
-      </label>
-    </li>
-  </ul>
-</fieldset>
-<fieldset>
   <legend>{'cf_label_mail'|@translate}</legend>
   <ul>
     <li>

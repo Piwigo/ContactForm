@@ -61,9 +61,6 @@ $lang['cf_separator_length'] = 'Taille de la barre de séparation';
 $lang['cf_mandatory_name'] = 'Présence du nom obligatoire';
 $lang['cf_mandatory_mail'] = 'Présence de l\'e-mail obligatoire';
 $lang['cf_redirect_delay'] = 'Délai de pause de la redirection';
-$lang['cf_label_link'] = 'Gestion du lien (hors menu) vers le formulaire';
-$lang['cf_define_link'] = 'Définir le lien';
-$lang['cf_link'] = 'Nom de la variable de template contenant le lien HTML vers le formulaire de contact';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mails';
 $lang['cf_emails'] = 'E-mails';

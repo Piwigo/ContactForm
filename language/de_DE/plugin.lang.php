@@ -122,12 +122,6 @@ $lang['cf_mandatory_mail'] = 'Die E-Mail ist obligatorisch';
 
 $lang['cf_redirect_delay'] = 'Wartezeit bis zur Weiterleitung (s) ';
 
-$lang['cf_label_link'] = 'Linkverwaltung (ausser der des Menüs)';
-
-$lang['cf_define_link'] = 'Den Link bestimmen';
-
-$lang['cf_link'] = 'Name der Template-Variable mit dem HTML-Link zum Kontaktformular';
-
 // Emails tab
 
 $lang['cf_tab_emails'] = 'E-Mails';

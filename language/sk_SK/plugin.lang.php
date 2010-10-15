@@ -61,9 +61,6 @@ $lang['cf_separator_length'] = 'Veľkosť stĺpca';
 $lang['cf_mandatory_name'] = 'Meno je povinné';
 $lang['cf_mandatory_mail'] = 'E-mailová adresa je povinná';
 $lang['cf_redirect_delay'] = 'Dĺžka pauzy pri presmerovaní';
-$lang['cf_label_link'] = 'Manažment linku (mimo menu)';
-$lang['cf_define_link'] = 'Definovanie linku';
-$lang['cf_link'] = 'Názov šablónových premenných obsahujúcich HTML linky na kontaktný formulár';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-maily';
 $lang['cf_emails'] = 'E-maily';

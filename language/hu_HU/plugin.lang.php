@@ -61,9 +61,6 @@ $lang['cf_separator_length'] = 'Elválasztó sáv hossza';
 $lang['cf_mandatory_name'] = 'Név kötelező';
 $lang['cf_mandatory_mail'] = 'E-mail cím kötelező';
 $lang['cf_redirect_delay'] = 'Átirányítás késleltetésének ideje';
-$lang['cf_label_link'] = 'Link kezelése (menüsávon kívül)';
-$lang['cf_define_link'] = 'Link meghatározása';
-$lang['cf_link'] = 'A mintasablon neve változó taralommal a HTML link a kapcsolati űrlaphoz';
 // Emails tab
 $lang['cf_tab_emails'] = 'E-mail címek';
 $lang['cf_emails'] = 'E-mail címek';

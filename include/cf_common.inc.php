@@ -36,7 +36,6 @@ define('CF_SEPARATOR',          '=');
 define('CF_SEPARATOR_LENGTH',   20);
 define('CF_DEFAULT_PREFIX',     'Piwigo ContactForm');
 define('CF_REDIRECT_DELAY',     5);
-define('CF_DEFAULT_LINKNAME',   'ContactFormLink');
 define('CF_LANG_DEFAULT',       'default');
 // Config keys
 if (isset($plugin)) {
@@ -55,8 +54,6 @@ define('CF_CFG_ALLOW_GUEST',    'cf_allow_guest');
 define('CF_CFG_MAIL_MANDATORY', 'cf_mandatory_mail');
 define('CF_CFG_NAME_MANDATORY', 'cf_mandatory_name');
 define('CF_CFG_REDIRECT_DELAY', 'cf_redirect_delay');
-define('CF_CFG_DEFINE_LINK',    'cf_define_link');
-define('CF_CFG_CONTACT_LINK',   'cf_link');
 define('CF_CFG_ADMIN_MAILS',    'cf_admin_mails');
 
 /* ************************** */
@@ -85,8 +82,6 @@ $cf_config_default[CF_CFG_ALLOW_GUEST] = true;
 $cf_config_default[CF_CFG_MAIL_MANDATORY] = true;
 $cf_config_default[CF_CFG_NAME_MANDATORY] = true;
 $cf_config_default[CF_CFG_REDIRECT_DELAY] = CF_REDIRECT_DELAY;
-$cf_config_default[CF_CFG_DEFINE_LINK] = true;
-$cf_config_default[CF_CFG_CONTACT_LINK] = CF_DEFAULT_LINKNAME;
 $cf_config_default[CF_CFG_ADMIN_MAILS] = cf_get_admins_contacts();
 $cf_config_default[CF_CFG_ADMIN_MAILS] = array();
 CF_Config::$default_config = $cf_config_default;
