@@ -96,7 +96,7 @@ $cf_config_lang_keys['contact_form_title'] = array(
 	'hu_HU' => 'Kapcsolati urlap',
     'it_IT' => 'Formulario di contatto',
 	'pl_PL' => 'Formularz kontaktu',
-	'sk_SK' => 'Kontaktný formulár',
+	'sk_SK' => 'KontaktnÃ½ formulÃ¡r',
 );
 $cf_config_lang_keys['contact_form'] = array(
     CF_LANG_DEFAULT => l10n('contact_form'),
