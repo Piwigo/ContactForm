@@ -1,6 +1,12 @@
-2010-10-17 1.1.4
+2010-10-17 1.1.5
                   [r7204] Errors in the History tabs
                   [r7241] Translations in tabs "Translations"
+                  [r7244] Incorrect characters encoding in cf_common.inc.php
+
+2010-10-17 1.1.4
+                  DELETED VERSION
+                  [r7204]
+                  [r7241]
 
 2010-10-15 1.1.3
                   * [r7197] Added: the core "Contact Webmaster" link in footer is replaced by a link to the ContactForm page. It works with a smarty prefilter, so it should work with all themes.
