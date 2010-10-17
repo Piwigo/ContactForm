@@ -6,7 +6,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.1.2');
+define('CF_VERSION',            '1.1.3');
 define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
@@ -89,18 +89,36 @@ CF_Config::$default_config = $cf_config_default;
 $cf_config_lang_keys = array();
 $cf_config_lang_keys['contact_form_title'] = array(
     CF_LANG_DEFAULT => l10n('contact_form'),
+	'de_DE' => 'Kontaktformular',
+    'en_UK' => 'Contact form',
+	'es_ES' => 'Formulario de contacto',
+    'fr_FR' => 'Formulaire de contact',
+	'hu_HU' => 'Kapcsolati urlap',
+    'it_IT' => 'Formulario di contatto',
+	'pl_PL' => 'Formularz kontaktu',
+	'sk_SK' => 'Kontaktný formulár',
 );
 $cf_config_lang_keys['contact_form'] = array(
     CF_LANG_DEFAULT => l10n('contact_form'),
+	'de_DE' => 'Kontaktformular',
+    'en_UK' => 'Contact',
+	'es_ES' => 'Contactar',
     'fr_FR' => 'Formulaire de contact',
-    'en_UK' => 'Contact form',
-    'it_IT' => '',
-);
+	'hu_HU' => 'Kapcsolat',
+    'it_IT' => 'Contattare',
+	'pl_PL' => 'Kontakt',
+	'sk_SK' => 'Kontakt',
+); 
 $cf_config_lang_keys['contact_form_link'] = array(
     CF_LANG_DEFAULT => l10n('contact_form_link'),
-    'fr_FR' => 'Contacter le webmestre',
+	'de_DE' => 'Den Webmaster kontaktieren',
     'en_UK' => 'Contact webmaster',
+	'es_ES' => 'Contactar webmestre',
+    'fr_FR' => 'Contacter le webmestre',
+	'hu_HU' => 'Webmester kapcsolat',
     'it_IT' => 'Contattare il webmaster',
+	'pl_PL' => 'Kontakt do webmastera',
+	'sk_SK' => 'Kontaktovanie webmastera',
 );
 CF_Config_Lang::$default_keys = $cf_config_lang_keys;
 ?>
