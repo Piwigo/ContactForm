@@ -97,6 +97,8 @@ $cf_config_lang_keys['contact_form_title'] = array(
     'it_IT' => 'Formulario di contatto',
 	'pl_PL' => 'Formularz kontaktu',
 	'sk_SK' => 'Kontaktný formulár',
+	'ru_RU' => 'Контактная информация',
+	'tr_TR' => 'İletişim formu',
 );
 $cf_config_lang_keys['contact_form'] = array(
     CF_LANG_DEFAULT => l10n('contact_form'),
@@ -108,6 +110,8 @@ $cf_config_lang_keys['contact_form'] = array(
     'it_IT' => 'Contattare',
 	'pl_PL' => 'Kontakt',
 	'sk_SK' => 'Kontakt',
+	'ru_RU' => 'Контакты',
+	'tr_TR' => 'İletişim',
 ); 
 $cf_config_lang_keys['contact_form_link'] = array(
     CF_LANG_DEFAULT => l10n('contact_form_link'),
@@ -119,6 +123,8 @@ $cf_config_lang_keys['contact_form_link'] = array(
     'it_IT' => 'Contattare il webmaster',
 	'pl_PL' => 'Kontakt do webmastera',
 	'sk_SK' => 'Kontaktovanie webmastera',
+	'ru_RU' => 'Contact webmaster',
+	'tr_TR' => 'İletişim- Site yöneticisi',
 );
 CF_Config_Lang::$default_keys = $cf_config_lang_keys;
 ?>
