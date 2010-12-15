@@ -1,6 +1,6 @@
-<!-- {known_script id="jquery" src=$ROOT_URL|@cat:"template-common/lib/jquery.packed.js"} -->
-{known_script id="jquery.ui" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.core.packed.js"}
-{known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"template-common/lib/ui/ui.resizable.packed.js"}
+<!-- {known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"} -->
+{known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/ui.core.packed.js"}
+{known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"themes/default/js/ui/ui.resizable.packed.js"}
 {literal}
 <script type="text/javascript">
 jQuery().ready(function(){
