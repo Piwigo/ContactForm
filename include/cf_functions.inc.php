@@ -118,7 +118,7 @@ order by
   
 }
 
-/* Return template for user template/theme*/
+/* Return template for user template/theme */
 function cf_get_template($file, $dir=CF_TEMPLATE, $prefix='') {
   global $user, $template;
 
