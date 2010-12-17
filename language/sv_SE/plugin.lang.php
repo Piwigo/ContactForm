@@ -21,7 +21,7 @@ $lang['contact_redirect_title'] = 'Skicka meddelande status';
 $lang['cf_from_name'] = 'Ditt Namn';
 $lang['cf_from_mail'] = 'Din E-Post';
 $lang['cf_subject'] = 'Ämne';
-$lang['cf_message'] = 'Medelande';
+$lang['cf_message'] = 'Meddelande';
 $lang['cf_submit'] = 'skicka';
 $lang['title_send_mail'] = 'En kommentar på sajten';
 
@@ -50,7 +50,7 @@ $lang['cf_validate'] = 'Skicka';
 // Configuration tab
 $lang['cf_tab_config'] = 'Konfiguration';
 $lang['cf_config'] = 'Konfiguration';
-$lang['cf_config_desc'] = 'Älmänna konfiguration för pluggin';
+$lang['cf_config_desc'] = 'Allmänna konfiguration för plugg-in';
 $lang['cf_label_config'] = 'Allmän konfiguration';
 $lang['cf_label_mail'] = 'E-post konfiguration';
 $lang['cf_menu_link'] = 'Lägg länken i menyn';
@@ -86,5 +86,6 @@ $lang['cf_history_version'] = 'Version';
 $lang['cf_history_log'] = 'Changelog';
 $lang['cf_file_not_found'] = 'Filen hittades inte';
 $lang['cf_file_empty'] = 'Filen är tom';
-$lang['cf_format_date'] = '%Y %M %D, ';
+$lang['cf_format_date'] = '%M %D, %Y';
+
 ?>
