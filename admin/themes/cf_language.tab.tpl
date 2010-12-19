@@ -1,6 +1,3 @@
-{* $Id: cf_language.tab.tpl,v 1.4 2009/08/19 14:51:59 Criss Exp $ *}
-{known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
-{known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.tabs.packed.js"}
 <script type="text/javascript">
 function set_active(key) {ldelim}
   var element = document.getElementById('cf_selected');

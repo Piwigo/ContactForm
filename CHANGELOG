@@ -1,3 +1,8 @@
+2010-12-19 1.1.6
+                  [r7641] No display the ContactForm page when the principal bloc is hidden bug:2008
+                  [r8151] [r8153] [r8196] jQuery not charged (old way since 2.1) bug:2065
+                  [r8152] Minors changes
+
 2010-10-17 1.1.5
                   [r7204] Errors in the History tabs
                   [r7241] Translations in tabs "Translations"
