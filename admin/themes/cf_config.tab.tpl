@@ -1,3 +1,8 @@
+{html_head}
+  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
+  {known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.tabs.packed.js"}
+{/html_head}
+
 <div class="titrePage">
     <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_config'|@translate}</h2>
 </div>

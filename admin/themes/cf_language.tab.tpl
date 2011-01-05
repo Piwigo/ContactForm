@@ -1,3 +1,8 @@
+{html_head}
+  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
+  {known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.tabs.packed.js"}
+{/html_head}
+
 <script type="text/javascript">
 function set_active(key) {ldelim}
   var element = document.getElementById('cf_selected');

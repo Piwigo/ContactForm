@@ -1,3 +1,8 @@
+2011-01-05 1.1.7
+                  [r8479] jQuery not charged (old way since 2.1) bug:2065
+                  [r8478] Compatibility with "Stripped" theme bug:2098
+                  [r8458] Update nl_NL
+
 2010-12-19 1.1.6
                   [r7641] No display the ContactForm page when the principal bloc is hidden bug:2008
                   [r8151] [r8153] [r8196] jQuery not charged (old way since 2.1) bug:2065

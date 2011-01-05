@@ -1,3 +1,7 @@
+{html_head}
+  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
+{/html_head}
+
 <div class="cf-button">
 <input type="button" value="{'cf_hide'|@translate}" onclick="hide('cf_messages');">
 </div>
