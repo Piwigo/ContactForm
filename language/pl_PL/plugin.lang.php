@@ -1,6 +1,4 @@
 <?php
-/* $Id: plugin.lang.php 3864 2009-09-17 22:55:20Z ddtddt $ */
-// translated by emcek
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
@@ -87,4 +85,6 @@ $lang['cf_history_log'] = 'Zmiany';
 $lang['cf_file_not_found'] = 'Pliku nie znaleziono';
 $lang['cf_file_empty'] = 'Plik jest pusty';
 $lang['cf_format_date'] = '%D %M %Y';
+
+// translated by emcek
 ?>

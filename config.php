@@ -1,5 +1,4 @@
 <?php
-/* $Id: config.php,v 1.5 2009/09/01 17:10:49 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');

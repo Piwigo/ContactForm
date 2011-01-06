@@ -1,5 +1,4 @@
 <?php
-/* $Id: cf_config.tab.php,v 1.3 2009/08/18 14:40:36 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 

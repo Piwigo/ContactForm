@@ -1,5 +1,4 @@
 <?php
-/* $Id: cf_history.tab.php,v 1.1 2009/08/21 09:24:18 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 

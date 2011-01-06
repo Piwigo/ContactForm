@@ -1,5 +1,4 @@
 <?php
-/* $Id: cf_language.tab.php,v 1.5 2009/08/19 14:51:59 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 check_status(ACCESS_ADMINISTRATOR);
 global $user;

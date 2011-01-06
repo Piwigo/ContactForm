@@ -1,5 +1,4 @@
 <?php
-/* $Id: plugin.lang.php,v 1.11 2009/09/01 17:10:50 Criss Exp $ */
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
