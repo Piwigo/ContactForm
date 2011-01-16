@@ -1,5 +1,5 @@
 <div class="titrePage">
-    <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_history'|@translate}</h2>
+    <h2>{$CF.TITLE}<br>{'cf_history'|@translate}</h2>
 </div>
 <h3 style="width: 100%;">{'cf_history_desc'|@translate}</h3>
 <table class="table2">

@@ -4,7 +4,7 @@
 {/html_head}
 
 <div class="titrePage">
-    <h2>{$CF.TITLE} [{$CF.VERSION}]<br>{'cf_emails'|@translate}</h2>
+    <h2>{$CF.TITLE}<br>{'cf_emails'|@translate}</h2>
 </div>
 <h3 style="width: 100%;">{'cf_emails_desc'|@translate}</h3>
 <form method="post" action="{$CF.F_ACTION}" id="update" enctype="multipart/form-data">
