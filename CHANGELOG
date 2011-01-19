@@ -1,3 +1,7 @@
+2011-01-05 1.1.8
+                  [r8689] add ar_SA thanks to bakir
+				  [r8689] Remove version information in title on tab.
+
 2011-01-05 1.1.7
                   [r8479] jQuery not charged (old way since 2.1) bug:2065
                   [r8478] Compatibility with "Stripped" theme bug:2098
