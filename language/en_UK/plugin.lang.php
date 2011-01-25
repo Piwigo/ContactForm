@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'A comment on the site';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Please enter a name';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Please enter a subject';
 $lang['cf_message_error'] = 'Please enter a message';
 $lang['cf_error_sending_mail'] = 'Error while sending e-mail';

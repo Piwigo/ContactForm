@@ -182,6 +182,7 @@ class CF_Plugin {
   
   protected function display_form($infos) {
     global $template,$user;
+    trigger_action('display_contactform');
     $template->set_extent(realpath(cf_get_template('cf_index.tpl')), 'index');
     $template->set_filenames(array(
         'index'       => realpath(cf_get_template('cf_index.tpl')),
@@ -395,7 +396,6 @@ class CF_Plugin {
     load_language('plugin.lang', CF_PATH);
     
     $infos = $this->create_infos_array(false);
-    $params_ok = true;
     $return = '';
     $value = '';
     // Key
@@ -403,7 +403,6 @@ class CF_Plugin {
       $infos['cf_id'] = trim( stripslashes($_POST['cf_id']));
     } else {
       $infos['cf_id'] = rand();
-      $params_ok = false;
       array_push( $infos['errors'], l10n('cf_form_error'));
     }
     // From name
@@ -413,11 +412,9 @@ class CF_Plugin {
         $infos['cf_from_name'] = $value;
       } else {
         array_push( $infos['errors'], l10n('cf_from_name_error'));
-        $params_ok = false;
       }
     } else {
       array_push( $infos['errors'], l10n('cf_from_name_error'));
-      $params_ok = false;
     }
     // From mail
     if (isset($_POST['cf_from_mail'])) {
@@ -426,12 +423,10 @@ class CF_Plugin {
       if (null == $return) {
         $infos['cf_from_mail'] = $value;
       } else {
-        $params_ok = false;
         array_push( $infos['errors'], $return);
       }
     } else {
       array_push( $infos['errors'], l10n('cf_mail_format_error'));
-      $params_ok = false;
     }
     // Subject
     if (isset($_POST['cf_subject'])) {
@@ -440,11 +435,9 @@ class CF_Plugin {
         $infos['cf_subject'] = $value;
       } else {
         array_push( $infos['errors'], l10n('cf_subject_error'));
-        $params_ok = false;
       }
     } else {
       array_push( $infos['errors'], l10n('cf_subject_error'));
-      $params_ok = false;
     }
     // Message
     if (isset($_POST['cf_message'])) {
@@ -453,13 +446,14 @@ class CF_Plugin {
         $infos['cf_message'] = $value;
       } else {
         array_push( $infos['errors'], l10n('cf_message_error'));
-        $params_ok = false;
       }
     } else {
       array_push( $infos['errors'], l10n('cf_message_error'));
-      $params_ok = false;
     }
-    return $params_ok;
+
+    $infos = trigger_event('check_contactform_params', $infos);
+
+    return empty($infos['errors']);
   }
   
   protected function check_key() {

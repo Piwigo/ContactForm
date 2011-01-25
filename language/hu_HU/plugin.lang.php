@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Üzenet az oldalról';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Írj be egy nevet';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Írd be a levél tárgyát';
 $lang['cf_message_error'] = 'Írd be az üzeneted';
 $lang['cf_error_sending_mail'] = 'Hiba történt a levél küldése közben';

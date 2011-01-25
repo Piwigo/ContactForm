@@ -26,7 +26,7 @@ $lang['cf_submit'] = 'Enviar';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Por favor, entre un nombre';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Por favor, entre un sujeto';
 $lang['cf_message_error'] = 'Por favor, entre un mensaje';
 $lang['cf_error_sending_mail'] = 'Error en el momento del envío del e-mail';

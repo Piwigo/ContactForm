@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Komentář na webu';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Prosím zadejte Vaše jméno';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Prosím zadejte předmět zprávy';
 $lang['cf_message_error'] = 'Prosím zadejte zprávu';
 $lang['cf_error_sending_mail'] = 'Nastala chyba při odeslání zprávy';

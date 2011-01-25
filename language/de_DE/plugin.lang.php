@@ -26,7 +26,7 @@ $lang['cf_submit'] = 'senden';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Bitte fügen Sie Ihren Namen ein';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Bitte fügen Sie den Betreff ein';
 $lang['cf_message_error'] = 'Bitte fügen Sie eine Mitteilung hinzu';
 $lang['cf_error_sending_mail'] = 'Es ist ein Fehler beim Versand der E-Mail aufgetreten'; 

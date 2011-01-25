@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'En kommentar på sajten';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Ange ett namn';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
 $lang['cf_subject_error'] = 'Ange ett ämnet';
 $lang['cf_message_error'] = 'Skriv ett meddelande';
 $lang['cf_error_sending_mail'] = 'Fel vid sändning av e-post';
