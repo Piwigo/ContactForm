@@ -75,14 +75,4 @@ $lang['cf_default_lang'] = 'Por defecto';
 $lang['contact_form_title_label'] = 'Título en la barra de menús';
 $lang['contact_form_label'] = 'Nombre fijado en la barra de menús';
 $lang['contact_form_link_label'] = 'Texto utilizado para el lazo de contacto abajo página';
-// History tab
-$lang['cf_tab_history'] = 'Reseña histórica';
-$lang['cf_history'] = 'Reseña histórica';
-$lang['cf_history_desc'] = 'Reseña histórica de las modificaciones';
-$lang['cf_history_date'] = 'Fecha';
-$lang['cf_history_version'] = 'Versión';
-$lang['cf_history_log'] = 'Changelog';
-$lang['cf_file_not_found'] = 'Fichero no encontrado';
-$lang['cf_file_empty'] = 'Fichero vacío';
-$lang['cf_format_date'] = '%D %M %Y';
 ?>

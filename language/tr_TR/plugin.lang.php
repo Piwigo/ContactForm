@@ -79,14 +79,4 @@ $lang['cf_default_lang'] = 'Default';
 $lang['contact_form_title_label'] = 'Title used in menubar';
 $lang['contact_form_label'] = 'Name used in menubar';
 $lang['contact_form_link_label'] = 'Text used for contact link in the page footer';
-// History tab
-$lang['cf_tab_history'] = 'Geçmiş';
-$lang['cf_history'] = 'Geçmiş';
-$lang['cf_history_desc'] = 'Geçmiş değiştirildi';
-$lang['cf_history_date'] = 'Tarih';
-$lang['cf_history_version'] = 'Versiyon';
-$lang['cf_history_log'] = 'Changelog';
-$lang['cf_file_not_found'] = 'Dosya bulunamadı';
-$lang['cf_file_empty'] = 'Dosya boş';
-$lang['cf_format_date'] = '%D %M, %Y';
 ?>

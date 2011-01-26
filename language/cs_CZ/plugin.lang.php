@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Defaultní';
 $lang['contact_form_title_label'] = 'Nadpis použitý v menu';
 $lang['contact_form_label'] = 'Název použitý v menu';
 $lang['contact_form_link_label'] = 'Text použit pro kontaktní odkaz v zápatí stránky';
-// History tab
-$lang['cf_tab_history'] = 'Historie';
-$lang['cf_history'] = 'Historie';
-$lang['cf_history_desc'] = 'Změny historie';
-$lang['cf_history_date'] = 'Datum';
-$lang['cf_history_version'] = 'Verze';
-$lang['cf_history_log'] = 'Změny';
-$lang['cf_file_not_found'] = 'Soubor nenalezen';
-$lang['cf_file_empty'] = 'Soubor je prázdný';
-$lang['cf_format_date'] = '%D.%M,%Y';
 ?>

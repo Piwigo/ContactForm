@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'الافتراضي';
 $lang['contact_form_title_label'] = 'العنوان مستخدم في شريط القوائم';
 $lang['contact_form_label'] = 'الاسم مستخدم في شريط القوائم';
 $lang['contact_form_link_label'] = 'النص مستخدم في رابط الاتصال في ذيل الصفحة';
-// History tab
-$lang['cf_tab_history'] = 'التاريخ';
-$lang['cf_history'] = 'التاريخ';
-$lang['cf_history_desc'] = 'تغيير التاريخ';
-$lang['cf_history_date'] = 'التاريخ';
-$lang['cf_history_version'] = 'الاصدار';
-$lang['cf_history_log'] = 'التغيير';
-$lang['cf_file_not_found'] = 'الملف غير موجود';
-$lang['cf_file_empty'] = 'الملف فارغ';
-$lang['cf_format_date'] = '%M %D, %Y';
 ?>

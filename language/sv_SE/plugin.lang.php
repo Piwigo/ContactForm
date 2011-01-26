@@ -76,15 +76,4 @@ $lang['cf_default_lang'] = 'Standard';
 $lang['contact_form_title_label'] = 'Titel som används i menyraden';
 $lang['contact_form_label'] = 'Namn som används i menyraden';
 $lang['contact_form_link_label'] = 'Text som används för kontakt länken i sidfoten';
-// History tab
-$lang['cf_tab_history'] = 'Historia';
-$lang['cf_history'] = 'Historia';
-$lang['cf_history_desc'] = 'Ändringar i historian';
-$lang['cf_history_date'] = 'Datum';
-$lang['cf_history_version'] = 'Version';
-$lang['cf_history_log'] = 'Changelog';
-$lang['cf_file_not_found'] = 'Filen hittades inte';
-$lang['cf_file_empty'] = 'Filen är tom';
-$lang['cf_format_date'] = '%M %D, %Y';
-
 ?>

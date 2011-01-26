@@ -75,16 +75,5 @@ $lang['cf_default_lang'] = 'Domyślny';
 $lang['contact_form_title_label'] = 'Tytuł używany in menubar';
 $lang['contact_form_label'] = 'Nazwa używana w menubar';
 $lang['contact_form_link_label'] = 'Tekst używany w stopce strony jako link kontaktu';
-// History tab
-$lang['cf_tab_history'] = 'Historia';
-$lang['cf_history'] = 'Historia';
-$lang['cf_history_desc'] = 'Histora zmian';
-$lang['cf_history_date'] = 'Data';
-$lang['cf_history_version'] = 'Wersja';
-$lang['cf_history_log'] = 'Zmiany';
-$lang['cf_file_not_found'] = 'Pliku nie znaleziono';
-$lang['cf_file_empty'] = 'Plik jest pusty';
-$lang['cf_format_date'] = '%D %M %Y';
-
 // translated by emcek
 ?>

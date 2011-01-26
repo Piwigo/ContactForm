@@ -76,15 +76,4 @@ $lang['cf_default_lang'] = 'Standaard';
 $lang['contact_form_title_label'] = 'Titel gebruikt in menubalk';
 $lang['contact_form_label'] = 'Naam gebruikt in de menubalk';
 $lang['contact_form_link_label'] = 'Tekt gebruikt in de contact link in de pagina voettekst';
-// History tab
-$lang['cf_tab_history'] = 'Historie';
-$lang['cf_history'] = 'Historie';
-$lang['cf_history_desc'] = 'Wijzigings geschiedenis';
-$lang['cf_history_date'] = 'Datum';
-$lang['cf_history_version'] = 'Versie';
-$lang['cf_history_log'] = 'wijzigingen log';
-$lang['cf_file_not_found'] = 'Bestand niet gevonden';
-$lang['cf_file_empty'] = 'Bestand is leeg';
-$lang['cf_format_date'] = '%D %M, %Y';
-
 ?>

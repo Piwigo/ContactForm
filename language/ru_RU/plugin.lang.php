@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Язык по умолчанию';
 $lang['contact_form_title_label'] = 'Название элемента в меню';
 $lang['contact_form_label'] = 'Имя элемента в меню';
 $lang['contact_form_link_label'] = 'Текст метки контактной информации внизу страницы';
-// Вкладка "Журнал"
-$lang['cf_tab_history'] = 'Журнал';
-$lang['cf_history'] = 'Журнал';
-$lang['cf_history_desc'] = 'Описание';
-$lang['cf_history_date'] = 'Дата';
-$lang['cf_history_version'] = 'Версия';
-$lang['cf_history_log'] = 'Журнал изменений';
-$lang['cf_file_not_found'] = 'Файл не найден';
-$lang['cf_file_empty'] = 'Файл пуст';
-$lang['cf_format_date'] = '%M %D, %Y';
 ?>

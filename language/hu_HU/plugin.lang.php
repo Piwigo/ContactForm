@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Alapértelmezett';
 $lang['contact_form_title_label'] = 'Bővítmények menüsorban használt cím';
 $lang['contact_form_label'] = 'Menüben használt menücím';
 $lang['contact_form_link_label'] = 'Az oldal láblécében használt kapcsolat link szövege';
-// History tab
-$lang['cf_tab_history'] = 'Verziótörténet';
-$lang['cf_history'] = 'Verziótörténet';
-$lang['cf_history_desc'] = 'Verziótörténet';
-$lang['cf_history_date'] = 'Dátum';
-$lang['cf_history_version'] = 'Változat';
-$lang['cf_history_log'] = 'Módosítások';
-$lang['cf_file_not_found'] = 'A fájl nem található';
-$lang['cf_file_empty'] = 'A fájl üres';
-$lang['cf_format_date'] = '%Y. %M %D.';
 ?>

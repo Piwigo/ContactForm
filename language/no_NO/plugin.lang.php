@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Satndard';
 $lang['contact_form_title_label'] = 'Tittel brukt i meny linjen';
 $lang['contact_form_label'] = 'Navn brkt i meny linjen';
 $lang['contact_form_link_label'] = 'Tekst brukt kontakt link i sidens bunn linje';
-// History tab
-$lang['cf_tab_history'] = 'Historie';
-$lang['cf_history'] = 'Historie';
-$lang['cf_history_desc'] = 'Forandrer historie';
-$lang['cf_history_date'] = 'Dato';
-$lang['cf_history_version'] = 'Versjon';
-$lang['cf_history_log'] = 'Forandrings logg';
-$lang['cf_file_not_found'] = 'Fil ikke funnet';
-$lang['cf_file_empty'] = 'Filen er tom';
-$lang['cf_format_date'] = '%M %D, %Å';
 ?>

@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Default';
 $lang['contact_form_title_label'] = 'Title used in menubar';
 $lang['contact_form_label'] = 'Name used in menubar';
 $lang['contact_form_link_label'] = 'Text used for contact link in the page footer';
-// History tab
-$lang['cf_tab_history'] = 'History';
-$lang['cf_history'] = 'History';
-$lang['cf_history_desc'] = 'Changes history';
-$lang['cf_history_date'] = 'Date';
-$lang['cf_history_version'] = 'Version';
-$lang['cf_history_log'] = 'Changelog';
-$lang['cf_file_not_found'] = 'File not found';
-$lang['cf_file_empty'] = 'File is empty';
-$lang['cf_format_date'] = '%M %D, %Y';
 ?>

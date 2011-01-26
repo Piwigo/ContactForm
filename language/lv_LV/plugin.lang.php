@@ -76,14 +76,4 @@ $lang['cf_default_lang'] = 'Pēc noklusējuma';
 $lang['contact_form_title_label'] = 'Izvēlnes joslā lietotais virsraksts';
 $lang['contact_form_label'] = ' Izvēlnes joslā lietotais vārds';
 $lang['contact_form_link_label'] = 'Lapas kājenī kontaktsaitei lietotais teksts';
-// Iezīme vēsture
-$lang['cf_tab_history'] = 'Vēsture';
-$lang['cf_history'] = 'Vēsture';
-$lang['cf_history_desc'] = 'Izmaina vēsturi';
-$lang['cf_history_date'] = 'Datums';
-$lang['cf_history_version'] = 'Versija';
-$lang['cf_history_log'] = 'Izmaiņu logs (Changelog)';
-$lang['cf_file_not_found'] = 'Fails nav atrasts';
-$lang['cf_file_empty'] = 'Fails ir tukšs';
-$lang['cf_format_date'] = '%M %D, %Y';
 ?>

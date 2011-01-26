@@ -75,14 +75,4 @@ $lang['cf_default_lang'] = 'Default';
 $lang['contact_form_title_label'] = 'Benutzter Titel in der Menüleiste';
 $lang['contact_form_label'] = 'Angezeigter Name in der Menüleiste';
 $lang['contact_form_link_label'] = 'Benutzter Text als Kontaktlink in der Fusszeile';
-// History tab
-$lang['cf_tab_history'] = 'Historie';
-$lang['cf_history'] = 'Historie';
-$lang['cf_history_desc'] = 'Historie der Revisionen';
-$lang['cf_history_date'] = 'Datum';
-$lang['cf_history_version'] = 'Version';
-$lang['cf_history_log'] = 'Change log';
-$lang['cf_file_not_found'] = 'Datei konnte nicht gefunden werden';
-$lang['cf_file_empty'] = 'Die Datei ist lehr';
-$lang['cf_format_date'] = '%D %M %Y';
 ?>
