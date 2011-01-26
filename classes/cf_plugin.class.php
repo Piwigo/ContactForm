@@ -150,10 +150,6 @@ class CF_Plugin {
     return $this->config;
   }
 
-  function get_version() {
-    return $this->config->get_version();
-  }
-  
   function get_title() {
     // Include language advices
     load_language('plugin.lang', CF_PATH);

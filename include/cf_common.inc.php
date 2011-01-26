@@ -6,7 +6,6 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 /* ************************** */
 
 // Version
-define('CF_VERSION',            '1.1.9');
 define('CF_TITLE',              'cf_plugin_name');
 
 // Directories
@@ -43,7 +42,6 @@ if (isset($plugin)) {
 define('CF_CFG_DB_FACTORY',     'Factory settings for plugin %s [%s]');
 define('CF_CFG_DB_COMMENT',     'Configuration of plugin %s [%s]');
 define('CF_CFG_COMMENT',        'comment');
-define('CF_CFG_VERSION',        'version');
 
 define('CF_CFG_MENU_LINK',      'cf_menu_link');
 define('CF_CFG_SUBJECT_PREFIX', 'cf_subject_prefix');

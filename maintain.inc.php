@@ -13,10 +13,6 @@ function plugin_install($plugin_id, $version, &$errors) {
   include_once(CF_PATH . 'include/cf_common.inc.php');
   // Include language advices
   load_language('plugin.lang', CF_PATH);
-  if ($version != CF_VERSION) {
-    array_push($errors, sprintf(l10n('cf_inconsistent_version'), $plugin_id));
-    return;
-  }
   update_config($plugin_id, CF_CFG_DB_FACTORY);
 }
 
@@ -36,7 +32,6 @@ function plugin_uninstall($plugin_id) {
 function update_config($plugin_id, $db_comment=null) {
   include_once(CF_PATH . 'include/cf_common.inc.php');
   $clean = cf_clean_obsolete_files(CF_OBSOLETE);
-  $cf_config_default[CF_CFG_VERSION] = CF_VERSION;
   if (null != $db_comment) {
     $cf_config_default[CF_CFG_COMMENT] = $db_comment;
   }

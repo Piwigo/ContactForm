@@ -34,13 +34,6 @@ class CF_Config {
       $this->config_values[$key] = $value;
   }
 
-  function get_version() {
-    if (isset($this->config_values[CF_CFG_VERSION])) {
-      return $this->config_values[CF_CFG_VERSION];
-    }
-    return CF_VERSION;
-  }
-
   function set_db_key($key) {
     $this->db_key = $key;
   }
@@ -119,8 +112,7 @@ class CF_Config {
       $this->set_value(CF_CFG_COMMENT, CF_CFG_DB_COMMENT);
     }
     $db_comment = sprintf($this->config_values[CF_CFG_COMMENT],
-                          $this->db_key,
-                          $this->get_version());
+                          $this->db_key);
     $query = '
         REPLACE INTO '.CONFIG_TABLE.'
         VALUES(
@@ -145,10 +137,6 @@ class CF_Config {
     $config->set_db_key($plugin_id);
     $config->load_config();
     $default_config = CF_Config::$default_config;
-    if (isset($default_config[CF_CFG_VERSION])) {
-      // Override version
-      $config->set_value(CF_CFG_VERSION, $default_config[CF_CFG_VERSION]);
-    }
     if (isset($default_config[CF_CFG_COMMENT])) {
       // Override comment
       $config->set_value(CF_CFG_COMMENT, $default_config[CF_CFG_COMMENT]);

@@ -63,7 +63,6 @@ $template->set_filenames(array(
 
 $cf = array(
     'TITLE'     => $cf_plugin->get_title(),
-    'VERSION'   => $cf_plugin->get_version(),
     'F_ACTION'  => '',
   );
 $template->assign('CF', $cf);
