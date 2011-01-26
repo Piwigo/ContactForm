@@ -1,3 +1,7 @@
+2011-01-26 1.1.9
+                  [r8887] Old key of language to be corrected  bug:2130
+				  [r8887] RAdd 2 trigger for compatibility with Captcha plugin and more plugin. Thanks to P@t
+
 2011-01-05 1.1.8
                   [r8689] add ar_SA thanks to bakir
 				  [r8689] Remove version information in title on tab.
