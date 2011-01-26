@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Vennligst fyll inn en beskjed';
 $lang['cf_error_sending_mail'] = 'Feil ved sending av e-mail';
 $lang['cf_sending_mail_successful'] = 'E-mail ble sendt';
 $lang['cf_form_error'] = 'Invalide data';
-$lang['cf_inconsistent_version'] = '%s: inkonsekvent versjons nummer';
 $lang['cf_no_unlink'] = 'Funksjonen \'fjern link\' ikke tilgjengelig...';
 $lang['cf_unlink_errors'] = 'En feil oppstod ved sletting av filer';
 $lang['cf_config_saved'] = 'Konfigurasjon lagret';

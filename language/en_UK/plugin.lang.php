@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Please enter a message';
 $lang['cf_error_sending_mail'] = 'Error while sending e-mail';
 $lang['cf_sending_mail_successful'] = 'E-mail sent successfully';
 $lang['cf_form_error'] = 'Invalid data';
-$lang['cf_inconsistent_version'] = '%s: inconsistent version numbers';
 $lang['cf_no_unlink'] = 'Function \'unlink\' not available...';
 $lang['cf_unlink_errors'] = 'Error occured during file deletion';
 $lang['cf_config_saved'] = 'Configuration successfully saved';

@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Vul een berichttekst in ';
 $lang['cf_error_sending_mail'] = 'Fout tijdens versturen van e-mail';
 $lang['cf_sending_mail_successful'] = 'E-mail succesvol verzonden';
 $lang['cf_form_error'] = 'Onjuiste gegevens';
-$lang['cf_inconsistent_version'] = '%s: inconsistente versie nummers';
 $lang['cf_no_unlink'] = 'Functie \'unlink\' nie beschikbaar...';
 $lang['cf_unlink_errors'] = 'Fout opgetreden tijdens verwijderen van bestand';
 $lang['cf_config_saved'] = 'Configuratie successvol opgeslagen';

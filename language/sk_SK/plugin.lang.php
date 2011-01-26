@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Prosím zadajte správu';
 $lang['cf_error_sending_mail'] = 'Chyba počas posielania e-mailu';
 $lang['cf_sending_mail_successful'] = 'E-mail bol úspešne odoslaný';
 $lang['cf_form_error'] = 'Neplatné údaje';
-$lang['cf_inconsistent_version'] = '%s: Nezhodné čísla verzií';
 $lang['cf_no_unlink'] = 'Funkcia \'unlink\' nie je prístupná...';
 $lang['cf_unlink_errors'] = 'Vyskytla sa chyba v priebehu mazania súboru';
 $lang['cf_config_saved'] = 'Konfigurácia bola úspešne uložená';

@@ -32,7 +32,6 @@ $lang['cf_message_error'] = 'Bitte fügen Sie eine Mitteilung hinzu';
 $lang['cf_error_sending_mail'] = 'Es ist ein Fehler beim Versand der E-Mail aufgetreten'; 
 $lang['cf_sending_mail_successful'] = 'Die E-Mail wurde erfolgreich versendet';
 $lang['cf_form_error'] = 'Ungültige Daten'; 
-$lang['cf_inconsistent_version'] = '%s : Inkompatible Version';
 $lang['cf_no_unlink'] = 'Die Funktion \'unlink\' ist nicht verfügbar...';
 $lang['cf_unlink_errors'] = 'Es ist ein Fehler während der Löschung der Datei entstanden';
 $lang['cf_config_saved'] = 'Die Konfiguration wurde erfolgreich gespeichert werden';

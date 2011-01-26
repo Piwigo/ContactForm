@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'من فضلك ادخل رسالة';
 $lang['cf_error_sending_mail'] = 'حدث خطأ أثناء الارسال';
 $lang['cf_sending_mail_successful'] = 'تم الارسال بنجاح';
 $lang['cf_form_error'] = 'معلومات غير صحيحة';
-$lang['cf_inconsistent_version'] = '%s: أرقام إصدار غير متناسقة';
 $lang['cf_no_unlink'] = 'الوظيفة "unlink" غير متوفرة';
 $lang['cf_unlink_errors'] = 'خطأ اثناء حذف الملف';
 $lang['cf_config_saved'] = 'الاعدادات حفظت بنجاح';

@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Írd be az üzeneted';
 $lang['cf_error_sending_mail'] = 'Hiba történt a levél küldése közben';
 $lang['cf_sending_mail_successful'] = 'A levelet sikeresen elküldtük';
 $lang['cf_form_error'] = 'Érvénytelen adat';
-$lang['cf_inconsistent_version'] = '%s: következetlen verziószám';
 $lang['cf_no_unlink'] = 'Csatolás megszűntetése \'unlink\' lehetőség nem elérhető...';
 $lang['cf_unlink_errors'] = 'Hiba történt a fájl törlésekor';
 $lang['cf_config_saved'] = 'A beállítások mentése sikeres';

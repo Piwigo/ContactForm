@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Prosím zadejte zprávu';
 $lang['cf_error_sending_mail'] = 'Nastala chyba při odeslání zprávy';
 $lang['cf_sending_mail_successful'] = 'E-mail odeslán';
 $lang['cf_form_error'] = 'Nesprávná data';
-$lang['cf_inconsistent_version'] = '%s: nekonzistentní čísla verzí';
 $lang['cf_no_unlink'] = 'Funkce \'unlink\' není k dispozici...';
 $lang['cf_unlink_errors'] = 'Chyba nastala při mazání souboru';
 $lang['cf_config_saved'] = 'Konfigurace uložena';

@@ -32,7 +32,6 @@ $lang['cf_message_error'] = 'Entrare un messaggio';
 $lang['cf_error_sending_mail'] = 'Errore durante l\'invio dell\'E-mail'; 
 $lang['cf_sending_mail_successful'] = 'Invio dell\'E-mail riuscito';
 $lang['cf_form_error'] = 'Dati errati'; 
-$lang['cf_inconsistent_version'] = '%s : versioni incoerenti';
 $lang['cf_no_unlink'] = 'La funzione \'unlink\' non è disponibile';
 $lang['cf_unlink_errors'] = 'Errori durante la sopressione dei file';
 $lang['cf_config_saved'] = 'Configurazione salvata con successo';

@@ -32,7 +32,6 @@ $lang['cf_message_error'] = 'Proszę wpisać wiadomość';
 $lang['cf_error_sending_mail'] = 'Błąd podczas wysyłania wiadomości';
 $lang['cf_sending_mail_successful'] = 'Wiadomość wysłana poprawnie';
 $lang['cf_form_error'] = 'Nieprawidłowe dane';
-$lang['cf_inconsistent_version'] = '%s: niesłaściwy numer wersji';
 $lang['cf_no_unlink'] = 'Funkcja \'unlink\' niedostępna...';
 $lang['cf_unlink_errors'] = 'Wystąpił błąd podczas kasowania pliku';
 $lang['cf_config_saved'] = 'Konfiguracja zapisana poprawnie';

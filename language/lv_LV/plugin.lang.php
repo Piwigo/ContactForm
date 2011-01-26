@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Lūdzu ievadiet ziņojumu';
 $lang['cf_error_sending_mail'] = 'Kļūda sūtot e-pastu';
 $lang['cf_sending_mail_successful'] = 'E-pasts nosūtīts veiksmīgi';
 $lang['cf_form_error'] = 'Kļūdaini dati';
-$lang['cf_inconsistent_version'] = '%s: pretrunīgi versiju numuri';
 $lang['cf_no_unlink'] = 'Funkcija \'unlink\' nav pieejama...';
 $lang['cf_unlink_errors'] = 'Kļūda dzēšot failu';
 $lang['cf_config_saved'] = 'Konfigurācija veiksmīgi saglabāta';

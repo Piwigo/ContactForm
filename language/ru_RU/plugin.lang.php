@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Пожалуйста, введите сообщен
 $lang['cf_error_sending_mail'] = 'Ошибка при отправке сообщения';
 $lang['cf_sending_mail_successful'] = 'Сообщение успешно отправлено';
 $lang['cf_form_error'] = 'Ошибка при подготовке сообщения к отправке';
-$lang['cf_inconsistent_version'] = '%s: несовместимая версия';
 $lang['cf_no_unlink'] = 'Функция \'unlink\' недоступна...';
 $lang['cf_unlink_errors'] = 'Ошибка при удалении файла';
 $lang['cf_config_saved'] = 'Настройки успешно сохранены';

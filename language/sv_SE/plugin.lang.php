@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Skriv ett meddelande';
 $lang['cf_error_sending_mail'] = 'Fel vid sändning av e-post';
 $lang['cf_sending_mail_successful'] = 'E-post skickats';
 $lang['cf_form_error'] = 'Ogiltiga data';
-$lang['cf_inconsistent_version'] = '%s: inkonsekvent versionsnummer';
 $lang['cf_no_unlink'] = 'Funktion \'unlink\' inte tillgänglig...';
 $lang['cf_unlink_errors'] = 'Fel inträffade vid borttagning av filer';
 $lang['cf_config_saved'] = 'Konfiguration sparats';

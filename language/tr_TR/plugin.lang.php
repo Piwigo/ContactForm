@@ -33,7 +33,6 @@ $lang['cf_message_error'] = 'Lütfen mesajınızı girin';
 $lang['cf_error_sending_mail'] = 'Mesajın görilmesinde sorun oluştu';
 $lang['cf_sending_mail_successful'] = 'Mesajınız başarılı bir şekilde gönderildi.';
 $lang['cf_form_error'] = 'Geçersiz bilgi';
-$lang['cf_inconsistent_version'] = '%s: bağpdaşmayan versiyon';
 $lang['cf_no_unlink'] = 'Fonksiyon \'unlink\' ulaşılamaz...';
 $lang['cf_unlink_errors'] = 'Dosyada hata oluştu';
 $lang['cf_config_saved'] = 'Değişiklikler başarılı bir şekilde kaydedildi.';
