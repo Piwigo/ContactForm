@@ -1,4 +1,0 @@
-File automatically created from SVN repository.
-
-URL: http://piwigo.org/svn/extensions/ContactForm 
-Revision: 4497
