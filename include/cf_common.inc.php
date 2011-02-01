@@ -39,7 +39,7 @@ if (isset($plugin)) {
   define('CF_CFG_DB_KEY',       $plugin['id']);
 }
 define('CF_CFG_DB_FACTORY',     'Factory settings for plugin %s [%s]');
-define('CF_CFG_DB_COMMENT',     'Configuration of plugin %s [%s]');
+define('CF_CFG_DB_COMMENT',     'Configuration of plugin %s');
 define('CF_CFG_COMMENT',        'comment');
 
 define('CF_CFG_MENU_LINK',      'cf_menu_link');
