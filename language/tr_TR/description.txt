@@ -1,1 +1,1 @@
-Ajoute un élément "Contacter" dans le bloc Menu afin d'offrir un formulaire de contact aux utilisateurs
+Kullanıcılara bir iletişim formu sunan bloğu "İletişim" menüye ekle
