@@ -61,7 +61,6 @@ define('CF_CFG_ADMIN_MAILS',    'cf_admin_mails');
 
 // Load class files
 cf_require_class("CF_Log");
-cf_require_class("CF_Config_Lang");
 cf_require_class("CF_Config");
 cf_require_class("CF_Plugin");
 
@@ -81,64 +80,4 @@ $cf_config_default[CF_CFG_REDIRECT_DELAY] = CF_REDIRECT_DELAY;
 $cf_config_default[CF_CFG_ADMIN_MAILS] = cf_get_admins_contacts();
 $cf_config_default[CF_CFG_ADMIN_MAILS] = array();
 CF_Config::$default_config = $cf_config_default;
-
-$cf_config_lang_keys = array();
-$cf_config_lang_keys['contact_form_title'] = array(
-    CF_LANG_DEFAULT => l10n('contact_form_title'),
-	'ar_SA' => 'نموذج الاتصال',
-	'cs_CZ' => 'Kontaktní formulář',
-	'de_DE' => 'Kontaktformular',
-    'en_UK' => 'Contact form',
-	'es_ES' => 'Formulario de contacto',
-    'fr_FR' => 'Formulaire de contact',
-	'hu_HU' => 'Kapcsolati urlap',
-    'it_IT' => 'Formulario di contatto',
-	'lv_LV' => 'Kontaktforma',
-	'nl_NL' => 'Contact formulier',
-	'no_NO' => 'Kontakt skjema',
-	'pl_PL' => 'Formularz kontaktu',
-	'ru_RU' => 'Контактная информация',
-	'sk_SK' => 'Kontaktný formulár',
-	'sv_SE' => 'Kontakt formulär',
-	'tr_TR' => 'İletişim formu'
-);
-$cf_config_lang_keys['contact_form'] = array(
-    CF_LANG_DEFAULT => l10n('contact_form'),
-	'ar_SA' => 'اتصل بنا',
-	'cs_CZ' => 'Kontakt',
-	'de_DE' => 'Kontaktformular',
-    'en_UK' => 'Contact',
-	'es_ES' => 'Contactar',
-    'fr_FR' => 'Formulaire de contact',
-	'hu_HU' => 'Kapcsolat',
-    'it_IT' => 'Contattare',
-	'lv_LV' => 'Kontaktēt',
-	'nl_NL' => 'Contact',
-	'no_NO' => 'Kontakt',
-	'pl_PL' => 'Kontakt',
-	'ru_RU' => 'Контакты',
-	'sk_SK' => 'Kontakt',
-	'sv_SE' => 'Kontakt',
-	'tr_TR' => 'İletişim'
-); 
-$cf_config_lang_keys['contact_form_link'] = array(
-    CF_LANG_DEFAULT => l10n('contact_form_link'),
-	'ar_SA' => 'اتصل بمدير الموقع',
-	'cs_CZ' => 'Kontakt správce webu',
-	'de_DE' => 'Den Webmaster kontaktieren',
-    'en_UK' => 'Contact webmaster',
-	'es_ES' => 'Contactar webmestre',
-    'fr_FR' => 'Contacter le webmestre',
-	'hu_HU' => 'Webmester kapcsolat',
-    'it_IT' => 'Contattare il webmaster',
-	'lv_LV' => 'Kontaktēt ar webmāsteru',
-	'nl_NL' => 'Contact webmaster',
-	'no_NO' => 'Kontakt webmaster',
-	'pl_PL' => 'Kontakt do webmastera',
-	'ru_RU' => 'Contact webmaster',
-	'sk_SK' => 'Kontaktovanie webmastera',
-	'sv_SE' => 'Kontakta webmaster',
-	'tr_TR' => 'İletişim- Site yöneticisi'
-);
-CF_Config_Lang::$default_keys = $cf_config_lang_keys;
 ?>

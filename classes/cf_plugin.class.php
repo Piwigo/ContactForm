@@ -52,7 +52,7 @@ class CF_Plugin {
     }
     
     $cf_values = array(
-        'TEXT'  => $this->config->get_lang_value('contact_form_link'),
+        'TEXT'  => l10n('contact_form_link'),
         'URL'   => make_index_url(array('section' => CF_URL_PARAMETER)),
       );
     $template->assign('CF_FOOTER_VALUES', $cf_values);
@@ -74,8 +74,8 @@ class CF_Plugin {
     
     if (!isset($block_mbMenu->data[CF_MENUBAR_KEY])) {
       $contact_form_menu = array(
-          'TITLE' => $this->config->get_lang_value('contact_form_title'),
-          'NAME'  => $this->config->get_lang_value('contact_form'),
+          'TITLE' => l10n('contact_form_title'),
+          'NAME'  => l10n('contact_form'),
           'URL'   => make_index_url(array('section' => CF_URL_PARAMETER)),
         );
       $block_mbMenu->data[CF_MENUBAR_KEY] = $contact_form_menu;
@@ -164,7 +164,7 @@ class CF_Plugin {
   protected function get_html_contact_form_link() {
     global $template;
     $cf_link = array(
-        'TEXT'  => $this->config->get_lang_value('contact_form_link'),
+        'TEXT'  => l10n('contact_form_link'),
         'URL'   => make_index_url(array('section' => CF_URL_PARAMETER)),
       );
     $template->set_filenames(array(

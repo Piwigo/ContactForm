@@ -65,13 +65,4 @@ $lang['cf_emails_desc'] = 'Verwaltung des E-Mail Bestimmungsortes';
 $lang['cf_active'] = 'Aktive E-Mail';
 $lang['cf_no_mail'] = 'Keine E-Mail Adresse verfügbar';
 $lang['cf_refresh'] = 'Regeneriere die E-Mail Adressenliste';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalisation';
-$lang['cf_language'] = 'Lokalisation';
-$lang['cf_language_desc'] = 'Übersetzung der Mitteilungen';
-$lang['cf_select_item'] = 'Das zu übersetzende Item auswählen';
-$lang['cf_default_lang'] = 'Default';
-$lang['contact_form_title_label'] = 'Benutzter Titel in der Menüleiste';
-$lang['contact_form_label'] = 'Angezeigter Name in der Menüleiste';
-$lang['contact_form_link_label'] = 'Benutzter Text als Kontaktlink in der Fusszeile';
 ?>

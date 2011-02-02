@@ -10,7 +10,6 @@ class CF_Config {
   protected $config_values;
   protected $db_key = null;
   protected $db_comment = null;
-  protected $config_lang;
   
   /* ************************ */
   /* ** Constructor        ** */
@@ -38,30 +37,11 @@ class CF_Config {
     $this->db_key = $key;
   }
   
-  function get_config_lang() {
-    return $this->config_lang;
-  }
-  
-  function get_lang_value($item, $language=null) {
-    if (null == $language) {
-      global $user;
-      $language = $user['language'];
-    }
-    $value = $this->config_lang->get_value($language, $item);
-    if (empty($value)) {
-      cf_switch_to_default_lang();
-      $value = l10n($item);
-      cf_switch_back_to_user_lang();
-    }
-    return $value;
-  }
-  
   /* ************************ */
   /* ** Loading methods    ** */
   /* ************************ */
   
   function load_config() {
-    $this->config_lang = null;
     if (null != $this->db_key) {
       $query = '
           SELECT value
@@ -73,25 +53,13 @@ class CF_Config {
         $row = mysql_fetch_row($result);
         if(is_string($row[0])) {
           $this->config_values = unserialize($row[0]);
-          if (isset($this->config_values['config_lang'])) {
-            $this->config_lang = $this->config_values['config_lang'];
-            $this->config_values['config_lang'] = null;
-          }
         }
       }
     }
-//    CF_Log::add_debug($this->config_lang, 'CF_Config::load_config');
     $this->load_default_config();
   }
   
   protected function load_default_config() {
-    if (null == $this->config_lang) {
-      $this->config_lang = new CF_Config_Lang();
-      $this->config_values['config_lang'] = null;
-      CF_Log::add_debug($this->config_lang,'CF_Config::load_default_config');
-    }
-    $this->config_lang->set_default_values();
-    $this->config_lang->update_keys();
     foreach (CF_Config::$default_config as $key => $value) {
       if (!isset($this->config_values[$key])) {
         $this->config_values[$key] = $value;
@@ -107,7 +75,9 @@ class CF_Config {
     if (null == $this->db_key) {
       return false;
     }
-    $this->config_values['config_lang'] = $this->config_lang;
+
+    unset($this->config_values['config_lang']);
+    
     if (!isset($this->config_values[CF_CFG_COMMENT])) {
       $this->set_value(CF_CFG_COMMENT, CF_CFG_DB_COMMENT);
     }

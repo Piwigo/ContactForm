@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'Cieľový manažment e-mailov';
 $lang['cf_active'] = 'Actívny e-mail';
 $lang['cf_no_mail'] = 'E-mailová adresa nie je dostupná';
 $lang['cf_refresh'] = 'Obnoviť zoznam e-mailých adries';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalizácia';
-$lang['cf_language'] = 'Lokalizácia';
-$lang['cf_language_desc'] = 'Preklad správ';
-$lang['cf_select_item'] = 'Označenie položiek na preklad';
-$lang['cf_default_lang'] = 'Predvolené';
-$lang['contact_form_title_label'] = 'Názov použitý v menu';
-$lang['contact_form_label'] = 'Názov použitý v menu';
-$lang['contact_form_link_label'] = 'Text použitý na kontaktný link v päte stránky';
 ?>

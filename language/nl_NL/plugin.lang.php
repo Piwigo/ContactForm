@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'Bestemming van e-mail beheer';
 $lang['cf_active'] = 'Actieve e-mail';
 $lang['cf_no_mail'] = 'Geen e-mail adres beschikbaar';
 $lang['cf_refresh'] = 'Regenereer e-mail lijst adres';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalisatie';
-$lang['cf_language'] = 'Lokalisatie';
-$lang['cf_language_desc'] = 'bericht vertaling';
-$lang['cf_select_item'] = 'Selecteer item om te vertalen';
-$lang['cf_default_lang'] = 'Standaard';
-$lang['contact_form_title_label'] = 'Titel gebruikt in menubalk';
-$lang['contact_form_label'] = 'Naam gebruikt in de menubalk';
-$lang['contact_form_link_label'] = 'Tekt gebruikt in de contact link in de pagina voettekst';
 ?>

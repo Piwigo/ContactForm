@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'Destination e-post hantering';
 $lang['cf_active'] = 'Aktiv e-post';
 $lang['cf_no_mail'] = 'Ingen e-postadress tillgänglig';
 $lang['cf_refresh'] = 'generera ny e-post lista';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalisering';
-$lang['cf_language'] = 'Lokalisering';
-$lang['cf_language_desc'] = 'Meddelanden översättning';
-$lang['cf_select_item'] = 'Välj post för att översätta';
-$lang['cf_default_lang'] = 'Standard';
-$lang['contact_form_title_label'] = 'Titel som används i menyraden';
-$lang['contact_form_label'] = 'Namn som används i menyraden';
-$lang['contact_form_link_label'] = 'Text som används för kontakt länken i sidfoten';
 ?>

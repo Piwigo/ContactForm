@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'Cél e-mail címek kezelése';
 $lang['cf_active'] = 'Aktív e-mail';
 $lang['cf_no_mail'] = 'Nincs e-mail cím';
 $lang['cf_refresh'] = 'E-mail címlista frissítése';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalizáció';
-$lang['cf_language'] = 'Lokalizáció';
-$lang['cf_language_desc'] = 'Megjelenő szöveg fordítása';
-$lang['cf_select_item'] = 'Lefordítandó elem kijelölése';
-$lang['cf_default_lang'] = 'Alapértelmezett';
-$lang['contact_form_title_label'] = 'Bővítmények menüsorban használt cím';
-$lang['contact_form_label'] = 'Menüben használt menücím';
-$lang['contact_form_link_label'] = 'Az oldal láblécében használt kapcsolat link szövege';
 ?>

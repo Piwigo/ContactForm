@@ -7,7 +7,6 @@ CF_Log::reset_messages();
 
 $config_tabs[]='config';
 $config_tabs[]='emails';
-$config_tabs[]='language';
 
 global $template, $page;
 // Include language advices

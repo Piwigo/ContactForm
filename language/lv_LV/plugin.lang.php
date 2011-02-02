@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'e-pastu galamērķu pārvaldība';
 $lang['cf_active'] = 'Aktīvs e-pasts';
 $lang['cf_no_mail'] = 'Nav pieejama e-pasta adrese';
 $lang['cf_refresh'] = 'Atjaunot e-pasta saraksta adresi';
-// Iezīme valoda  
-$lang['cf_tab_language'] = 'Lokalizācija';
-$lang['cf_language'] = 'Lokalizācija';
-$lang['cf_language_desc'] = 'Ziņojuma tulkojums';
-$lang['cf_select_item'] = 'Izvēlēties pārtulkojamo vienību';
-$lang['cf_default_lang'] = 'Pēc noklusējuma';
-$lang['contact_form_title_label'] = 'Izvēlnes joslā lietotais virsraksts';
-$lang['contact_form_label'] = ' Izvēlnes joslā lietotais vārds';
-$lang['contact_form_link_label'] = 'Lapas kājenī kontaktsaitei lietotais teksts';
 ?>

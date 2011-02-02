@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'Получатели e-mail';
 $lang['cf_active'] = 'Активный адрес e-mail';
 $lang['cf_no_mail'] = 'Нет доступных адресов e-mail';
 $lang['cf_refresh'] = 'Сформировать список адресов e-mail снова';
-// Вкладка "Языки"
-$lang['cf_tab_language'] = 'Локализация';
-$lang['cf_language'] = 'Локализация';
-$lang['cf_language_desc'] = 'Перевод сообщений';
-$lang['cf_select_item'] = 'Выберите элементы для перевода';
-$lang['cf_default_lang'] = 'Язык по умолчанию';
-$lang['contact_form_title_label'] = 'Название элемента в меню';
-$lang['contact_form_label'] = 'Имя элемента в меню';
-$lang['contact_form_link_label'] = 'Текст метки контактной информации внизу страницы';
 ?>

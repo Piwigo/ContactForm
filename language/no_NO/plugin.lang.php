@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'mål for e-mail behandling';
 $lang['cf_active'] = 'Aktive e-mail';
 $lang['cf_no_mail'] = 'INgen e-mail addresse tilgjengelig';
 $lang['cf_refresh'] = 'Oppdater e-mail adresse liste';
-// Language tab
-$lang['cf_tab_language'] = 'Lokalisasjon';
-$lang['cf_language'] = 'Lokalisasjon';
-$lang['cf_language_desc'] = 'Beskjed oversettelse';
-$lang['cf_select_item'] = 'Velg beskjef å oversette';
-$lang['cf_default_lang'] = 'Satndard';
-$lang['contact_form_title_label'] = 'Tittel brukt i meny linjen';
-$lang['contact_form_label'] = 'Navn brkt i meny linjen';
-$lang['contact_form_link_label'] = 'Tekst brukt kontakt link i sidens bunn linje';
 ?>

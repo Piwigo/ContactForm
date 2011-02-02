@@ -69,13 +69,4 @@ $lang['cf_emails_desc'] = 'Hedef e-posta yönetimi';
 $lang['cf_active'] = 'Etkin e-posta';
 $lang['cf_no_mail'] = 'Mevcut e-posta adresi yok';
 $lang['cf_refresh'] = 'E-posta listesini tekrar oluştur';
-// Dil bölümü
-$lang['cf_tab_language'] = 'Yerelleştirme';
-$lang['cf_language'] = 'Yerelleştirme';
-$lang['cf_language_desc'] = 'Mesajları çevir';
-$lang['cf_select_item'] = 'Çevirmek için öğe seçiniz';
-$lang['cf_default_lang'] = 'Varsayılan';
-$lang['contact_form_title_label'] = 'Menüde kullanılan başlık';
-$lang['contact_form_label'] = 'Menüde kullanılan isim';
-$lang['contact_form_link_label'] = 'İletişim bağlantısı altında kullanılacak yazı';
 ?>

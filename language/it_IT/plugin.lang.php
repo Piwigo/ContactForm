@@ -65,13 +65,4 @@ $lang['cf_emails_desc'] = 'Gestione delle e-mail di destinazione';
 $lang['cf_active'] = 'E-mail attiva';
 $lang['cf_no_mail'] = 'Nessun\'indirizzo e-mail disponibile';
 $lang['cf_refresh'] = 'Rigenerare la lista degli indirizzi';
-// Language tab
-$lang['cf_tab_language'] = 'Localizzazione';
-$lang['cf_language'] = 'Localizzazione';
-$lang['cf_language_desc'] = 'Traduzzione dei messaggi';
-$lang['cf_select_item'] = 'Selezzionare l\'elemento da tradurre';
-$lang['cf_default_lang'] = 'Di default';
-$lang['contact_form_title_label'] = 'Titolo nella barra dei menu';
-$lang['contact_form_label'] = 'Nome visualizzato nella barra dei menu';
-$lang['contact_form_link_label'] = 'Testo utilizzato per il link di contatto nel footer';
 ?>

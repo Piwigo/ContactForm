@@ -66,13 +66,4 @@ $lang['cf_emails_desc'] = 'تنظيم البريد الالكتروني المس
 $lang['cf_active'] = 'البريد الالكتروني النشطة';
 $lang['cf_no_mail'] = 'لايوجد عنوان بريد الكتروني متاح';
 $lang['cf_refresh'] = 'اعادة توليد قوائم البريد الالكتروني';
-// Language tab
-$lang['cf_tab_language'] = 'الاماكن';
-$lang['cf_language'] = 'الاماكن';
-$lang['cf_language_desc'] = 'ترجمة الرسالة';
-$lang['cf_select_item'] = 'اختار شيئا للترجمة';
-$lang['cf_default_lang'] = 'الافتراضي';
-$lang['contact_form_title_label'] = 'العنوان مستخدم في شريط القوائم';
-$lang['contact_form_label'] = 'الاسم مستخدم في شريط القوائم';
-$lang['contact_form_link_label'] = 'النص مستخدم في رابط الاتصال في ذيل الصفحة';
 ?>
