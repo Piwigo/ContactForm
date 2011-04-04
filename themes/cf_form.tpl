@@ -1,38 +1,7 @@
-{html_head}
-  {known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
-  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
-  {known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.resizable.packed.js"}
-{/html_head}
+{combine_css path="plugins/ContactForm/include/contactform.css"}
+{combine_script id="ContactForm" load="async" path="plugins/ContactForm/include/contactform.js"}
 
-{literal}
-<script type="text/javascript">
-jQuery().ready(function(){
-    // Resize possible for textarea
-    jQuery("#cf_message").resizable({
-        handles: "all",
-        animate: true,
-        animateDuration: "slow",
-        animateEasing: "swing",
-        preventDefault: true,
-        preserveCursor: true,
-        autoHide: true,
-        ghost: true
-      });
-  });
-jQuery().ready(function(){
-  // Resize possible for textarea
-  jQuery(".cf-input").resizable({
-        handles: "e",
-        animate: true,
-        animateDuration: "slow",
-        animateEasing: "swing",
-        preventDefault: true,
-        preserveCursor: true,
-        autoHide: true,
-        ghost: true
-      });
-  });
-
+{footer_script}{literal}
 function cf_validate() {
   var items = new Array('cf_from_name','cf_from_mail','cf_subject','cf_message');
   var is_mail = new Array(false,true,false,false);
@@ -57,8 +26,8 @@ function cf_validate() {
   }
   return true;
 }
-</script>
-{/literal}
+{/literal}{/footer_script}
+
 <div id="autre_content" class="contact-form">
   <form  method="post" action="{$CF.F_ACTION}" class="filter" id="contactform" onsubmit="return cf_validate();">
   <div class="contact-form-content">

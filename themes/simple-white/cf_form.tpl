@@ -1,11 +1,7 @@
-{html_head}
-  <!-- {known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"} -->
-  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
-  {known_script id="jquery.ui.resizable" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.resizable.packed.js"}
-{/html_head}
+{combine_css path="plugins/ContactForm/include/contactform.css"}
+{combine_script id="ContactForm" load="async" path="plugins/ContactForm/include/contactform.js"}
 
-{literal}
-<script type="text/javascript">
+{footer_script}{literal}
 jQuery().ready(function(){
     // Resize possible for textarea
     jQuery("#cf_message").resizable({
@@ -57,8 +53,8 @@ function cf_validate() {
   }
   return true;
 }
-</script>
-{/literal}
+{/literal}{/footer_script}
+
 <div id="subcontent" class="contact-form">
   <form  method="post" action="{$CF.F_ACTION}" class="filter" id="contactform" onsubmit="return cf_validate();">
   <div class="contact-form-content">

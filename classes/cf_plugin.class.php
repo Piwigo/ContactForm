@@ -186,15 +186,7 @@ class CF_Plugin {
         'cf_form'     => realpath(cf_get_template('cf_form.tpl')),
         'cf_messages' => realpath(cf_get_template('cf_messages.tpl')),
       ));
-    $template->block_html_head( '',
-              '<link rel="stylesheet" type="text/css" '.
-              'href="' . CF_INCLUDE . 'contactform.css' . '">',
-              $smarty, $repeat);
-    $template->block_html_head( '',
-              '<script type="text/javascript" '.
-              'src="' . CF_INCLUDE . 'contactform.js' . '">'.
-              '</script>',
-              $smarty, $repeat);
+    
     $cf = array(
         'TITLE'     => 'contact_form_title',
         'NEED_NAME' => $this->config->get_value(CF_CFG_NAME_MANDATORY),
@@ -206,7 +198,7 @@ class CF_Plugin {
         'NAME'      => $infos['cf_from_name'],
         'SUBJECT'   => $infos['cf_subject'],
         'MESSAGE'   => $infos['cf_message'],
-        'KEY'       => get_comment_post_key($infos['cf_id']),
+        'KEY'       => get_ephemeral_key(2, $infos['cf_id']),
       );
     if (!empty($infos['errors'])) {
       $template->assign('errors', $infos['errors']);
@@ -462,16 +454,8 @@ class CF_Plugin {
     if (isset($_POST['cf_id'])) {
       $id = trim( stripslashes($_POST['cf_id']));
     }
-    
-    $key = explode( ':', $key );
-    if ( count($key)!=2
-          or $key[0]>time()-2 // page must have been retrieved more than 2 sec ago
-          or $key[0]<time()-3600 // 60 minutes expiration
-          or hash_hmac(
-                'md5', $key[0].':'.$id, $conf['secret_key']
-              ) != $key[1]
-        )
-    {
+
+    if (!verify_ephemeral_key($key, $id)) {
       return false;
     }
     return true;

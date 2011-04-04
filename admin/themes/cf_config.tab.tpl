@@ -1,7 +1,4 @@
-{html_head}
-  {known_script id="jquery.ui" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.core.packed.js"}
-  {known_script id="jquery.ui.tabs" src=$ROOT_URL|@cat:"themes/default/js/ui/packed/ui.tabs.packed.js"}
-{/html_head}
+{combine_script id="jquery.ui.tabs"}
 
 <div class="titrePage">
     <h2>{$CF.TITLE}<br>{'cf_config'|@translate}</h2>
@@ -70,11 +67,9 @@
 {* ----------- CONFIGURATION ----------- *}
 <p><input class="submit" type="submit" value="{'cf_validate'|@translate}" name="submit"></p>
 </form>
-{literal}
-<script type="text/javascript">
+{footer_script}{literal}
 $(document).ready(function() {
     $(".infos").fadeOut(800).fadeIn(1200).fadeOut(400).fadeIn(800).fadeOut(400);
     $(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
   });
-</script>
-{/literal}
+{/literal}{/footer_script}
