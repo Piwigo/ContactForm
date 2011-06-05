@@ -71,6 +71,7 @@ class CF_Plugin {
     }
     // Include language advices
     load_language('plugin.lang', CF_PATH);
+	load_language('lang', PHPWG_ROOT_PATH.'local/', array('no_fallback'=>true, 'local'=>true) ); 
     
     if (!isset($block_mbMenu->data[CF_MENUBAR_KEY])) {
       $contact_form_menu = array(
