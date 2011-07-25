@@ -14,9 +14,6 @@ div.contact-form-content {
 .cf-input-disabled {
   position: relative;
 }
-.cf-input, .cf-input-disabled {
-  left: 5px;
-}
 td.contact-form-left {
 	padding-right: 5px;
 	text-align: right;
