@@ -17,23 +17,22 @@ $lang['contact_redirect_title'] = 'Üzenet küldés állapot';
 
 // ==================================================================
 // Menubar block
-$lang['cf_from_name'] = 'Neved';
-$lang['cf_from_mail'] = 'E-mail címed';
+$lang['cf_from_name'] = 'Neve';
+$lang['cf_from_mail'] = 'E-mail címe';
 $lang['cf_subject'] = 'Tárgy';
-$lang['cf_message'] = 'Üzeneted';
+$lang['cf_message'] = 'Üzenete';
 $lang['cf_submit'] = 'Küldés';
 $lang['title_send_mail'] = 'Üzenet az oldalról';
 
 // ==================================================================
 // Messages
-$lang['cf_from_name_error'] = 'Írj be egy nevet';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
-$lang['cf_subject_error'] = 'Írd be a levél tárgyát';
-$lang['cf_message_error'] = 'Írd be az üzeneted';
+$lang['cf_from_name_error'] = 'Írjon be egy nevet';
+$lang['cf_mail_format_error'] = 'Az e-mail cím formátuma hibás';
+$lang['cf_message_error'] = 'Írja be az üzenetét';
 $lang['cf_error_sending_mail'] = 'Hiba történt a levél küldése közben';
 $lang['cf_sending_mail_successful'] = 'A levelet sikeresen elküldtük';
 $lang['cf_form_error'] = 'Érvénytelen adat';
-$lang['cf_no_unlink'] = 'Csatolás megszűntetése \'unlink\' lehetőség nem elérhető...';
+$lang['cf_no_unlink'] = 'Csatolás megszüntetése \'unlink\' lehetőség nem elérhető...';
 $lang['cf_unlink_errors'] = 'Hiba történt a fájl törlésekor';
 $lang['cf_config_saved'] = 'A beállítások mentése sikeres';
 $lang['cf_config_saved_with_errors'] = 'Hiba történt a beállítások mentésekor';
@@ -66,4 +65,5 @@ $lang['cf_emails_desc'] = 'Cél e-mail címek kezelése';
 $lang['cf_active'] = 'Aktív e-mail';
 $lang['cf_no_mail'] = 'Nincs e-mail cím';
 $lang['cf_refresh'] = 'E-mail címlista frissítése';
+$lang['cf_subject_error'] = 'Írja be a levél tárgyát';
 ?>
