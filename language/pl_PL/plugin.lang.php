@@ -54,9 +54,9 @@ $lang['cf_menu_link'] = 'Dodaj link do menu';
 $lang['cf_guest_allowed'] = 'Zezwalaj gościom na wysyłanie formularza';
 $lang['cf_mail_prefix'] = 'Przedrostek tematu wysłanej wiadomości e-mail';
 $lang['cf_separator'] = 'Znak separatora w formacie tekstowym wiadomości e-mail';
-$lang['cf_separator_length'] = 'Wielkość menubar';
+$lang['cf_separator_length'] = 'Wielkość paska menu';
 $lang['cf_mandatory_name'] = 'Nazwisko jest wymagane';
-$lang['cf_mandatory_mail'] = 'Adres e-mail address is wymagany';
+$lang['cf_mandatory_mail'] = 'Adres e-mail jest wymagany';
 $lang['cf_redirect_delay'] = 'Wstrzymaj opóźnienie przekierowania';
 // Emails tab
 $lang['cf_tab_emails'] = 'Adresy';
@@ -66,4 +66,5 @@ $lang['cf_active'] = 'Aktywny e-mail';
 $lang['cf_no_mail'] = 'Brak dostępnych adresów e-mail';
 $lang['cf_refresh'] = 'Ponowne tworzenie listy adresów e-mail';
 // translated by emcek
+$lang['title_send_mail'] = 'Komentarz na temat strony';
 ?>
