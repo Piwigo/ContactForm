@@ -476,6 +476,7 @@ class CF_Plugin {
       global $user;
       // Include language advices
       load_language('plugin.lang', CF_PATH);
+	  load_language('lang', PHPWG_ROOT_PATH.'local/', array('no_fallback'=>true, 'local'=>true) );
       
       $infos['cf_id'] = rand();
       $infos['cf_from_name'] = is_a_guest()?'':$user['username'];
