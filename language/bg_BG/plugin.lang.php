@@ -2,18 +2,18 @@
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $lang;
 
-$lang['cf_plugin_name'] = 'Contact Form';
-$lang['contact_form_debug'] = 'Display of debug information';
+$lang['cf_plugin_name'] = 'Формуляр за контакт';
+$lang['contact_form_debug'] = 'Покажи информацията за дебъгване';
 
 // ==================================================================
 // Default values if not configured
-$lang['contact_form_title'] = 'Contact form';
+$lang['contact_form_title'] = 'Формуляр за контакт';
 $lang['contact_form'] = 'Контакт';
 $lang['contact_form_link'] = 'Контакт Уебмастър';
 
 // ==================================================================
 // Redirect page
-$lang['contact_redirect_title'] = 'Send message status';
+$lang['contact_redirect_title'] = 'Изпрати съобщение за състоянието';
 
 // ==================================================================
 // Menubar block
@@ -46,24 +46,24 @@ $lang['cf_hide'] = 'Скрий';
 // Admin page
 $lang['cf_validate'] = 'Изпрати';
 // Configuration tab
-$lang['cf_tab_config'] = 'Configuration';
-$lang['cf_config'] = 'Configuration';
-$lang['cf_config_desc'] = 'Plugin main configuration';
-$lang['cf_label_config'] = 'General configuration';
-$lang['cf_label_mail'] = 'E-mail configuration';
-$lang['cf_menu_link'] = 'Add link in menu';
-$lang['cf_guest_allowed'] = 'Allow guests to see the form';
+$lang['cf_tab_config'] = 'Конфигурация';
+$lang['cf_config'] = 'Конфигурация';
+$lang['cf_config_desc'] = 'Плъгин за основната конфигурация';
+$lang['cf_label_config'] = 'Обща конфигурация';
+$lang['cf_label_mail'] = 'Е-мейл конфигурация';
+$lang['cf_menu_link'] = 'Добави линк в менюто';
+$lang['cf_guest_allowed'] = 'Позволи на гостите да виждат формата';
 $lang['cf_mail_prefix'] = 'Prefix of the sent e-mail subject';
 $lang['cf_separator'] = 'Character(s) used to define a separation bar in the e-mail in text format';
-$lang['cf_separator_length'] = 'Size of the bar';
-$lang['cf_mandatory_name'] = 'Name is mandatory';
-$lang['cf_mandatory_mail'] = 'E-mail address is mandatory';
+$lang['cf_separator_length'] = 'Размер на бара';
+$lang['cf_mandatory_name'] = 'Името е задължително';
+$lang['cf_mandatory_mail'] = 'Е-мейл адресът е задължителен';
 $lang['cf_redirect_delay'] = 'Pause delay of redirection';
 // Emails tab
-$lang['cf_tab_emails'] = 'E-mails';
-$lang['cf_emails'] = 'E-mails';
+$lang['cf_tab_emails'] = 'Е-мейли';
+$lang['cf_emails'] = 'Е-мейли';
 $lang['cf_emails_desc'] = 'Destination e-mails management';
-$lang['cf_active'] = 'Active e-mail';
-$lang['cf_no_mail'] = 'No e-mail address available';
-$lang['cf_refresh'] = 'Regenerate e-mail list address';
+$lang['cf_active'] = 'Активен Е-майл';
+$lang['cf_no_mail'] = 'Няма наличен Е-мейл адрес';
+$lang['cf_refresh'] = 'Регенериране на списъка с Е-мейл адреси';
 ?>
