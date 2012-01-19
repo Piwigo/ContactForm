@@ -71,7 +71,7 @@ class CF_Plugin {
     }
     // Include language advices
     load_language('plugin.lang', CF_PATH);
-	load_language('lang', PHPWG_ROOT_PATH.'local/', array('no_fallback'=>true, 'local'=>true) ); 
+    load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true) );
     
     if (!isset($block_mbMenu->data[CF_MENUBAR_KEY])) {
       $contact_form_menu = array(
@@ -476,7 +476,7 @@ class CF_Plugin {
       global $user;
       // Include language advices
       load_language('plugin.lang', CF_PATH);
-	  load_language('lang', PHPWG_ROOT_PATH.'local/', array('no_fallback'=>true, 'local'=>true) );
+      load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true) );
       
       $infos['cf_id'] = rand();
       $infos['cf_from_name'] = is_a_guest()?'':$user['username'];
