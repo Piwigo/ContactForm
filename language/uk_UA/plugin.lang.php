@@ -27,4 +27,14 @@ $lang['cf_subject'] = 'Тема';
 $lang['cf_submit'] = 'Надіслати';
 $lang['contact_form'] = 'Зв\'язатися';
 $lang['contact_form_link'] = 'Зв\'язатися з адміністратором';
+$lang['cf_error_sending_mail'] = 'Помилка при відправленні по електронній пошті';
+$lang['cf_from_name'] = 'Ваше ім\'я';
+$lang['cf_from_name_error'] = 'Будь ласка, введіть ім\'я';
+$lang['cf_message_error'] = 'Будь ласка, введіть повідомлення';
+$lang['cf_sending_mail_successful'] = 'Повідомлення успішно надіслано';
+$lang['cf_subject_error'] = 'Будь ласка, ведіть тему';
+$lang['contact_form_debug'] = 'Відображення налагоджувальної інформації';
+$lang['contact_form_title'] = 'Контактна форма';
+$lang['contact_redirect_title'] = 'Статус надісланого повідомлення';
+$lang['title_send_mail'] = 'Коментарі на сайті';
 ?>
