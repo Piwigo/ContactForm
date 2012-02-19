@@ -44,5 +44,5 @@ $lang['cf_separator_length'] = 'Розмір панелі';
 $lang['cf_tab_config'] = 'Конфігурація';
 $lang['cf_tab_emails'] = 'Електронна пошта';
 $lang['cf_unlink_errors'] = 'Сталася помилка під час видалення файлів';
-$lang['cf_validate'] = 'Представляти';
+$lang['cf_validate'] = 'Прийняти';
 ?>
