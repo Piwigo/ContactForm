@@ -27,7 +27,7 @@ $lang['title_send_mail'] = '';
 // ==================================================================
 // Mesajlar
 $lang['cf_from_name_error'] = 'Lütfen isminizi girin';
-$lang['cf_mail_format_error'] = $lang['e-posta şöyle olmalıdır xxx@yyy.eee (örnek : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'E-Posta yandaki gibi olmalıdır  xxx@yyy.eee (örnek : jack@altern.org)';
 $lang['cf_subject_error'] = 'Lütfen konuyu girin';
 $lang['cf_message_error'] = 'Lütfen mesajınızı girin';
 $lang['cf_error_sending_mail'] = 'Mesajın gönderilmesinde sorun oluştu';

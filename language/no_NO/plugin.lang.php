@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'En kommentar til siden';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Vennligst fyll inn navn';
-$lang['cf_mail_format_error'] = $lang['reg_err_mail_address'];
+$lang['cf_mail_format_error'] = 'mail addresse må være tilsvarende xxx@yyy.eee (eksempel : jack@altern.org)';
 $lang['cf_subject_error'] = 'Vennligst fyll inn emne';
 $lang['cf_message_error'] = 'Vennligst fyll inn en beskjed';
 $lang['cf_error_sending_mail'] = 'Feil ved sending av e-mail';

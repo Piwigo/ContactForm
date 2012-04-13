@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Komentārs web lapā';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Lūdzu ievadiet vārdu';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'e-pasta adresei jāizskatās xxx@yyy.eee (piemēram : jack@altern.org)';
 $lang['cf_subject_error'] = 'Lūdzu ievadiet tematu';
 $lang['cf_message_error'] = 'Lūdzu ievadiet ziņojumu';
 $lang['cf_error_sending_mail'] = 'Kļūda sūtot e-pastu';

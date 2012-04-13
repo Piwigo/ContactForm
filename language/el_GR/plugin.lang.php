@@ -17,7 +17,7 @@ $lang['cf_submit'] = 'Αποστολή';
 $lang['title_send_mail'] = 'Ένα σχόλιο για την ιστοσελίδα';
 
 $lang['cf_from_name_error'] = 'Παρακαλώ εισάγετε ένα όνομα';
-$lang['cf_mail_format_error'] = $lang['Η διεύθυνση email πρέπει να είναι της μορφής xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'η διεύθυνση ηλεκτρονικού ταχυδρομείου πρέπει να είναι της μορφής xxx@yyy.eee (παράδειγμα: jack@altern.org)';
 $lang['cf_subject_error'] = 'Παρακαλώ εισάγετε ένα θέμα';
 $lang['cf_message_error'] = 'Παρακαλώ εισάγετε ένα μήνυμα';
 $lang['cf_error_sending_mail'] = 'Λάθος κατά την απόστολή e-mail';

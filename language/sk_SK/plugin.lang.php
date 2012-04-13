@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Komentár na stránku';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Prosím zadajte meno';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'E-mail musí byť vo formáte xxx@yyy.eee (napríklad: kovac@zoznam.sk)';
 $lang['cf_subject_error'] = 'Prosím zadajte predmet';
 $lang['cf_message_error'] = 'Prosím zadajte správu';
 $lang['cf_error_sending_mail'] = 'Chyba počas posielania e-mailu';

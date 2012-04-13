@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Een commentaar op de site';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'Vul een naam in';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'email-adres moet zijn xxx@yyy.eee (bijvoorbeeld : jack@altern.org)';
 $lang['cf_subject_error'] = 'Vul een onderwerp in';
 $lang['cf_message_error'] = 'Vul een berichttekst in ';
 $lang['cf_error_sending_mail'] = 'Fout tijdens versturen van e-mail';

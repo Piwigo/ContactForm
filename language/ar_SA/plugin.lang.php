@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'تعليق على الموقع';
 // ==================================================================
 // Messages
 $lang['cf_from_name_error'] = 'من فضلك ادخل الاسم';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'يجب ان يكون البريد بهذه الكيفيةxxx@yyy.eee (مثلا : jack@altern.org)';
 $lang['cf_subject_error'] = 'من فضلك ادخل العنوان';
 $lang['cf_message_error'] = 'من فضلك ادخل رسالة';
 $lang['cf_error_sending_mail'] = 'حدث خطأ أثناء الارسال';

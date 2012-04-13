@@ -27,7 +27,7 @@ $lang['title_send_mail'] = 'Một lời bình trên trang';
 // ==================================================================
 // Thông điệp
 $lang['cf_from_name_error'] = 'Vui lòng nhập tên';
-$lang['cf_mail_format_error'] = $lang['mail address must be like xxx@yyy.eee (example : jack@altern.org)'];
+$lang['cf_mail_format_error'] = 'địa chỉ email phải có dạng xxx@yyy.eee (ví dụ : jack@altern.org)';
 $lang['cf_subject_error'] = 'Vui lòng nhập tiêu đề';
 $lang['cf_message_error'] = 'Vui lòng nhập nội dung';
 $lang['cf_error_sending_mail'] = 'Có lỗi trong quá trình gởi email';
