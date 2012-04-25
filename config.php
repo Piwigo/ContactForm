@@ -7,6 +7,7 @@ CF_Log::reset_messages();
 
 $config_tabs[]='config';
 $config_tabs[]='emails';
+$config_tabs[]='persoform';
 
 global $template, $page;
 // Include language advices

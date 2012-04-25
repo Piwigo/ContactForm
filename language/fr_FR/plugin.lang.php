@@ -66,4 +66,12 @@ $lang['cf_emails_desc'] = 'Gestion des e-mails de destination';
 $lang['cf_active'] = 'E-mail actif';
 $lang['cf_no_mail'] = 'Aucune adresse e-mail disponible';
 $lang['cf_refresh'] = 'Regénérer la liste des adresses';
+// persoformtab
+$lang['cf_tab_persoform'] = 'Ajouter texte perso au Formulaire';
+$lang['Add text to the contact form'] = 'Ajouter du texte au formulaire de contact';
+$lang['Add text above'] = 'Texte ajouter au dessus';
+$lang['Add text below'] = 'Texte ajouter en dessous';
+$lang['use tag < div id="persoformtop" > to customize your personal text'] = 'utiiser la balise < div id="persoformtop" > pour personaliser le texte';
+$lang['use tag < div id="persoformbottom" > to customize your personal text'] = 'utiiser la balise < div id="persoformbottom" > pour personaliser le texte';
+$lang['if plugin ExtendedDescription is actif, you can use tags [lang]'] = 'Si le plugin ExtendedDescription est actif, vous pouvez utiliser les balises [lang]';
 ?>

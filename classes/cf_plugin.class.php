@@ -187,6 +187,36 @@ class CF_Plugin {
         'cf_form'     => realpath(cf_get_template('cf_form.tpl')),
         'cf_messages' => realpath(cf_get_template('cf_messages.tpl')),
       ));
+	  
+	  //charge Persoform
+$PAED = pwg_db_fetch_assoc(pwg_query("SELECT state FROM " . PLUGINS_TABLE . " WHERE id = 'ExtendedDescription';"));
+if($PAED['state'] == 'active') add_event_handler('AP_render_content', 'get_user_language_desc');	  
+	  
+$query = '
+select param,value
+	FROM ' . CONFIG_TABLE . '
+  WHERE param = "persoformtop"
+	;';
+$result = pwg_query($query);
+$row = mysql_fetch_array($result);
+$persoformtop=trigger_event('AP_render_content', $row['value']);    
+  $template->assign(
+    array(
+      'PERSOFORMTOP' => $persoformtop,
+      ));
+	  
+	 $query = '
+select param,value
+	FROM ' . CONFIG_TABLE . '
+  WHERE param = "persoformbottom"
+	;';
+$result = pwg_query($query);
+$row = mysql_fetch_array($result);
+$persoformbottom=trigger_event('AP_render_content', $row['value']);       
+  $template->assign(
+    array(
+      'PERSOFORMBOTTOM' => $persoformbottom,
+      ));
     
     $cf = array(
         'TITLE'     => 'contact_form_title',

@@ -27,7 +27,7 @@ function cf_validate() {
   return true;
 }
 {/literal}{/footer_script}
-
+<div id="persoformtop">{$PERSOFORMTOP}</div>
 <div id="autre_content" class="contact-form">
   <form  method="post" action="{$CF.F_ACTION}" class="filter" id="contactform" onsubmit="return cf_validate();">
   <div class="contact-form-content">
@@ -72,3 +72,4 @@ function cf_validate() {
   </div>
   </form>
 </div>
+<div id="persoformbottom">{$PERSOFORMBOTTOM}</div>
