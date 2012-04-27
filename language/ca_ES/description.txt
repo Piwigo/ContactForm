@@ -1,0 +1,1 @@
+Afegeix l'element "contacte" en el men&uacute; per oferir un formulari de contacte per als usuaris
