@@ -1,1 +1,1 @@
-Adicionar men&uacute; "Contacto" no bloco de Men&uacute;s para proporcionar aos utilizadores um formul&aacute;rio para contactar.
+Adicionar "Contacto" no bloco Men&uacute; para proporcionar aos utilizadores um formul&aacute;rio para contactar.
