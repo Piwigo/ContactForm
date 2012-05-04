@@ -67,11 +67,7 @@ $lang['cf_active'] = 'Active e-mail';
 $lang['cf_no_mail'] = 'No e-mail address available';
 $lang['cf_refresh'] = 'Regenerate e-mail list address';
 // persoformtab
-$lang['cf_tab_persoform'] = 'Add text Form';
-$lang['Add text to the contact form'] = 'Add text to the contact form';
-$lang['Add text above'] = 'Add text above';
-$lang['Add text below'] = 'Add text below';
-$lang['use tag < div id="persoformtop" > to customize your personal text'] = 'use tag < div id="persoformtop" > to customize your personal text';
-$lang['use tag < div id="persoformbottom" > to customize your personal text'] = 'use tag < div id="persoformbottom" > to customize your personal text';
-$lang['if plugin ExtendedDescription is actif, you can use tags [lang]'] = 'if plugin ExtendedDescription is actif, you can use tags [lang]';
+$lang['cf_tab_persoform'] = 'Add custom text';
+$lang['Text before the contact form'] = 'Text before the contact form';
+$lang['Text after the contact form'] = 'Text after the contact form';
 ?>
