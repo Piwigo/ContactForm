@@ -17,8 +17,8 @@ if (isset($_POST['submitpersoform']))
 //charge Persoform
 $template->assign(
   array(
-    'PERSOFORMTOP' => $conf['persoformtop'],
-    'PERSOFORMBOTTOM' => $conf['persoformbottom'],
+    'PERSOFORMTOP' => @$conf['persoformtop'],
+    'PERSOFORMBOTTOM' => @$conf['persoformbottom'],
     )
   );
 ?>
