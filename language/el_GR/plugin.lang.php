@@ -1,6 +1,5 @@
 <?php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
-global $lang;
 
 $lang['contact_form_title'] = 'Φόρμα επαφής';
 $lang['contact_form'] = 'Επαφή';

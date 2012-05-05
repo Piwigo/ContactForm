@@ -1,6 +1,5 @@
 <?php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
-global $lang;
 
 $lang['cf_plugin_name'] = 'Kontakt Skjema';
 $lang['contact_form_debug'] = 'Vis testkjørings informasjon';
