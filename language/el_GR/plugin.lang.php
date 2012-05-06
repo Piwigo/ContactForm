@@ -57,4 +57,7 @@ $lang['cf_refresh'] = 'Regenerate e-mail list address';
 
 
 
+$lang['Text after the contact form'] = 'Κείμενο μετά από τη φόρμα επικοινωνίας';
+$lang['Text before the contact form'] = 'Κείμενο πριν από τη φόρμα επικοινωνίας';
+$lang['cf_tab_persoform'] = 'Προσθήκη προσαρμοσμένου κειμένου';
 ?>
