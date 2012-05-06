@@ -46,11 +46,7 @@ $lang['cf_tab_emails'] = 'Електронна пошта';
 $lang['cf_unlink_errors'] = 'Сталася помилка під час видалення файлів';
 $lang['cf_validate'] = 'Прийняти';
 $lang['cf_from_mail'] = 'Ваш емейл';
-$lang['Add text above'] = 'Додати текст вище';
-$lang['Add text below'] = 'Додати текст нижче';
-$lang['Add text to the contact form'] = 'Додати текст до контактної форми';
 $lang['cf_tab_persoform'] = 'Додати текстову Форму';
-$lang['if plugin ExtendedDescription is actif, you can use tags [lang]'] = 'якщо плаґін "ExtendedDescription" активний, ви можете використовувати теґи [lang]';
-$lang['use tag < div id="persoformbottom" > to customize your personal text'] = 'використовуйте теґ < div id="persoformbottom" >, щоб налаштувати ваш особистий текст';
-$lang['use tag < div id="persoformtop" > to customize your personal text'] = 'використовуйте теґ < div id="persoformtop" >, щоб налаштувати ваш особистий текст';
+$lang['Text after the contact form'] = 'Текст після контактної форми';
+$lang['Text before the contact form'] = 'Текст перед контактною формою';
 ?>
