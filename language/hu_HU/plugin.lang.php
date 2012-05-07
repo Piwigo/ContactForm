@@ -65,4 +65,7 @@ $lang['cf_active'] = 'Aktív e-mail';
 $lang['cf_no_mail'] = 'Nincs e-mail cím';
 $lang['cf_refresh'] = 'E-mail címlista frissítése';
 $lang['cf_subject_error'] = 'Írja be a levél tárgyát';
+$lang['Text after the contact form'] = 'Szöveg a kapcsolati űrlap után';
+$lang['Text before the contact form'] = 'Szöveg a kapcsolati űrlap előtt';
+$lang['cf_tab_persoform'] = 'Egyéni szöveg hozzáadása';
 ?>
