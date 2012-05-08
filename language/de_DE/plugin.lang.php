@@ -64,4 +64,8 @@ $lang['cf_emails_desc'] = 'Verwaltung des E-Mail Bestimmungsortes';
 $lang['cf_active'] = 'Aktive E-Mail';
 $lang['cf_no_mail'] = 'Keine E-Mail Adresse verfügbar';
 $lang['cf_refresh'] = 'Regeneriere die E-Mail Adressenliste';
+$lang['Text after the contact form'] = 'Text nach dem Kontaktformular';
+$lang['Text before the contact form'] = 'Text vor dem Kontaktformular';
+$lang['cf_tab_persoform'] = 'Benutzerdefinierten Text hinzufügen';
+$lang['title_send_mail'] = 'Ein Kommentar auf der Seite';
 ?>
