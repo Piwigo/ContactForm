@@ -20,9 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Add text above'] = 'Afegir el text per sobre';
-$lang['Add text below'] = 'Afegir el text per sota';
-$lang['Add text to the contact form'] = 'Afegir text al formulari de contacte';
 $lang['cf_active'] = 'Correu electrònic actiu';
 $lang['cf_config_desc'] = 'Configuració general del complement';
 $lang['cf_config_saved_with_errors'] = 'Configuració desada però amb errors';
@@ -70,8 +67,5 @@ $lang['contact_form_link'] = 'Contactar amb el webmaster';
 $lang['contact_form_title'] = 'Formulari de contacte';
 $lang['contact_form'] = 'Contacte';
 $lang['contact_redirect_title'] = 'Enviar missatge d\'estat';
-$lang['if plugin ExtendedDescription is actif, you can use tags [lang]'] = 'si el complement ExtendedDescription és actiu, pots utilitzar les etiquetes [idioma]';
-$lang['title_send_mail'] = 'Hi ha un comentari al web';
-$lang['use tag < div id="persoformbottom" > to customize your personal text'] = 'fer servir l\'etiqueta <div id="persoformbottom"> per personalitzar un text';
-$lang['use tag < div id="persoformtop" > to customize your personal text'] = 'fer servir l\'etiqueta <div id = "persoformtop"> per personalitzar un text';
+$lang['title_send_mail'] = 'Un comentari respecte al web';
 ?>
