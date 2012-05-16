@@ -64,4 +64,8 @@ $lang['cf_emails_desc'] = 'Gestione delle e-mail di destinazione';
 $lang['cf_active'] = 'E-mail attiva';
 $lang['cf_no_mail'] = 'Nessun\'indirizzo e-mail disponibile';
 $lang['cf_refresh'] = 'Rigenerare la lista degli indirizzi';
+$lang['Text after the contact form'] = 'Testo dopo il modulo di contatto';
+$lang['Text before the contact form'] = 'Testo prima del modulo di contatto';
+$lang['cf_tab_persoform'] = 'Aggiungi testo personalizzato';
+$lang['title_send_mail'] = 'Un commento sul sito';
 ?>
