@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'Bestemming van e-mail beheer';
 $lang['cf_active'] = 'Actieve e-mail';
 $lang['cf_no_mail'] = 'Geen e-mail adres beschikbaar';
 $lang['cf_refresh'] = 'Regenereer e-mail lijst adres';
+$lang['Text after the contact form'] = 'Tekst na het contactformulier';
+$lang['Text before the contact form'] = 'Tekst vóór het contactformulier';
+$lang['cf_tab_persoform'] = 'Voeg eigen tekst toe';
 ?>
