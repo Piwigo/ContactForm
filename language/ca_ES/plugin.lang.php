@@ -68,4 +68,6 @@ $lang['contact_form_title'] = 'Formulari de contacte';
 $lang['contact_form'] = 'Contacte';
 $lang['contact_redirect_title'] = 'Enviar missatge d\'estat';
 $lang['title_send_mail'] = 'Un comentari respecte al web';
+$lang['Text after the contact form'] = 'Texte després del formulari de contacte';
+$lang['Text before the contact form'] = 'Texte abans del formulari de contacte';
 ?>
