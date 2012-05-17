@@ -52,17 +52,20 @@ $lang['cf_label_config'] = 'Обща конфигурация';
 $lang['cf_label_mail'] = 'Е-мейл конфигурация';
 $lang['cf_menu_link'] = 'Добави линк в менюто';
 $lang['cf_guest_allowed'] = 'Позволи на гостите да виждат формата';
-$lang['cf_mail_prefix'] = 'Prefix of the sent e-mail subject';
-$lang['cf_separator'] = 'Character(s) used to define a separation bar in the e-mail in text format';
+$lang['cf_mail_prefix'] = 'Префикс на изпратен е-майл обект';
+$lang['cf_separator'] = 'Синвол(и) използван за дефиниране на разграничител в е-майл в текстов формат ';
 $lang['cf_separator_length'] = 'Размер на бара';
 $lang['cf_mandatory_name'] = 'Името е задължително';
 $lang['cf_mandatory_mail'] = 'Е-мейл адресът е задължителен';
-$lang['cf_redirect_delay'] = 'Pause delay of redirection';
+$lang['cf_redirect_delay'] = 'Пауза на забавяне от пренасочване';
 // Emails tab
 $lang['cf_tab_emails'] = 'Е-мейли';
 $lang['cf_emails'] = 'Е-мейли';
-$lang['cf_emails_desc'] = 'Destination e-mails management';
-$lang['cf_active'] = 'Активен Е-майл';
-$lang['cf_no_mail'] = 'Няма наличен Е-мейл адрес';
-$lang['cf_refresh'] = 'Регенериране на списъка с Е-мейл адреси';
+$lang['cf_emails_desc'] = 'Управление на местоназначение на е-майли';
+$lang['cf_active'] = 'Активен е-майл';
+$lang['cf_no_mail'] = 'Няма наличен е-мейл адрес';
+$lang['cf_refresh'] = 'Регенериране на списъка с е-мейл адреси';
+$lang['Text after the contact form'] = 'Текст след формуляра "За контакт"';
+$lang['Text before the contact form'] = 'Текст пред формуляра "За контакт"';
+$lang['cf_tab_persoform'] = 'Вмъкване на още инфо...';
 ?>
