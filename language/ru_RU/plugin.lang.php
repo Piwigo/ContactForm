@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'Получатели e-mail';
 $lang['cf_active'] = 'Активный адрес e-mail';
 $lang['cf_no_mail'] = 'Нет доступных адресов e-mail';
 $lang['cf_refresh'] = 'Сформировать список адресов e-mail снова';
+$lang['Text after the contact form'] = 'Текст после формы обратной связи';
+$lang['Text before the contact form'] = 'Текст перед формой обратной связи';
+$lang['cf_tab_persoform'] = 'Добавить произвольный текст';
 ?>
