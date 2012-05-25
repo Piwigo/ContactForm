@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'mål for e-mail behandling';
 $lang['cf_active'] = 'Aktive e-mail';
 $lang['cf_no_mail'] = 'INgen e-mail addresse tilgjengelig';
 $lang['cf_refresh'] = 'Oppdater e-mail adresse liste';
+$lang['Text after the contact form'] = 'Tekst etter kontaktskjema';
+$lang['Text before the contact form'] = 'Tekst før kontaktskjema';
+$lang['cf_tab_persoform'] = 'Legg til valgfri tekst';
 ?>
