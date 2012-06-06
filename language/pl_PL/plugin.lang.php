@@ -66,4 +66,7 @@ $lang['cf_no_mail'] = 'Brak dostępnych adresów e-mail';
 $lang['cf_refresh'] = 'Ponowne tworzenie listy adresów e-mail';
 // translated by emcek
 $lang['title_send_mail'] = 'Komentarz na temat strony';
+$lang['Text after the contact form'] = 'Tekst pod formularzem';
+$lang['Text before the contact form'] = 'Tekst przed formularzem';
+$lang['cf_tab_persoform'] = 'Dodaj własny tekst';
 ?>
