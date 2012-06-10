@@ -58,9 +58,6 @@ $lang['cf_separator_length'] = 'Mesaj alanın genişliği';
 $lang['cf_mandatory_name'] = 'Zorunlu isim';
 $lang['cf_mandatory_mail'] = 'E-postanın zorunluluğu';
 $lang['cf_redirect_delay'] = 'Geribildirimde geçikme süresi';
-$lang['cf_label_link'] = 'Link yönetimi (dışardan menü)';
-$lang['cf_define_link'] = 'Adresi belirt';
-$lang['cf_link'] = 'Name of the template variable containing the HTML link to the contact form';
 // E-posta  bölümü
 $lang['cf_tab_emails'] = 'E-postalar';
 $lang['cf_emails'] = 'E-postalar';
@@ -68,4 +65,7 @@ $lang['cf_emails_desc'] = 'Hedef e-posta yönetimi';
 $lang['cf_active'] = 'Etkin e-posta';
 $lang['cf_no_mail'] = 'Mevcut e-posta adresi yok';
 $lang['cf_refresh'] = 'E-posta listesini tekrar oluştur';
+$lang['Text after the contact form'] = 'İletişim formun arkasındaki metin';
+$lang['Text before the contact form'] = 'İletişim formun önünndeki metin';
+$lang['cf_tab_persoform'] = 'Özelleştirilmiş metin ekle';
 ?>
