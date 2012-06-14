@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'Destinationshantering för e-post';
 $lang['cf_active'] = 'Aktiv e-post';
 $lang['cf_no_mail'] = 'Ingen e-postadress tillgänglig';
 $lang['cf_refresh'] = 'Uppdatera';
+$lang['Text after the contact form'] = 'Text efter kontaktformuläret';
+$lang['Text before the contact form'] = 'Text före kontaktformuläret';
+$lang['cf_tab_persoform'] = 'Lägg till valfri text';
 ?>
