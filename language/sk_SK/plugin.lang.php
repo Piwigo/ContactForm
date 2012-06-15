@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'Cieľový manažment e-mailov';
 $lang['cf_active'] = 'Actívny e-mail';
 $lang['cf_no_mail'] = 'E-mailová adresa nie je dostupná';
 $lang['cf_refresh'] = 'Obnoviť zoznam e-mailých adries';
+$lang['Text after the contact form'] = 'Text za kontaktným formulárom';
+$lang['Text before the contact form'] = 'Text pred kontaktným formulárom';
+$lang['cf_tab_persoform'] = 'Pridajte obyčajný text';
 ?>
