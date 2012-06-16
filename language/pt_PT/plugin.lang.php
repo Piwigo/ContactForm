@@ -67,11 +67,7 @@ $lang['contact_form_link'] = 'Contactar Webmaster';
 $lang['contact_form_title'] = 'Formulário de Contacto';
 $lang['contact_redirect_title'] = 'Estado de envio de mensagem';
 $lang['title_send_mail'] = 'Um comentário sobre o site';
-$lang['Add text above'] = 'Escreva o texto acima';
-$lang['Add text below'] = 'Escreva o texto que se segue';
-$lang['Add text to the contact form'] = 'Adicionar texto ao formulário de contacto';
 $lang['cf_tab_persoform'] = 'Adicionar formulário de texto';
-$lang['if plugin ExtendedDescription is actif, you can use tags ']['lang'] = 'Se tem activa a extenção ExtendedDescription, você pode usar as etiguetas [lang]';
-$lang['use tag < div id="persoformbottom" > to customize your personal text'] = 'Use a etiqueta <div id="persoformbottom"> para personalizar o seu texto';
-$lang['use tag < div id="persoformtop" > to customize your personal text'] = 'Use a etiqueta <div id="persoformtop"> para personalizar o seu texto';
+$lang['Text after the contact form'] = 'Texto antes do formulário de contacto';
+$lang['Text before the contact form'] = 'Texto depois do formulário de contacto';
 ?>
