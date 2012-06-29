@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'تنظيم البريد الالكتروني المس
 $lang['cf_active'] = 'البريد الالكتروني النشطة';
 $lang['cf_no_mail'] = 'لايوجد عنوان بريد الكتروني متاح';
 $lang['cf_refresh'] = 'اعادة توليد قوائم البريد الالكتروني';
+$lang['Text after the contact form'] = 'النص بعد نموذج الاتصال';
+$lang['Text before the contact form'] = 'النص قبل نموذج الاتصال';
+$lang['cf_tab_persoform'] = 'اضف نص اختياري';
 ?>
