@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'Quản lý thư điện tử gởi đến';
 $lang['cf_active'] = 'Kích hoạt thư điện tử';
 $lang['cf_no_mail'] = 'Không có địa chỉ thư nào dùng được';
 $lang['cf_refresh'] = 'Tạo ra danh sách địa chỉ thư';
+$lang['Text after the contact form'] = 'Chữ hiện sau form liên lạc';
+$lang['Text before the contact form'] = 'Chữ hiện trước form liên lạc';
+$lang['cf_tab_persoform'] = 'Thêm chữ theo ý bạn';
 ?>
