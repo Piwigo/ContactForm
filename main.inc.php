@@ -20,7 +20,8 @@ add_event_handler('loc_begin_index',
 add_event_handler('loc_begin_page_tail',             
                   array(&$cf_plugin, 'loc_begin_page_header'));
 add_event_handler('blockmanager_apply',             
-                  array(&$cf_plugin, 'blockmanager_apply'));
+                  array(&$cf_plugin, 'blockmanager_apply'),
+                  EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 add_event_handler('loc_end_index',             
                   array(&$cf_plugin, 'loc_end_index'));
 add_event_handler('loc_end_page_tail',
