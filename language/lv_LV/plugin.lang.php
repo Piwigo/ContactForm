@@ -47,7 +47,7 @@ $lang['cf_validate'] = 'Apstiprināt';
 // Konfigurācijas iezīme (tab)
 $lang['cf_tab_config'] = 'Konfigurācija';
 $lang['cf_config'] = 'Konfigurācija';
-$lang['cf_config_desc'] = 'Spraudnis (plugin) galvenā konfigurācija';
+$lang['cf_config_desc'] = 'Spraudņa (plugin) galvenā konfigurācija';
 $lang['cf_label_config'] = 'Vispārējā konfigurācija';
 $lang['cf_label_mail'] = 'E-pasta konfigurācija';
 $lang['cf_menu_link'] = 'Pievienot saiti izvēlnē';
@@ -65,4 +65,7 @@ $lang['cf_emails_desc'] = 'e-pastu galamērķu pārvaldība';
 $lang['cf_active'] = 'Aktīvs e-pasts';
 $lang['cf_no_mail'] = 'Nav pieejama e-pasta adrese';
 $lang['cf_refresh'] = 'Atjaunot e-pasta saraksta adresi';
+$lang['Text after the contact form'] = 'Teksts pēc kontaktformas';
+$lang['Text before the contact form'] = 'Teksts pirms kontaktformas';
+$lang['cf_tab_persoform'] = 'Pievienot savu tekstu';
 ?>
