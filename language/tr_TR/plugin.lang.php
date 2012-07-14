@@ -66,6 +66,6 @@ $lang['cf_active'] = 'Etkin e-posta';
 $lang['cf_no_mail'] = 'Mevcut e-posta adresi yok';
 $lang['cf_refresh'] = 'E-posta listesini tekrar oluştur';
 $lang['Text after the contact form'] = 'İletişim formun arkasındaki metin';
-$lang['Text before the contact form'] = 'İletişim formun önünndeki metin';
+$lang['Text before the contact form'] = 'İletişim formun önündeki metin';
 $lang['cf_tab_persoform'] = 'Özelleştirilmiş metin ekle';
 ?>
