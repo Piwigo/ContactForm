@@ -42,18 +42,15 @@ $tabsheet->assign();
 // Define template file
 $template->block_html_head( '',
           '<link rel="stylesheet" type="text/css" '.
-          'href="' . CF_INCLUDE . 'contactform.css' . '">',
-          $smarty, $repeat);
+          'href="' . CF_INCLUDE . 'contactform.css' . '">');
 $admin_css = cf_get_template('contactform_admin.css', CF_AMDIN_TPL, 'admin_');
 $template->block_html_head( '',
           '<link rel="stylesheet" type="text/css" '.
-          'href="' . $admin_css . '">',
-          $smarty, $repeat);
+          'href="' . $admin_css . '">');
 $template->block_html_head( '',
           '<script type="text/javascript" '.
           'src="' . CF_INCLUDE . 'contactform.js' . '">'.
-          '</script>',
-          $smarty, $repeat);
+          '</script>');
 $template->set_filenames(array(
     'plugin_admin_content' => realpath(cf_get_template('cf_'.
                                                        $page['tab'].
