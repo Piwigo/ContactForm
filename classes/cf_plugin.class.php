@@ -253,8 +253,7 @@ $persoformbottom=trigger_event('AP_render_content', $row['value']);
       
     $template->block_html_head( '',
               '<link rel="stylesheet" type="text/css" '.
-              'href="' . CF_INCLUDE . 'contactform.css' . '">',
-              $smarty, $repeat);
+              'href="' . CF_INCLUDE . 'contactform.css' . '">');
     $cf = array(
         'TITLE'     => 'contact_redirect_title',
         'CSS'       => '<link rel="stylesheet" type="text/css" '.
@@ -292,8 +291,7 @@ $persoformbottom=trigger_event('AP_render_content', $row['value']);
       
     $template->block_html_head( '',
               '<link rel="stylesheet" type="text/css" '.
-              'href="' . CF_INCLUDE . 'contactform.css' . '">',
-              $smarty, $repeat);
+              'href="' . CF_INCLUDE . 'contactform.css' . '">');
     $cf = array(
         'TITLE'     => 'contact_form_title',
       );
