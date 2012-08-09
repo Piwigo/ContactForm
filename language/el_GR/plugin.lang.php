@@ -33,4 +33,20 @@ $lang['Please enter a subject'] = 'Παρακαλώ εισάγετε ένα θέ
 $lang['Please enter a message'] = 'Παρακαλώ εισάγετε ένα μήνυμα';
 $lang['Error while sending e-mail'] = 'Λάθος κατά την απόστολή e-mail';
 
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Πρόθεμα για το θέμα του e-mail που στέλνετε (μπορείτε να χρησιμοποιήσετε το " "%gallery_title%"")';
+$lang['Please enter an e-mail'] = 'Παρακαλώ εισάγετε ένα e-mail';
+$lang['Plain text'] = 'Απλό κείμενο';
+$lang['No active email address'] = 'Μη ενεργή διεύθυνση ηλεκτρονικού ταχυδρομείου';
+$lang['Name is mandatory'] = 'Το όνομα είναι υποχρεωτικό';
+$lang['General configuration'] = 'Γενικές ρυθμίσεις';
+$lang['E-mail format :'] = 'Μορφή E-mail:';
+$lang['E-mail configuration'] = 'Διαμόρφωση E-mail ';
+$lang['E-mail address is mandatory'] = 'Η διεύθυνση E-mail είναι υποχρεωτική';
+$lang['Default e-mail subject'] = 'Προεπιλεγμένο θέμα στο e-mail';
+$lang['Allow guests to see the form'] = 'Επιτρέψτε στους επισκέπτες να δουν τη φόρμα';
+$lang['Active'] = 'Ενεργό';
+$lang['Add link in menu'] = 'Προσθήκη ενός συνδέσμου στο μενού';
+$lang['+ Add an email'] = '+ Προσθήκη ενός e-mail';
+$lang['%s must not be more than %d characters long'] = '%s δεν πρέπει να είναι περισσότερο από %d χαρακτήρες';
+$lang['%s must not be less than %d characters long'] = '%s πρέπει να είναι τουλάχιστον %d χαρακτήρες';
 ?>
