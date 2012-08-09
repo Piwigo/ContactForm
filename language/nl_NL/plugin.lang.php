@@ -21,8 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['A comment on the site'] = 'Voeg eigen tekst toe';
-$lang['Contact'] = 'Contact';
 $lang['Your name'] = 'Je naam';
 $lang['Your e-mail'] = 'Je e-mail';
 $lang['Subject'] = 'Onderwerp';

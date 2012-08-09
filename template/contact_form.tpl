@@ -96,5 +96,6 @@ content.add(Validate.Length, {ldelim} minimum: 20, maximum: 2000,
 <div class="contact desc">{$ContactForm_after}</div>
 {/if}
 
-{if $clear}<div style="clear: both;"></div>{/if}
+{if $clear}<div style="clear: both;"></div>
+</div>{/if}
 </div>{* <!-- content --> *}

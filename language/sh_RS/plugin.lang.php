@@ -21,8 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['A comment on the site'] = 'Komentar sajta';
-$lang['Contact'] = 'Kontakt';
 $lang['Your name'] = 'Vaše ime';
 $lang['Your e-mail'] = 'Vaš e-mejl';
 $lang['Subject'] = 'Naslov';

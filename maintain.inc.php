@@ -6,7 +6,7 @@ define('contact_form_default_config',
     'cf_must_initialize' => true,
     'cf_menu_link' => true,
     'cf_subject_prefix' => '%gallery_title%',
-    'cf_default_subject' => 'A comment on the site',
+    'cf_default_subject' => 'A comment on your site',
     'cf_allow_guest' => true,
     'cf_mandatory_mail' => true,
     'cf_mandatory_name' => true,
@@ -40,7 +40,7 @@ function plugin_activate()
     if (!isset($new_conf['cf_must_initialize']))
     {
       $new_conf['cf_must_initialize'] = false;
-      $new_conf['cf_default_subject'] = 'A comment on the site';
+      $new_conf['cf_default_subject'] = 'A comment on your site';
       $new_conf['cf_mail_type'] = 'text/html';
       unset($new_conf['comment'], $new_conf['cf_redirect_delay']);
       unset($new_conf['cf_separator'], $new_conf['cf_separator_length']);

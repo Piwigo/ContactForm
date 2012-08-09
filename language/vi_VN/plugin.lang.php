@@ -21,8 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['A comment on the site'] = 'Một lời bình trên trang';
-$lang['Contact'] = 'Liên hệ';
 $lang['Your name'] = 'Tên của bạn';
 $lang['Your e-mail'] = 'Email của bạn';
 $lang['Subject'] = 'Tiêu đề';

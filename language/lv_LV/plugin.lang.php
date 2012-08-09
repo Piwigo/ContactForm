@@ -21,8 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['A comment on the site'] = 'Pievienot savu tekstu';
-$lang['Contact'] = 'Kontaktēt';
 $lang['Your name'] = 'Jūsu vārds';
 $lang['Your e-mail'] = 'Jūsu e-pasts';
 $lang['Subject'] = 'Temats';

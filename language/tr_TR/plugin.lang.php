@@ -21,7 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['Contact'] = 'İletişim';
 $lang['Your name'] = 'İsminiz';
 $lang['Your e-mail'] = 'E-posta adresiniz';
 $lang['Subject'] = 'Konu';

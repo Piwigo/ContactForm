@@ -21,8 +21,6 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['A comment on the site'] = 'Egyéni szöveg hozzáadása';
-$lang['Contact'] = 'Kapcsolat';
 $lang['Your name'] = 'Neve';
 $lang['Your e-mail'] = 'E-mail címe';
 $lang['Subject'] = 'Tárgy';
