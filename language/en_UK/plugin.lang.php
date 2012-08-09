@@ -41,7 +41,6 @@ $lang['Text before the contact form'] = 'Text before the contact form';
 $lang['Text after the contact form'] = 'Text after the contact form';
 $lang['Active'] = 'Active';
 $lang['+ Add an email'] = '+ Add an email';
-$lang['E-mail: %s'] = 'E-mail: %s';
 $lang['No active email address'] = 'No active email address';
 $lang['E-mail sent successfully'] = 'E-mail sent successfully';
 $lang['Please enter a name'] = 'Please enter a name';
