@@ -39,4 +39,14 @@ $lang['Please enter a subject'] = 'Пожалуйста, укажите тему
 $lang['Please enter a message'] = 'Пожалуйста, введите сообщение';
 $lang['Error while sending e-mail'] = 'Ошибка при отправке сообщения';
 
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Префикс темы отправляемых e-mail (можно использовать "%gallery_title%")';
+$lang['Please enter an e-mail'] = 'Пожалуйста, введите e-mail';
+$lang['Active'] = 'Активный';
+$lang['Default e-mail subject'] = 'Текст почты по умолчанию';
+$lang['E-mail format :'] = 'Формат e-mail';
+$lang['No active email address'] = 'Нет активных адресов';
+$lang['Plain text'] = 'Простой текст';
+$lang['+ Add an email'] = '+ Добавить email';
+$lang['%s must not be more than %d characters long'] = '%s должно быть не длиннее %d символов';
+$lang['%s must not be less than %d characters long'] = '%s должно быть не короче %d символов';
 ?>
