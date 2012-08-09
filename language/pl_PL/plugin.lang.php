@@ -1,72 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Formularz kontaktu';
-$lang['contact_form_debug'] = 'Wyświetl informacje śledzące proces';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Formularz kontaktu';
-$lang['contact_form'] = 'Kontakt';
-$lang['contact_form_link'] = 'Kontakt do webmastera';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Wyślij status wiadomości';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Twoje nazwisko';
-$lang['cf_from_mail'] = 'Twój e-mail';
-$lang['cf_subject'] = 'Temat';
-$lang['cf_message'] = 'Wiadomość';
-$lang['cf_submit'] = 'Wyślij';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Proszę podać nazwisko';
-$lang['cf_mail_format_error'] = 'mail musi być w postaci xxx@yyy.eee (przykład : jack@altern.org)';
-$lang['cf_subject_error'] = 'Proszę podać temat';
-$lang['cf_message_error'] = 'Proszę wpisać wiadomość';
-$lang['cf_error_sending_mail'] = 'Błąd podczas wysyłania wiadomości';
-$lang['cf_sending_mail_successful'] = 'Wiadomość wysłana poprawnie';
-$lang['cf_form_error'] = 'Nieprawidłowe dane';
-$lang['cf_no_unlink'] = 'Funkcja \'unlink\' niedostępna...';
-$lang['cf_unlink_errors'] = 'Wystąpił błąd podczas kasowania pliku';
-$lang['cf_config_saved'] = 'Konfiguracja zapisana poprawnie';
-$lang['cf_config_saved_with_errors'] = 'Konfiguracja zapisana z błędami';
-$lang['cf_length_not_integer'] = 'Rozmiar musi być liczbą';
-$lang['cf_delay_not_integer'] = 'Opóźnienie musi być liczbą';
-$lang['cf_link_error'] = 'Zmienna nie może zawierać spacji';
-$lang['cf_hide'] = 'Ukryj';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Potwierdź';
-// Configuration tab
-$lang['cf_tab_config'] = 'Konfiguracja';
-$lang['cf_config'] = 'Konfiguracja';
-$lang['cf_config_desc'] = 'Konfiguracja podstawowa wtyczki';
-$lang['cf_label_config'] = 'Konfiguracja ogólna';
-$lang['cf_label_mail'] = 'Konfiguracja e-mail';
-$lang['cf_menu_link'] = 'Dodaj link do menu';
-$lang['cf_guest_allowed'] = 'Zezwalaj gościom na wysyłanie formularza';
-$lang['cf_mail_prefix'] = 'Przedrostek tematu wysłanej wiadomości e-mail';
-$lang['cf_separator'] = 'Znak separatora w formacie tekstowym wiadomości e-mail';
-$lang['cf_separator_length'] = 'Wielkość paska menu';
-$lang['cf_mandatory_name'] = 'Nazwisko jest wymagane';
-$lang['cf_mandatory_mail'] = 'Adres e-mail jest wymagany';
-$lang['cf_redirect_delay'] = 'Wstrzymaj opóźnienie przekierowania';
-// Emails tab
-$lang['cf_tab_emails'] = 'Adresy';
-$lang['cf_emails'] = 'Adresy';
-$lang['cf_emails_desc'] = 'Zarządzanie adresami e-mail do kontaktu';
-$lang['cf_active'] = 'Aktywny e-mail';
-$lang['cf_no_mail'] = 'Brak dostępnych adresów e-mail';
-$lang['cf_refresh'] = 'Ponowne tworzenie listy adresów e-mail';
-// translated by emcek
-$lang['title_send_mail'] = 'Komentarz na temat strony';
-$lang['Text after the contact form'] = 'Tekst pod formularzem';
+$lang['A comment on the site'] = 'Dodaj własny tekst';
+$lang['Contact'] = 'Kontakt';
+$lang['Your name'] = 'Twoje nazwisko';
+$lang['Your e-mail'] = 'Twój e-mail';
+$lang['Subject'] = 'Temat';
+$lang['Message'] = 'Wiadomość';
+$lang['General configuration'] = 'Konfiguracja ogólna';
+$lang['Add link in menu'] = 'Dodaj link do menu';
+$lang['Allow guests to see the form'] = 'Zezwalaj gościom na wysyłanie formularza';
+$lang['E-mail address is mandatory'] = 'Adres e-mail jest wymagany';
+$lang['Name is mandatory'] = 'Nazwisko jest wymagane';
+$lang['E-mail configuration'] = 'Konfiguracja e-mail';
 $lang['Text before the contact form'] = 'Tekst przed formularzem';
-$lang['cf_tab_persoform'] = 'Dodaj własny tekst';
+$lang['Text after the contact form'] = 'Tekst pod formularzem';
+$lang['E-mail sent successfully'] = 'Wiadomość wysłana poprawnie';
+$lang['Please enter a name'] = 'Proszę podać nazwisko';
+$lang['Please enter a subject'] = 'Proszę podać temat';
+$lang['Please enter a message'] = 'Proszę wpisać wiadomość';
+$lang['Error while sending e-mail'] = 'Błąd podczas wysyłania wiadomości';
+
 ?>

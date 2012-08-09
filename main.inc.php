@@ -4,31 +4,39 @@ Plugin Name: Contact Form
 Version: auto
 Description: Add a "Contact" item in the Menu block to offer a contact form to users
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=304
-Author: Criss, Gotcha
-Author URI: http://piwigo.org/
+Author: Piwigo Team
+Author URI: http://piwigo.org
 */
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-define('CF_PATH',     PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
-define('CF_ROOT',     dirname(__FILE__).'/');
-include_once(CF_PATH . 'include/cf_common.inc.php');
+define('CONTACT_FORM_PATH',  PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
+define('CONTACT_FORM_ADMIN', get_root_url() . 'admin.php?page=plugin-' . basename(dirname(__FILE__)));
 
-$cf_plugin = new CF_Plugin($plugin['id']);
-add_event_handler('loc_begin_index',             
-                  array(&$cf_plugin, 'loc_begin_index'));
-add_event_handler('loc_begin_page_tail',             
-                  array(&$cf_plugin, 'loc_begin_page_header'));
-add_event_handler('blockmanager_apply',             
-                  array(&$cf_plugin, 'blockmanager_apply'),
-                  EVENT_HANDLER_PRIORITY_NEUTRAL+10);
-add_event_handler('loc_end_index',             
-                  array(&$cf_plugin, 'loc_end_index'));
-add_event_handler('loc_end_page_tail',
-                  array(&$cf_plugin, 'loc_end_page_tail'));
-if(defined('IN_ADMIN')) {
-  add_event_handler('get_admin_plugin_menu_links',
-                    array(&$cf_plugin, 'get_admin_plugin_menu_links'));
+
+add_event_handler('init', 'contact_form_init');
+add_event_handler('loc_end_section_init', 'contact_form_section_init');
+add_event_handler('loc_end_index', 'contact_form_page');
+add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
+if (defined('IN_ADMIN'))
+{
+  add_event_handler('get_admin_plugin_menu_links', 'contact_form_admin_menu');
 }
-set_plugin_data($plugin['id'], $cf_plugin);
+
+include(CONTACT_FORM_PATH . 'include/functions.inc.php');
+
+
+function contact_form_init()
+{
+  global $conf;
+  $conf['ContactForm'] = unserialize($conf['ContactForm']);
+  
+  load_language('plugin.lang', CONTACT_FORM_PATH);
+  
+  if ($conf['ContactForm']['cf_must_initialize'])
+  {
+    contact_form_initialize_emails();
+  }
+}
+
 ?>

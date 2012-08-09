@@ -1,63 +1,38 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['contact_form_title'] = 'Φόρμα επαφής';
-$lang['contact_form'] = 'Επαφή';
-$lang['contact_form_link'] = 'Επαφή με τον webmaster';
-
-
-$lang['contact_redirect_title'] = 'Κατάσταση απεσταλμένου μηνύματος';
-
-$lang['cf_from_name'] = 'Το όνομά σου';
-$lang['cf_from_mail'] = 'Το e-mail σου';
-$lang['cf_subject'] = 'Θέμα';
-$lang['cf_message'] = 'Μήνυμα';
-$lang['cf_submit'] = 'Αποστολή';
-$lang['title_send_mail'] = 'Ένα σχόλιο για την ιστοσελίδα';
-
-$lang['cf_from_name_error'] = 'Παρακαλώ εισάγετε ένα όνομα';
-$lang['cf_mail_format_error'] = 'η διεύθυνση ηλεκτρονικού ταχυδρομείου πρέπει να είναι της μορφής xxx@yyy.eee (παράδειγμα: jack@altern.org)';
-$lang['cf_subject_error'] = 'Παρακαλώ εισάγετε ένα θέμα';
-$lang['cf_message_error'] = 'Παρακαλώ εισάγετε ένα μήνυμα';
-$lang['cf_error_sending_mail'] = 'Λάθος κατά την απόστολή e-mail';
-$lang['cf_sending_mail_successful'] = 'Το e-mail στάλθηκε με επιτυχία';
-$lang['cf_form_error'] = 'Άκυρα δεδομένα';
-$lang['cf_no_unlink'] = 'Function \'unlink\' not available...';
-$lang['cf_unlink_errors'] = 'Λάθη συνέβησαν κατά την διαγραφή του αρχείου';
-$lang['cf_config_saved'] = 'Η παραμετροποίηση αποθηκεύτηκε επιτυχημένα';
-$lang['cf_config_saved_with_errors'] = 'Η παραμετροποίηση αποθηκεύτηκε με λάθη';
-$lang['cf_length_not_integer'] = 'Το μέγεθος πρέπει να είναι ακέραιος αριθμός';
-$lang['cf_delay_not_integer'] = 'Η καθυστέρηση πρέπει να είναι ακέραιος αριθμός';
-$lang['cf_link_error'] = 'Η μεταβλητή δεν μπορεί να περιέχει κενά';
-$lang['cf_hide'] = 'Απόκρυψη'; 
-
-
-$lang['cf_plugin_name'] = 'Contact Form';
-$lang['contact_form_debug'] = 'Display of debug information';
-$lang['cf_validate'] = 'Submit';
-$lang['cf_tab_config'] = 'Configuration';
-$lang['cf_config'] = 'Configuration';
-$lang['cf_config_desc'] = 'Plugin main configuration';
-$lang['cf_label_config'] = 'General configuration';
-$lang['cf_label_mail'] = 'E-mail configuration';
-$lang['cf_menu_link'] = 'Add link in menu';
-$lang['cf_guest_allowed'] = 'Allow guests to see the form';
-$lang['cf_mail_prefix'] = 'Prefix of the sent e-mail subject';
-$lang['cf_separator'] = 'Character(s) used to define a separation bar in the e-mail in text format';
-$lang['cf_separator_length'] = 'Size of the bar';
-$lang['cf_mandatory_name'] = 'Name is mandatory';
-$lang['cf_mandatory_mail'] = 'E-mail address is mandatory';
-$lang['cf_redirect_delay'] = 'Pause delay of redirection';
-$lang['cf_tab_emails'] = 'E-mails';
-$lang['cf_emails'] = 'E-mails';
-$lang['cf_emails_desc'] = 'Destination e-mails management';
-$lang['cf_active'] = 'Active e-mail';
-$lang['cf_no_mail'] = 'No e-mail address available';
-$lang['cf_refresh'] = 'Regenerate e-mail list address';
-
-
-
-$lang['Text after the contact form'] = 'Κείμενο μετά από τη φόρμα επικοινωνίας';
+$lang['A comment on the site'] = 'Ένα σχόλιο για την ιστοσελίδα';
+$lang['Contact'] = 'Επαφή';
+$lang['Your name'] = 'Το όνομά σου';
+$lang['Your e-mail'] = 'Το e-mail σου';
+$lang['Subject'] = 'Θέμα';
+$lang['Message'] = 'Μήνυμα';
 $lang['Text before the contact form'] = 'Κείμενο πριν από τη φόρμα επικοινωνίας';
-$lang['cf_tab_persoform'] = 'Προσθήκη προσαρμοσμένου κειμένου';
+$lang['Text after the contact form'] = 'Κείμενο μετά από τη φόρμα επικοινωνίας';
+$lang['E-mail sent successfully'] = 'Το e-mail στάλθηκε με επιτυχία';
+$lang['Please enter a name'] = 'Παρακαλώ εισάγετε ένα όνομα';
+$lang['Please enter a subject'] = 'Παρακαλώ εισάγετε ένα θέμα';
+$lang['Please enter a message'] = 'Παρακαλώ εισάγετε ένα μήνυμα';
+$lang['Error while sending e-mail'] = 'Λάθος κατά την απόστολή e-mail';
+
 ?>

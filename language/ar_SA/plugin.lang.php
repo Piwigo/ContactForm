@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'نموذج الاتصال';
-$lang['contact_form_debug'] = 'عرض تصحيح المعلومات';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'نموذج الاتصال';
-$lang['contact_form'] = 'اتصل بنا';
-$lang['contact_form_link'] = 'اتصل بمدير الموقع';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'ارسل رسالة حالة';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'اسمك';
-$lang['cf_from_mail'] = 'بريدك الالكتروني';
-$lang['cf_subject'] = 'العنوان';
-$lang['cf_message'] = 'الرسالة';
-$lang['cf_submit'] = 'ارسل';
-$lang['title_send_mail'] = 'تعليق على الموقع';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'من فضلك ادخل الاسم';
-$lang['cf_mail_format_error'] = 'يجب ان يكون البريد بهذه الكيفيةxxx@yyy.eee (مثلا : jack@altern.org)';
-$lang['cf_subject_error'] = 'من فضلك ادخل العنوان';
-$lang['cf_message_error'] = 'من فضلك ادخل رسالة';
-$lang['cf_error_sending_mail'] = 'حدث خطأ أثناء الارسال';
-$lang['cf_sending_mail_successful'] = 'تم الارسال بنجاح';
-$lang['cf_form_error'] = 'معلومات غير صحيحة';
-$lang['cf_no_unlink'] = 'الوظيفة "unlink" غير متوفرة';
-$lang['cf_unlink_errors'] = 'خطأ اثناء حذف الملف';
-$lang['cf_config_saved'] = 'الاعدادات حفظت بنجاح';
-$lang['cf_config_saved_with_errors'] = 'الاعدادات حفظت مع وجود أخطاء';
-$lang['cf_length_not_integer'] = 'الحجم يجب ان يكون عدد صحيح';
-$lang['cf_delay_not_integer'] = 'التأخير يجب ان يكون عدد صحيح';
-$lang['cf_link_error'] = 'المتغير لايمكن ان يحوي مسافات';
-$lang['cf_hide'] = 'اخفاء';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'ادخل';
-// Configuration tab
-$lang['cf_tab_config'] = 'الاعدادات';
-$lang['cf_config'] = 'الاعدادات';
-$lang['cf_config_desc'] = 'الاعدادت الرئيسة للأداة';
-$lang['cf_label_config'] = 'الاعدادات العامة';
-$lang['cf_label_mail'] = 'اعدادات البريد الالكتروني';
-$lang['cf_menu_link'] = 'اضف رابط في القائمة';
-$lang['cf_guest_allowed'] = 'السماح للضيوف برؤية النموذج';
-$lang['cf_mail_prefix'] = 'البداية المعرفة للبريد المرسل';
-$lang['cf_separator'] = 'احرف التي تستخدم لتحديد شريط الفاصل في تنسيق نص البريد الإلكتروني';
-$lang['cf_separator_length'] = 'حجم الشريط';
-$lang['cf_mandatory_name'] = 'الاسم اجباري';
-$lang['cf_mandatory_mail'] = 'البريد الالكتروني اجباري';
-$lang['cf_redirect_delay'] = 'ايقاف مؤقت التأخير في التحويل';
-// Emails tab
-$lang['cf_tab_emails'] = 'البريد الالكتروني';
-$lang['cf_emails'] = 'البريد الالكتروني';
-$lang['cf_emails_desc'] = 'تنظيم البريد الالكتروني المستهدفة';
-$lang['cf_active'] = 'البريد الالكتروني النشطة';
-$lang['cf_no_mail'] = 'لايوجد عنوان بريد الكتروني متاح';
-$lang['cf_refresh'] = 'اعادة توليد قوائم البريد الالكتروني';
-$lang['Text after the contact form'] = 'النص بعد نموذج الاتصال';
+$lang['A comment on the site'] = 'تعليق على الموقع';
+$lang['Contact'] = 'اتصل بنا';
+$lang['Your name'] = 'اسمك';
+$lang['Your e-mail'] = 'بريدك الالكتروني';
+$lang['Subject'] = 'العنوان';
+$lang['Message'] = 'الرسالة';
+$lang['General configuration'] = 'الاعدادات العامة';
+$lang['Add link in menu'] = 'اضف رابط في القائمة';
+$lang['Allow guests to see the form'] = 'السماح للضيوف برؤية النموذج';
+$lang['E-mail address is mandatory'] = 'البريد الالكتروني اجباري';
+$lang['Name is mandatory'] = 'الاسم اجباري';
+$lang['E-mail configuration'] = 'اعدادات البريد الالكتروني';
 $lang['Text before the contact form'] = 'النص قبل نموذج الاتصال';
-$lang['cf_tab_persoform'] = 'اضف نص اختياري';
+$lang['Text after the contact form'] = 'النص بعد نموذج الاتصال';
+$lang['E-mail sent successfully'] = 'تم الارسال بنجاح';
+$lang['Please enter a name'] = 'من فضلك ادخل الاسم';
+$lang['Please enter a subject'] = 'من فضلك ادخل العنوان';
+$lang['Please enter a message'] = 'من فضلك ادخل رسالة';
+$lang['Error while sending e-mail'] = 'حدث خطأ أثناء الارسال';
+
 ?>

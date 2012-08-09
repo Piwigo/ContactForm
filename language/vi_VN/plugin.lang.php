@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Dạng Liên hệ';
-$lang['contact_form_debug'] = 'Hiển thị của thông tin hiệu chỉnh lỗi';
-
-// ==================================================================
-// Giá trị mặc định nếu không được cấu hình 
-$lang['contact_form_title'] = 'Dạng Liên hệ';
-$lang['contact_form'] = 'Liên hệ';
-$lang['contact_form_link'] = 'Liên hệ webmaster';
-
-// ==================================================================
-// Trang đổi hướng
-$lang['contact_redirect_title'] = 'Gởi trạng thái tin nhắn';
-
-// ==================================================================
-// Khối thanh trình đơn
-$lang['cf_from_name'] = 'Tên của bạn';
-$lang['cf_from_mail'] = 'Email của bạn';
-$lang['cf_subject'] = 'Tiêu đề';
-$lang['cf_message'] = 'Thông điệp';
-$lang['cf_submit'] = 'Gởi';
-$lang['title_send_mail'] = 'Một lời bình trên trang';
-
-// ==================================================================
-// Thông điệp
-$lang['cf_from_name_error'] = 'Vui lòng nhập tên';
-$lang['cf_mail_format_error'] = 'địa chỉ email phải có dạng xxx@yyy.eee (ví dụ : jack@altern.org)';
-$lang['cf_subject_error'] = 'Vui lòng nhập tiêu đề';
-$lang['cf_message_error'] = 'Vui lòng nhập nội dung';
-$lang['cf_error_sending_mail'] = 'Có lỗi trong quá trình gởi email';
-$lang['cf_sending_mail_successful'] = 'Email đã được gởi thành công';
-$lang['cf_form_error'] = 'Dữ liệu không có thực';
-$lang['cf_no_unlink'] = 'Chức năng \'unlink\' không dùng được...';
-$lang['cf_unlink_errors'] = 'Lỗi xuất hiện trong quá trình xóa tệp tin';
-$lang['cf_config_saved'] = 'Cấu hình được lưu thành công';
-$lang['cf_config_saved_with_errors'] = 'Cấu hình được lưu với lỗi';
-$lang['cf_length_not_integer'] = 'Kích thước phải là số nguyên';
-$lang['cf_delay_not_integer'] = 'Độ trễ phải là số nguyên';
-$lang['cf_link_error'] = 'Biến số không thể chứa khoảng trắng';
-$lang['cf_hide'] = 'Ẩn';
-
-// ==================================================================
-// Trang quản trị
-$lang['cf_validate'] = 'Xác nhận';
-// Thẻ cấu hình
-$lang['cf_tab_config'] = 'Cấu hình';
-$lang['cf_config'] = 'Cấu hình';
-$lang['cf_config_desc'] = 'Cấu hình plugin chính';
-$lang['cf_label_config'] = 'Cấu hình tổng quát';
-$lang['cf_label_mail'] = 'Cấu hình thư điện tử';
-$lang['cf_menu_link'] = 'Thêm liên kết vào trình đơn';
-$lang['cf_guest_allowed'] = 'Cho phép khách xem các dạng';
-$lang['cf_mail_prefix'] = 'Tiếp đầu ngữ tiêu đề mail được gởi';
-$lang['cf_separator'] = 'Ký tự sử dụng để định nghĩa thanh chia của email trong định dạng kiểu chữ';
-$lang['cf_separator_length'] = 'Kích thước của thanh';
-$lang['cf_mandatory_name'] = 'Họ tên là bắt buộc';
-$lang['cf_mandatory_mail'] = 'Địa chỉ thư điện tử là bắt buộc';
-$lang['cf_redirect_delay'] = 'Tạm ngừng độ trễ của quá trình điều hướng';
-// Thẻ thư điện tử
-$lang['cf_tab_emails'] = 'Thư điện tử';
-$lang['cf_emails'] = 'Thư điện tử';
-$lang['cf_emails_desc'] = 'Quản lý thư điện tử gởi đến';
-$lang['cf_active'] = 'Kích hoạt thư điện tử';
-$lang['cf_no_mail'] = 'Không có địa chỉ thư nào dùng được';
-$lang['cf_refresh'] = 'Tạo ra danh sách địa chỉ thư';
-$lang['Text after the contact form'] = 'Chữ hiện sau form liên lạc';
+$lang['A comment on the site'] = 'Một lời bình trên trang';
+$lang['Contact'] = 'Liên hệ';
+$lang['Your name'] = 'Tên của bạn';
+$lang['Your e-mail'] = 'Email của bạn';
+$lang['Subject'] = 'Tiêu đề';
+$lang['Message'] = 'Thông điệp';
+$lang['General configuration'] = 'Cấu hình tổng quát';
+$lang['Add link in menu'] = 'Thêm liên kết vào trình đơn';
+$lang['Allow guests to see the form'] = 'Cho phép khách xem các dạng';
+$lang['E-mail address is mandatory'] = 'Địa chỉ thư điện tử là bắt buộc';
+$lang['Name is mandatory'] = 'Họ tên là bắt buộc';
+$lang['E-mail configuration'] = 'Cấu hình thư điện tử';
 $lang['Text before the contact form'] = 'Chữ hiện trước form liên lạc';
-$lang['cf_tab_persoform'] = 'Thêm chữ theo ý bạn';
+$lang['Text after the contact form'] = 'Chữ hiện sau form liên lạc';
+$lang['E-mail sent successfully'] = 'Email đã được gởi thành công';
+$lang['Please enter a name'] = 'Vui lòng nhập tên';
+$lang['Please enter a subject'] = 'Vui lòng nhập tiêu đề';
+$lang['Please enter a message'] = 'Vui lòng nhập nội dung';
+$lang['Error while sending e-mail'] = 'Có lỗi trong quá trình gởi email';
+
 ?>

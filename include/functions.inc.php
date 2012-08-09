@@ -1,0 +1,326 @@
+<?php
+if (!defined('CONTACT_FORM_PATH')) die('Hacking attempt!');
+
+/**
+ * define page section from url
+ */
+function contact_form_section_init()
+{
+  global $tokens, $page, $conf;
+  
+  define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
+
+  if ($tokens[0] == 'contact')
+  {
+    $page['section'] = 'contact';
+    $page['title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
+  }
+}
+
+/**
+ * contact page 
+ */
+function contact_form_page()
+{
+  global $page;
+
+  if (isset($page['section']) and $page['section'] == 'contact')
+  {
+    include(CONTACT_FORM_PATH . '/include/contact_form.inc.php');
+  }
+}
+
+/** 
+ * public menu link 
+ */
+function contact_form_applymenu($menu_ref_arr)
+{
+  global $conf;
+  
+  if ( !$conf['ContactForm']['cf_menu_link'] ) return;
+  if ( !is_classic_user() and !$conf['ContactForm']['cf_allow_guest'] ) return;
+  if ( !count(get_contact_emails()) ) return;
+  
+  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact2')) . '/');
+
+  $menu = &$menu_ref_arr[0];
+  if (($block = $menu->get_block('mbMenu')) != null)
+  {
+    array_push($block->data, array(
+      'URL' => CONTACT_FORM_PUBLIC,
+      'NAME' => l10n('Contact'),
+    ));
+  }
+}
+
+/**
+ * admin plugins menu link 
+ */
+function contact_form_admin_menu($menu) 
+{
+  array_push($menu, array(
+    'URL' => CONTACT_FORM_ADMIN,
+    'NAME' => 'Contact Form',
+  ));
+  return $menu;
+}
+
+/**
+ * init emails list
+ */
+function contact_form_initialize_emails()
+{
+  global $conf;
+  
+  $query = '
+SELECT
+    u.'.$conf['user_fields']['username'].' AS username,
+    u.'.$conf['user_fields']['email'].' AS email
+  FROM '.USERS_TABLE.' AS u
+    JOIN '.USER_INFOS_TABLE.' AS i
+    ON i.user_id =  u.'.$conf['user_fields']['id'].'
+  WHERE i.status in (\'webmaster\',  \'admin\')
+    AND '.$conf['user_fields']['email'].' IS NOT NULL
+  ORDER BY username
+;';
+  $result = pwg_query($query);
+  
+  $emails = array();
+  while ($row = pwg_db_fetch_assoc($result))
+  {
+    array_push($emails, array(
+      'name' => $row['username'],
+      'email' => $row['email'],
+      'active' => true,
+      ));
+  }
+  
+  $conf['ContactForm']['cf_admin_mails'] = $emails;
+  $conf['ContactForm']['cf_must_initialize'] = false;
+  conf_update_param('ContactForm', serialize($conf['ContactForm']));
+}
+
+
+/**
+ * Send comment to subscribers
+ */
+function send_contact_form(&$comm, $key)
+{
+  global $conf, $page, $template, $conf_mail;
+  
+  if (!isset($conf_mail))
+  {
+    $conf_mail = get_mail_configuration();
+  }
+  
+  $comm = array_merge($comm,
+    array(
+      'ip' => $_SERVER['REMOTE_ADDR'],
+      'agent' => $_SERVER['HTTP_USER_AGENT']
+    )
+   );
+
+  $comment_action='validate';
+  
+  // check key
+  if (!verify_ephemeral_key(@$key))
+  {
+    $comment_action='reject';
+  }
+
+  // check author
+  if ( $conf['ContactForm']['cf_mandatory_name'] and empty($comm['author']) )
+  {
+    array_push($page['errors'], l10n('Please enter a name'));
+    $comment_action='reject';
+  }
+  
+  // check email
+  if ( $conf['ContactForm']['cf_mandatory_mail'] and empty($comm['email']) )
+  {
+    array_push($page['errors'], l10n('Please enter an e-mail'));
+    $comment_action='reject';
+  }
+  else if ( !empty($comm['email']) and !check_email_validity($comm['email']) )
+  {
+    array_push($page['errors'], l10n('mail address must be like xxx@yyy.eee (example : jack@altern.org)'));
+    $comment_action='reject';
+  }
+
+  // check subject
+  if (empty($comm['subject']))
+  {
+    array_push($page['errors'], l10n('Please enter a subject'));
+    $comment_action='reject';
+  }
+  else if (strlen($comm['subject']) < 4)
+  {
+    array_push($page['errors'], sprintf(l10n('%s must not be less than %d characters long'), l10n('Subject'), 4));
+    $comment_action='reject';
+  }
+  else if (strlen($comm['subject']) > 100)
+  {
+    array_push($page['errors'], sprintf(l10n('%s must not be more than %d characters long'), l10n('Subject'), 100));
+    $comment_action='reject';
+  }
+  
+  // check content
+  if (empty($comm['content']))
+  {
+    array_push($page['errors'], l10n('Please enter a message'));
+    $comment_action='reject';
+  }
+  else if (strlen($comm['content']) < 20)
+  {
+    array_push($page['errors'], sprintf(l10n('%s must not be less than %d characters long'), l10n('Message'), 20));
+    $comment_action='reject';
+  }
+  else if (strlen($comm['subject']) > 2000)
+  {
+    array_push($page['errors'], sprintf(l10n('%s must not be more than %d characters long'), l10n('Message'), 2000));
+    $comment_action='reject';
+  }
+  
+  include_once(PHPWG_ROOT_PATH.'include/functions_comment.inc.php');
+  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+  
+  add_event_handler('contact_form_check', 'user_comment_check',
+    EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
+  
+  // perform more spam check
+  $comment_action = trigger_event('contact_form_check', $comment_action, $comm);
+  
+  // get admin emails
+  $emails = get_contact_emails();
+  if (!count($emails))
+  {
+    array_push($page['errors'], l10n('Error while sending e-mail'));
+    $comment_action='reject';
+  }
+
+  if ($comment_action == 'validate')
+  {
+    // format subject
+    $prefix = str_replace('%gallery_title%', $conf['gallery_title'], $conf['ContactForm']['cf_subject_prefix']);
+    $subject = '['.$prefix.'] '.$comm['subject'];
+    $subject = trim(preg_replace('#[\n\r]+#s', '', $subject));
+    $subject = encode_mime_header($subject);
+    
+    // format content
+    if ($conf['ContactForm']['cf_mail_type'] == 'text/html')
+    {
+      $comm['content'] = nl2br($comm['content']);
+    }
+    
+    // format expeditor
+    if (empty($comm['email']))
+    {
+      $args['from'] = $conf_mail['formated_email_webmaster'];
+    }
+    else
+    {
+      $args['from'] = format_email($comm['author'], $comm['email']);
+    }
+    
+    // hearders
+    $headers = 'From: '.$args['from']."\n";  
+    $headers.= 'MIME-Version: 1.0'."\n";
+    $headers.= 'X-Mailer: Piwigo Mailer'."\n";
+    $headers.= 'Content-Transfer-Encoding: 8bit'."\n";
+    $headers.= 'Content-Type: '.$conf['ContactForm']['cf_mail_type'].'; charset="'.get_pwg_charset().'";'."\n";
+    
+    set_make_full_url();
+    switch_lang_to(get_default_language());
+    load_language('plugin.lang', CONTACT_FORM_PATH);
+    
+    // template
+    if ($conf['ContactForm']['cf_mail_type'] == 'text/html')
+    {
+      $mail_css = file_get_contents(dirname(__FILE__).'/../template/mail/style.css');
+      $template->set_filename('contact_mail', dirname(__FILE__).'/../template/mail/content_html.tpl');
+    }
+    else
+    {
+      $mail_css = null;
+      $template->set_filename('contact_mail', dirname(__FILE__).'/../template/mail/content_plain.tpl');
+    }
+    
+    $template->assign(array(
+      'cf_prefix' => $prefix,
+      'contact' => $comm,
+      'GALLERY_URL' => get_gallery_home_url(),
+      'PHPWG_URL' => PHPWG_URL,
+      'CONTACT_MAIL_CSS' => $mail_css,
+      ));
+    
+    // mail content
+    $content = $template->parse('contact_mail', true);
+    $content = wordwrap($content, 70, "\n", true);
+    
+    // send mail
+    $result =
+      trigger_event('send_mail',
+        false, /* Result */
+        trigger_event('send_mail_to', implode(';', $emails)),
+        trigger_event('send_mail_subject', $subject),
+        trigger_event('send_mail_content', $content),
+        trigger_event('send_mail_headers', $headers),
+        $args
+      );
+    
+    unset_make_full_url();
+    switch_lang_back();
+    load_language('plugin.lang', CONTACT_FORM_PATH);
+    
+    if ($result == false)
+    {
+      array_push($page['errors'], l10n('Error while sending e-mail'));
+      $comment_action='reject';
+    }
+  }
+  
+  return $comment_action;
+}
+
+/**
+ * get contact emails
+ */
+function get_contact_emails()
+{
+  global $conf;
+  
+  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+  
+  $emails = array();
+  foreach ($conf['ContactForm']['cf_admin_mails'] as $data)
+  {
+    if ($data['active'])
+    {
+      array_push($emails, format_email($data['name'], $data['email']));
+    }
+  }
+  
+  return $emails;
+}
+
+
+/**
+ * check if email is valid 
+ */
+function check_email_validity($mail_address)
+{
+  if (version_compare(PHP_VERSION, '5.2.0') >= 0)
+  {
+    return filter_var($mail_address, FILTER_VALIDATE_EMAIL)!==false;
+  }
+  else
+  {
+    $atom   = '[-a-z0-9!#$%&\'*+\\/=?^_`{|}~]';   // before  arobase
+    $domain = '([a-z0-9]([-a-z0-9]*[a-z0-9]+)?)'; // domain name
+    $regex = '/^' . $atom . '+' . '(\.' . $atom . '+)*' . '@' . '(' . $domain . '{1,63}\.)+' . $domain . '{2,63}$/i';
+
+    return (bool)preg_match($regex, $mail_address);
+  }
+}
+
+?>

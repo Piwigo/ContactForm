@@ -1,40 +1,72 @@
 <?php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
-if (!defined('IN_ADMIN') or !IN_ADMIN) die('Hacking attempt!');
 
-if (!defined('CF_PATH')) {
-  define('CF_PATH',     PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
-}
-if (!defined('CF_ROOT')) {
-  define('CF_ROOT',     dirname(__FILE__).'/');
-}
+define('contact_form_default_config', 
+  serialize(array(
+    'cf_must_initialize' => true,
+    'cf_menu_link' => true,
+    'cf_subject_prefix' => '%gallery_title%',
+    'cf_default_subject' => 'A comment on the site',
+    'cf_allow_guest' => true,
+    'cf_mandatory_mail' => true,
+    'cf_mandatory_name' => true,
+    'cf_redirect_delay' => 5,
+    'cf_mail_type' => 'text/html',
+    'cf_admin_mails' => array(),
+    ))
+  );
 
-function plugin_install($plugin_id, $version, &$errors) {
-  include_once(CF_PATH . 'include/cf_common.inc.php');
-  // Include language advices
-  load_language('plugin.lang', CF_PATH);
-  update_config($plugin_id, CF_CFG_DB_FACTORY);
-}
 
-function plugin_activate($plugin_id, $version, &$errors) {
-  update_config($plugin_id);
-}
-
-function plugin_deactivate($plugin_id) {
-  // Nothing special
-}
-
-function plugin_uninstall($plugin_id) {
-  include_once(CF_PATH . 'include/cf_common.inc.php');
-  $uninstall = CF_Config::uninstall($plugin_id);
+function plugin_install() 
+{
+  conf_update_param('ContactForm', contact_form_default_config);
+  conf_update_param('ContactForm_before', null);
+  conf_update_param('ContactForm_after', null);
 }
 
-function update_config($plugin_id, $db_comment=null) {
-  include_once(CF_PATH . 'include/cf_common.inc.php');
-  $clean = cf_clean_obsolete_files(CF_OBSOLETE);
-  if (null != $db_comment) {
-    $cf_config_default[CF_CFG_COMMENT] = $db_comment;
+function plugin_activate()
+{
+  global $conf;
+
+  if (!isset($conf['ContactForm']))
+  {
+    plugin_install();
   }
-  $install = CF_Config::install($plugin_id);
+  else
+  {
+    $new_conf = unserialize($conf['ContactForm']);
+    
+    // migration 2.4 -> 2.5
+    if (!isset($new_conf['cf_must_initialize']))
+    {
+      $new_conf['cf_must_initialize'] = false;
+      $new_conf['cf_default_subject'] = 'A comment on the site';
+      $new_conf['cf_mail_type'] = 'text/html';
+      unset($new_conf['comment'], $new_conf['cf_redirect_delay']);
+      unset($new_conf['cf_separator'], $new_conf['cf_separator_length']);
+      
+      foreach ($new_conf['cf_admin_mails'] as $email => $data)
+      {
+        $new_conf['cf_admin_mails'][] = array(
+          'email' => $email,
+          'name' => $data['NAME'],
+          'active' => $data['ACTIVE'],
+          );
+        unset($new_conf['cf_admin_mails'][ $email ]);
+      }
+      
+      conf_update_param('ContactForm', serialize($new_conf));
+      conf_update_param('ContactForm_before', stripslashes($conf['persoformtop']));
+      conf_update_param('ContactForm_after', stripslashes($conf['persoformbottom']));
+      
+      pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param IN("persoformtop", "persoformbottom") LIMIT 2;');
+    }
+  }
 }
+
+function plugin_uninstall() 
+{
+  pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param LIKE "ContactForm%" LIMIT 3;');
+}
+
 ?>

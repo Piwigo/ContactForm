@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Формуляр за контакт';
-$lang['contact_form_debug'] = 'Покажи информацията за дебъгване';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Формуляр за контакт';
-$lang['contact_form'] = 'Контакт';
-$lang['contact_form_link'] = 'Контакт Уебмастър';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Изпрати съобщение за състоянието';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Вашето Име';
-$lang['cf_from_mail'] = 'Вашият e-mail';
-$lang['cf_subject'] = 'Тема';
-$lang['cf_message'] = 'Съобщение';
-$lang['cf_submit'] = 'Изпрати';
-$lang['title_send_mail'] = 'Коментар на сайта';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Моля въведете име';
-$lang['cf_mail_format_error'] = 'мейл адресът трябва да бъде подобно на xxx@yyy.eee (пример : jack@altern.org)';
-$lang['cf_subject_error'] = 'Моля въведете тема';
-$lang['cf_message_error'] = 'Моля въведете съобщение';
-$lang['cf_error_sending_mail'] = 'Грешка при изпращане на e-mail';
-$lang['cf_sending_mail_successful'] = 'E-mail е изпратен успешно';
-$lang['cf_form_error'] = 'Невалидна информация';
-$lang['cf_no_unlink'] = 'Функцията \'unlink\' не е налична...';
-$lang['cf_unlink_errors'] = 'Възникна грешка при изтриването на файла';
-$lang['cf_config_saved'] = 'Конфигурацията е записана успешно';
-$lang['cf_config_saved_with_errors'] = 'Конфигурацията е записана с грешки';
-$lang['cf_length_not_integer'] = 'Размерът трябва да бъде цяло число';
-$lang['cf_delay_not_integer'] = 'Закъснението трябва да бъде цяло число';
-$lang['cf_link_error'] = 'Променливата неможе да съдържа интервали';
-$lang['cf_hide'] = 'Скрий';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Изпрати';
-// Configuration tab
-$lang['cf_tab_config'] = 'Конфигурация';
-$lang['cf_config'] = 'Конфигурация';
-$lang['cf_config_desc'] = 'Плъгин за основната конфигурация';
-$lang['cf_label_config'] = 'Обща конфигурация';
-$lang['cf_label_mail'] = 'Е-мейл конфигурация';
-$lang['cf_menu_link'] = 'Добави линк в менюто';
-$lang['cf_guest_allowed'] = 'Позволи на гостите да виждат формата';
-$lang['cf_mail_prefix'] = 'Префикс на изпратен е-майл обект';
-$lang['cf_separator'] = 'Синвол(и) използван за дефиниране на разграничител в е-майл в текстов формат ';
-$lang['cf_separator_length'] = 'Размер на бара';
-$lang['cf_mandatory_name'] = 'Името е задължително';
-$lang['cf_mandatory_mail'] = 'Е-мейл адресът е задължителен';
-$lang['cf_redirect_delay'] = 'Пауза на забавяне от пренасочване';
-// Emails tab
-$lang['cf_tab_emails'] = 'Е-мейли';
-$lang['cf_emails'] = 'Е-мейли';
-$lang['cf_emails_desc'] = 'Управление на местоназначение на е-майли';
-$lang['cf_active'] = 'Активен е-майл';
-$lang['cf_no_mail'] = 'Няма наличен е-мейл адрес';
-$lang['cf_refresh'] = 'Регенериране на списъка с е-мейл адреси';
-$lang['Text after the contact form'] = 'Текст след формуляра "За контакт"';
+$lang['A comment on the site'] = 'Коментар на сайта';
+$lang['Contact'] = 'Контакт';
+$lang['Your name'] = 'Вашето Име';
+$lang['Your e-mail'] = 'Вашият e-mail';
+$lang['Subject'] = 'Тема';
+$lang['Message'] = 'Съобщение';
+$lang['General configuration'] = 'Обща конфигурация';
+$lang['Add link in menu'] = 'Добави линк в менюто';
+$lang['Allow guests to see the form'] = 'Позволи на гостите да виждат формата';
+$lang['E-mail address is mandatory'] = 'Е-мейл адресът е задължителен';
+$lang['Name is mandatory'] = 'Името е задължително';
+$lang['E-mail configuration'] = 'E-mail configuration';
 $lang['Text before the contact form'] = 'Текст пред формуляра "За контакт"';
-$lang['cf_tab_persoform'] = 'Вмъкване на още инфо...';
+$lang['Text after the contact form'] = 'Текст след формуляра "За контакт"';
+$lang['E-mail sent successfully'] = 'E-mail е изпратен успешно';
+$lang['Please enter a name'] = 'Моля въведете име';
+$lang['Please enter a subject'] = 'Моля въведете тема';
+$lang['Please enter a message'] = 'Моля въведете съобщение';
+$lang['Error while sending e-mail'] = 'Грешка при изпращане на e-mail';
+
 ?>

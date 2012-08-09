@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Kontaktní formulář';
-$lang['contact_form_debug'] = 'Zobrazí případně chyby k odladění';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Kontaktní formulář';
-$lang['contact_form'] = 'Kontakt';
-$lang['contact_form_link'] = 'Kontakt správce webu';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Stav odesílané zprávy';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Vaše jméno';
-$lang['cf_from_mail'] = 'Váš e-mail';
-$lang['cf_subject'] = 'Předmět';
-$lang['cf_message'] = 'Zpráva';
-$lang['cf_submit'] = 'Odeslat';
-$lang['title_send_mail'] = 'Komentář na webu';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Prosím zadejte Vaše jméno';
-$lang['cf_mail_format_error'] = 'E-mail musí být ve formátu xxx@yyy.eee (například : novak@seznam.cz)';
-$lang['cf_subject_error'] = 'Prosím zadejte předmět zprávy';
-$lang['cf_message_error'] = 'Prosím zadejte zprávu';
-$lang['cf_error_sending_mail'] = 'Nastala chyba při odeslání zprávy';
-$lang['cf_sending_mail_successful'] = 'E-mail odeslán';
-$lang['cf_form_error'] = 'Nesprávná data';
-$lang['cf_no_unlink'] = 'Funkce \'unlink\' není k dispozici...';
-$lang['cf_unlink_errors'] = 'Chyba nastala při mazání souboru';
-$lang['cf_config_saved'] = 'Konfigurace uložena';
-$lang['cf_config_saved_with_errors'] = 'Konfigurace uložena s chybami';
-$lang['cf_length_not_integer'] = 'Velikost musí být celé číslo';
-$lang['cf_delay_not_integer'] = 'Zpoždění musí být celé číslo';
-$lang['cf_link_error'] = 'Proměnná ne\může obsahovat mezery';
-$lang['cf_hide'] = 'Skrýt';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Potvrdit';
-// Configuration tab
-$lang['cf_tab_config'] = 'Konfigurace';
-$lang['cf_config'] = 'Konfigurace';
-$lang['cf_config_desc'] = 'Hlavní konfigurace pluginu';
-$lang['cf_label_config'] = 'Hlavní konfigurace';
-$lang['cf_label_mail'] = 'E-mail konfigurace';
-$lang['cf_menu_link'] = 'Vložit odkaz do menu';
-$lang['cf_guest_allowed'] = 'Povol návštěvníkům vidět formulář';
-$lang['cf_mail_prefix'] = 'Prefix pro předmět zpráv';
-$lang['cf_separator'] = 'Znak(y) sloužící k definování oddělení polí v e-mailu v textovém formátu';
-$lang['cf_separator_length'] = 'Velikost pole';
-$lang['cf_mandatory_name'] = 'Jméno je povinné';
-$lang['cf_mandatory_mail'] = 'E-mail addresa je povinná';
-$lang['cf_redirect_delay'] = 'Zpoždění přesměrování';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-maily';
-$lang['cf_emails'] = 'E-maily';
-$lang['cf_emails_desc'] = 'Řízení cílové destinace e-mailů ';
-$lang['cf_active'] = 'Aktivuj e-mail';
-$lang['cf_no_mail'] = 'Žádná mail adresa k dispozici';
-$lang['cf_refresh'] = 'Regenerace seznamu e-mail adres';
-$lang['Text after the contact form'] = 'Text za kontaktním formulářem';
+$lang['A comment on the site'] = 'Komentář na webu';
+$lang['Contact'] = 'Kontakt';
+$lang['Your name'] = 'Vaše jméno';
+$lang['Your e-mail'] = 'Váš e-mail';
+$lang['Subject'] = 'Předmět';
+$lang['Message'] = 'Zpráva';
+$lang['General configuration'] = 'Hlavní konfigurace';
+$lang['Add link in menu'] = 'Vložit odkaz do menu';
+$lang['Allow guests to see the form'] = 'Povol návštěvníkům vidět formulář';
+$lang['E-mail address is mandatory'] = 'E-mail addresa je povinná';
+$lang['Name is mandatory'] = 'Jméno je povinné';
+$lang['E-mail configuration'] = 'E-mail konfigurace';
 $lang['Text before the contact form'] = 'Text před kontaktním formulářem';
-$lang['cf_tab_persoform'] = 'Přidejte zakázkový text';
+$lang['Text after the contact form'] = 'Text za kontaktním formulářem';
+$lang['E-mail sent successfully'] = 'E-mail odeslán';
+$lang['Please enter a name'] = 'Prosím zadejte Vaše jméno';
+$lang['Please enter a subject'] = 'Prosím zadejte předmět zprávy';
+$lang['Please enter a message'] = 'Prosím zadejte zprávu';
+$lang['Error while sending e-mail'] = 'Nastala chyba při odeslání zprávy';
+
 ?>

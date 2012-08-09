@@ -1,0 +1,42 @@
+.contact {
+  width:540px;
+  margin:10px auto 10px auto;
+}
+  .contact table td {
+    padding-bottom:5px;
+    text-align:left;
+  }
+  .contact table td.title {
+    font-weight:bold;
+    text-align:right !important;
+    padding-top:3px;
+    vertical-align:top;
+    width:120px;
+  }
+  .filter label {
+    float:none;
+    margin-right:3px;
+  }
+  .contact input[type="text"], .contact textarea {
+    border-radius:2px;
+    padding:3px;
+  }
+
+.LV_validation_message{
+  display:block;
+  font-weight:bold;
+  margin:0 0 0 5px;
+}
+.LV_valid {
+   display:none;
+}
+.LV_invalid {
+  color:#cc0000;
+}
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+  border: 1px solid #cc0000;
+}

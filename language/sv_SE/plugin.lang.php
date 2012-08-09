@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Kontaktformulär';
-$lang['contact_form_debug'] = 'Visning av felsökningsinformation';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Kontaktformulär';
-$lang['contact_form'] = 'Kontakt';
-$lang['contact_form_link'] = 'Kontakta webbansvarig';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Skicka meddelande status';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Namn';
-$lang['cf_from_mail'] = 'E-post';
-$lang['cf_subject'] = 'Ämne';
-$lang['cf_message'] = 'Meddelande';
-$lang['cf_submit'] = 'skicka';
-$lang['title_send_mail'] = 'En kommentar till webbsidan';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Ange ett namn';
-$lang['cf_mail_format_error'] = 'e-postadress måste vara av formen ”arne@anka.org';
-$lang['cf_subject_error'] = 'Ange ett ämnet';
-$lang['cf_message_error'] = 'Skriv ett meddelande';
-$lang['cf_error_sending_mail'] = 'Fel vid sändning av e-post';
-$lang['cf_sending_mail_successful'] = 'E-post har skickats';
-$lang['cf_form_error'] = 'Ogiltiga data';
-$lang['cf_no_unlink'] = 'Funktionen \'unlink\' inte tillgänglig...';
-$lang['cf_unlink_errors'] = 'Fel inträffade vid borttagning av filer';
-$lang['cf_config_saved'] = 'Inställningar har sparats';
-$lang['cf_config_saved_with_errors'] = 'Inställningar har sparats med fel!';
-$lang['cf_length_not_integer'] = 'Storleken måste vara ett heltal';
-$lang['cf_delay_not_integer'] = 'Fördröjningen måste vara ett heltal';
-$lang['cf_link_error'] = 'Variabel kan inte  innehålla mellanslag';
-$lang['cf_hide'] = 'Dölj';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Skicka';
-// Configuration tab
-$lang['cf_tab_config'] = 'Inställningar';
-$lang['cf_config'] = 'Inställningar';
-$lang['cf_config_desc'] = 'Allmänna inställningar för plugg-in';
-$lang['cf_label_config'] = 'Allmäna inställningar';
-$lang['cf_label_mail'] = 'E-post inställningar';
-$lang['cf_menu_link'] = 'Inkludera länk i menyn';
-$lang['cf_guest_allowed'] = 'Tillåt gäster att använda formuläret';
-$lang['cf_mail_prefix'] = 'Prefix till "Ämne" i det sända e-postmeddelandet';
-$lang['cf_separator'] = 'Symbol att använda som avdelare i e-post i textformat';
-$lang['cf_separator_length'] = 'Avdelarens längd';
-$lang['cf_mandatory_name'] = 'Obligatoriskt namn';
-$lang['cf_mandatory_mail'] = 'Obligatorisk e-postadress';
-$lang['cf_redirect_delay'] = 'Fördröjning av omdirigering';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-post';
-$lang['cf_emails'] = 'E-post';
-$lang['cf_emails_desc'] = 'Destinationshantering för e-post';
-$lang['cf_active'] = 'Aktiv e-post';
-$lang['cf_no_mail'] = 'Ingen e-postadress tillgänglig';
-$lang['cf_refresh'] = 'Uppdatera';
-$lang['Text after the contact form'] = 'Text efter kontaktformuläret';
+$lang['A comment on the site'] = 'En kommentar till webbsidan';
+$lang['Contact'] = 'Kontakt';
+$lang['Your name'] = 'Namn';
+$lang['Your e-mail'] = 'E-post';
+$lang['Subject'] = 'Ämne';
+$lang['Message'] = 'Meddelande';
+$lang['General configuration'] = 'Allmäna inställningar';
+$lang['Add link in menu'] = 'Inkludera länk i menyn';
+$lang['Allow guests to see the form'] = 'Tillåt gäster att använda formuläret';
+$lang['E-mail address is mandatory'] = 'Obligatorisk e-postadress';
+$lang['Name is mandatory'] = 'Obligatoriskt namn';
+$lang['E-mail configuration'] = 'E-post inställningar';
 $lang['Text before the contact form'] = 'Text före kontaktformuläret';
-$lang['cf_tab_persoform'] = 'Lägg till valfri text';
+$lang['Text after the contact form'] = 'Text efter kontaktformuläret';
+$lang['E-mail sent successfully'] = 'E-post har skickats';
+$lang['Please enter a name'] = 'Ange ett namn';
+$lang['Please enter a subject'] = 'Ange ett ämnet';
+$lang['Please enter a message'] = 'Skriv ett meddelande';
+$lang['Error while sending e-mail'] = 'Fel vid sändning av e-post';
+
 ?>

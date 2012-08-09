@@ -1,71 +1,43 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'İletişim Formu';
-$lang['contact_form_debug'] = 'Debug bilgisini gör';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'İletişim formu';
-$lang['contact_form'] = 'İletişim';
-$lang['contact_form_link'] = 'İletişim Site yöneticisi';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Mesajın durumunu gönder';
-
-// ==================================================================
-// Menü bloğu
-$lang['cf_from_name'] = 'İsminiz';
-$lang['cf_from_mail'] = 'E-posta adresiniz';
-$lang['cf_subject'] = 'Konu';
-$lang['cf_message'] = 'Mesaj';
-$lang['cf_submit'] = 'Gönder';
-$lang['title_send_mail'] = '';
-
-// ==================================================================
-// Mesajlar
-$lang['cf_from_name_error'] = 'Lütfen isminizi girin';
-$lang['cf_mail_format_error'] = 'E-Posta yandaki gibi olmalıdır  xxx@yyy.eee (örnek : jack@altern.org)';
-$lang['cf_subject_error'] = 'Lütfen konuyu girin';
-$lang['cf_message_error'] = 'Lütfen mesajınızı girin';
-$lang['cf_error_sending_mail'] = 'Mesajın gönderilmesinde sorun oluştu';
-$lang['cf_sending_mail_successful'] = 'Mesajınız başarılı bir şekilde gönderildi.';
-$lang['cf_form_error'] = 'Geçersiz bilgi';
-$lang['cf_no_unlink'] = 'Fonksiyon \'unlink\' ulaşılamaz...';
-$lang['cf_unlink_errors'] = 'Dosyada hata oluştu';
-$lang['cf_config_saved'] = 'Değişiklikler başarılı ile kaydedildi.';
-$lang['cf_config_saved_with_errors'] = 'Değişikler hatalar ile kaydedildi';
-$lang['cf_length_not_integer'] = 'Boyut değeri tam sayı olmalı';
-$lang['cf_delay_not_integer'] = 'Geçikme değeri tam sayı olmalı';
-$lang['cf_link_error'] = 'Değişkenler boşluk içeremez';
-$lang['cf_hide'] = 'Gizle';
-
-// ==================================================================
-// Yönetici Sayfası
-$lang['cf_validate'] = 'Gönder';
-// Ayarlar  bölümü
-$lang['cf_tab_config'] = 'Ayarlar';
-$lang['cf_config'] = 'Ayarlar';
-$lang['cf_config_desc'] = 'Eklenti ayarları';
-$lang['cf_label_config'] = 'Genel ayarlar';
-$lang['cf_label_mail'] = 'E-posta ayarları';
-$lang['cf_menu_link'] = 'Menüye link ekle';
-$lang['cf_guest_allowed'] = 'Ziyaretciler formu görebilir';
-$lang['cf_mail_prefix'] = 'Gelen postaya eklenecek ön ek';
-$lang['cf_separator'] = 'Character(s) used to define a separation bar in the e-mail in text format';
-$lang['cf_separator_length'] = 'Mesaj alanın genişliği';
-$lang['cf_mandatory_name'] = 'Zorunlu isim';
-$lang['cf_mandatory_mail'] = 'E-postanın zorunluluğu';
-$lang['cf_redirect_delay'] = 'Geribildirimde geçikme süresi';
-// E-posta  bölümü
-$lang['cf_tab_emails'] = 'E-postalar';
-$lang['cf_emails'] = 'E-postalar';
-$lang['cf_emails_desc'] = 'Hedef e-posta yönetimi';
-$lang['cf_active'] = 'Etkin e-posta';
-$lang['cf_no_mail'] = 'Mevcut e-posta adresi yok';
-$lang['cf_refresh'] = 'E-posta listesini tekrar oluştur';
-$lang['Text after the contact form'] = 'İletişim formun arkasındaki metin';
+$lang['Contact'] = 'İletişim';
+$lang['Your name'] = 'İsminiz';
+$lang['Your e-mail'] = 'E-posta adresiniz';
+$lang['Subject'] = 'Konu';
+$lang['Message'] = 'Mesaj';
+$lang['General configuration'] = 'Genel ayarlar';
+$lang['Add link in menu'] = 'Menüye link ekle';
+$lang['Allow guests to see the form'] = 'Ziyaretciler formu görebilir';
+$lang['E-mail address is mandatory'] = 'E-postanın zorunluluğu';
+$lang['Name is mandatory'] = 'Zorunlu isim';
+$lang['E-mail configuration'] = 'E-posta ayarları';
 $lang['Text before the contact form'] = 'İletişim formun önündeki metin';
-$lang['cf_tab_persoform'] = 'Özelleştirilmiş metin ekle';
+$lang['Text after the contact form'] = 'İletişim formun arkasındaki metin';
+$lang['E-mail sent successfully'] = 'Mesajınız başarılı bir şekilde gönderildi.';
+$lang['Please enter a name'] = 'Lütfen isminizi girin';
+$lang['Please enter a subject'] = 'Lütfen konuyu girin';
+$lang['Please enter a message'] = 'Lütfen mesajınızı girin';
+$lang['Error while sending e-mail'] = 'Mesajın gönderilmesinde sorun oluştu';
+
 ?>

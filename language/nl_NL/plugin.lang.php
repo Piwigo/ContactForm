@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Contact Formulier';
-$lang['contact_form_debug'] = 'Toon debug informatie';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Contact formulier';
-$lang['contact_form'] = 'Contact';
-$lang['contact_form_link'] = 'Contact webmaster';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Verzonden bericht status';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Je naam';
-$lang['cf_from_mail'] = 'Je e-mail';
-$lang['cf_subject'] = 'Onderwerp';
-$lang['cf_message'] = 'Bericht';
-$lang['cf_submit'] = 'Verstuur';
-$lang['title_send_mail'] = 'Een commentaar op de site';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Vul een naam in';
-$lang['cf_mail_format_error'] = 'email-adres moet zijn xxx@yyy.eee (bijvoorbeeld : jack@altern.org)';
-$lang['cf_subject_error'] = 'Vul een onderwerp in';
-$lang['cf_message_error'] = 'Vul een berichttekst in ';
-$lang['cf_error_sending_mail'] = 'Fout tijdens versturen van e-mail';
-$lang['cf_sending_mail_successful'] = 'E-mail succesvol verzonden';
-$lang['cf_form_error'] = 'Onjuiste gegevens';
-$lang['cf_no_unlink'] = 'Functie \'unlink\' nie beschikbaar...';
-$lang['cf_unlink_errors'] = 'Fout opgetreden tijdens verwijderen van bestand';
-$lang['cf_config_saved'] = 'Configuratie successvol opgeslagen';
-$lang['cf_config_saved_with_errors'] = 'Configuratie opgeslagen met fouten';
-$lang['cf_length_not_integer'] = 'grootte moet een geheel getal zijn';
-$lang['cf_delay_not_integer'] = 'Vertraging moet een geheel getal zijn';
-$lang['cf_link_error'] = 'Variabele kan geen spaties bevatten';
-$lang['cf_hide'] = 'Verberg';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Verzenden';
-// Configuration tab
-$lang['cf_tab_config'] = 'Configuratie';
-$lang['cf_config'] = 'Configuratie';
-$lang['cf_config_desc'] = 'Plugin hoofd configuratie';
-$lang['cf_label_config'] = 'Algemene configuratie';
-$lang['cf_label_mail'] = 'E-mail configuratie';
-$lang['cf_menu_link'] = 'Voeg link aan menu toe';
-$lang['cf_guest_allowed'] = 'Sta gasten toe om het formulier te zien';
-$lang['cf_mail_prefix'] = 'Voorvoegsel van het email onderwerp';
-$lang['cf_separator'] = 'Teken(s) gebruikt voor de scheidingsbalk in de e-mail, in tekst formaat';
-$lang['cf_separator_length'] = 'Grote van de balk';
-$lang['cf_mandatory_name'] = 'Naam is verplicht';
-$lang['cf_mandatory_mail'] = 'E-mail adres is verplicht';
-$lang['cf_redirect_delay'] = 'wachttijd voor opnieuw versturen';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-mails';
-$lang['cf_emails'] = 'E-mails';
-$lang['cf_emails_desc'] = 'Bestemming van e-mail beheer';
-$lang['cf_active'] = 'Actieve e-mail';
-$lang['cf_no_mail'] = 'Geen e-mail adres beschikbaar';
-$lang['cf_refresh'] = 'Regenereer e-mail lijst adres';
-$lang['Text after the contact form'] = 'Tekst na het contactformulier';
+$lang['A comment on the site'] = 'Voeg eigen tekst toe';
+$lang['Contact'] = 'Contact';
+$lang['Your name'] = 'Je naam';
+$lang['Your e-mail'] = 'Je e-mail';
+$lang['Subject'] = 'Onderwerp';
+$lang['Message'] = 'Bericht';
+$lang['General configuration'] = 'Algemene configuratie';
+$lang['Add link in menu'] = 'Voeg link aan menu toe';
+$lang['Allow guests to see the form'] = 'Sta gasten toe om het formulier te zien';
+$lang['E-mail address is mandatory'] = 'E-mail adres is verplicht';
+$lang['Name is mandatory'] = 'Naam is verplicht';
+$lang['E-mail configuration'] = 'E-mail configuratie';
 $lang['Text before the contact form'] = 'Tekst vóór het contactformulier';
-$lang['cf_tab_persoform'] = 'Voeg eigen tekst toe';
+$lang['Text after the contact form'] = 'Tekst na het contactformulier';
+$lang['E-mail sent successfully'] = 'E-mail succesvol verzonden';
+$lang['Please enter a name'] = 'Vul een naam in';
+$lang['Please enter a subject'] = 'Vul een onderwerp in';
+$lang['Please enter a message'] = 'Vul een berichttekst in';
+$lang['Error while sending e-mail'] = 'Fout tijdens versturen van e-mail';
+
 ?>

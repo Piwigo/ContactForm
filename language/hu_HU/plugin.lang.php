@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Kapcsolati űrlap';
-$lang['contact_form_debug'] = 'Hibakeresési adatok megjelenítése';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Kapcsolati űrlap';
-$lang['contact_form'] = 'Kapcsolat';
-$lang['contact_form_link'] = 'Webmester kapcsolat';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Üzenet küldés állapot';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Neve';
-$lang['cf_from_mail'] = 'E-mail címe';
-$lang['cf_subject'] = 'Tárgy';
-$lang['cf_message'] = 'Üzenete';
-$lang['cf_submit'] = 'Küldés';
-$lang['title_send_mail'] = 'Üzenet az oldalról';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Írjon be egy nevet';
-$lang['cf_mail_format_error'] = 'Az e-mail cím formátuma hibás';
-$lang['cf_message_error'] = 'Írja be az üzenetét';
-$lang['cf_error_sending_mail'] = 'Hiba történt a levél küldése közben';
-$lang['cf_sending_mail_successful'] = 'A levelet sikeresen elküldtük';
-$lang['cf_form_error'] = 'Érvénytelen adat';
-$lang['cf_no_unlink'] = 'Csatolás megszüntetése \'unlink\' lehetőség nem elérhető...';
-$lang['cf_unlink_errors'] = 'Hiba történt a fájl törlésekor';
-$lang['cf_config_saved'] = 'A beállítások mentése sikeres';
-$lang['cf_config_saved_with_errors'] = 'Hiba történt a beállítások mentésekor';
-$lang['cf_length_not_integer'] = 'A méretnek egész számnak kell lennie';
-$lang['cf_delay_not_integer'] = 'Az időnek egész számnak kell lennie';
-$lang['cf_link_error'] = 'A változó nem tartalmazhat szóközt';
-$lang['cf_hide'] = 'Vissza';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Küldés';
-// Configuration tab
-$lang['cf_tab_config'] = 'Beállítások';
-$lang['cf_config'] = 'Beállítások';
-$lang['cf_config_desc'] = 'Bővítmény alap konfigurációja';
-$lang['cf_label_config'] = 'Általános beállítások';
-$lang['cf_label_mail'] = 'E-mail beállítások';
-$lang['cf_menu_link'] = 'Kapcsolat elem hozzáadása a menühöz';
-$lang['cf_guest_allowed'] = 'Vendégek is használhatják az űrlapot ';
-$lang['cf_mail_prefix'] = 'A levél tárgyának előtagja';
-$lang['cf_separator'] = 'Szöveg formátumú e-mail esetén az elválasztó sávhoz használt karakter';
-$lang['cf_separator_length'] = 'Elválasztó sáv hossza';
-$lang['cf_mandatory_name'] = 'Név kötelező';
-$lang['cf_mandatory_mail'] = 'E-mail cím kötelező';
-$lang['cf_redirect_delay'] = 'Átirányítás késleltetésének ideje';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-mail címek';
-$lang['cf_emails'] = 'E-mail címek';
-$lang['cf_emails_desc'] = 'Cél e-mail címek kezelése';
-$lang['cf_active'] = 'Aktív e-mail';
-$lang['cf_no_mail'] = 'Nincs e-mail cím';
-$lang['cf_refresh'] = 'E-mail címlista frissítése';
-$lang['cf_subject_error'] = 'Írja be a levél tárgyát';
-$lang['Text after the contact form'] = 'Szöveg a kapcsolati űrlap után';
+$lang['A comment on the site'] = 'Egyéni szöveg hozzáadása';
+$lang['Contact'] = 'Kapcsolat';
+$lang['Your name'] = 'Neve';
+$lang['Your e-mail'] = 'E-mail címe';
+$lang['Subject'] = 'Tárgy';
+$lang['Message'] = 'Üzenete';
+$lang['General configuration'] = 'Általános beállítások';
+$lang['Add link in menu'] = 'Kapcsolat elem hozzáadása a menühöz';
+$lang['Allow guests to see the form'] = 'Vendégek is használhatják az űrlapot';
+$lang['E-mail address is mandatory'] = 'E-mail cím kötelező';
+$lang['Name is mandatory'] = 'Név kötelező';
+$lang['E-mail configuration'] = 'E-mail beállítások';
 $lang['Text before the contact form'] = 'Szöveg a kapcsolati űrlap előtt';
-$lang['cf_tab_persoform'] = 'Egyéni szöveg hozzáadása';
+$lang['Text after the contact form'] = 'Szöveg a kapcsolati űrlap után';
+$lang['E-mail sent successfully'] = 'A levelet sikeresen elküldtük';
+$lang['Please enter a name'] = 'Írjon be egy nevet';
+$lang['Please enter a subject'] = 'Írja be a levél tárgyát';
+$lang['Please enter a message'] = 'Írja be az üzenetét';
+$lang['Error while sending e-mail'] = 'Hiba történt a levél küldése közben';
+
 ?>

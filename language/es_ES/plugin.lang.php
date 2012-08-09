@@ -1,71 +1,43 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Contact Form';
-$lang['contact_form_debug'] = 'Fijación de las informaciones de debug';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Formulario de contacto';
-$lang['contact_form'] = 'Contactar';
-$lang['contact_form_link'] = 'Contactar webmestre';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Estatuto del envío del mensaje';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Su nombre';
-$lang['cf_from_mail'] = 'Su e-mail';
-$lang['cf_subject'] = 'Sujeto';
-$lang['cf_message'] = 'Mensaje';
-$lang['cf_submit'] = 'Enviar';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Por favor, entre un nombre';
-$lang['cf_mail_format_error'] = 'El formato de la dirección e-mail debe ser xxx@yyy.eee (ejemplo: jack@altern.org)';
-$lang['cf_subject_error'] = 'Por favor, entre un sujeto';
-$lang['cf_message_error'] = 'Por favor, entre un mensaje';
-$lang['cf_error_sending_mail'] = 'Error en el momento del envío del e-mail';
-$lang['cf_sending_mail_successful'] = 'E-mail enviado con éxito';
-$lang['cf_form_error'] = 'Datos incorrectos';
-$lang['cf_no_unlink'] = 'La función \'unlink \' no está disponible';
-$lang['cf_unlink_errors'] = 'Errores se efectuaron en el momento de la supresión de ficheros';
-$lang['cf_config_saved'] = 'Configuración salvada con éxito';
-$lang['cf_config_saved_with_errors'] = 'Configuración salvada pero con errores';
-$lang['cf_length_not_integer'] = 'La talla debe ser un entero';
-$lang['cf_delay_not_integer'] = 'El plazo debe ser un entero';
-$lang['cf_link_error'] = 'La variable no puede contener de espacios';
-$lang['cf_hide'] = 'Enmascarar';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Validar';
-// Configuration tab
-$lang['cf_tab_config'] = 'Configuración';
-$lang['cf_config'] = 'Configuración';
-$lang['cf_config_desc'] = 'Configuración principal del plugin';
-$lang['cf_label_config'] = 'Configuración general';
-$lang['cf_label_mail'] = 'Configuración del e-mail';
-$lang['cf_menu_link'] = 'Añadir el lazo en el menú';
-$lang['cf_guest_allowed'] = 'Autorizar a los invitados a tener el formulario';
-$lang['cf_mail_prefix'] = 'Prefijo del sujeto del e-mail enviado';
-$lang['cf_separator'] = 'Carácter utilizado para definir una barra de separación en el e-mail al tamaño texto';
-$lang['cf_separator_length'] = 'Talla de la barra de separación';
-$lang['cf_mandatory_name'] = 'Presencia del nombre obligatorio';
-$lang['cf_mandatory_mail'] = 'Presencia del e-mail obligatorio';
-$lang['cf_redirect_delay'] = 'Plazo de pausa del redirection';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-mail';
-$lang['cf_emails'] = 'E-mail';
-$lang['cf_emails_desc'] = 'Gestión de los e-mails de destino';
-$lang['cf_active'] = 'E-mail activo';
-$lang['cf_no_mail'] = 'Ningún correo electrónico disponible';
-$lang['cf_refresh'] = 'Regenerar la lista de las direcciones';
-$lang['Text after the contact form'] = 'Texto después del formulario de contacto';
+$lang['A comment on the site'] = 'Un comentario en el sitio';
+$lang['Contact'] = 'Contactar';
+$lang['Your name'] = 'Su nombre';
+$lang['Your e-mail'] = 'Su e-mail';
+$lang['Subject'] = 'Sujeto';
+$lang['Message'] = 'Mensaje';
+$lang['General configuration'] = 'Configuración general';
+$lang['Add link in menu'] = 'Añadir el lazo en el menú';
+$lang['Allow guests to see the form'] = 'Autorizar a los invitados a tener el formulario';
+$lang['E-mail address is mandatory'] = 'Presencia del e-mail obligatorio';
+$lang['Name is mandatory'] = 'Presencia del nombre obligatorio';
 $lang['Text before the contact form'] = 'Texto antes del formulario de contacto';
-$lang['cf_tab_persoform'] = 'Añadir texto personalizado';
-$lang['title_send_mail'] = 'Un comentario en el sitio';
+$lang['Text after the contact form'] = 'Texto después del formulario de contacto';
+$lang['E-mail sent successfully'] = 'E-mail enviado con éxito';
+$lang['Please enter a name'] = 'Por favor, entre un nombre';
+$lang['Please enter a subject'] = 'Por favor, entre un sujeto';
+$lang['Please enter a message'] = 'Por favor, entre un mensaje';
+$lang['Error while sending e-mail'] = 'Error en el momento del envío del e-mail';
+
 ?>

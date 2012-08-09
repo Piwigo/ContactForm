@@ -1,71 +1,44 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
 
-$lang['cf_plugin_name'] = 'Kontakt Skjema';
-$lang['contact_form_debug'] = 'Vis testkjørings informasjon';
-
-// ==================================================================
-// Default values if not configured
-$lang['contact_form_title'] = 'Kontakt skjema';
-$lang['contact_form'] = 'Kontakt';
-$lang['contact_form_link'] = 'Kontakt webmaster';
-
-// ==================================================================
-// Redirect page
-$lang['contact_redirect_title'] = 'Send beskjed status';
-
-// ==================================================================
-// Menubar block
-$lang['cf_from_name'] = 'Ditt navn';
-$lang['cf_from_mail'] = 'Din e-mail';
-$lang['cf_subject'] = 'Emne';
-$lang['cf_message'] = 'Beskjed';
-$lang['cf_submit'] = 'Send';
-$lang['title_send_mail'] = 'En kommentar til siden';
-
-// ==================================================================
-// Messages
-$lang['cf_from_name_error'] = 'Vennligst fyll inn navn';
-$lang['cf_mail_format_error'] = 'mail addresse må være tilsvarende xxx@yyy.eee (eksempel : jack@altern.org)';
-$lang['cf_subject_error'] = 'Vennligst fyll inn emne';
-$lang['cf_message_error'] = 'Vennligst fyll inn en beskjed';
-$lang['cf_error_sending_mail'] = 'Feil ved sending av e-mail';
-$lang['cf_sending_mail_successful'] = 'E-mail ble sendt';
-$lang['cf_form_error'] = 'Invalide data';
-$lang['cf_no_unlink'] = 'Funksjonen \'fjern link\' ikke tilgjengelig...';
-$lang['cf_unlink_errors'] = 'En feil oppstod ved sletting av filer';
-$lang['cf_config_saved'] = 'Konfigurasjon lagret';
-$lang['cf_config_saved_with_errors'] = 'Konfigurasjon lagret med feil';
-$lang['cf_length_not_integer'] = 'Størrelse må være en variabel';
-$lang['cf_delay_not_integer'] = 'Forsinkelse må være en variabel';
-$lang['cf_link_error'] = 'Variabler kan\kan ikke inneholde mellomrom';
-$lang['cf_hide'] = 'Hide';
-
-// ==================================================================
-// Admin page
-$lang['cf_validate'] = 'Lagre';
-// Configuration tab
-$lang['cf_tab_config'] = 'Konfigurasjon';
-$lang['cf_config'] = 'Konfigurasjon';
-$lang['cf_config_desc'] = 'Pluggin hoved konfigurasjon';
-$lang['cf_label_config'] = 'Generell konfigurasjon';
-$lang['cf_label_mail'] = 'E-mail konfigurasjon';
-$lang['cf_menu_link'] = 'Legg til link i menyen';
-$lang['cf_guest_allowed'] = 'La gjester se dette skjemaet';
-$lang['cf_mail_prefix'] = 'Prefikset til den sendte e-mail´ens emne';
-$lang['cf_separator'] = 'Karakterer brukt til å definere en mellomroms linje i e-mailen i tekst format';
-$lang['cf_separator_length'] = 'Størrelse på mellomrommet';
-$lang['cf_mandatory_name'] = 'Navn er påkrevd';
-$lang['cf_mandatory_mail'] = 'E-mail addresse er påkrevd';
-$lang['cf_redirect_delay'] = 'Sett forsinkelsen ved videresending på pause';
-// Emails tab
-$lang['cf_tab_emails'] = 'E-mailer';
-$lang['cf_emails'] = 'E-mail';
-$lang['cf_emails_desc'] = 'mål for e-mail behandling';
-$lang['cf_active'] = 'Aktive e-mail';
-$lang['cf_no_mail'] = 'INgen e-mail addresse tilgjengelig';
-$lang['cf_refresh'] = 'Oppdater e-mail adresse liste';
-$lang['Text after the contact form'] = 'Tekst etter kontaktskjema';
+$lang['A comment on the site'] = 'Legg til valgfri tekst';
+$lang['Contact'] = 'Kontakt';
+$lang['Your name'] = 'Ditt navn';
+$lang['Your e-mail'] = 'Din e-mail';
+$lang['Subject'] = 'Emne';
+$lang['Message'] = 'Beskjed';
+$lang['General configuration'] = 'Generell konfigurasjon';
+$lang['Add link in menu'] = 'Legg til link i menyen';
+$lang['Allow guests to see the form'] = 'La gjester se dette skjemaet';
+$lang['E-mail address is mandatory'] = 'E-mail addresse er påkrevd';
+$lang['Name is mandatory'] = 'Navn er påkrevd';
+$lang['E-mail configuration'] = 'E-mail konfigurasjon';
 $lang['Text before the contact form'] = 'Tekst før kontaktskjema';
-$lang['cf_tab_persoform'] = 'Legg til valgfri tekst';
+$lang['Text after the contact form'] = 'Tekst etter kontaktskjema';
+$lang['E-mail sent successfully'] = 'E-mail ble sendt';
+$lang['Please enter a name'] = 'Vennligst fyll inn navn';
+$lang['Please enter a subject'] = 'Vennligst fyll inn emne';
+$lang['Please enter a message'] = 'Vennligst fyll inn en beskjed';
+$lang['Error while sending e-mail'] = 'Feil ved sending av e-mail';
+
 ?>

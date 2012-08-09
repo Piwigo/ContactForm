@@ -20,54 +20,25 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['cf_active'] = 'Activar email';
-$lang['cf_config'] = 'Configuração';
-$lang['cf_config_desc'] = 'Configuração principal da extensão';
-$lang['cf_config_saved'] = 'Configuração salva com sucesso';
-$lang['cf_config_saved_with_errors'] = 'Configuração salva com erros';
-$lang['cf_delay_not_integer'] = 'Atraso deve ser um valor integer';
-$lang['cf_emails'] = 'Emails';
-$lang['cf_emails_desc'] = 'Gestão de emails de destino';
-$lang['cf_error_sending_mail'] = 'Erro ao enviar email';
-$lang['cf_form_error'] = 'Dados inválidos';
-$lang['cf_from_mail'] = 'O seu email';
-$lang['cf_from_name'] = 'O seu nome';
-$lang['cf_from_name_error'] = 'Por favor escreva um nome';
-$lang['cf_guest_allowed'] = 'Permitir visualização do formulário por convidados';
-$lang['cf_hide'] = 'Ocultar';
-$lang['cf_label_config'] = 'Configuração Geral';
-$lang['cf_label_mail'] = 'Configuração de email';
-$lang['cf_length_not_integer'] = 'Tamanho deve ser um valor integer';
-$lang['cf_link_error'] = 'Variáveis não podem conter espaços';
-$lang['cf_mail_format_error'] = 'Por favor, a direcção deve ser do género xxx@yyy.eee (example : jack@altern.org)';
-$lang['cf_mail_prefix'] = 'Prefixo do assunto de emails enviados';
-$lang['cf_mandatory_mail'] = 'Endereço de email é obrigatório';
-$lang['cf_mandatory_name'] = 'Nome é obrigatório';
-$lang['cf_menu_link'] = 'Adicionar ligação no menú';
-$lang['cf_message'] = 'Mensagem';
-$lang['cf_message_error'] = 'Por favor escreva uma mensagem';
-$lang['cf_no_mail'] = 'Nenhum endereço de email disponível';
-$lang['cf_no_unlink'] = 'Função \'unlink\' não disponível';
-$lang['cf_plugin_name'] = 'Formulário de Contacto';
-$lang['cf_redirect_delay'] = 'Atraso da pausa de redireccionamento';
-$lang['cf_refresh'] = 'Regenerar lista de endereços de email';
-$lang['cf_sending_mail_successful'] = 'Email enviado com sucesso';
-$lang['cf_separator'] = 'Caractére(s) usado(s) para definir a bara de separação no email em formato de texto';
-$lang['cf_separator_length'] = 'Tamanho da barra';
-$lang['cf_subject'] = 'Assunto';
-$lang['cf_subject_error'] = 'Por favor escreva um assunto';
-$lang['cf_submit'] = 'Enviar';
-$lang['cf_tab_config'] = 'Configuração';
-$lang['cf_tab_emails'] = 'Emails';
-$lang['cf_unlink_errors'] = 'Ocorreu um erro ao apagar ficheiro';
-$lang['cf_validate'] = 'Submeter';
-$lang['contact_form'] = 'Contactar';
-$lang['contact_form_debug'] = 'Mostrar informação de depuração';
-$lang['contact_form_link'] = 'Contactar Webmaster';
-$lang['contact_form_title'] = 'Formulário de Contacto';
-$lang['contact_redirect_title'] = 'Estado de envio de mensagem';
-$lang['title_send_mail'] = 'Um comentário sobre o site';
-$lang['cf_tab_persoform'] = 'Adicionar formulário de texto';
-$lang['Text after the contact form'] = 'Texto antes do formulário de contacto';
+
+$lang['A comment on the site'] = 'Um comentário sobre o site';
+$lang['Contact'] = 'Contactar';
+$lang['Your name'] = 'O seu nome';
+$lang['Your e-mail'] = 'O seu email';
+$lang['Subject'] = 'Assunto';
+$lang['Message'] = 'Mensagem';
+$lang['General configuration'] = 'Configuração Geral';
+$lang['Add link in menu'] = 'Adicionar ligação no menú';
+$lang['Allow guests to see the form'] = 'Permitir visualização do formulário por convidados';
+$lang['E-mail address is mandatory'] = 'Endereço de email é obrigatório';
+$lang['Name is mandatory'] = 'Nome é obrigatório';
+$lang['E-mail configuration'] = 'Configuração de email';
 $lang['Text before the contact form'] = 'Texto depois do formulário de contacto';
+$lang['Text after the contact form'] = 'Texto antes do formulário de contacto';
+$lang['E-mail sent successfully'] = 'Email enviado com sucesso';
+$lang['Please enter a name'] = 'Por favor escreva um nome';
+$lang['Please enter a subject'] = 'Por favor escreva um assunto';
+$lang['Please enter a message'] = 'Por favor escreva uma mensagem';
+$lang['Error while sending e-mail'] = 'Erro ao enviar email';
+
 ?>

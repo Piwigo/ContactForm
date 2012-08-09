@@ -1,52 +1,44 @@
 <?php
-$lang['cf_message'] = 'Повідомлення';
-$lang['cf_plugin_name'] = 'Зворотній зв\'язок';
-$lang['cf_subject'] = 'Тема';
-$lang['cf_submit'] = 'Надіслати';
-$lang['contact_form'] = 'Зв\'язатися';
-$lang['contact_form_link'] = 'Зв\'язатися з адміністратором';
-$lang['cf_error_sending_mail'] = 'Помилка при відправленні по електронній пошті';
-$lang['cf_from_name'] = 'Ваше ім\'я';
-$lang['cf_from_name_error'] = 'Будь ласка, введіть ім\'я';
-$lang['cf_message_error'] = 'Будь ласка, введіть повідомлення';
-$lang['cf_sending_mail_successful'] = 'Повідомлення успішно надіслано';
-$lang['cf_subject_error'] = 'Будь ласка, ведіть тему';
-$lang['contact_form_debug'] = 'Відображення налагоджувальної інформації';
-$lang['contact_form_title'] = 'Контактна форма';
-$lang['contact_redirect_title'] = 'Статус надісланого повідомлення';
-$lang['title_send_mail'] = 'Коментар про сайт';
-$lang['cf_active'] = 'Активна електронна пошта';
-$lang['cf_config'] = 'Конфігурація';
-$lang['cf_config_desc'] = 'Плаґін основної конфігурації';
-$lang['cf_config_saved'] = 'Конфігурація успішно збережена';
-$lang['cf_config_saved_with_errors'] = 'Конфігурація збережена з помилками';
-$lang['cf_delay_not_integer'] = 'Затримка повинна бути цілим числом';
-$lang['cf_emails'] = 'Електронна пошта';
-$lang['cf_emails_desc'] = 'Управління адресою електронної пошти';
-$lang['cf_form_error'] = 'Невірні дані';
-$lang['cf_guest_allowed'] = 'Дозвольте гостям бачити форму';
-$lang['cf_hide'] = 'Приховати';
-$lang['cf_label_config'] = 'Загальна конфігурація';
-$lang['cf_label_mail'] = 'Конфігурації електронної пошти';
-$lang['cf_length_not_integer'] = 'Розмір повинен бути цілим числом';
-$lang['cf_link_error'] = 'Змінна не може містити пропусків';
-$lang['cf_mail_format_error'] = 'Невірний формат електронної пошти';
-$lang['cf_mail_prefix'] = 'Префікс до надісланої теми на емейл адресу';
-$lang['cf_mandatory_mail'] = 'Адреса електронної пошти є обов\'язковою';
-$lang['cf_mandatory_name'] = 'Ім\'я є обов\'язковим';
-$lang['cf_menu_link'] = 'Додати посилання в меню';
-$lang['cf_no_mail'] = 'Немає доступних адрес електронної пошти';
-$lang['cf_no_unlink'] = 'Функція "від\'єднати" не доступна...';
-$lang['cf_redirect_delay'] = 'Пауза затримки для перенаправлення';
-$lang['cf_refresh'] = 'Відновити список адрес електронної пошти';
-$lang['cf_separator'] = 'Символ(и), що використовуються для визначення поділу бару електронної пошти в текстовому форматі';
-$lang['cf_separator_length'] = 'Розмір панелі';
-$lang['cf_tab_config'] = 'Конфігурація';
-$lang['cf_tab_emails'] = 'Електронна пошта';
-$lang['cf_unlink_errors'] = 'Сталася помилка під час видалення файлів';
-$lang['cf_validate'] = 'Прийняти';
-$lang['cf_from_mail'] = 'Ваш емейл';
-$lang['cf_tab_persoform'] = 'Додати текстову Форму';
-$lang['Text after the contact form'] = 'Текст після контактної форми';
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
+
+$lang['A comment on the site'] = 'Коментар про сайт';
+$lang['Contact'] = 'Зв\'язатися';
+$lang['Your name'] = 'Ваше ім\'я';
+$lang['Your e-mail'] = 'Ваш емейл';
+$lang['Subject'] = 'Тема';
+$lang['Message'] = 'Повідомлення';
+$lang['General configuration'] = 'Загальна конфігурація';
+$lang['Add link in menu'] = 'Додати посилання в меню';
+$lang['Allow guests to see the form'] = 'Дозвольте гостям бачити форму';
+$lang['E-mail address is mandatory'] = 'Конфігурації електронної пошти';
+$lang['Name is mandatory'] = 'Ім\'я є обов\'язковим';
+$lang['E-mail configuration'] = 'Адреса електронної пошти є обов\'язковою';
 $lang['Text before the contact form'] = 'Текст перед контактною формою';
+$lang['Text after the contact form'] = 'Текст після контактної форми';
+$lang['E-mail sent successfully'] = 'Повідомлення успішно надіслано';
+$lang['Please enter a name'] = 'Будь ласка, введіть ім\'я';
+$lang['Please enter a subject'] = 'Будь ласка, ведіть тему';
+$lang['Please enter a message'] = 'Будь ласка, введіть повідомлення';
+$lang['Error while sending e-mail'] = 'Помилка при відправленні по електронній пошті';
+
 ?>
