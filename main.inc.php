@@ -10,8 +10,9 @@ Author URI: http://piwigo.org
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-define('CONTACT_FORM_PATH',  PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
-define('CONTACT_FORM_ADMIN', get_root_url() . 'admin.php?page=plugin-' . basename(dirname(__FILE__)));
+define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
+define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . basename(dirname(__FILE__)));
+define('CONTACT_FORM_PUBLIC', get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
 
 
 add_event_handler('init', 'contact_form_init');
@@ -21,7 +22,6 @@ add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'contact_form_admin_menu');
-  define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
 }
 
 include(CONTACT_FORM_PATH . 'include/functions.inc.php');

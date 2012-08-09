@@ -8,8 +8,6 @@ function contact_form_section_init()
 {
   global $tokens, $page, $conf;
   
-  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
-
   if ($tokens[0] == 'contact')
   {
     $page['section'] = 'contact';
@@ -40,8 +38,6 @@ function contact_form_applymenu($menu_ref_arr)
   if ( !$conf['ContactForm']['cf_menu_link'] ) return;
   if ( !is_classic_user() and !$conf['ContactForm']['cf_allow_guest'] ) return;
   if ( !count(get_contact_emails()) ) return;
-  
-  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
 
   $menu = &$menu_ref_arr[0];
   if (($block = $menu->get_block('mbMenu')) != null)
