@@ -8,7 +8,7 @@ function contact_form_section_init()
 {
   global $tokens, $page, $conf;
   
-  define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
+  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
 
   if ($tokens[0] == 'contact')
   {
@@ -41,7 +41,7 @@ function contact_form_applymenu($menu_ref_arr)
   if ( !is_classic_user() and !$conf['ContactForm']['cf_allow_guest'] ) return;
   if ( !count(get_contact_emails()) ) return;
   
-  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact2')) . '/');
+  if (!defined('CONTACT_FORM_PUBLIC')) define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
 
   $menu = &$menu_ref_arr[0];
   if (($block = $menu->get_block('mbMenu')) != null)
@@ -63,6 +63,16 @@ function contact_form_admin_menu($menu)
     'NAME' => 'Contact Form',
   ));
   return $menu;
+}
+
+/**
+ * change contact on link on footer
+ */
+function contact_form_footer_link($content, &$smarty)
+{
+  $search = '<a href="mailto:{$CONTACT_MAIL}?subject={\'A comment on your site\'|@translate|@escape:url}">';
+  $replace = '<a href="'.CONTACT_FORM_PUBLIC.'">';
+  return str_replace($search, $replace, $content);
 }
 
 /**

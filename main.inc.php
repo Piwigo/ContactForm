@@ -21,6 +21,7 @@ add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'contact_form_admin_menu');
+  define('CONTACT_FORM_PUBLIC', make_index_url(array('section' => 'contact')) . '/');
 }
 
 include(CONTACT_FORM_PATH . 'include/functions.inc.php');
@@ -28,7 +29,7 @@ include(CONTACT_FORM_PATH . 'include/functions.inc.php');
 
 function contact_form_init()
 {
-  global $conf;
+  global $conf, $template;
   $conf['ContactForm'] = unserialize($conf['ContactForm']);
   
   load_language('plugin.lang', CONTACT_FORM_PATH);
@@ -37,6 +38,8 @@ function contact_form_init()
   {
     contact_form_initialize_emails();
   }
+  
+  $template->set_prefilter('tail', 'contact_form_footer_link');
 }
 
 ?>
