@@ -45,4 +45,8 @@ $lang['Plain text'] = 'Einfacher Text';
 $lang['Active'] = 'Aktiv';
 $lang['No active email address'] = 'Keine Aktive E-Mail Adresse';
 $lang['Please enter an e-mail'] = 'Bitte eine E-Mail Adresse eingeben';
+$lang['%s must not be less than %d characters long'] = '%s darf nicht weniger als %d Zeichen lang sein';
+$lang['%s must not be more than %d characters long'] = '%s darf nicht mehr als %d Zeichen lang sein';
+$lang['Default e-mail subject'] = 'Standard E-mail-Betreff';
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Präfix des gesendeten e-Mail-Betreffs (Sie können "% Gallery_title" benutzen)';
 ?>
