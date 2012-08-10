@@ -39,4 +39,10 @@ $lang['Please enter a subject'] = 'Bitte fügen Sie den Betreff ein';
 $lang['Please enter a message'] = 'Bitte fügen Sie eine Mitteilung hinzu';
 $lang['Error while sending e-mail'] = 'Es ist ein Fehler beim Versand der E-Mail aufgetreten'; 
 
+$lang['+ Add an email'] = '+ Eine Mail hinzufügen';
+$lang['E-mail format :'] = 'E-Mail Format:';
+$lang['Plain text'] = 'Einfacher Text';
+$lang['Active'] = 'Aktiv';
+$lang['No active email address'] = 'Keine Aktive E-Mail Adresse';
+$lang['Please enter an e-mail'] = 'Bitte eine E-Mail Adresse eingeben';
 ?>
