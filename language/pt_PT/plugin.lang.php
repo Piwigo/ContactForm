@@ -26,9 +26,9 @@ $lang['Your e-mail'] = 'O seu email';
 $lang['Subject'] = 'Assunto';
 $lang['Message'] = 'Mensagem';
 $lang['General configuration'] = 'Configuração Geral';
-$lang['Add link in menu'] = 'Adicionar ligação no menú';
-$lang['Allow guests to see the form'] = 'Permitir visualização do formulário por convidados';
-$lang['E-mail address is mandatory'] = 'Endereço de email é obrigatório';
+$lang['Add link in menu'] = 'Adicionar link no menú';
+$lang['Allow guests to see the form'] = 'Permitir aos visitantes a visualização do formulário';
+$lang['E-mail address is mandatory'] = 'Endereço de email é imperativo';
 $lang['Name is mandatory'] = 'Nome é obrigatório';
 $lang['E-mail configuration'] = 'Configuração de email';
 $lang['Text before the contact form'] = 'Texto depois do formulário de contacto';
@@ -39,4 +39,14 @@ $lang['Please enter a subject'] = 'Por favor escreva um assunto';
 $lang['Please enter a message'] = 'Por favor escreva uma mensagem';
 $lang['Error while sending e-mail'] = 'Erro ao enviar email';
 
+$lang['%s must not be less than %d characters long'] = '%s não pode ter menos de %d charactéres ';
+$lang['%s must not be more than %d characters long'] = '%s não pode ter mais de %d charactéres ';
+$lang['+ Add an email'] = '+ Adicionar um Email';
+$lang['Active'] = 'Ativo';
+$lang['Default e-mail subject'] = 'Assunto do Email, por defeito.';
+$lang['E-mail format :'] = 'Formato do Email';
+$lang['No active email address'] = 'Direção de Email não ativada';
+$lang['Plain text'] = 'Texto normal';
+$lang['Please enter an e-mail'] = 'Indique um Email por favor';
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Prefixo do assunto Enviar e-mail (Pode usar "%gallery_title%")';
 ?>
