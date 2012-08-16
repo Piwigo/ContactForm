@@ -39,4 +39,14 @@ $lang['Please enter a subject'] = 'Proszę podać temat';
 $lang['Please enter a message'] = 'Proszę wpisać wiadomość';
 $lang['Error while sending e-mail'] = 'Błąd podczas wysyłania wiadomości';
 
+$lang['%s must not be less than %d characters long'] = '%s nie może być mniej znaków niż %d';
+$lang['%s must not be more than %d characters long'] = '%s nie może być więcej znaków niż %d';
+$lang['+ Add an email'] = '+ Dodaj email';
+$lang['Active'] = 'Aktywny';
+$lang['Default e-mail subject'] = 'Domyślny temat maila';
+$lang['E-mail format :'] = 'Format maila:';
+$lang['No active email address'] = 'Brak aktywnego adresu email';
+$lang['Plain text'] = 'Sam tekst';
+$lang['Please enter an e-mail'] = 'Wprowadź proszę e-mail';
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Prefix tematu wysyłanego maila (możesz wykorzystać tytuł galerii: "%gallery_title%")';
 ?>
