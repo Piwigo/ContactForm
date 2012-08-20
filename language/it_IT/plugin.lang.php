@@ -39,4 +39,14 @@ $lang['Please enter a subject'] = 'Entrare un soggetto';
 $lang['Please enter a message'] = 'Entrare un messaggio';
 $lang['Error while sending e-mail'] = 'Errore durante l\'invio dell\'E-mail'
 
+$lang['%s must not be less than %d characters long'] = '% deve essere lungo non meno di % caratteri';
+$lang['%s must not be more than %d characters long'] = '% la lunghezza non deve essere maggiore di % caratteri';
+$lang['Default e-mail subject'] = 'Oggetto email predefinito';
+$lang['E-mail format :'] = 'Formato email';
+$lang['No active email address'] = 'Email inattive';
+$lang['Plain text'] = 'Testo non formattato';
+$lang['Please enter an e-mail'] = 'Aggiungi la tua email';
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Presisso per le email gia inviate';
+$lang['Active'] = 'Attivo';
+$lang['+ Add an email'] = 'Aggiungi la tua email';
 ?>
