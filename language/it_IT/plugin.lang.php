@@ -37,7 +37,7 @@ $lang['E-mail sent successfully'] = 'Invio dell\'E-mail riuscito';
 $lang['Please enter a name'] = 'Entrare un nome';
 $lang['Please enter a subject'] = 'Entrare un soggetto';
 $lang['Please enter a message'] = 'Entrare un messaggio';
-$lang['Error while sending e-mail'] = 'Errore durante l\'invio dell\'E-mail'
+$lang['Error while sending e-mail'] = 'Errore durante l\'invio dell\'E-mail';
 
 $lang['%s must not be less than %d characters long'] = '% deve essere lungo non meno di % caratteri';
 $lang['%s must not be more than %d characters long'] = '% la lunghezza non deve essere maggiore di % caratteri';
