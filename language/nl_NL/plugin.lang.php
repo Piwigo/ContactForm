@@ -39,4 +39,14 @@ $lang['Please enter a subject'] = 'Vul een onderwerp in';
 $lang['Please enter a message'] = 'Vul een berichttekst in';
 $lang['Error while sending e-mail'] = 'Fout tijdens versturen van e-mail';
 
+$lang['%s must not be less than %d characters long'] = '%s mag niet kleiner zijn dan %d tekens';
+$lang['%s must not be more than %d characters long'] = '%s mag niet groter zijn dan %d tekens';
+$lang['+ Add an email'] = '+ voeg een e-mail adres toe';
+$lang['Active'] = 'Actief';
+$lang['Default e-mail subject'] = 'Standaard e-mail onderwerp';
+$lang['E-mail format :'] = 'E-mail formaat:';
+$lang['No active email address'] = 'Geen actieve email adres';
+$lang['Plain text'] = 'Platte tekst';
+$lang['Please enter an e-mail'] = 'Voer een email adres in';
+$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Voorvoegsel voor het email onderwerp (je kan \'%gallery_title%\') gebruiken';
 ?>
