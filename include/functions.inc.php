@@ -50,18 +50,6 @@ function contact_form_applymenu($menu_ref_arr)
 }
 
 /**
- * admin plugins menu link 
- */
-function contact_form_admin_menu($menu) 
-{
-  array_push($menu, array(
-    'URL' => CONTACT_FORM_ADMIN,
-    'NAME' => 'Contact Form',
-  ));
-  return $menu;
-}
-
-/**
  * change contact on link on footer
  */
 function contact_form_footer_link($content, &$smarty)
