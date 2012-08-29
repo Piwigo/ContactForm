@@ -239,6 +239,8 @@ function send_contact_form(&$comm, $key)
       $template->set_filename('contact_mail', dirname(__FILE__).'/../template/mail/content_plain.tpl');
     }
     
+    $comm['show_ip'] = isset($conf['contact_form_show_ip']) ? $conf['contact_form_show_ip'] : true;
+    
     $template->assign(array(
       'cf_prefix' => $prefix,
       'contact' => $comm,
@@ -255,7 +257,7 @@ function send_contact_form(&$comm, $key)
     $result =
       trigger_event('send_mail',
         false, /* Result */
-        trigger_event('send_mail_to', implode(';', $emails)),
+        trigger_event('send_mail_to', implode(',', $emails)),
         trigger_event('send_mail_subject', $subject),
         trigger_event('send_mail_content', $content),
         trigger_event('send_mail_headers', $headers),

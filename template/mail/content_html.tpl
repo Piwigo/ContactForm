@@ -18,16 +18,12 @@
 
 <div id="the_content">
   <p>
-    {'Name'|@translate} : {$contact.author}<br>
-    {'Email address'|@translate} : {$contact.email}
+    {'Name'|@translate}: {$contact.author}<br>
+    {'Email address'|@translate}: {$contact.email}
+    {if $contact.show_ip}<br>{'IP: %s'|@translate|@sprintf:$contact.ip}{/if}
   </p>
 
   <blockquote>{$contact.content}</blockquote>
-
-  <p>
-    {'IP: %s'|@translate|@sprintf:$contact.ip}<br>
-    {'Browser: %s'|@translate|@sprintf:$contact.agent}
-  </p>
 </div>
 
 <div id="the_footer">
