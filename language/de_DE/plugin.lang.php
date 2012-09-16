@@ -49,4 +49,8 @@ $lang['%s must not be more than %d characters long'] = '%s darf nicht mehr als %
 $lang['Default e-mail subject'] = 'Standard E-mail-Betreff';
 $lang['Prefix of the sent e-mail subject'] = 'Präfix des gesendeten e-Mail-Betreffs';
 $lang['you can use "%gallery_title%"'] = 'Sie können "%gallery_title%" benutzen';
+$lang['+ Add a category'] = 'Eine Kategorie hinzufügen';
+$lang['Category'] = 'Kategorie';
+$lang['Please choose a category'] = 'Bitte eine Kategorie wählen';
+$lang['can be translated with LocalFiles Editor plugin'] = 'kann mit LocalFiles Editor Plugin übersetzt werden';
 ?>
