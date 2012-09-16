@@ -13,6 +13,11 @@ email.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter an e-mail'
 email.add(Validate.Email, {ldelim} failureMessage: "{'mail address must be like xxx@yyy.eee (example : jack@altern.org)'|@translate}" });
 {/if}
 
+{if $GROUPS}
+var group = new LiveValidation('group', {ldelim} onlyOnSubmit: true })
+group.add(Validate.Exclusion, {ldelim} within: ['-1'], failureMessage: "{'Please choose a category'|@translate}" });
+{/if}
+
 var subject = new LiveValidation('subject', {ldelim} onlyOnSubmit: true });
 subject.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a subject'|@translate}" });
 subject.add(Validate.Length, {ldelim} minimum: 4, maximum: 100,
@@ -74,6 +79,17 @@ content.add(Validate.Length, {ldelim} minimum: 20, maximum: 2000,
         {/if}
         </td>
       </tr>
+      {if $GROUPS}
+      <tr>
+        <td class="title"><label for="group">{'Category'|@translate}</label></td>
+        <td>
+          <select name="group" id="group">
+            <option value="-1">------------</option>
+            {html_options options=$GROUPS selected=$contact.group}
+          </select>
+        </td>
+      </tr>
+      {/if}
       <tr>
         <td class="title"><label for="subject">{'Subject'|@translate}</label></td>
         <td><input type="text" name="subject" id="subject" style="width:400px;" value="{$contact.subject}"></td>

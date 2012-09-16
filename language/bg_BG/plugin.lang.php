@@ -38,8 +38,8 @@ $lang['Please enter a name'] = 'Моля въведете име';
 $lang['Please enter a subject'] = 'Моля въведете тема';
 $lang['Please enter a message'] = 'Моля въведете съобщение';
 $lang['Error while sending e-mail'] = 'Грешка при изпращане на e-mail';
-
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Префикс на изпращания имейл обект (Може да използвате "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Префикс на изпращания имейл обект';
+$lang['you can use "%gallery_title%"'] = 'Може да използвате "%gallery_title%"';
 $lang['Plain text'] = 'Свободен текст';
 $lang['No active email address'] = 'Неактивет имейл адрес';
 $lang['E-mail format :'] = 'Имейл формат:';

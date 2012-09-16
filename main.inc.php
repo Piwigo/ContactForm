@@ -10,21 +10,27 @@ Author URI: http://piwigo.org
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . 'ContactForm/');
-define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-ContactForm');
-define('CONTACT_FORM_PUBLIC', get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
-define('CONTACT_FORM_VERSION', '2.4.d');
+global $prefixeTable;
+
+defined('CONTACT_FORM_ID') or define('CONTACT_FORM_ID', basename(dirname(__FILE__)));
+define('CONTACT_FORM_PATH',    PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
+define('CONTACT_FORM_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
+define('CONTACT_FORM_PUBLIC',  get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
+define('CONTACT_FORM_TABLE',   $prefixeTable .'contact_form');
+define('CONTACT_FORM_VERSION', '2.5.0');
 
 
 add_event_handler('init', 'contact_form_init');
 
-add_event_handler('loc_end_section_init', 'contact_form_section_init');
-add_event_handler('loc_end_index', 'contact_form_page');
-add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
-
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'contact_form_admin_menu');
+}
+else
+{
+  add_event_handler('loc_end_section_init', 'contact_form_section_init');
+  add_event_handler('loc_end_index', 'contact_form_page');
+  add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 }
 
 include(CONTACT_FORM_PATH . 'include/functions.inc.php');
@@ -38,22 +44,22 @@ function contact_form_init()
   global $conf, $template,  $pwg_loaded_plugins;
   
   if (
-    $pwg_loaded_plugins['ContactForm']['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins['ContactForm']['version'], CONTACT_FORM_VERSION, '<')
+    $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] == 'auto' or
+    version_compare($pwg_loaded_plugins[CONTACT_FORM_ID]['version'], CONTACT_FORM_VERSION, '<')
   )
   {
     include_once(CONTACT_FORM_PATH . 'include/install.inc.php');
     contact_form_install();
     
-    if ($pwg_loaded_plugins['ContactForm']['version'] != 'auto')
+    if ($pwg_loaded_plugins[CONTACT_FORM_ID]['version'] != 'auto')
     {
       $query = '
 UPDATE '. PLUGINS_TABLE .'
 SET version = "'. CONTACT_FORM_VERSION .'"
-WHERE id = "ContactForm"';
+WHERE id = "'. CONTACT_FORM_ID .'"';
       pwg_query($query);
       
-      $pwg_loaded_plugins['ContactForm']['version'] = CONTACT_FORM_VERSION;
+      $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] = CONTACT_FORM_VERSION;
       
       if (defined('IN_ADMIN'))
       {

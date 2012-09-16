@@ -85,11 +85,16 @@ SELECT
     array_push($emails, array(
       'name' => $row['username'],
       'email' => $row['email'],
-      'active' => true,
+      'active' => 'true',
       ));
   }
   
-  $conf['ContactForm']['cf_admin_mails'] = $emails;
+  mass_inserts(
+    CONTACT_FORM_TABLE,
+    array('name','email','active'),
+    $email
+    );
+  
   $conf['ContactForm']['cf_must_initialize'] = false;
   conf_update_param('ContactForm', serialize($conf['ContactForm']));
 }
@@ -106,6 +111,13 @@ function send_contact_form(&$comm, $key)
   {
     $conf_mail = get_mail_configuration();
   }
+  
+  $query = '
+SELECT DISTINCT group_name
+  FROM '. CONTACT_FORM_TABLE .'
+  ORDER BY group_name
+;';
+  $groups = array_from_query($query, 'group_name');
   
   $comm = array_merge($comm,
     array(
@@ -158,6 +170,14 @@ function send_contact_form(&$comm, $key)
     $comment_action='reject';
   }
   
+  // check group
+  if ( count($groups) > 1 and $comm['group'] == -1 )
+  {
+    $comm['group'] = true;
+    array_push($page['errors'], l10n('Please choose a category'));
+    $comment_action='reject';
+  }
+  
   // check content
   if (empty($comm['content']))
   {
@@ -185,7 +205,7 @@ function send_contact_form(&$comm, $key)
   $comment_action = trigger_event('contact_form_check', $comment_action, $comm);
   
   // get admin emails
-  $emails = get_contact_emails();
+  $emails = get_contact_emails($comm['group']);
   if (!count($emails))
   {
     array_push($page['errors'], l10n('Error while sending e-mail'));
@@ -280,20 +300,44 @@ function send_contact_form(&$comm, $key)
 
 /**
  * get contact emails
+ * @param mixed group:
+ *    - bool true:    all emails
+ *    - empty string: emails without group
+ *    - string:       emails with the specified group
  */
-function get_contact_emails()
+function get_contact_emails($group=true)
 {
   global $conf;
   
   include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
-  $emails = array();
-  foreach ($conf['ContactForm']['cf_admin_mails'] as $data)
+  $where = '1=1';
+  if ($group!==true)
   {
-    if ($data['active'])
+    if (empty($group))
     {
-      array_push($emails, format_email($data['name'], $data['email']));
+      $where = 'group_name IS NULL';
     }
+    else
+    {
+      $where = 'group_name="'.$group.'"';
+    }
+  }
+  
+  $query = '
+SELECT *
+  FROM '. CONTACT_FORM_TABLE .'
+  WHERE 
+    '.$where.'
+    AND active = "true"
+  ORDER BY name ASC
+';
+  $result = pwg_query($query);
+  
+  $emails = array();
+  while ($data = pwg_db_fetch_assoc($result))
+  {
+    array_push($emails, format_email($data['name'], $data['email']));
   }
   
   return $emails;

@@ -17,9 +17,12 @@
     float:none;
     margin-right:3px;
   }
-  .contact input[type="text"], .contact textarea {
+  .contact input[type="text"], .contact textarea, .contact select {
     border-radius:2px;
     padding:3px;
+  }
+  .content select {
+    padding:2px;
   }
 
 .LV_validation_message{

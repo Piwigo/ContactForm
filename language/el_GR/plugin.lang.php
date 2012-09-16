@@ -32,8 +32,8 @@ $lang['Please enter a name'] = 'Παρακαλώ εισάγετε ένα όνο�
 $lang['Please enter a subject'] = 'Παρακαλώ εισάγετε ένα θέμα';
 $lang['Please enter a message'] = 'Παρακαλώ εισάγετε ένα μήνυμα';
 $lang['Error while sending e-mail'] = 'Λάθος κατά την απόστολή e-mail';
-
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Πρόθεμα για το θέμα του e-mail που στέλνετε (μπορείτε να χρησιμοποιήσετε το " "%gallery_title%"")';
+$lang['Prefix of the sent e-mail subject'] = 'Πρόθεμα για το θέμα του e-mail που στέλνετε';
+$lang['you can use "%gallery_title%"'] = 'μπορείτε να χρησιμοποιήσετε το "%gallery_title%"';
 $lang['Please enter an e-mail'] = 'Παρακαλώ εισάγετε ένα e-mail';
 $lang['Plain text'] = 'Απλό κείμενο';
 $lang['No active email address'] = 'Μη ενεργή διεύθυνση ηλεκτρονικού ταχυδρομείου';

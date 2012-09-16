@@ -38,7 +38,6 @@ $lang['Please enter a message'] = 'پیام خود را وارد کنید';
 $lang['Please enter a name'] = 'نام خود را وارد کنید';
 $lang['Please enter a subject'] = 'موضوع را وارد کنید';
 $lang['Please enter an e-mail'] = 'ایمیل خود را وارد کنید';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'پیشوند موضوع ایمیل (می توانید از "%gallery_title%" استفاده کنید)';
 $lang['Text after the contact form'] = 'متنِ پس از فرمِ تماس';
 $lang['Text before the contact form'] = 'متنِ پیش از فرمِ تماس';
 $lang['Your e-mail'] = 'ایمیل شما';

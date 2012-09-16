@@ -1,7 +1,8 @@
 <?php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-include_once(PHPWG_PLUGINS_PATH . 'ContactForm/include/install.inc.php');
+defined('CONTACT_FORM_ID') or define('CONTACT_FORM_ID', basename(dirname(__FILE__)));
+include_once(PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/include/install.inc.php');
 
 function plugin_install() 
 {

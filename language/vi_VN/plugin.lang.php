@@ -38,7 +38,6 @@ $lang['Please enter a name'] = 'Vui lòng nhập tên';
 $lang['Please enter a subject'] = 'Vui lòng nhập tiêu đề';
 $lang['Please enter a message'] = 'Vui lòng nhập nội dung';
 $lang['Error while sending e-mail'] = 'Có lỗi trong quá trình gởi email';
-
 $lang['%s must not be less than %d characters long'] = '%s phải có ít nhất %d ký tự';
 $lang['%s must not be more than %d characters long'] = '%s phải có ít hơn %d ký tự';
 $lang['+ Add an email'] = '+ Thêm địa chỉ email';
@@ -48,5 +47,6 @@ $lang['E-mail format :'] = 'Định dạng thư';
 $lang['No active email address'] = 'Chưa cài đặt dùng email nào';
 $lang['Plain text'] = 'Thô (không có định dạng gì)';
 $lang['Please enter an e-mail'] = 'Hãy nhập địa chỉ thư';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Chủ đề gắn vào trước chủ đề thư (ví dụ "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Chủ đề gắn vào trước chủ đề thư';
+$lang['you can use "%gallery_title%"'] = 'ví dụ "%gallery_title%"';
 ?>

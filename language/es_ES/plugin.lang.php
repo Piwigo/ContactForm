@@ -37,7 +37,6 @@ $lang['Please enter a name'] = 'Por favor, entre un nombre';
 $lang['Please enter a subject'] = 'Por favor, entre un sujeto';
 $lang['Please enter a message'] = 'Por favor, entre un mensaje';
 $lang['Error while sending e-mail'] = 'Error en el momento del envío del e-mail';
-
 $lang['%s must not be less than %d characters long'] = '%s no debe ser menor que %d caracteres';
 $lang['%s must not be more than %d characters long'] = '%s no debe ser mayor que %d caracteres';
 $lang['+ Add an email'] = '+ Añadir un e-mail';
@@ -48,5 +47,6 @@ $lang['E-mail format :'] = 'Formato del correo electrónico ';
 $lang['No active email address'] = 'No hay dirección de correo electrónico activa';
 $lang['Plain text'] = 'Texto sin formato';
 $lang['Please enter an e-mail'] = 'Por favor, introduzca un e-mail';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Prefijo del asunto del correo electrónico de envío (se puede utilizar "%galería de title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Prefijo del asunto del correo electrónico de envío';
+$lang['you can use "%gallery_title%"'] = 'se puede utilizar "%gallery_title%"';
 ?>

@@ -3,7 +3,20 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 function contact_form_install()
 {
-  global $conf;
+  global $conf, $prefixeTable;
+  
+  // email table
+  $query = '
+CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
+  `id` smallint(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `active` enum("true","false") NOT NULL DEFAULT "true",
+  `group_name` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQUE` (`email`,`group_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;';
+  pwg_query($query);
 
   // configuration
   if (empty($conf['ContactForm']))
@@ -18,7 +31,6 @@ function contact_form_install()
       'cf_mandatory_name' => true,
       'cf_redirect_delay' => 5,
       'cf_mail_type' => 'text/html',
-      'cf_admin_mails' => array(),
       ));
     
     conf_update_param('ContactForm', $contact_form_default_config);
@@ -36,21 +48,36 @@ function contact_form_install()
     // migration 2.4 -> 2.5
     if (!isset($new_conf['cf_must_initialize']))
     {
+      // new params
       $new_conf['cf_must_initialize'] = false;
       $new_conf['cf_default_subject'] = 'A comment on your site';
       $new_conf['cf_mail_type'] = 'text/html';
-      unset($new_conf['comment'], $new_conf['cf_redirect_delay'], $new_conf['cf_separator'], $new_conf['cf_separator_length']);
       
+      // move emails to database
+      $email = array();
       foreach ($new_conf['cf_admin_mails'] as $email => $data)
       {
-        $new_conf['cf_admin_mails'][] = array(
+        array_push($emails, array(
           'email' => $email,
           'name' => $data['NAME'],
-          'active' => $data['ACTIVE'],
-          );
-        unset($new_conf['cf_admin_mails'][ $email ]);
+          'active' => boolean_to_string($data['ACTIVE']),
+          ));
       }
       
+      mass_inserts(
+        $prefixeTable .'contact_form',
+        array('name','email','active'),
+        $emails
+        );
+      
+      // old params
+      unset(
+        $new_conf['comment'], $new_conf['cf_redirect_delay'], 
+        $new_conf['cf_separator'], $new_conf['cf_separator_length'], 
+        $new_conf['cf_admin_mails']
+        );
+      
+      // save config
       $conf['ContactForm'] = serialize($new_conf);
       $conf['ContactForm_before'] = stripslashes($conf['persoformtop']);
       $conf['ContactForm_after'] = stripslashes($conf['persoformbottom']);

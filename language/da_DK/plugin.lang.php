@@ -38,7 +38,6 @@ $lang['Please enter a name'] = 'Angiv et navn';
 $lang['Please enter a subject'] = 'Angiv et emne';
 $lang['Please enter a message'] = 'Angiv en beskred';
 $lang['Error while sending e-mail'] = 'Fejl ved afsendelse af e-mail';
-
 $lang['%s must not be less than %d characters long'] = '%s må ikke være kortere end %d karakterer';
 $lang['%s must not be more than %d characters long'] = '%s må ikke være længere end %d karakterer';
 $lang['+ Add an email'] = '+Tilføj en email';
@@ -48,5 +47,6 @@ $lang['E-mail format :'] = 'Email format:';
 $lang['No active email address'] = 'Ingen aktiv email adresse';
 $lang['Plain text'] = 'Ren tekst';
 $lang['Please enter an e-mail'] = 'Angiv en email adresse';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Præfix for email emne (du kan anvende "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Præfix for email emne';
+$lang['you can use "%gallery_title%"'] = 'du kan anvende "%gallery_title%"';
 ?>

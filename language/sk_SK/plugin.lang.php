@@ -39,7 +39,8 @@ $lang['Please enter a subject'] = 'Prosím zadajte predmet';
 $lang['Please enter a message'] = 'Prosím zadajte správu';
 $lang['Error while sending e-mail'] = 'Chyba počas posielania e-mailu';
 
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Predpona predmetu posielaného emailu (môžete použiť "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Predpona predmetu posielaného emailu';
+$lang['you can use "%gallery_title%"'] = 'môžete použiť "%gallery_title%"';
 $lang['Please enter an e-mail'] = 'Prosím vložte email';
 $lang['Plain text'] = 'Obyčajný text';
 $lang['No active email address'] = 'Neaktívna emailová adresa';

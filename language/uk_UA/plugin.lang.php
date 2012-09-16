@@ -38,7 +38,6 @@ $lang['Please enter a name'] = 'Будь ласка, введіть ім\'я';
 $lang['Please enter a subject'] = 'Будь ласка, ведіть тему';
 $lang['Please enter a message'] = 'Будь ласка, введіть повідомлення';
 $lang['Error while sending e-mail'] = 'Помилка при відправленні по електронній пошті';
-
 $lang['%s must not be less than %d characters long'] = '%s повинно бути не коротше %d символів';
 $lang['%s must not be more than %d characters long'] = '%s повинно бути не довше %d символів';
 $lang['+ Add an email'] = '+ Додати e-mail';
@@ -48,5 +47,6 @@ $lang['E-mail format :'] = 'Формат e-mail';
 $lang['No active email address'] = 'Немає активних адрес';
 $lang['Plain text'] = 'Простий текст';
 $lang['Please enter an e-mail'] = 'Будь ласка, введіть e-mail';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Префікс теми відправлених e-mail (можна використовувати "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Префікс теми відправлених e-mail';
+$lang['you can use "%gallery_title%"'] = 'можна використовувати "%gallery_title%"';
 ?>

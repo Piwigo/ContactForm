@@ -38,8 +38,8 @@ $lang['Please enter a name'] = 'Lūdzu ievadiet vārdu';
 $lang['Please enter a subject'] = 'Lūdzu ievadiet tematu';
 $lang['Please enter a message'] = 'Lūdzu ievadiet ziņojumu';
 $lang['Error while sending e-mail'] = 'Kļūda sūtot e-pastu';
-
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Nosūtītā e-pasta tēmas prefikss (varat lietot "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Nosūtītā e-pasta tēmas prefikss';
+$lang['you can use "%gallery_title%"'] = 'varat lietot "%gallery_title%"';
 $lang['%s must not be more than %d characters long'] = '%s jābūt ne vairāk kā %d rakstzīmju garam';
 $lang['%s must not be less than %d characters long'] = '%s jābūt ne māzāk kā %d rakstzīmju garam';
 $lang['No active email address'] = 'Nav aktīvas e-pasta adreses';

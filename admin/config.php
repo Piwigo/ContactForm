@@ -13,7 +13,6 @@ if (isset($_POST['save_config']))
     'cf_mandatory_mail' =>    isset($_POST['cf_mandatory_mail']),
     'cf_mandatory_name' =>    isset($_POST['cf_mandatory_name']),
     'cf_mail_type' =>         $_POST['cf_mail_type'],
-    'cf_admin_mails' =>       $conf['ContactForm']['cf_admin_mails'],
     );
   $conf['ContactForm_before'] = $_POST['cf_before'];
   $conf['ContactForm_after'] = $_POST['cf_after'];
@@ -33,6 +32,6 @@ $template->assign(array(
   'cf_after' => stripslashes($conf['ContactForm_after']),
   ));
 
-$template->set_filename('contact_form', dirname(__FILE__).'/template/config.tpl');
+$template->set_filename('contact_form', realpath(CONTACT_FORM_PATH . 'admin/template/config.tpl'));
 
 ?>

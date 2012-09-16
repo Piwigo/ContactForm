@@ -38,7 +38,6 @@ $lang['Please enter a name'] = 'Prosím zadejte Vaše jméno';
 $lang['Please enter a subject'] = 'Prosím zadejte předmět zprávy';
 $lang['Please enter a message'] = 'Prosím zadejte zprávu';
 $lang['Error while sending e-mail'] = 'Nastala chyba při odeslání zprávy';
-
 $lang['%s must not be more than %d characters long'] = '%s nesmí být delší než %d znaků';
 $lang['+ Add an email'] = '+ Přidat email';
 $lang['Active'] = 'Aktivní';
@@ -47,6 +46,7 @@ $lang['E-mail format :'] = 'Formát e-mailu';
 $lang['No active email address'] = 'Žádná kativní emailová adresa';
 $lang['Plain text'] = 'Prostý text';
 $lang['Please enter an e-mail'] = 'Prosím, vložte e-mail';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Předpona poslaného e-mail předmětu (můžete použít "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Předpona poslaného e-mail předmětu';
+$lang['you can use "%gallery_title%"'] = 'můžete použít "%gallery_title%"';
 $lang['%s must not be less than %d characters long'] = '%s nesmí být kratší než %d znaků';
 ?>

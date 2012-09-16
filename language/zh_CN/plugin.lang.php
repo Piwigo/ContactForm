@@ -21,7 +21,8 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Please enter an e-mail'] = '请输入email地址';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'email标题的前缀 (您可以使用 "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'email标题的前缀';
+$lang['you can use "%gallery_title%"'] = '您可以使用 "%gallery_title%"';
 $lang['Subject'] = '标题';
 $lang['Text after the contact form'] = '联络表单之后的文字';
 $lang['Text before the contact form'] = '联络表单之前的文字';

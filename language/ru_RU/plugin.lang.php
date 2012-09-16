@@ -39,7 +39,8 @@ $lang['Please enter a subject'] = 'Пожалуйста, укажите тему
 $lang['Please enter a message'] = 'Пожалуйста, введите сообщение';
 $lang['Error while sending e-mail'] = 'Ошибка при отправке сообщения';
 
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Префикс темы отправляемых e-mail (можно использовать "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Префикс темы отправляемых e-mail';
+$lang['you can use "%gallery_title%"'] = 'можно использовать "%gallery_title%"';
 $lang['Please enter an e-mail'] = 'Пожалуйста, введите e-mail';
 $lang['Active'] = 'Активный';
 $lang['Default e-mail subject'] = 'Текст почты по умолчанию';

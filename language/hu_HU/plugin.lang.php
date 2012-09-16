@@ -38,7 +38,6 @@ $lang['Please enter a name'] = 'Írjon be egy nevet';
 $lang['Please enter a subject'] = 'Írja be a levél tárgyát';
 $lang['Please enter a message'] = 'Írja be az üzenetét';
 $lang['Error while sending e-mail'] = 'Hiba történt a levél küldése közben';
-
 $lang['%s must not be less than %d characters long'] = '%s nem lehet kevesebb %d karakternél';
 $lang['%s must not be more than %d characters long'] = '%s nem lehet több %d karakternél';
 $lang['+ Add an email'] = '+ e-mail hozzáadása';
@@ -48,5 +47,6 @@ $lang['E-mail format :'] = 'E-mail formátum';
 $lang['No active email address'] = 'Nincs aktív e-mail cím';
 $lang['Plain text'] = 'Egyszerű szöveg';
 $lang['Please enter an e-mail'] = 'Kérek egy e-mail címet';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Küldött e-mail tárgy előtag (a "%gallery_title%" használható)';
+$lang['Prefix of the sent e-mail subject'] = 'Küldött e-mail tárgy előtag';
+$lang['you can use "%gallery_title%"'] = 'a "%gallery_title%" használható';
 ?>

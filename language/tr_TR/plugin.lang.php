@@ -41,7 +41,8 @@ $lang['Error while sending e-mail'] = 'Mesajın gönderilmesinde sorun oluştu';
 
 $lang['%s must not be less than %d characters long'] = '%s, %d karakter uzunluğundan küçük olmamalıdır';
 $lang['%s must not be more than %d characters long'] = '%s, %d karakter uzunluğundan büyük olmamalıdır';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Gönderilen e-posta konusu başına bir ön takı ekle ("%gallery_title%" kullanabilirsiniz.)';
+$lang['Prefix of the sent e-mail subject'] = 'Gönderilen e-posta konusu başına bir ön takı ekle';
+$lang['you can use "%gallery_title%"'] = '"%gallery_title%" kullanabilirsiniz';
 $lang['+ Add an email'] = '+ Bir e-posta adresi ekle';
 $lang['Active'] = 'Etkin';
 $lang['Default e-mail subject'] = 'Varsayılan e-posta konusu';

@@ -48,5 +48,6 @@ $lang['E-mail format :'] = 'Formato do Email';
 $lang['No active email address'] = 'Direção de Email não ativada';
 $lang['Plain text'] = 'Texto normal';
 $lang['Please enter an e-mail'] = 'Indique um Email por favor';
-$lang['Prefix of the sent e-mail subject (you can use "%gallery_title%")'] = 'Prefixo do assunto Enviar e-mail (Pode usar "%gallery_title%")';
+$lang['Prefix of the sent e-mail subject'] = 'Prefixo do assunto Enviar e-mail';
+$lang['you can use "%gallery_title%"'] = 'Pode usar "%gallery_title%"';
 ?>

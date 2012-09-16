@@ -14,10 +14,11 @@ if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !count(
 if (isset($_POST['send_mail']))
 {
   $contact = array(
-    'author' => trim($_POST['author']),
-    'email' => trim($_POST['email']),
-    'subject' =>   trim($_POST['subject']),
-    'content' =>   $_POST['content'],
+    'author' =>  trim($_POST['author']),
+    'email' =>   trim($_POST['email']),
+    'group' =>   @$_POST['group'],
+    'subject' => trim($_POST['subject']),
+    'content' => $_POST['content'],
    );
   
   $comment_action = send_contact_form($contact, @$_POST['key']);
@@ -46,6 +47,7 @@ if (is_classic_user())
     $contact = array(
       'author' => $user['username'],
       'email' => $user['email'],
+      'group' => null,
       'subject' => l10n($conf['ContactForm']['cf_default_subject']),
       'content' => null,
       );
@@ -66,6 +68,24 @@ if (!empty($pwg_loaded_plugins['ExtendedDescription']))
   add_event_handler('render_contact_form', 'get_user_language_desc');
 }
 
+$query = '
+SELECT DISTINCT group_name
+  FROM '. CONTACT_FORM_TABLE .'
+  ORDER BY group_name
+;';
+$result = pwg_query($query);
+
+$groups = array();
+while ($data = pwg_db_fetch_assoc($result))
+{
+  $groups[ $data['group_name'] ] = !empty($data['group_name']) ? l10n($data['group_name']) : l10n('Default');
+}
+
+if (count($groups) > 1)
+{
+  $template->assign('GROUPS', $groups);
+}
+
 $template->assign(array(
   'contact' => $contact,
   'ContactForm_before' => trigger_event('render_contact_form', $conf['ContactForm_before']),
@@ -76,6 +96,6 @@ $template->assign(array(
   'F_ACTION' => CONTACT_FORM_PUBLIC,
   ));
 
-$template->set_filename('index', dirname(__FILE__).'/../template/contact_form.tpl');
+$template->set_filename('index', realpath(CONTACT_FORM_PATH . 'template/contact_form.tpl'));
 
 ?>

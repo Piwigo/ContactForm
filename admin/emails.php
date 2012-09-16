@@ -4,6 +4,7 @@ if (!defined('CONTACT_FORM_PATH')) die('Hacking attempt!');
 // save emails
 if (isset($_POST['save_emails']))
 {
+  var_dump($_POST);
   $emails = array();
   foreach ($_POST['emails'] as $entry)
   {
@@ -15,23 +16,55 @@ if (isset($_POST['save_emails']))
     }
     else
     {
+      if ($entry['group_name'] == -1) $entry['group_name'] = null;
+      
       array_push($emails, array(
         'name' => $entry['name'],
         'email' => $entry['email'],
-        'active' => isset($entry['active']),
+        'group_name' => $entry['group_name'],
+        'active' => boolean_to_string(isset($entry['active'])),
         ));
     }
   }
   
-  $conf['ContactForm']['cf_admin_mails'] = $emails;
-  conf_update_param('ContactForm', serialize($conf['ContactForm']));
+  pwg_query('TRUNCATE TABLE `'. CONTACT_FORM_TABLE. '`');
+  
+  mass_inserts(
+    CONTACT_FORM_TABLE,
+    array('name','email','group_name','active'),
+    $emails
+    );
+  
   array_push($page['infos'], l10n('Information data registered in database'));
 }
 
 
 // display emails
-$template->assign('EMAILS', $conf['ContactForm']['cf_admin_mails']);
+$query = '
+SELECT *
+  FROM '. CONTACT_FORM_TABLE .'
+  ORDER BY
+    group_name ASC,
+    name ASC
+';
+$result = pwg_query($query);
 
-$template->set_filename('contact_form', dirname(__FILE__).'/template/emails.tpl');
+$emails = $groups = array();
+while ($data = pwg_db_fetch_assoc($result))
+{
+  $data['active'] = get_boolean($data['active']);
+  array_push($emails, $data);
+  if (!empty($data['group_name']))
+  {
+    array_push($groups, $data['group_name']);
+  }
+}
+
+$template->assign(array(
+  'EMAILS' => $emails,
+  'GROUPS' => array_unique($groups),
+  ));
+
+$template->set_filename('contact_form', realpath(CONTACT_FORM_PATH . 'admin/template/emails.tpl'));
 
 ?>
