@@ -48,4 +48,9 @@ $lang['Please enter an e-mail'] = 'Aggiungi la tua email';
 $lang['Prefix of the sent e-mail subject'] = 'Presisso per le email gia inviate';
 $lang['Active'] = 'Attivo';
 $lang['+ Add an email'] = 'Aggiungi la tua email';
+$lang['+ Add a category'] = '+ Aggiungi una categoria';
+$lang['Category'] = 'Categoria';
+$lang['Please choose a category'] = 'Per favore scegli una categoria';
+$lang['can be translated with LocalFiles Editor plugin'] = 'può essere tradotto con il plugin LocalFiles Editor ';
+$lang['you can use "%gallery_title%"'] = 'puoi usare "%gallery_title%"';
 ?>
