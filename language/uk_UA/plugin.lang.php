@@ -49,4 +49,8 @@ $lang['Plain text'] = 'Простий текст';
 $lang['Please enter an e-mail'] = 'Будь ласка, введіть e-mail';
 $lang['Prefix of the sent e-mail subject'] = 'Префікс теми відправлених e-mail';
 $lang['you can use "%gallery_title%"'] = 'можна використовувати "%gallery_title%"';
+$lang['+ Add a category'] = '+ Додати категорію';
+$lang['Category'] = 'Категорія';
+$lang['Please choose a category'] = 'Будь ласка, виберіть категорію';
+$lang['can be translated with LocalFiles Editor plugin'] = 'може бути переведені з плаґіна LocalFiles Editor';
 ?>
