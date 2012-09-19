@@ -50,4 +50,8 @@ $lang['Plain text'] = 'Простой текст';
 $lang['+ Add an email'] = '+ Добавить email';
 $lang['%s must not be more than %d characters long'] = '%s должно быть не длиннее %d символов';
 $lang['%s must not be less than %d characters long'] = '%s должно быть не короче %d символов';
+$lang['+ Add a category'] = '+ Добавить категорию';
+$lang['Category'] = 'Категория';
+$lang['Please choose a category'] = 'Выберите категорию';
+$lang['can be translated with LocalFiles Editor plugin'] = 'можно перевести с помощью плагина LocalFiles Editor';
 ?>
