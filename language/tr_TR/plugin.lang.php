@@ -50,4 +50,8 @@ $lang['E-mail format :'] = 'e-posta formatı:';
 $lang['No active email address'] = 'Etkin e-posta adresi yok';
 $lang['Plain text'] = 'Düz yazı';
 $lang['Please enter an e-mail'] = 'Lütfen bir e-posta adresi girin';
+$lang['+ Add a category'] = '+ Bir kategori ekle';
+$lang['Category'] = 'Kategori';
+$lang['Please choose a category'] = 'Lütfen bir kategori seçin';
+$lang['can be translated with LocalFiles Editor plugin'] = 'LocalFiles Editor eklentisi ile çevrilebilir';
 ?>
