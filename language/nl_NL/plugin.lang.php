@@ -49,4 +49,8 @@ $lang['Plain text'] = 'Platte tekst';
 $lang['Please enter an e-mail'] = 'Voer een email adres in';
 $lang['Prefix of the sent e-mail subject'] = 'Voorvoegsel voor het email onderwerp';
 $lang['you can use "%gallery_title%"'] = 'je kan "%gallery_title%" gebruiken';
+$lang['+ Add a category'] = 'Voeg een categorie toe';
+$lang['Category'] = 'Categorie';
+$lang['Please choose a category'] = 'Kies aub een categorie';
+$lang['can be translated with LocalFiles Editor plugin'] = 'kan vertaald worden met de LocalFiles plugin';
 ?>
