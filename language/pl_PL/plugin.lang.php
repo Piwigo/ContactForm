@@ -50,4 +50,8 @@ $lang['Plain text'] = 'Sam tekst';
 $lang['Please enter an e-mail'] = 'Wprowadź proszę e-mail';
 $lang['Prefix of the sent e-mail subject'] = 'Prefix tematu wysyłanego maila';
 $lang['you can use "%gallery_title%"'] = 'możesz wykorzystać tytuł galerii: "%gallery_title%"';
+$lang['+ Add a category'] = '* Dodaj kategorię';
+$lang['Category'] = 'Kategoria';
+$lang['Please choose a category'] = 'Wybierz kategorię';
+$lang['can be translated with LocalFiles Editor plugin'] = 'może zostać przetłumaczone we wtyczce LocalFiles Editor';
 ?>
