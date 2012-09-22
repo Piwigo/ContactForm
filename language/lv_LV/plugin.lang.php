@@ -49,4 +49,8 @@ $lang['Plain text'] = 'Vienkāršs teksts';
 $lang['E-mail format :'] = 'E-pasta formāts';
 $lang['Default e-mail subject'] = 'E-pasta tēma pēc noklusējuma';
 $lang['Active'] = 'Aktīvs';
+$lang['+ Add a category'] = '+ Pievinojiet kategoriju';
+$lang['can be translated with LocalFiles Editor plugin'] = 'Var pārtulkot, izmantojot LocalFiles Redaktora spraudni ';
+$lang['Please choose a category'] = 'Lūdzu izvēlieties kategoriju';
+$lang['Category'] = 'Kategorija';
 ?>
