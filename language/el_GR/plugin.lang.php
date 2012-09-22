@@ -49,4 +49,8 @@ $lang['Add link in menu'] = 'Προσθήκη ενός συνδέσμου στο
 $lang['+ Add an email'] = '+ Προσθήκη ενός e-mail';
 $lang['%s must not be more than %d characters long'] = '%s δεν πρέπει να είναι περισσότερο από %d χαρακτήρες';
 $lang['%s must not be less than %d characters long'] = '%s πρέπει να είναι τουλάχιστον %d χαρακτήρες';
+$lang['can be translated with LocalFiles Editor plugin'] = 'μπορεί να μεταφραστεί με το πρόσθετο LocalFiles Editor ';
+$lang['Please choose a category'] = 'Παρακαλούμαι διαλέξτε μια κατηγορία';
+$lang['Category'] = 'Κατηγορία';
+$lang['+ Add a category'] = '+Προσθέστε μια κατηγορία';
 ?>
