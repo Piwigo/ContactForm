@@ -50,4 +50,8 @@ $lang['Active'] = 'Aktívne';
 $lang['+ Add an email'] = '+ Pridať email';
 $lang['%s must not be more than %d characters long'] = '%s nesmie byť viac ako %d znakov dlhý';
 $lang['%s must not be less than %d characters long'] = '%s nesmie byť menej ako %d znakov dlhý';
+$lang['can be translated with LocalFiles Editor plugin'] = 'môžete preložiť s doplnkom LocalFiles Editor';
+$lang['Please choose a category'] = 'Prosím vyberte kategóriu';
+$lang['Category'] = 'Kategória';
+$lang['+ Add a category'] = '+Pridať kategóriu';
 ?>
