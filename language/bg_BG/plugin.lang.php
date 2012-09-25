@@ -49,4 +49,8 @@ $lang['+ Add an email'] = '+Добавяне на имейл';
 $lang['%s must not be more than %d characters long'] = '%s не трябва да е повече от %d символа дължина';
 $lang['%s must not be less than %d characters long'] = '%s не трябва да е по-малко от %d символа дължина';
 $lang['Please enter an e-mail'] = 'Моля въведете имейл';
+$lang['can be translated with LocalFiles Editor plugin'] = 'може да се преведе с добавката "LocalFile Editor"';
+$lang['Please choose a category'] = 'Моля изберете категория';
+$lang['Category'] = 'Категория';
+$lang['+ Add a category'] = '+Нова категория';
 ?>
