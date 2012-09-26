@@ -36,4 +36,21 @@ $lang['Plain text'] = 'ข้อความธรรมดา';
 $lang['Message'] = 'ข้อความ';
 $lang['Add link in menu'] = 'เพิ่มลิงค์ในเมนู';
 $lang['Active'] = 'เปิดใช้งาน';
+$lang['Default e-mail subject'] = '
+ค่าเริ่มต้นชื่อเรื่องอีเมล์';
+$lang['E-mail address is mandatory'] = 'ที่อยู่อีเมล์ จำเป็นต้องใช้';
+$lang['Error while sending e-mail'] = 'ผิดพลาดขณะที่การส่งอีเมล์';
+$lang['Name is mandatory'] = 'ชื่อ จำเป็นต้องมี';
+$lang['No active email address'] = 'ไม่ใช่ที่อยู่อีเมลที่ใช้งานได้';
+$lang['Please choose a category'] = 'กรุณาเลือกประเภท';
+$lang['Prefix of the sent e-mail subject'] = 'คำนำหน้าของหัวข้ออีเมลที่ส่ง';
+$lang['Text after the contact form'] = 'ข้อความหลังฟอร์มการติดต่อ';
+$lang['Text before the contact form'] = 'ข้อความก่อนแบบฟอร์มการติดต่อ';
+$lang['can be translated with LocalFiles Editor plugin'] = 'สามารถแปลกับปลั๊กอิน LocalFiles Editor';
+$lang['you can use "%gallery_title%"'] = 'คุณสามารถใช้ "%gallery_title%"';
+$lang['%s must not be more than %d characters long'] = '%s ไม่ต้องมากกว่า %d ตัวอักษร';
+$lang['%s must not be less than %d characters long'] = '%s จะต้องไม่น้อยกว่า %d ตัวอักษร';
+$lang['Allow guests to see the form'] = 'อนุญาตให้ผู้เยี่ยมชมทั่วไปเห็นฟอร์ม';
+$lang['Category'] = 'ประเภท';
+$lang['+ Add a category'] = '+เพิ่มประเภท';
 ?>
