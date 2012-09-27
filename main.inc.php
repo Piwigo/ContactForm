@@ -17,7 +17,7 @@ define('CONTACT_FORM_PATH',    PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
 define('CONTACT_FORM_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
 define('CONTACT_FORM_PUBLIC',  get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
 define('CONTACT_FORM_TABLE',   $prefixeTable .'contact_form');
-define('CONTACT_FORM_VERSION', '2.5.0');
+define('CONTACT_FORM_VERSION', 'auto');
 
 
 add_event_handler('init', 'contact_form_init');
