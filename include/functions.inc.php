@@ -92,7 +92,7 @@ SELECT
   mass_inserts(
     CONTACT_FORM_TABLE,
     array('name','email','active'),
-    $email
+    $emails
     );
   
   $conf['ContactForm']['cf_must_initialize'] = false;

@@ -53,5 +53,6 @@ $lang['Please choose a category'] = 'Please choose a category';
 $lang['%s must not be less than %d characters long'] = '%s must not be less than %d characters long';
 $lang['%s must not be more than %d characters long'] = '%s must not be more than %d characters long';
 $lang['Error while sending e-mail'] = 'Error while sending e-mail';
+$lang['Redirect after sending email (optional)'] = 'Redirect after sending email (optional)';
 
 ?>

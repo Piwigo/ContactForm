@@ -4,7 +4,6 @@ if (!defined('CONTACT_FORM_PATH')) die('Hacking attempt!');
 // save emails
 if (isset($_POST['save_emails']))
 {
-  var_dump($_POST);
   $emails = array();
   foreach ($_POST['emails'] as $entry)
   {

@@ -26,14 +26,21 @@ if (isset($_POST['send_mail']))
   switch ($comment_action)
   {
     case 'validate':
-      array_push($page['infos'], l10n('E-mail sent successfully'));
-      unset($contact);
+      $_SESSION['page_infos'][] = l10n('E-mail sent successfully');
+      if (!empty($conf['ContactForm']['cf_redirect_url']))
+      {
+        redirect($conf['ContactForm']['cf_redirect_url']);
+      }
+      else
+      {
+        redirect(CONTACT_FORM_PUBLIC);
+      }
       break;
     case 'moderate':
     case 'reject':
       break;
     default:
-      trigger_error('Invalid comment action '.$comment_action, E_USER_WARNING);
+      trigger_error('Invalid action '.$comment_action, E_USER_WARNING);
   }
 }
 

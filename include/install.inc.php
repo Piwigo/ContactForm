@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       'cf_mandatory_name' => true,
       'cf_redirect_delay' => 5,
       'cf_mail_type' => 'text/html',
+      'cf_redirect_url' => null,
       ));
     
     conf_update_param('ContactForm', $contact_form_default_config);
@@ -52,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       $new_conf['cf_must_initialize'] = false;
       $new_conf['cf_default_subject'] = 'A comment on your site';
       $new_conf['cf_mail_type'] = 'text/html';
+      $new_conf['cf_redirect_url'] = null;
       
       // move emails to database
       $email = array();

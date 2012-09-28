@@ -32,6 +32,12 @@
           {'Name is mandatory'|@translate}
         </label>
       </li>
+      <li>
+        <label>
+          <input type="text" name="cf_redirect_url" value="{$cf_redirect_url}" size="30">
+          {'Redirect after sending email (optional)'|@translate}
+        </label>
+      </li>
     </ul>
   </fieldset>
   
