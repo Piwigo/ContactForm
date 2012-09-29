@@ -49,4 +49,9 @@ $lang['Please enter an e-mail'] = 'Prosím, vložte e-mail';
 $lang['Prefix of the sent e-mail subject'] = 'Předpona poslaného e-mail předmětu';
 $lang['you can use "%gallery_title%"'] = 'můžete použít "%gallery_title%"';
 $lang['%s must not be less than %d characters long'] = '%s nesmí být kratší než %d znaků';
+$lang['+ Add a category'] = '+ přidat kategorii';
+$lang['Category'] = 'Kategorie';
+$lang['Please choose a category'] = 'Vyberte prosím kategorii';
+$lang['Redirect after sending email (optional)'] = 'Přesměrovat po odeslání mailu (volitelné)';
+$lang['can be translated with LocalFiles Editor plugin'] = 'může být přeloženo pomocí pluginu LocalFiles Editor';
 ?>
