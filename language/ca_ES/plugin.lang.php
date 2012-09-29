@@ -39,4 +39,9 @@ $lang['Please enter a subject'] = 'Si us plau, introdueix l\'assumpte';
 $lang['Please enter a message'] = 'Si us plau, escribiu el missatge';
 $lang['Error while sending e-mail'] = 'Error a l\'enviar el correu electrònic';
 
+$lang['+ Add a category'] = '+ Afegir categoria';
+$lang['+ Add an email'] = '+ Afegir email';
+$lang['Active'] = 'Actiu';
+$lang['Category'] = 'Categoria';
+$lang['Plain text'] = 'Text pla';
 ?>
