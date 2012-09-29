@@ -54,4 +54,5 @@ $lang['+ Add a category'] = '+ Bir kategori ekle';
 $lang['Category'] = 'Kategori';
 $lang['Please choose a category'] = 'Lütfen bir kategori seçin';
 $lang['can be translated with LocalFiles Editor plugin'] = 'LocalFiles Editor eklentisi ile çevrilebilir';
+$lang['Redirect after sending email (optional)'] = 'e-Posta gönderildikten sonra yönlendir (opsiyonel)';
 ?>
