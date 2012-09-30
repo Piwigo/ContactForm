@@ -53,4 +53,5 @@ $lang['+ Add a category'] = '+ Añadir una categoría';
 $lang['Category'] = 'Categoría';
 $lang['Please choose a category'] = 'Por favor elige una categoría';
 $lang['can be translated with LocalFiles Editor plugin'] = 'se puede traducir con el plugin  LocalFilesEditor';
+$lang['Redirect after sending email (optional)'] = 'Redireccionar después de enviar por correo electrónico (opcional)';
 ?>
