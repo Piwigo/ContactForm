@@ -13,7 +13,7 @@ if (isset($_POST['save_config']))
     'cf_mandatory_mail' =>    isset($_POST['cf_mandatory_mail']),
     'cf_mandatory_name' =>    isset($_POST['cf_mandatory_name']),
     'cf_mail_type' =>         $_POST['cf_mail_type'],
-    'cf_redirect_url' =>      $_POST['cf_redirect_url'],
+    'cf_redirect_url' =>      ($_POST['cf_redirect_url']!='http://') ? $_POST['cf_redirect_url'] : null,
     );
   $conf['ContactForm_before'] = $_POST['cf_before'];
   $conf['ContactForm_after'] = $_POST['cf_after'];

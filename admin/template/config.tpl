@@ -34,7 +34,7 @@
       </li>
       <li>
         <label>
-          <input type="text" name="cf_redirect_url" value="{$cf_redirect_url}" size="30">
+          <input type="text" name="cf_redirect_url" value="{if $cf_redirect_url}{$cf_redirect_url}{else}http://{/if}" size="50">
           {'Redirect after sending email (optional)'|@translate}
         </label>
       </li>
