@@ -53,4 +53,5 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'kan oversættes med 
 $lang['+ Add a category'] = '+ Tilføj en kategori';
 $lang['Category'] = 'Kategori';
 $lang['Please choose a category'] = 'Vælg en kategori';
+$lang['Redirect after sending email (optional)'] = 'Omdiriger efter mailen er sendt (valgfrit)';
 ?>
