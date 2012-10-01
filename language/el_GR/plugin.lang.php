@@ -53,4 +53,5 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'μπορεί να μ
 $lang['Please choose a category'] = 'Παρακαλούμαι διαλέξτε μια κατηγορία';
 $lang['Category'] = 'Κατηγορία';
 $lang['+ Add a category'] = '+Προσθέστε μια κατηγορία';
+$lang['Redirect after sending email (optional)'] = 'Ανακατεύθυνση μετά την αποστολή e-mail (προαιρετικό)';
 ?>
