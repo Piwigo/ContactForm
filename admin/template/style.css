@@ -15,3 +15,13 @@ tr.delete input, tr.delete select {
   border-radius:10px;
   font-weight:bold;
 }
+
+.infos.tip {
+  background-image:none;
+  font-weight:normal;
+  padding:10px;
+  min-height:0;
+  width:700px;
+  margin:20px auto 5px auto;
+  border-radius:5px;
+}

@@ -42,7 +42,7 @@ $lang['Text before the contact form'] = 'Texte au-dessus du formulaire de contac
 $lang['Text after the contact form'] = 'Texte au-dessous du formulaire de contact';
 $lang['E-mails'] = 'E-mails';
 $lang['Active'] = 'Actif';
-$lang['+ Add an email'] = '+ Ajouter une email';
+$lang['+ Add an email'] = '+ Ajouter un email';
 $lang['+ Add a category'] = '+ Ajouter une categorie';
 $lang['No active email address'] = 'Aucune adresse email active';
 $lang['E-mail sent successfully'] = 'E-mail envoyé avec succès';
@@ -55,5 +55,7 @@ $lang['%s must not be less than %d characters long'] = '%s ne doit pas faire moi
 $lang['%s must not be more than %d characters long'] = '%s ne doit pas faire plus de %d caractères';
 $lang['Error while sending e-mail'] = 'Erreur lors de l\'envoi de l\'e-mail';
 $lang['Redirect after sending email (optional)'] = 'Rediriger après l\'envoi du mail (optionel)';
+$lang['Tip'] = 'Astuce';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Chaque catégorie est affichée comme un "service" distinct sur la page de contact (exemple: "Technique", "Commercial", "Question générale"). Utiliser les catégories n\'est pas obligatoire.';
 
 ?>

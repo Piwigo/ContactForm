@@ -54,6 +54,11 @@
   {footer_script}var entry = {$i};{/footer_script}
 </form>
 
+<div class="infos tip">
+<b>{'Tip'|@translate}:</b>
+{'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'|@translate}
+</div>
+
 
 
 {footer_script}

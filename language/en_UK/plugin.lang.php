@@ -54,5 +54,7 @@ $lang['%s must not be less than %d characters long'] = '%s must not be less than
 $lang['%s must not be more than %d characters long'] = '%s must not be more than %d characters long';
 $lang['Error while sending e-mail'] = 'Error while sending e-mail';
 $lang['Redirect after sending email (optional)'] = 'Redirect after sending email (optional)';
+$lang['Tip'] = 'Tip';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.';
 
 ?>
