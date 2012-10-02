@@ -54,4 +54,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'Var pārtulkot, izma
 $lang['Please choose a category'] = 'Lūdzu izvēlieties kategoriju';
 $lang['Category'] = 'Kategorija';
 $lang['Redirect after sending email (optional)'] = 'Pāradresēt pēc e-pasta nosūtīšanas (izvēles)';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Katra kategorija tiek rādīta kā atsevišķs "pakalpojums" kontaktformā (piemēram: "Tehniska rakstura", "Komerciāla rakstura", "Vispārējs jautājums"). Kategoriju izmantošana nav obligāta.';
+$lang['Tip'] = 'Padoms';
 ?>
