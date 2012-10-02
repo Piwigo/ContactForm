@@ -39,4 +39,22 @@ $lang['Please enter a subject'] = 'Vennligst fyll inn emne';
 $lang['Please enter a message'] = 'Vennligst fyll inn en beskjed';
 $lang['Error while sending e-mail'] = 'Feil ved sending av e-mail';
 
+$lang['Prefix of the sent e-mail subject'] = 'Prefiks for sendt e-postemne';
+$lang['Redirect after sending email (optional)'] = 'Omdiriger etter å ha sendt e-post (valgfritt)';
+$lang['can be translated with LocalFiles Editor plugin'] = 'kan oversettes med LocalFiles Editor plugin';
+$lang['you can use "%gallery_title%"'] = 'du kan bruke "% gallery_title%';
+$lang['Please choose a category'] = 'Vennligst velg en kategori';
+$lang['Please enter an e-mail'] = 'Vennligst angi en e-post';
+$lang['Tip'] = 'Tips';
+$lang['No active email address'] = 'Ingen aktiv e-mailadresse';
+$lang['Plain text'] = 'Ren tekst';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Hver kategori vises som en tydelig "service" på kontaktskjemaet (eksempel: "Teknisk", "Kommersielt", "generelle spørsmål"). Bruk av kategorier er ikke obligatorisk.';
+$lang['E-mail format :'] = 'E-mail format:';
+$lang['Default e-mail subject'] = 'Standard e-mailemne';
+$lang['Category'] = 'Kategori';
+$lang['%s must not be more than %d characters long'] = '%s må ikke være lengre enn %d tegn';
+$lang['%s must not be less than %d characters long'] = '%s må ikke være kortere enn %d tegn';
+$lang['Active'] = 'Aktiv';
+$lang['+ Add an email'] = '+Legg til en email';
+$lang['+ Add a category'] = '+Legg til en kategori';
 ?>
