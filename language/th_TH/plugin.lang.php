@@ -53,4 +53,7 @@ $lang['%s must not be less than %d characters long'] = '%s จะต้องไ
 $lang['Allow guests to see the form'] = 'อนุญาตให้ผู้เยี่ยมชมทั่วไปเห็นฟอร์ม';
 $lang['Category'] = 'ประเภท';
 $lang['+ Add a category'] = '+เพิ่มประเภท';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'ในแต่ละหมวดหมู่จะปรากฏเป็น "บริการ" แตกต่างบนแบบฟอร์มการติดต่อ (ตัวอย่าง: "เทคนิค", "พาณิชย์", "คำ';
+$lang['Redirect after sending email (optional)'] = 'กลับมายังหน้าเดิมหลังจากการส่งเมล์ (ตัวเลือก)';
+$lang['Tip'] = 'ทิป';
 ?>
