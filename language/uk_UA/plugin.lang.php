@@ -53,4 +53,6 @@ $lang['+ Add a category'] = '+ Додати категорію';
 $lang['Category'] = 'Категорія';
 $lang['Please choose a category'] = 'Будь ласка, виберіть категорію';
 $lang['can be translated with LocalFiles Editor plugin'] = 'може бути переведені з плаґіна LocalFiles Editor';
+$lang['Redirect after sending email (optional)'] = 'Перенаправити після надсилання електронної пошти (обов\'язково)';
+$lang['Tip'] = 'Порада';
 ?>
