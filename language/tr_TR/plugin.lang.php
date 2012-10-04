@@ -56,4 +56,5 @@ $lang['Please choose a category'] = 'Lütfen bir kategori seçin';
 $lang['can be translated with LocalFiles Editor plugin'] = 'LocalFiles Editor eklentisi ile çevrilebilir';
 $lang['Redirect after sending email (optional)'] = 'e-Posta gönderildikten sonra yönlendir (opsiyonel)';
 $lang['Tip'] = 'İpucu';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Her kategori, iletişim formu üzerinde farklı bir "hizmet" olarak görüntülenir (örnek: "Teknik","Ticari","Genel soru"). Kategorilerin kullanımı zorunlu değildir.';
 ?>
