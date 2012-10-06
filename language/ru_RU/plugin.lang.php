@@ -54,4 +54,7 @@ $lang['+ Add a category'] = '+ Добавить категорию';
 $lang['Category'] = 'Категория';
 $lang['Please choose a category'] = 'Выберите категорию';
 $lang['can be translated with LocalFiles Editor plugin'] = 'можно перевести с помощью плагина LocalFiles Editor';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Каждая категория отображается в контактной форме как "Сервис" (например:  "Техподдержка", "Общий вопрос", "Финансовый вопрос"). Использование категорий не обязательно.';
+$lang['Redirect after sending email (optional)'] = 'Перенаправить после отправки почты (необязательно)';
+$lang['Tip'] = 'Подсказка';
 ?>
