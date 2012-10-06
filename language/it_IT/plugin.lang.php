@@ -53,4 +53,7 @@ $lang['Category'] = 'Categoria';
 $lang['Please choose a category'] = 'Per favore scegli una categoria';
 $lang['can be translated with LocalFiles Editor plugin'] = 'può essere tradotto con il plugin LocalFiles Editor ';
 $lang['you can use "%gallery_title%"'] = 'puoi usare "%gallery_title%"';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Ogni categoria viene visualizzata come un distinto "servizio" sul modulo di contatto (esempio: "tecnica", "commerciale", "Domanda generale"). L\'utilizzo delle categorie non è obbligatoria.';
+$lang['Redirect after sending email (optional)'] = 'Redirect dopo l\'invio e-mail (facoltativo)';
+$lang['Tip'] = 'Tip';
 ?>
