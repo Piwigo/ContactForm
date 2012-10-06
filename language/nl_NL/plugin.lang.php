@@ -53,4 +53,7 @@ $lang['+ Add a category'] = 'Voeg een categorie toe';
 $lang['Category'] = 'Categorie';
 $lang['Please choose a category'] = 'Kies aub een categorie';
 $lang['can be translated with LocalFiles Editor plugin'] = 'kan vertaald worden met de LocalFiles plugin';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Eleke categorie wordt weergegeven als een dienst op het contact formulier(b.v "Technisch","commercieel","Algemene vraag"). Het gebruik van categoriën is niet verplicht.';
+$lang['Redirect after sending email (optional)'] = 'Redirect na het sturen van Email(optioneel)';
+$lang['Tip'] = 'Tip';
 ?>
