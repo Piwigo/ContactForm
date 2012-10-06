@@ -54,4 +54,6 @@ $lang['Category'] = 'Kategorie';
 $lang['Please choose a category'] = 'Vyberte prosím kategorii';
 $lang['Redirect after sending email (optional)'] = 'Přesměrovat po odeslání mailu (volitelné)';
 $lang['can be translated with LocalFiles Editor plugin'] = 'může být přeloženo pomocí pluginu LocalFiles Editor';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Každá kategorie se na kontaktním formuláři zobrazí jako samostatná "služba" (příklad: "Technické", "Obchodní", "Obecný dotaz"). Použití kategorií není povinné.';
+$lang['Tip'] = 'Tip';
 ?>

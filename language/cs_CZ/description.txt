@@ -1,1 +1,1 @@
-Vloží kontakt do bloku s menu a umožní kontakt uživatelům
+Vloží kontakt do bloku menu a umožní kontakt uživatelům
