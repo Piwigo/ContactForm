@@ -23,7 +23,7 @@
 $lang['%s must not be less than %d characters long'] = '%s نباید از %d حرف کمتر باشد';
 $lang['%s must not be more than %d characters long'] = '%s نباید از %d حرف بیشتر باشد';
 $lang['Active'] = 'فعال کردن';
-$lang['Add link in menu'] = 'افزودن پیوند در منو';
+$lang['Add link in menu'] = 'افزودن یک لینک در منو';
 $lang['Allow guests to see the form'] = 'مهمان ها بتوانند فرم را ببینند';
 $lang['E-mail address is mandatory'] = 'وارد کردن ایمیل الزامی است';
 $lang['E-mail configuration'] = 'تنظیمات ایمیل';
@@ -46,4 +46,13 @@ $lang['Subject'] = 'موضوع';
 $lang['Message'] = 'پیام';
 $lang['Default e-mail subject'] = 'موضوع پیشفرض ایمیل';
 $lang['+ Add an email'] = '+ افزودن یک ایمیل';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'هر موضوع باید مشخص باشد مثلا:"خدمات" روی فرم تماس (به عنوان مثال: "فنی"، "تجاری"، "سوال عمومی).استفاده کردن از دسته بندی اجباری نیست';
+$lang['Category'] = 'شاخه';
+$lang['+ Add a category'] = 'اضافه کردن یک شاخه';
+$lang['Please choose a category'] = 'لطفا یک شاخه را انتخاب کنید';
+$lang['Prefix of the sent e-mail subject'] = 'پیشوند از موضوع ایمیل فرستاده می شود.';
+$lang['Redirect after sending email (optional)'] = 'تغییر مسیر بعد از ارسال ایمیل.اختیاری';
+$lang['Tip'] = 'سر قلم';
+$lang['can be translated with LocalFiles Editor plugin'] = 'میتوان با افزونه ویرایشگر localfiles ترجمه کنید';
+$lang['you can use "%gallery_title%"'] = 'تو میتوانی استفاده کنی از  "%gallery_title%" ';
 ?>
