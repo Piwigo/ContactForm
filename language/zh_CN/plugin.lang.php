@@ -48,4 +48,11 @@ $lang['Plain text'] = '纯文本';
 $lang['Please enter a message'] = '请输入内容';
 $lang['Please enter a name'] = '请输入名字';
 $lang['Please enter a subject'] = '请输入标题';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = '每个类别都作为单独的服务显示在联络表单中（如：“技术类”，“商业类”，“常规问题”），但并不强制使用。';
+$lang['+ Add a category'] = '+ 添加一个类别';
+$lang['Category'] = '类别';
+$lang['Please choose a category'] = '请选择一个类别';
+$lang['Redirect after sending email (optional)'] = '发送邮件后重定向（可选）';
+$lang['Tip'] = '提示';
+$lang['can be translated with LocalFiles Editor plugin'] = '可以用LocalFiles Editor插件翻译';
 ?>
