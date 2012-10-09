@@ -50,4 +50,11 @@ $lang['Plain text'] = 'Texto normal';
 $lang['Please enter an e-mail'] = 'Indique um Email por favor';
 $lang['Prefix of the sent e-mail subject'] = 'Prefixo do assunto Enviar e-mail';
 $lang['you can use "%gallery_title%"'] = 'Pode usar "%gallery_title%"';
+$lang['+ Add a category'] = '+ Adicionar uma categoria';
+$lang['Category'] = 'Categoria';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Cada categoria é apresentada como um serviço distinto no formulário contacto ( Exemplo: "Tecnico","Comercial","Questão geral"). Não é obrigatório o uso de categorias.';
+$lang['Please choose a category'] = 'Escolha uma categoria se faz favor';
+$lang['Redirect after sending email (optional)'] = 'Redirecionar depois de enviar o mail (Opcional)';
+$lang['Tip'] = 'Tipo';
+$lang['can be translated with LocalFiles Editor plugin'] = 'pode ser traduzido com a extenção Editor de Arquivos Locais';
 ?>
