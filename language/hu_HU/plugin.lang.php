@@ -49,4 +49,11 @@ $lang['Plain text'] = 'Egyszerű szöveg';
 $lang['Please enter an e-mail'] = 'Kérek egy e-mail címet';
 $lang['Prefix of the sent e-mail subject'] = 'Küldött e-mail tárgy előtag';
 $lang['you can use "%gallery_title%"'] = 'a "%gallery_title%" használható';
+$lang['+ Add a category'] = '+ Kategória hozzáadása';
+$lang['Category'] = 'Kategória';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Minden kategória külön "szolgáltatásként" jelenik meg a kapcsolati űrlapon (pl. "Technikai", "Üzleti", "Általános kérdés"). A kategóriák használata nem kötelező.';
+$lang['Please choose a category'] = 'Kérlek, válassz kategóriát';
+$lang['Redirect after sending email (optional)'] = 'E-mail küldés után átirányítás (opcionális)';
+$lang['Tip'] = 'Tanács';
+$lang['can be translated with LocalFiles Editor plugin'] = 'Fordítható a LocalFiles Editor (Helyi-File Szerkesztő) bővítménnyel';
 ?>
