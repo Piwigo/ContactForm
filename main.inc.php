@@ -44,6 +44,7 @@ function contact_form_init()
   global $conf, $template,  $pwg_loaded_plugins;
   
   if (
+    CONTACT_FORM_VERSION == 'auto' or
     $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] == 'auto' or
     version_compare($pwg_loaded_plugins[CONTACT_FORM_ID]['version'], CONTACT_FORM_VERSION, '<')
   )
@@ -51,7 +52,7 @@ function contact_form_init()
     include_once(CONTACT_FORM_PATH . 'include/install.inc.php');
     contact_form_install();
     
-    if ($pwg_loaded_plugins[CONTACT_FORM_ID]['version'] != 'auto')
+    if ( $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] != 'auto' and CONTACT_FORM_VERSION != 'auto' )
     {
       $query = '
 UPDATE '. PLUGINS_TABLE .'

@@ -26,7 +26,7 @@ if (isset($_POST['save_emails']))
     }
   }
   
-  pwg_query('TRUNCATE TABLE `'. CONTACT_FORM_TABLE. '`');
+  pwg_query('TRUNCATE TABLE `'. CONTACT_FORM_TABLE. '`;');
   
   mass_inserts(
     CONTACT_FORM_TABLE,

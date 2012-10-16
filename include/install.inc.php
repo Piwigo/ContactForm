@@ -29,7 +29,6 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       'cf_allow_guest' => true,
       'cf_mandatory_mail' => true,
       'cf_mandatory_name' => true,
-      'cf_redirect_delay' => 5,
       'cf_mail_type' => 'text/html',
       'cf_redirect_url' => null,
       ));
@@ -56,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       $new_conf['cf_redirect_url'] = null;
       
       // move emails to database
-      $email = array();
+      $emails = array();
       foreach ($new_conf['cf_admin_mails'] as $email => $data)
       {
         array_push($emails, array(
@@ -81,8 +80,8 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       
       // save config
       $conf['ContactForm'] = serialize($new_conf);
-      $conf['ContactForm_before'] = stripslashes($conf['persoformtop']);
-      $conf['ContactForm_after'] = stripslashes($conf['persoformbottom']);
+      $conf['ContactForm_before'] = stripslashes(@$conf['persoformtop']);
+      $conf['ContactForm_after'] = stripslashes(@$conf['persoformbottom']);
       
       conf_update_param('ContactForm', $conf['ContactForm']);
       conf_update_param('ContactForm_before', $conf['ContactForm_before']);
