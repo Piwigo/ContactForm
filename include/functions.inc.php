@@ -11,7 +11,7 @@ function contact_form_section_init()
   if ($tokens[0] == 'contact')
   {
     $page['section'] = 'contact';
-    $page['title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
+    $page['title'] = $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
   }
 }
 
@@ -159,11 +159,6 @@ SELECT DISTINCT group_name
     array_push($page['errors'], l10n('Please enter a subject'));
     $comment_action='reject';
   }
-  else if (strlen($comm['subject']) < 4)
-  {
-    array_push($page['errors'], sprintf(l10n('%s must not be less than %d characters long'), l10n('Subject'), 4));
-    $comment_action='reject';
-  }
   else if (strlen($comm['subject']) > 100)
   {
     array_push($page['errors'], sprintf(l10n('%s must not be more than %d characters long'), l10n('Subject'), 100));
@@ -182,11 +177,6 @@ SELECT DISTINCT group_name
   if (empty($comm['content']))
   {
     array_push($page['errors'], l10n('Please enter a message'));
-    $comment_action='reject';
-  }
-  else if (strlen($comm['content']) < 20)
-  {
-    array_push($page['errors'], sprintf(l10n('%s must not be less than %d characters long'), l10n('Message'), 20));
     $comment_action='reject';
   }
   else if (strlen($comm['subject']) > 2000)
@@ -259,7 +249,7 @@ SELECT DISTINCT group_name
       $template->set_filename('contact_mail', dirname(__FILE__).'/../template/mail/content_plain.tpl');
     }
     
-    $comm['show_ip'] = isset($conf['contact_form_show_ip']) ? $conf['contact_form_show_ip'] : true;
+    $comm['show_ip'] = isset($conf['contact_form_show_ip']) ? $conf['contact_form_show_ip'] : false;
     
     $template->assign(array(
       'cf_prefix' => $prefix,

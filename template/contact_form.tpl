@@ -20,15 +20,13 @@ group.add(Validate.Exclusion, {ldelim} within: ['-1'], failureMessage: "{'Please
 
 var subject = new LiveValidation('subject', {ldelim} onlyOnSubmit: true });
 subject.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a subject'|@translate}" });
-subject.add(Validate.Length, {ldelim} minimum: 4, maximum: 100,
-  tooShortMessage: "{'%s must not be less than %d characters long'|@translate|@sprintf:'':4}",
+subject.add(Validate.Length, {ldelim} maximum: 100,
   tooLongMessage: "{'%s must not be more than %d characters long'|@translate|@sprintf:'':100}" 
   });
 
 var content = new LiveValidation('cf_content', {ldelim} onlyOnSubmit: true });
 content.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a message'|@translate}" });
-content.add(Validate.Length, {ldelim} minimum: 20, maximum: 2000,
-  tooShortMessage: "{'%s must not be less than %d characters long'|@translate|@sprintf:'':20}",
+content.add(Validate.Length, {ldelim} maximum: 2000,
   tooLongMessage: "{'%s must not be more %d characters long'|@translate|@sprintf:'':2000}",
   });
 {/footer_script}
