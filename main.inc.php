@@ -71,6 +71,7 @@ WHERE id = "'. CONTACT_FORM_ID .'"';
   
   $conf['ContactForm'] = unserialize($conf['ContactForm']);
   load_language('plugin.lang', CONTACT_FORM_PATH);
+  load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true));
   
   if ($conf['ContactForm']['cf_must_initialize'])
   {
