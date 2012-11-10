@@ -51,8 +51,8 @@ $lang['E-mail format :'] = 'Format del correu electrònic';
 $lang['No active email address'] = 'No hi ha adreces de correu electrònic actives';
 $lang['Please choose a category'] = 'Si us plau, escull una categoria';
 $lang['Please enter an e-mail'] = 'Si us plau, introdueix un email';
-$lang['Prefix of the sent e-mail subject'] = 'Prefix de l\\'assumpte d\'enviament del correu electrònic';
-$lang['Redirect after sending email (optional)'] = 'Redireccionar després d\\'enviar per email (opcional)';
+$lang['Prefix of the sent e-mail subject'] = 'Prefix de l\'assumpte d\'enviament del correu electrònic';
+$lang['Redirect after sending email (optional)'] = 'Redireccionar després d\'enviar per email (opcional)';
 $lang['can be translated with LocalFiles Editor plugin'] = 'pot traduir-se amb el complement LocalFilesEditor';
 $lang['you can use "%gallery_title%"'] = 'pot utilitzar-se "%gallery_title%"';
 ?>
