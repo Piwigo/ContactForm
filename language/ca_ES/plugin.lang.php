@@ -21,38 +21,40 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['Your name'] = 'Nom';
-$lang['Your e-mail'] = 'Correu electrònic';
+$lang['Your name'] = 'El vostre nom';
+$lang['Your e-mail'] = 'El vostre correu electrònic';
 $lang['Subject'] = 'Assumpte';
 $lang['Message'] = 'Missatge';
 $lang['General configuration'] = 'Configuració general';
 $lang['Add link in menu'] = 'Afegeix un enllaç al menú';
-$lang['Allow guests to see the form'] = 'Permetre que els convidats vegin el formulari';
-$lang['E-mail address is mandatory'] = 'E-mail address is mandatory';
-$lang['Name is mandatory'] = 'El nom és obligatori';
-$lang['E-mail configuration'] = 'El correu electrònic és obligatori';
-$lang['Text before the contact form'] = 'Texte abans del formulari de contacte';
-$lang['Text after the contact form'] = 'Texte després del formulari de contacte';
+$lang['Allow guests to see the form'] = 'Permet que els convidats vegin el formulari';
+$lang['E-mail address is mandatory'] = 'És obligatori indicar l\'adreça de correu electrònic';
+$lang['Name is mandatory'] = 'És obligatori indicar el nom';
+$lang['E-mail configuration'] = 'Configuració del correu electròncic';
+$lang['Text before the contact form'] = 'Text abans del formulari de contacte';
+$lang['Text after the contact form'] = 'Text després del formulari de contacte';
 $lang['E-mail sent successfully'] = 'El correu electrònic s\'ha enviat correctament';
-$lang['Please enter a name'] = 'Si us plau, introdueix un nom';
-$lang['Please enter a subject'] = 'Si us plau, introdueix l\'assumpte';
-$lang['Please enter a message'] = 'Si us plau, escribiu el missatge';
-$lang['Error while sending e-mail'] = 'Error a l\'enviar el correu electrònic';
+$lang['Please enter a name'] = 'Introduïu un nom';
+$lang['Please enter a subject'] = 'Introduïu un assumpte';
+$lang['Please enter a message'] = 'Escriviu el missatge';
+$lang['Error while sending e-mail'] = 'Error en enviar el correu electrònic';
 
-$lang['+ Add a category'] = '+ Afegir categoria';
-$lang['+ Add an email'] = '+ Afegir email';
+$lang['+ Add a category'] = '+ Afegeix una categoria';
+$lang['+ Add an email'] = '+ Afegeix un correu electrònic';
 $lang['Active'] = 'Actiu';
 $lang['Category'] = 'Categoria';
 $lang['Plain text'] = 'Text pla';
-$lang['%s must not be more than %d characters long'] = '%s no pot ser major que %d caracters';
-$lang['%s must not be less than %d characters long'] = '%s no pot tindre menys que %d caracters';
+$lang['%s must not be more than %d characters long'] = '%s no pot ser major que %d caràcters';
+$lang['%s must not be less than %d characters long'] = '%s no pot tindre menys de %d caràcters';
 $lang['Default e-mail subject'] = 'Assumpte per defecte del correu electrònic';
-$lang['E-mail format :'] = 'Format del correu electrònic';
+$lang['E-mail format :'] = 'Format del correu electrònic:';
 $lang['No active email address'] = 'No hi ha adreces de correu electrònic actives';
-$lang['Please choose a category'] = 'Si us plau, escull una categoria';
-$lang['Please enter an e-mail'] = 'Si us plau, introdueix un email';
+$lang['Please choose a category'] = 'Escolliu una categoria';
+$lang['Please enter an e-mail'] = 'Introduïu una adreça de correu electrònic';
 $lang['Prefix of the sent e-mail subject'] = 'Prefix de l\'assumpte d\'enviament del correu electrònic';
-$lang['Redirect after sending email (optional)'] = 'Redireccionar després d\'enviar per email (opcional)';
-$lang['can be translated with LocalFiles Editor plugin'] = 'pot traduir-se amb el complement LocalFilesEditor';
-$lang['you can use "%gallery_title%"'] = 'pot utilitzar-se "%gallery_title%"';
+$lang['Redirect after sending email (optional)'] = 'Redirigeix després d\'enviar per correu electrònic (opcional)';
+$lang['can be translated with LocalFiles Editor plugin'] = 'pot traduir-se amb el connector LocalFiles Editor';
+$lang['you can use "%gallery_title%"'] = 'podeu utilitzar "%gallery_title%"';
+$lang['Tip'] = 'Truc';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Les categories es visualitzen com a "serveis" diferents en el formulari de contacte (exemple: "Tècnic", "Comercia", "Interès general"). L\'ús de categories no es obligatori.';
 ?>
