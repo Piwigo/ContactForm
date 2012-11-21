@@ -57,5 +57,6 @@ $lang['Error while sending e-mail'] = 'Erreur lors de l\'envoi de l\'e-mail';
 $lang['Redirect after sending email (optional)'] = 'Rediriger après l\'envoi du mail (optionel)';
 $lang['Tip'] = 'Astuce';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Chaque catégorie est affichée comme un "service" distinct sur la page de contact (exemple: "Technique", "Commercial", "Question générale"). Utiliser les catégories n\'est pas obligatoire.';
+$lang['Send'] = 'Envoyer';
 
 ?>
