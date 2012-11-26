@@ -273,6 +273,18 @@ SELECT DISTINCT group_name
         trigger_event('send_mail_headers', $headers),
         $args
       );
+      
+    if ( $comm['send_copy'] and !empty($comm['email']) )
+    {
+      trigger_event('send_mail',
+        false, /* Result */
+        trigger_event('send_mail_to', $args['from']),
+        trigger_event('send_mail_subject', $subject),
+        trigger_event('send_mail_content', $content),
+        trigger_event('send_mail_headers', $headers),
+        $args
+      );
+    }
     
     unset_make_full_url();
     switch_lang_back();

@@ -58,5 +58,6 @@ $lang['Redirect after sending email (optional)'] = 'Rediriger après l\'envoi du
 $lang['Tip'] = 'Astuce';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Chaque catégorie est affichée comme un "service" distinct sur la page de contact (exemple: "Technique", "Commercial", "Question générale"). Utiliser les catégories n\'est pas obligatoire.';
 $lang['Send'] = 'Envoyer';
+$lang['Send copy to my email'] = 'Envoyer une copie à mon email';
 
 ?>

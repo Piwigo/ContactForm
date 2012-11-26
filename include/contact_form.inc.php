@@ -19,6 +19,7 @@ if (isset($_POST['send_mail']))
     'group' =>   @$_POST['group'],
     'subject' => trim($_POST['subject']),
     'content' => $_POST['content'],
+    'send_copy' => isset($_POST['send_copy']),
    );
   
   $comment_action = send_contact_form($contact, @$_POST['key']);

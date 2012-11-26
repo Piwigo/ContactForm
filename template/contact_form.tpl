@@ -53,7 +53,7 @@ content.add(Validate.Length, {ldelim} maximum: 2000,
 {/if}
 
 <div class="contact">
-  <form  method="post" action="{$F_ACTION}" class="filter">
+  <form  method="post" action="{$F_ACTION}">
     <table>
       <tr>
         <td class="title"><label for="author">{'Your name'|@translate}</label></td>
@@ -98,7 +98,10 @@ content.add(Validate.Length, {ldelim} maximum: 2000,
       </tr>
       <tr>
         <td class="title">&nbsp;</td>
-        <td><input class="submit" type="submit" name="send_mail" value="{'Send'|@translate}"></td>
+        <td>
+          <input class="submit" type="submit" name="send_mail" value="{'Send'|@translate}">
+          <label><input type="checkbox" name="send_copy"> {'Send copy to my email'|@translate}</label>
+        </td>
       </tr>
     </table>
     

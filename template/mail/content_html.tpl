@@ -18,8 +18,8 @@
 
 <div id="the_content">
   <p>
-    {'Name'|@translate}: {$contact.author}<br>
-    {'Email address'|@translate}: {$contact.email}
+    <b>{'Name'|@translate}:</b> {$contact.author}<br>
+    <b>{'Email address'|@translate}:</b> {$contact.email}
     {if $contact.show_ip}<br>{'IP: %s'|@translate|@sprintf:$contact.ip}{/if}
   </p>
 
