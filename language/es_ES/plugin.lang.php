@@ -56,4 +56,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'se puede traducir co
 $lang['Redirect after sending email (optional)'] = 'Redireccionar después de enviar por correo electrónico (opcional)';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Cada categoría se muestra como un claro "servicio" en el formulario de contacto (por ejemplo: "técnicas", "Comercial", "Pregunta general"). El uso de categorías no es obligatorio.';
 $lang['Tip'] = 'Consejo ';
+$lang['Send'] = 'Mandar';
+$lang['Send copy to my email'] = 'Mandar una copia a mi dirección de correos.';
 ?>
