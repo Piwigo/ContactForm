@@ -56,4 +56,6 @@ $lang['Please choose a category'] = 'Vælg en kategori';
 $lang['Redirect after sending email (optional)'] = 'Omdiriger efter mailen er sendt (valgfrit)';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Hver kategori vises som en særskilt "tjeneste" på kontaktformularen (eksempel: "Teknisk", "Kommerciel", "Generelt spørgsmål"). Det et ikke et krav, at der anvendes kategorier.';
 $lang['Tip'] = 'Tip';
+$lang['Send'] = 'Send';
+$lang['Send copy to my email'] = 'Send kopi til min mailadresse';
 ?>
