@@ -47,7 +47,7 @@ $lang['Plain text'] = 'Testo non formattato';
 $lang['Please enter an e-mail'] = 'Aggiungi la tua email';
 $lang['Prefix of the sent e-mail subject'] = 'Presisso per le email gia inviate';
 $lang['Active'] = 'Attivo';
-$lang['+ Add an email'] = 'Aggiungi la tua email';
+$lang['+ Add an email'] = '+ Aggiungi una email';
 $lang['+ Add a category'] = '+ Aggiungi una categoria';
 $lang['Category'] = 'Categoria';
 $lang['Please choose a category'] = 'Per favore scegli una categoria';
@@ -56,4 +56,6 @@ $lang['you can use "%gallery_title%"'] = 'puoi usare "%gallery_title%"';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Ogni categoria viene visualizzata come un distinto "servizio" sul modulo di contatto (esempio: "tecnica", "commerciale", "Domanda generale"). L\'utilizzo delle categorie non è obbligatoria.';
 $lang['Redirect after sending email (optional)'] = 'Redirect dopo l\'invio e-mail (facoltativo)';
 $lang['Tip'] = 'Tip';
+$lang['Send'] = 'Invia';
+$lang['Send copy to my email'] = 'Invia una copia alla mia email';
 ?>
