@@ -56,4 +56,6 @@ $lang['+ Add a category'] = '+Προσθέστε μια κατηγορία';
 $lang['Redirect after sending email (optional)'] = 'Ανακατεύθυνση μετά την αποστολή e-mail (προαιρετικό)';
 $lang['Tip'] = 'Πληροφορία';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Κάθε κατηγορία εμφανίζεται ως διακριτή "υπηρεσία" στην φόρμα επικοινωνίας (παράδειγμα: «Τεχνική», «Εμπορική», «Γενική ερώτηση"). Η χρήση κατηγοριών δεν είναι υποχρεωτική.';
+$lang['Send copy to my email'] = 'Αποστολή αντιγράφου στο email μου';
+$lang['Send'] = 'Αποστολή';
 ?>
