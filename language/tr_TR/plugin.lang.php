@@ -57,4 +57,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'LocalFiles Editor ek
 $lang['Redirect after sending email (optional)'] = 'e-Posta gönderildikten sonra yönlendir (opsiyonel)';
 $lang['Tip'] = 'İpucu';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Her kategori, iletişim formu üzerinde farklı bir "hizmet" olarak görüntülenir (örnek: "Teknik","Ticari","Genel soru"). Kategorilerin kullanımı zorunlu değildir.';
+$lang['Send'] = 'Gönder';
+$lang['Send copy to my email'] = 'Kopyasını ePostama gönder';
 ?>
