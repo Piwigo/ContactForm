@@ -55,4 +55,6 @@ $lang['Please choose a category'] = '请选择一个类别';
 $lang['Redirect after sending email (optional)'] = '发送邮件后重定向（可选）';
 $lang['Tip'] = '提示';
 $lang['can be translated with LocalFiles Editor plugin'] = '可以用LocalFiles Editor插件翻译';
+$lang['Send'] = '发送';
+$lang['Send copy to my email'] = '发送复件到我的Email';
 ?>
