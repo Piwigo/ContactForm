@@ -56,4 +56,6 @@ $lang['Please choose a category'] = 'Kérlek, válassz kategóriát';
 $lang['Redirect after sending email (optional)'] = 'E-mail küldés után átirányítás (opcionális)';
 $lang['Tip'] = 'Tanács';
 $lang['can be translated with LocalFiles Editor plugin'] = 'Fordítható a LocalFiles Editor (Helyi-File Szerkesztő) bővítménnyel';
+$lang['Send'] = 'Küldés';
+$lang['Send copy to my email'] = 'Másolat küldése az email címemre';
 ?>
