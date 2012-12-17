@@ -56,4 +56,6 @@ $lang['+ Add a category'] = '+เพิ่มประเภท';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'ในแต่ละหมวดหมู่จะปรากฏเป็น "บริการ" แตกต่างบนแบบฟอร์มการติดต่อ (ตัวอย่าง: "เทคนิค", "พาณิชย์", "คำ';
 $lang['Redirect after sending email (optional)'] = 'กลับมายังหน้าเดิมหลังจากการส่งเมล์ (ตัวเลือก)';
 $lang['Tip'] = 'ทิป';
+$lang['Send'] = 'ส่ง';
+$lang['Send copy to my email'] = 'ส่งสำเนาไปยังอีเมลของฉัน';
 ?>
