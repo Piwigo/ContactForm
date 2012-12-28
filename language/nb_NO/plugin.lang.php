@@ -57,4 +57,6 @@ $lang['%s must not be less than %d characters long'] = '%s må ikke være korter
 $lang['Active'] = 'Aktiv';
 $lang['+ Add an email'] = '+Legg til en email';
 $lang['+ Add a category'] = '+Legg til en kategori';
+$lang['Send copy to my email'] = 'Send kopi til min E-post';
+$lang['Send'] = 'Send';
 ?>
