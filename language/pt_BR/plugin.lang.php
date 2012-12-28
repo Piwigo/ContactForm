@@ -51,4 +51,10 @@ $lang['Please enter a message'] = 'Por favor, entre com a mensagem';
 $lang['Please enter a name'] = 'Por favor, entre com o nome';
 $lang['Please enter a subject'] = 'Por favor, entre com o assunto';
 $lang['Please enter an e-mail'] = 'Por favor, entre com um email';
+$lang['%s must not be less than %d characters long'] = '%s não pode ter menos do que %d caracteres';
+$lang['%s must not be more than %d characters long'] = '%s não pode ter mais do que %d caratcteres';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Cada categoria é mostrada como um "serviço" distinto no formulário de contato (exemplo: "Técnico", "Comercial", "Questões Gerais"). Usar as categorias não é obrigatório.';
+$lang['Prefix of the sent e-mail subject'] = 'Prefixo do assunto do email enviado';
+$lang['Send'] = 'Enviar';
+$lang['Send copy to my email'] = 'Enviar cópia para o meu email';
 ?>
