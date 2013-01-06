@@ -1,0 +1,1 @@
+Lisää "Yhteys" -valinta Valikkopalkkiin tuodaksesi yhteydenottolomakkeen käyttäjien saataville
