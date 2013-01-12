@@ -57,4 +57,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'pot traduir-se amb e
 $lang['you can use "%gallery_title%"'] = 'podeu utilitzar "%gallery_title%"';
 $lang['Tip'] = 'Truc';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Les categories es visualitzen com a "serveis" diferents en el formulari de contacte (exemple: "Tècnic", "Comercia", "Interès general"). L\'ús de categories no es obligatori.';
+$lang['Send'] = 'Envia';
+$lang['Send copy to my email'] = 'Envia una còpia al meu correu electrònic';
 ?>
