@@ -57,4 +57,6 @@ $lang['+ Add a category'] = '+Pridať kategóriu';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Každá kategória je zobrazená ako jednoznačná "služba" v kontaktnom formulári (napr. "Technické", "Komerčné", Hlavné otázky"). Používanie kategórií nie je povinné.';
 $lang['Redirect after sending email (optional)'] = 'Presmerovanie po odoslaní mailu (voliteľné)';
 $lang['Tip'] = 'Tip';
+$lang['Send copy to my email'] = 'Poslať kópiu na email';
+$lang['Send'] = 'Poslať';
 ?>
