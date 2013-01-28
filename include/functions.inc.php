@@ -12,6 +12,17 @@ function contact_form_section_init()
   {
     $page['section'] = 'contact';
     $page['title'] = $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
+    
+  }
+}
+function contact_form_header()
+{
+  global $page, $template;
+  
+  if (isset($page['section']) and $page['section'] == 'contact')
+  {
+    $page['body_id'] = 'theContactPage';
+    $template->assign('BODY_ID', $page['body_id']);
   }
 }
 
@@ -351,7 +362,11 @@ SELECT *
  */
 function check_email_validity($mail_address)
 {
-  if (version_compare(PHP_VERSION, '5.2.0') >= 0)
+  if (function_exists('email_check_format'))
+  {
+    return email_check_format($mail_address); // Piwigo 2.5
+  }
+  else if (version_compare(PHP_VERSION, '5.2.0') >= 0)
   {
     return filter_var($mail_address, FILTER_VALIDATE_EMAIL)!==false;
   }

@@ -100,7 +100,7 @@ $template->assign(array(
   'ContactForm_after' => trigger_event('render_contact_form', nl2br($conf['ContactForm_after'])),
   'KEY' => get_ephemeral_key(3),
   'CONTACT_FORM_PATH' => CONTACT_FORM_PATH,
-  'CONTACT_FORM_ABS_PATH'=> dirname(__FILE__).'/../',
+  'CONTACT_FORM_ABS_PATH'=> realpath(CONTACT_FORM_PATH).'/',
   'F_ACTION' => CONTACT_FORM_PUBLIC,
   ));
 

@@ -29,6 +29,7 @@ if (defined('IN_ADMIN'))
 else
 {
   add_event_handler('loc_end_section_init', 'contact_form_section_init');
+  add_event_handler('loc_end_page_header', 'contact_form_header');
   add_event_handler('loc_end_index', 'contact_form_page');
   add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 }
