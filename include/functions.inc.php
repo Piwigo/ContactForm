@@ -12,7 +12,7 @@ function contact_form_section_init()
   {
     $page['section'] = 'contact';
     $page['title'] = $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
-    
+    $page['is_homepage'] = false;
   }
 }
 function contact_form_header()
@@ -222,6 +222,7 @@ SELECT DISTINCT group_name
     $subject = encode_mime_header($subject);
     
     // format content
+    $comm['content'] = trigger_event('render_contact_content', $comm['content']);
     if ($conf['ContactForm']['cf_mail_type'] == 'text/html')
     {
       $comm['content'] = nl2br($comm['content']);
