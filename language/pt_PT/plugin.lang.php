@@ -57,4 +57,6 @@ $lang['Please choose a category'] = 'Escolha uma categoria se faz favor';
 $lang['Redirect after sending email (optional)'] = 'Redirecionar depois de enviar o mail (Opcional)';
 $lang['Tip'] = 'Tipo';
 $lang['can be translated with LocalFiles Editor plugin'] = 'pode ser traduzido com a extenção Editor de Arquivos Locais';
+$lang['Send'] = 'Enviar';
+$lang['Send copy to my email'] = 'Enviar uma cópia para o meu E-mail';
 ?>
