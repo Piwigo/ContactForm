@@ -10,20 +10,19 @@ function contact_form_section_init()
   
   if ($tokens[0] == 'contact')
   {
+    add_event_handler('loc_begin_page_header', 'contact_form_header');
+    
     $page['section'] = 'contact';
-    $page['title'] = $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
     $page['is_homepage'] = false;
+    
+    $page['title'] = l10n('Contact');
+    $page['section_title'] = $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';  
   }
 }
 function contact_form_header()
 {
-  global $page, $template;
-  
-  if (isset($page['section']) and $page['section'] == 'contact')
-  {
-    $page['body_id'] = 'theContactPage';
-    $template->assign('BODY_ID', $page['body_id']);
-  }
+  global $page;
+  $page['body_id'] = 'theContactPage';
 }
 
 /**
