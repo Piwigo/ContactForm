@@ -1,0 +1,1 @@
+Legg til eit "Kontakt"-element i menyblokken for å vise kontakskjema for brukarar
