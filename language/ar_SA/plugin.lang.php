@@ -39,4 +39,11 @@ $lang['Please enter a subject'] = 'من فضلك ادخل العنوان';
 $lang['Please enter a message'] = 'من فضلك ادخل رسالة';
 $lang['Error while sending e-mail'] = 'حدث خطأ أثناء الارسال';
 
+$lang['Default e-mail subject'] = 'الموضوع الافتراضي للبريد الإلكتروني';
+$lang['Category'] = 'فئة';
+$lang['Active'] = 'نشط';
+$lang['+ Add an email'] = '+ اضف البريد الإلكتروني';
+$lang['+ Add a category'] = '+ اضف فئة اخرى';
+$lang['%s must not be more than %d characters long'] = '٪  يجب أن لا تكون أكثر من٪ د حرفا';
+$lang['%s must not be less than %d characters long'] = '٪  يجب أن لا تكون أكثر من٪ د حرفا';
 ?>
