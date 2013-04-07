@@ -46,4 +46,17 @@ $lang['+ Add an email'] = '+ اضف البريد الإلكتروني';
 $lang['+ Add a category'] = '+ اضف فئة اخرى';
 $lang['%s must not be more than %d characters long'] = '٪  يجب أن لا تكون أكثر من٪ د حرفا';
 $lang['%s must not be less than %d characters long'] = '٪  يجب أن لا تكون أكثر من٪ د حرفا';
+$lang['you can use "%gallery_title%"'] = 'يمكنك استخدام "٪ gallery_title٪"';
+$lang['can be translated with LocalFiles Editor plugin'] = 'يمكن ترجمتها مع الملفات المحلية لمحرر البرنامج المساعد';
+$lang['Tip'] = 'حيلة';
+$lang['Send copy to my email'] = 'أرسِلْ نسخة الى بريدي الالكتروني';
+$lang['Send'] = 'أُرسِلَ';
+$lang['Redirect after sending email (optional)'] = 'إعادة توجيه البريد الالكتروني بعد الارسال  (اختياري)';
+$lang['Prefix of the sent e-mail subject'] = 'بادئة للموضوع البريد الإلكتروني المُرسَل';
+$lang['Please enter an e-mail'] = 'المرجو إدخال البريد الإلكتروني';
+$lang['Please choose a category'] = 'المرجو اختيار فئة';
+$lang['Plain text'] = 'نص عادي';
+$lang['No active email address'] = 'لا يوجد اي عنوان بريد إلكتروني نشط.';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'يتم عرض كل فئة بأنها "خدمة" منفصلة في استمارة الاتصال (على سبيل المثال: "التقنية"، "الأعمال"، "مسألة عامة"). استخدام الفئات ليس إلزامي';
+$lang['E-mail format :'] = 'صيغة للبريد الإلكتروني:';
 ?>
