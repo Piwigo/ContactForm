@@ -65,6 +65,8 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
           ));
       }
       
+      $new_conf['cf_must_initialize'] = empty($emails);
+      
       mass_inserts(
         $prefixeTable .'contact_form',
         array('name','email','active'),
