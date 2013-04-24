@@ -1,0 +1,1 @@
+Saad lisada "Kontakteeru" nupu menüüsse, mille kaudu kasutajad saavad sinuga ühendust võtta.
