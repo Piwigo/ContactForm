@@ -73,7 +73,7 @@ if ($conf['ContactForm']['cf_mandatory_name'])
 
 if (!empty($pwg_loaded_plugins['ExtendedDescription']))
 {
-  add_event_handler('render_contact_form', 'get_user_language_desc');
+  add_event_handler('render_contact_form', 'get_extended_desc');
 }
 
 $query = '
