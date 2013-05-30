@@ -32,4 +32,11 @@ $lang['Send copy to my email'] = 'Lähetä kopio sähköpostiini';
 $lang['Subject'] = 'Aihe';
 $lang['Send'] = 'Lähetä';
 $lang['Message'] = 'Viesti';
+$lang['+ Add a category'] = '+ Lisää kategoria';
+$lang['Active'] = 'Aktiivinen';
+$lang['Allow guests to see the form'] = 'Salli vierailijoiden nähdä lomake';
+$lang['Category'] = 'Kategoria';
+$lang['Default e-mail subject'] = 'Oletusaihe sähköpostiviestille';
+$lang['E-mail sent successfully'] = 'Sähköposti lähetettiin onnistuneesti';
+$lang['Plain text'] = 'Pelkkä teksti';
 ?>
