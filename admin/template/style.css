@@ -25,3 +25,8 @@ tr.delete input, tr.delete select {
   margin:20px auto 5px auto;
   border-radius:5px;
 }
+
+.themeBox {
+  height:auto;
+  padding-bottom:5px;
+}

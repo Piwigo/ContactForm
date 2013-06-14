@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       'cf_mandatory_name' => true,
       'cf_mail_type' => 'text/html',
       'cf_redirect_url' => null,
+      'cf_theme' => 'dark',
       ));
     
     conf_update_param('ContactForm', $contact_form_default_config);
@@ -81,16 +82,24 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
         );
       
       // save config
-      $conf['ContactForm'] = serialize($new_conf);
       $conf['ContactForm_before'] = stripslashes(@$conf['persoformtop']);
       $conf['ContactForm_after'] = stripslashes(@$conf['persoformbottom']);
       
-      conf_update_param('ContactForm', $conf['ContactForm']);
       conf_update_param('ContactForm_before', $conf['ContactForm_before']);
       conf_update_param('ContactForm_after', $conf['ContactForm_after']);
       
       pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param IN("persoformtop", "persoformbottom") LIMIT 2;');
     }
+    
+    // new param 2.5.c
+    if (!isset($new_conf['cf_theme']))
+    {
+      $new_conf['cf_theme'] = 'dark';
+    }
+    
+    // save config
+    $conf['ContactForm'] = serialize($new_conf);
+    conf_update_param('ContactForm', $conf['ContactForm']);
   }
 }
 

@@ -1,4 +1,14 @@
 {combine_css path=$CONTACT_FORM_PATH|@cat:"admin/template/style.css"}
+{include file='include/colorbox.inc.tpl'}
+
+{footer_script}{literal}
+jQuery("a.preview-box").colorbox();
+
+jQuery("input[name='cf_theme']").change(function() {
+  jQuery("input[name='cf_theme']").parents(".themeBox").removeClass("themeDefault");
+  jQuery(this).parents(".themeBox").addClass("themeDefault");
+});
+{/literal}{/footer_script}
 
 <div class="titrePage">
 	<h2>Contact Form</h2>
@@ -68,6 +78,31 @@
         </label>
       </li>
     </ul>
+  </fieldset>
+  
+  <fieldset>
+    <legend>{'Theme'|@translate}</legend>
+    
+    <div class="themeBoxes">
+      <div class="themeBox {if $cf_theme=='clear'}themeDefault{/if}">
+        <div class="themeName"><label>
+          <input type="radio" name="cf_theme" value="clear" {if $cf_theme=='clear'}checked{/if}>
+          Clear
+        </label></div>
+        <div class="themeShot">
+          <a href="{$CONTACT_FORM_PATH}admin/template/prev-clear.jpg" class="preview-box"><img src="{$CONTACT_FORM_PATH}admin/template/prev-clear.jpg" width="150"/></a>
+        </div>
+      </div>
+      <div class="themeBox {if $cf_theme=='dark'}themeDefault{/if}">
+        <div class="themeName"><label>
+          <input type="radio" name="cf_theme" value="dark" {if $cf_theme=='dark'}checked{/if}>
+          Dark
+        </label></div>
+        <div class="themeShot">
+          <a href="{$CONTACT_FORM_PATH}admin/template/prev-dark.jpg" class="preview-box"><img src="{$CONTACT_FORM_PATH}admin/template/prev-dark.jpg" width="150"/></a>
+        </div>
+      </div>
+    </div>
   </fieldset>
   
   <fieldset>
