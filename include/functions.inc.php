@@ -251,7 +251,7 @@ SELECT DISTINCT group_name
     // template
     if ($conf['ContactForm']['cf_mail_type'] == 'text/html')
     {
-      $mail_css = file_get_contents(dirname(__FILE__).'/../template/mail/style.css');
+      $mail_css = file_get_contents(dirname(__FILE__).'/../template/mail/style-'.$conf['ContactForm']['cf_theme'].'.css');
       $template->set_filename('contact_mail', dirname(__FILE__).'/../template/mail/content_html.tpl');
     }
     else
