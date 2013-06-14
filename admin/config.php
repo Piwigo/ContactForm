@@ -15,6 +15,7 @@ if (isset($_POST['save_config']))
     'cf_mail_type' =>         $_POST['cf_mail_type'],
     'cf_redirect_url' =>      ($_POST['cf_redirect_url']!='http://') ? $_POST['cf_redirect_url'] : null,
     'cf_theme' =>             $_POST['cf_theme'],
+    'cf_ready' =>             $conf['ContactForm']['cf_ready'],
     );
   $conf['ContactForm_before'] = $_POST['cf_before'];
   $conf['ContactForm_after'] = $_POST['cf_after'];
