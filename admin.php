@@ -16,7 +16,7 @@ $tabsheet->assign();
 // include page
 include(CONTACT_FORM_PATH . 'admin/' . $page['tab'] . '.php');
 
-if (!count(get_contact_emails()))
+if (!$conf['ContactForm']['cf_ready'])
 {
   array_push($page['errors'], l10n('No active email address'));
 }

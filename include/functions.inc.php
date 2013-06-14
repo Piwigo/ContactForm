@@ -47,7 +47,7 @@ function contact_form_applymenu($menu_ref_arr)
   
   if ( !$conf['ContactForm']['cf_menu_link'] ) return;
   if ( !is_classic_user() and !$conf['ContactForm']['cf_allow_guest'] ) return;
-  if ( !count(get_contact_emails()) ) return;
+  if ( !$conf['ContactForm']['cf_ready'] ) return;
 
   $menu = &$menu_ref_arr[0];
   if (($block = $menu->get_block('mbMenu')) != null)
@@ -64,6 +64,9 @@ function contact_form_applymenu($menu_ref_arr)
  */
 function contact_form_footer_link($content, &$smarty)
 {
+  global $conf;
+  if ( !$conf['ContactForm']['cf_ready'] ) return $content;
+  
   $search = '<a href="mailto:{$CONTACT_MAIL}?subject={\'A comment on your site\'|@translate|@escape:url}">';
   $replace = '<a href="'.CONTACT_FORM_PUBLIC.'">';
   return str_replace($search, $replace, $content);

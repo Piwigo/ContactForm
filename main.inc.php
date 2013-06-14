@@ -41,7 +41,7 @@ include(CONTACT_FORM_PATH . 'include/functions.inc.php');
  */
 function contact_form_init()
 {
-  global $conf, $template,  $pwg_loaded_plugins;
+  global $conf, $template, $pwg_loaded_plugins;
   
   if (
     CONTACT_FORM_VERSION == 'auto' or
@@ -77,6 +77,8 @@ WHERE id = "'. CONTACT_FORM_ID .'"';
   {
     contact_form_initialize_emails();
   }
+  
+  $conf['ContactForm']['cf_ready'] = count(get_contact_emails());
   
   $template->set_prefilter('tail', 'contact_form_footer_link');
 }

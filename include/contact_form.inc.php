@@ -3,9 +3,9 @@ if (!defined('CONTACT_FORM_PATH')) die('Hacking attempt!');
 
 global $template, $user, $conf, $page, $pwg_loaded_plugins;
 
-if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !count(get_contact_emails()) )
+if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !$conf['ContactForm']['cf_ready'] )
 {
-  redirect(get_root_url());
+  redirect(get_absolute_root_url());
 }
 
 // +-----------------------------------------------------------------------+

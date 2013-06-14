@@ -33,6 +33,8 @@ if (isset($_POST['save_emails']))
     array('name','email','group_name','active'),
     $emails
     );
+    
+  $conf['ContactForm']['cf_ready'] = count($emails);
   
   array_push($page['infos'], l10n('Information data registered in database'));
 }
