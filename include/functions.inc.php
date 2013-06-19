@@ -65,7 +65,7 @@ function contact_form_applymenu($menu_ref_arr)
 function contact_form_footer_link($content, &$smarty)
 {
   global $conf;
-  if ( !$conf['ContactForm']['cf_ready'] ) return $content;
+  if ( !@$conf['ContactForm']['cf_ready'] ) return $content;
   
   $search = '<a href="mailto:{$CONTACT_MAIL}?subject={\'A comment on your site\'|@translate|@escape:url}">';
   $replace = '<a href="'.CONTACT_FORM_PUBLIC.'">';

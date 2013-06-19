@@ -3,7 +3,7 @@
 Plugin Name: Contact Form
 Version: auto
 Description: Add a "Contact" item in the Menu block to offer a contact form to users
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=304
+Plugin URI: auto
 Author: Piwigo Team
 Author URI: http://piwigo.org
 */
