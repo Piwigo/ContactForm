@@ -49,4 +49,13 @@ $lang['Plain text'] = 'Thô (không có định dạng gì)';
 $lang['Please enter an e-mail'] = 'Hãy nhập địa chỉ thư';
 $lang['Prefix of the sent e-mail subject'] = 'Chủ đề gắn vào trước chủ đề thư';
 $lang['you can use "%gallery_title%"'] = 'ví dụ "%gallery_title%"';
+$lang['+ Add a category'] = '+ Thêm một phân loại';
+$lang['Category'] = 'Phân loại';
+$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Mỗi phân loại được hiển thị như là một "dịch vụ" duy nhất trong mẫu liên hệ (Ví dụ: "Kỹ thuật", "Thương mại", "Câu hỏi chung"). Việc sử dụng phân loại không bắt buộc.';
+$lang['Please choose a category'] = 'Hãy chọn một phân loại';
+$lang['Redirect after sending email (optional)'] = 'Đổi hướng sau khi gửi email (tùy chọn)';
+$lang['Send'] = 'Gửi';
+$lang['Send copy to my email'] = 'Gửi bản sao vào email của tôi';
+$lang['Tip'] = 'Mẹo';
+$lang['can be translated with LocalFiles Editor plugin'] = 'có thể dịch với plugin LocalFiles Editor';
 ?>
