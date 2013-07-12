@@ -1,0 +1,1 @@
+Adaugă un obiect "Contact" în blocul de meniu pentru a oferi o modalitate de contact utilizatorilor
