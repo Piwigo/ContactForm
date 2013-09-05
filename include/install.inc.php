@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
   if (empty($conf['ContactForm']))
   {
     $contact_form_default_config = serialize(array(
+      'cf_ready' => false,
       'cf_must_initialize' => true,
       'cf_menu_link' => true,
       'cf_subject_prefix' => '%gallery_title%',
@@ -50,7 +51,6 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
     if (!isset($new_conf['cf_must_initialize']))
     {
       // new params
-      $new_conf['cf_must_initialize'] = false;
       $new_conf['cf_default_subject'] = 'A comment on your site';
       $new_conf['cf_mail_type'] = 'text/html';
       $new_conf['cf_redirect_url'] = null;
@@ -95,6 +95,11 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
     if (!isset($new_conf['cf_theme']))
     {
       $new_conf['cf_theme'] = 'dark';
+    }
+    
+    if (!isset($new_conf['cf_ready']))
+    {
+      $new_conf['cf_ready'] = false;
     }
     
     // save config

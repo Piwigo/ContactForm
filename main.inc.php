@@ -80,7 +80,11 @@ WHERE id = "'. CONTACT_FORM_ID .'"';
   
   $conf['ContactForm']['cf_ready'] = count(get_contact_emails());
   
-  $template->set_prefilter('tail', 'contact_form_footer_link');
+  if ($conf['ContactForm']['cf_ready'] && (!is_a_guest() || $conf['ContactForm']['cf_allow_guest']))
+  {
+    $template->assign('CONTACT_MAIL', true);
+    $template->set_prefilter('tail', 'contact_form_footer_link');
+  }
 }
 
 /**

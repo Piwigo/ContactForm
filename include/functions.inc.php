@@ -64,9 +64,6 @@ function contact_form_applymenu($menu_ref_arr)
  */
 function contact_form_footer_link($content, &$smarty)
 {
-  global $conf;
-  if ( !@$conf['ContactForm']['cf_ready'] ) return $content;
-  
   $search = '<a href="mailto:{$CONTACT_MAIL}?subject={\'A comment on your site\'|@translate|@escape:url}">';
   $replace = '<a href="'.CONTACT_FORM_PUBLIC.'">';
   return str_replace($search, $replace, $content);
@@ -86,7 +83,7 @@ SELECT
   FROM '.USERS_TABLE.' AS u
     JOIN '.USER_INFOS_TABLE.' AS i
     ON i.user_id =  u.'.$conf['user_fields']['id'].'
-  WHERE i.status in (\'webmaster\',  \'admin\')
+  WHERE i.status IN (\'webmaster\',  \'admin\')
     AND '.$conf['user_fields']['email'].' IS NOT NULL
   ORDER BY username
 ;';
