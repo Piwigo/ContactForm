@@ -21,13 +21,13 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['Your name'] = 'Имя';
-$lang['Your e-mail'] = 'e-mail';
+$lang['Your name'] = 'Ваше имя';
+$lang['Your e-mail'] = 'Ваш e-mail (для ответа)';
 $lang['Subject'] = 'Тема';
 $lang['Message'] = 'Сообщение';
 $lang['General configuration'] = 'Основные настройки';
 $lang['Add link in menu'] = 'Добавить ссылку в меню';
-$lang['Allow guests to see the form'] = 'Показывать форму гостевым пользователям';
+$lang['Allow guests to see the form'] = 'Показывать форму посетителям-"гостям"';
 $lang['E-mail address is mandatory'] = 'Адрес email обязателен';
 $lang['Name is mandatory'] = 'Имя обязательно';
 $lang['E-mail configuration'] = 'Настройки e-mail';
@@ -43,7 +43,7 @@ $lang['Prefix of the sent e-mail subject'] = 'Префикс темы отпра
 $lang['you can use "%gallery_title%"'] = 'можно использовать "%gallery_title%"';
 $lang['Please enter an e-mail'] = 'Пожалуйста, введите e-mail';
 $lang['Active'] = 'Активный';
-$lang['Default e-mail subject'] = 'Текст почты по умолчанию';
+$lang['Default e-mail subject'] = 'Текст эл.письма по умолчанию';
 $lang['E-mail format :'] = 'Формат e-mail';
 $lang['No active email address'] = 'Нет активных адресов';
 $lang['Plain text'] = 'Простой текст';
@@ -57,6 +57,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'можно пере�
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Каждая категория отображается в контактной форме как "Сервис" (например:  "Техподдержка", "Общий вопрос", "Финансовый вопрос"). Использование категорий не обязательно.';
 $lang['Redirect after sending email (optional)'] = 'Перенаправить после отправки почты (необязательно)';
 $lang['Tip'] = 'Подсказка';
-$lang['Send'] = 'Послать';
-$lang['Send copy to my email'] = 'Отправлять копию на мой email';
+$lang['Send'] = 'Отправить получателю';
+$lang['Send copy to my email'] = 'и копию на мой email';
 ?>
