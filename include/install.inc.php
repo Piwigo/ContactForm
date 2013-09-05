@@ -21,8 +21,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
   // configuration
   if (empty($conf['ContactForm']))
   {
-    $contact_form_default_config = serialize(array(
-      'cf_ready' => false,
+    $conf['ContactForm'] = serialize(array(
       'cf_must_initialize' => true,
       'cf_menu_link' => true,
       'cf_subject_prefix' => '%gallery_title%',
@@ -35,13 +34,12 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       'cf_theme' => 'dark',
       ));
     
-    conf_update_param('ContactForm', $contact_form_default_config);
-    conf_update_param('ContactForm_before', null);
-    conf_update_param('ContactForm_after', null);
-    
-    $conf['ContactForm'] = $contact_form_default_config;
     $conf['ContactForm_before'] = null;
     $conf['ContactForm_after'] = null;
+    
+    conf_update_param('ContactForm', $conf['ContactForm']);
+    conf_update_param('ContactForm_before', $conf['ContactForm_before']);
+    conf_update_param('ContactForm_after', $conf['ContactForm_after']);
   }
   else
   {
@@ -95,11 +93,6 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
     if (!isset($new_conf['cf_theme']))
     {
       $new_conf['cf_theme'] = 'dark';
-    }
-    
-    if (!isset($new_conf['cf_ready']))
-    {
-      $new_conf['cf_ready'] = false;
     }
     
     // save config

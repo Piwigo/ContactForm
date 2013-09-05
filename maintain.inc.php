@@ -20,10 +20,12 @@ function plugin_activate()
 
 function plugin_uninstall() 
 {
-  global $prefixeTable;
+  global $prefixeTable, $conf;
   
-  pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param LIKE "ContactForm%" LIMIT 3;');
+  pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param LIKE "ContactForm%";');
   pwg_query('DROP TABLE IF EXISTS `'. $prefixeTable .'contact_form`;');
+  
+  unset($conf['ContactForm'], $conf['ContactForm_before'], $conf['ContactForm_after']);
 }
 
 ?>
