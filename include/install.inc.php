@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       conf_update_param('ContactForm_before', $conf['ContactForm_before']);
       conf_update_param('ContactForm_after', $conf['ContactForm_after']);
       
-      pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param IN("persoformtop", "persoformbottom") LIMIT 2;');
+      pwg_query('DELETE FROM `'. CONFIG_TABLE .'` WHERE param IN("persoformtop", "persoformbottom");');
     }
     
     // new param 2.5.c
@@ -98,6 +98,19 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
     // save config
     $conf['ContactForm'] = serialize($new_conf);
     conf_update_param('ContactForm', $conf['ContactForm']);
+  }
+  
+  // just in case something went wrong in a previous version
+  if (empty($conf['ContactForm_before']))
+  {
+    $conf['ContactForm_before'] = null;
+    conf_update_param('ContactForm_before', $conf['ContactForm_before']);
+  }
+  
+  if (empty($conf['ContactForm_after']))
+  {
+    $conf['ContactForm_after'] = null;
+    conf_update_param('ContactForm_after', $conf['ContactForm_after']);
   }
 }
 
