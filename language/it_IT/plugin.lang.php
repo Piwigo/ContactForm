@@ -58,4 +58,6 @@ $lang['Redirect after sending email (optional)'] = 'Redirect dopo l\'invio e-mai
 $lang['Tip'] = 'Tip';
 $lang['Send'] = 'Invia';
 $lang['Send copy to my email'] = 'Invia una copia alla mia email';
+$lang['Invalid redirect URL'] = 'URL di reindirizzamento non valido';
+$lang['Name'] = 'Nome';
 ?>
