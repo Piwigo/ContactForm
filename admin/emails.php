@@ -8,35 +8,36 @@ if (isset($_POST['save_emails']))
   foreach ($_POST['emails'] as $entry)
   {
     if (isset($entry['delete'])) continue;
-    
-    if ( empty($entry['email']) or !check_email_validity($entry['email']) )
+
+    if ( empty($entry['email']) or !email_check_format($entry['email']) )
     {
-      array_push($page['errors'], l10n('mail address must be like xxx@yyy.eee (example : jack@altern.org)'));
+      $page['errors'][] = l10n('mail address must be like xxx@yyy.eee (example : jack@altern.org)');
     }
     else
     {
+      if (empty($entry['name'])) $entry['name'] = $entry['email'];
       if ($entry['group_name'] == -1) $entry['group_name'] = null;
-      
-      array_push($emails, array(
+
+      $emails[] = array(
         'name' => $entry['name'],
         'email' => $entry['email'],
         'group_name' => $entry['group_name'],
         'active' => boolean_to_string(isset($entry['active'])),
-        ));
+        );
     }
   }
-  
+
   pwg_query('TRUNCATE TABLE `'. CONTACT_FORM_TABLE. '`;');
-  
+
   mass_inserts(
     CONTACT_FORM_TABLE,
     array('name','email','group_name','active'),
     $emails
     );
-    
-  $conf['ContactForm']['cf_ready'] = count($emails);
-  
-  array_push($page['infos'], l10n('Information data registered in database'));
+
+  $conf['ContactForm_ready'] = count($emails);
+
+  $page['infos'][] = l10n('Information data registered in database');
 }
 
 
@@ -54,10 +55,10 @@ $emails = $groups = array();
 while ($data = pwg_db_fetch_assoc($result))
 {
   $data['active'] = get_boolean($data['active']);
-  array_push($emails, $data);
+  $emails[] = $data;
   if (!empty($data['group_name']))
   {
-    array_push($groups, $data['group_name']);
+    $groups[] = $data['group_name'];
   }
 }
 
@@ -67,5 +68,3 @@ $template->assign(array(
   ));
 
 $template->set_filename('contact_form', realpath(CONTACT_FORM_PATH . 'admin/template/emails.tpl'));
-
-?>

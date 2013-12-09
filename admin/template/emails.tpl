@@ -1,19 +1,17 @@
-{combine_css path=$CONTACT_FORM_PATH|@cat:"admin/template/style.css"}
-
+{combine_css path=$CONTACT_FORM_PATH|cat:"admin/template/style.css"}
 
 <div class="titrePage">
 	<h2>Contact Form</h2>
 </div>
 
-
 <form method="post" action="{$CONTACT_FORM_ADMIN}-emails" class="properties">
   <table class="table2" id="emails">
     <tr class="throw">
-      <th>{'Name'|@translate}</th>
-      <th>{'Email address'|@translate}</th>
-      <th>{'Category'|@translate}</th>
-      <th>{'Active'|@translate}</th>
-      <th>{'Delete'|@translate}</th>
+      <th>{'Name'|translate}</th>
+      <th>{'Email address'|translate}</th>
+      <th>{'Category'|translate}</th>
+      <th>{'Active'|translate}</th>
+      <th>{'Delete'|translate}</th>
     </tr>
   {counter start=0 assign=i}
   {foreach from=$EMAILS item=entry}
@@ -41,13 +39,13 @@
   {/foreach}
     <tr class="{if $i is odd}row1{else}row2{/if}" id="addEntryContainer">
       <td colspan="2" style="text-align:center;">
-        <a id="addEntry">{'+ Add an email'|@translate}</a>
+        <a id="addEntry">{'+ Add an email'|translate}</a>
       </td>
       <td>
-        <a id="addGroup">{'+ Add a category'|@translate}</a>
+        <a id="addGroup">{'+ Add a category'|translate}</a>
       </td>
       <td colspan="2"  style="text-align:center;">
-        <input type="submit" name="save_emails" value="{'Submit'|@translate}" class="submit">
+        <input type="submit" name="save_emails" value="{'Submit'|translate}" class="submit">
       </td>
     </tr>
   </table>
@@ -55,10 +53,9 @@
 </form>
 
 <div class="infos tip">
-<b>{'Tip'|@translate}:</b>
-{'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'|@translate}
+<b>{'Tip'|translate}:</b>
+{'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'|translate}
 </div>
-
 
 
 {footer_script}
@@ -67,14 +64,23 @@ var group_options = new Array;
 group_options[group_options.length] = '<option value="{$entry|escape:javascript}">{$entry|escape:javascript}</option>';
 {/foreach}
 
-{literal}
-var doBlink = function(obj,start,finish) { jQuery(obj).fadeOut(300).fadeIn(300); if(start!=finish) { start=start+1; doBlink(obj,start,finish); } };
-jQuery.fn.blink = function(start,finish) { return this.each(function() { doBlink(this,start,finish) }); };
+var doBlink = function(obj,start,finish) {
+  jQuery(obj).fadeOut(300).fadeIn(300);
+  if(start!=finish) {
+    start=start+1; doBlink(obj,start,finish);
+  }
+};
+jQuery.fn.blink = function(start,finish) {
+  return this.each(function() {
+    doBlink(this,start,finish);
+  });
+};
 
 jQuery(document).on('change', '.delete', function() {
   if ($(this).is(':checked')) {
     $(this).parents('tr').addClass('delete');
-  } else {
+  }
+  else {
     $(this).parents('tr').removeClass('delete');
   }
 });
@@ -82,7 +88,7 @@ jQuery(document).on('change', '.delete', function() {
 jQuery('#addEntry').click(function() {
   entry++;
   i = entry;
-  
+
   content =
     '<tr class="row'+ (i%2+1) +'">'+
       '<td>'+
@@ -107,7 +113,7 @@ jQuery('#addEntry').click(function() {
       '</td>'+
     '</tr>'
   $('#emails').append(content);
-    
+
   $('#addEntryContainer')
     .removeClass('row1 row2')
     .addClass('row'+ Math.abs(i%2-2))
@@ -115,7 +121,7 @@ jQuery('#addEntry').click(function() {
 });
 
 jQuery('#addGroup').click(function() {
-  name = prompt("{/literal}{'Name'|@translate}{literal}:");
+  name = prompt("{'Name'|translate}:");
   if (name != null && name != "") {
     name = name.replace(new RegExp('"','g'),"'");
     content = '<option value="'+ name +'">'+ name +'</option>';
@@ -123,4 +129,4 @@ jQuery('#addGroup').click(function() {
     $("select.groups").append(content).blink(1,2);
   }
 });
-{/literal}{/footer_script}
+{/footer_script}

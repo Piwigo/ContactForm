@@ -3,7 +3,7 @@ if (!defined('CONTACT_FORM_PATH')) die('Hacking attempt!');
 
 global $template, $user, $conf, $page, $pwg_loaded_plugins;
 
-if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !$conf['ContactForm']['cf_ready'] )
+if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !$conf['ContactForm_ready'] )
 {
   redirect(get_absolute_root_url());
 }
@@ -21,7 +21,7 @@ if (isset($_POST['send_mail']))
     'content' => $_POST['content'],
     'send_copy' => isset($_POST['send_copy']),
    );
-  
+
   $comment_action = send_contact_form($contact, @$_POST['key']);
 
   switch ($comment_action)
@@ -104,6 +104,5 @@ $template->assign(array(
   'F_ACTION' => CONTACT_FORM_PUBLIC,
   ));
 
-$template->set_filename('index', realpath(CONTACT_FORM_PATH . 'template/contact_form.tpl'));
-
-?>
+$template->set_filename('contactform', realpath(CONTACT_FORM_PATH . 'template/contact_form.tpl'));
+$template->assign_var_from_handle('CONTENT', 'contactform');

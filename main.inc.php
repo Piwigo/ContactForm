@@ -30,8 +30,10 @@ else
 {
   add_event_handler('loc_end_section_init', 'contact_form_section_init');
   add_event_handler('loc_end_index', 'contact_form_page');
-  add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 }
+
+add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
+add_event_handler('before_parse_mail_template', 'contact_form_mail_template', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
 include(CONTACT_FORM_PATH . 'include/functions.inc.php');
 
@@ -42,61 +44,40 @@ include(CONTACT_FORM_PATH . 'include/functions.inc.php');
 function contact_form_init()
 {
   global $conf, $template, $pwg_loaded_plugins;
-  
-  if (
-    CONTACT_FORM_VERSION == 'auto' or
-    $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins[CONTACT_FORM_ID]['version'], CONTACT_FORM_VERSION, '<')
-  )
-  {
-    include_once(CONTACT_FORM_PATH . 'include/install.inc.php');
-    contact_form_install();
-    
-    if ( $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] != 'auto' and CONTACT_FORM_VERSION != 'auto' )
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. CONTACT_FORM_VERSION .'"
-WHERE id = "'. CONTACT_FORM_ID .'"';
-      pwg_query($query);
-      
-      $pwg_loaded_plugins[CONTACT_FORM_ID]['version'] = CONTACT_FORM_VERSION;
-      
-      if (defined('IN_ADMIN'))
-      {
-        $_SESSION['page_infos'][] = 'ContactForm updated to version '. CONTACT_FORM_VERSION;
-      }
-    }
-  }
-  
+
+  include_once(CONTACT_FORM_PATH . 'maintain.inc.php');
+  $maintain = new ContactForm_maintain(CONTACT_FORM_ID);
+  $maintain->autoUpdate(CONTACT_FORM_VERSION, 'install');
+
   $conf['ContactForm'] = unserialize($conf['ContactForm']);
   load_language('plugin.lang', CONTACT_FORM_PATH);
   load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true));
-  
+
   if ($conf['ContactForm']['cf_must_initialize'])
   {
     contact_form_initialize_emails();
   }
-  
-  $conf['ContactForm']['cf_ready'] = count(get_contact_emails());
-  
-  if ($conf['ContactForm']['cf_ready'] && (!is_a_guest() || $conf['ContactForm']['cf_allow_guest']))
+
+  $conf['ContactForm_ready'] = count(get_contact_emails());
+
+  if ($conf['ContactForm_ready'] && (!is_a_guest() || $conf['ContactForm']['cf_allow_guest']))
   {
-    $template->assign('CONTACT_MAIL', true);
+    $template->assign(array(
+      'CONTACT_MAIL' => true,
+      'CONTACT_FORM_PUBLIC' => CONTACT_FORM_PUBLIC,
+      ));
     $template->set_prefilter('tail', 'contact_form_footer_link');
   }
 }
 
 /**
- * admin plugins menu link 
+ * admin plugins menu link
  */
-function contact_form_admin_menu($menu) 
+function contact_form_admin_menu($menu)
 {
-  array_push($menu, array(
+  $menu[] = array(
     'URL' => CONTACT_FORM_ADMIN,
     'NAME' => 'Contact Form',
-  ));
+  );
   return $menu;
 }
-
-?>

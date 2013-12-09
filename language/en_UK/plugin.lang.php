@@ -58,5 +58,7 @@ $lang['Tip'] = 'Tip';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.';
 $lang['Send'] = 'Send';
 $lang['Send copy to my email'] = 'Send copy to my email';
+$lang['Invalid redirect URL'] = 'Invalid redirect URL';
+$lang['Name'] = 'Name';
 
 ?>
