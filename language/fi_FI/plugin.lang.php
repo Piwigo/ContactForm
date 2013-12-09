@@ -57,4 +57,6 @@ $lang['Text after the contact form'] = 'Teksti yhteydenottolomakkeen jälkeen';
 $lang['Text before the contact form'] = 'Teksti ennen yhteydenottolomaketta';
 $lang['can be translated with LocalFiles Editor plugin'] = 'voidaan kääntää LocalFiles Editor-laajennuksen kautta';
 $lang['you can use "%gallery_title%"'] = 'voit käyttää "%gallery_title%"';
+$lang['Invalid redirect URL'] = 'Uudelleenohjattu verkko-osoite ei kelpaa';
+$lang['Name'] = 'Nimi';
 ?>
