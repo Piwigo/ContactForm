@@ -57,4 +57,6 @@ $lang['Default e-mail subject'] = 'Vaikimisi e-kirja teema';
 $lang['E-mail address is mandatory'] = 'E-posti aadress on kohustuslik';
 $lang['E-mail configuration'] = 'E-kirja kinnitus';
 $lang['E-mail format :'] = 'E-kirja formaat';
+$lang['Invalid redirect URL'] = 'Vigane suunatud URL';
+$lang['Name'] = 'Nimi';
 ?>
