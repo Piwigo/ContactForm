@@ -59,4 +59,6 @@ $lang['Tip'] = 'Tipo';
 $lang['can be translated with LocalFiles Editor plugin'] = 'pode ser traduzido com a extenção Editor de Arquivos Locais';
 $lang['Send'] = 'Enviar';
 $lang['Send copy to my email'] = 'Enviar uma cópia para o meu E-mail';
+$lang['Invalid redirect URL'] = 'URL de redireção inválida';
+$lang['Name'] = 'Nome';
 ?>
