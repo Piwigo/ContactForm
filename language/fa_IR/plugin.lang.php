@@ -57,4 +57,6 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'می‌تواند ب
 $lang['you can use "%gallery_title%"'] = 'می‌توانید از "%gallery_title%" استفاده کنید';
 $lang['Send'] = 'فرستادن';
 $lang['Send copy to my email'] = 'یک نمونه از پیام به ایمیل خودم بفرست';
+$lang['Invalid redirect URL'] = 'آدرسِ URL بدرستی هدایت نشد.';
+$lang['Name'] = 'نام';
 ?>
