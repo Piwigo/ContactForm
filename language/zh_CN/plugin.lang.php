@@ -57,4 +57,6 @@ $lang['Tip'] = '提示';
 $lang['can be translated with LocalFiles Editor plugin'] = '可以用LocalFiles Editor插件翻译';
 $lang['Send'] = '发送';
 $lang['Send copy to my email'] = '发送复件到我的Email';
+$lang['Invalid redirect URL'] = '无效重定向URL';
+$lang['Name'] = '姓名';
 ?>
