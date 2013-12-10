@@ -58,4 +58,6 @@ $lang['Each category is displayed as a distinct "service" on the contact form (e
 $lang['Tip'] = 'Padoms';
 $lang['Send copy to my email'] = 'Sūtīt kopiju uz manu e-pastu';
 $lang['Send'] = 'Sūtīt';
+$lang['Invalid redirect URL'] = 'Kļūdaini pāradresēts URL';
+$lang['Name'] = 'Nosaukums';
 ?>
