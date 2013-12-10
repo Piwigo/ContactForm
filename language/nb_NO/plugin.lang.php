@@ -59,4 +59,6 @@ $lang['+ Add an email'] = '+Legg til en email';
 $lang['+ Add a category'] = '+Legg til en kategori';
 $lang['Send copy to my email'] = 'Send kopi til min E-post';
 $lang['Send'] = 'Send';
+$lang['Invalid redirect URL'] = 'Ikke gyldig URL omdirigering';
+$lang['Name'] = 'Navn';
 ?>
