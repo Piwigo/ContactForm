@@ -58,4 +58,6 @@ $lang['Send'] = 'Gửi';
 $lang['Send copy to my email'] = 'Gửi bản sao vào email của tôi';
 $lang['Tip'] = 'Mẹo';
 $lang['can be translated with LocalFiles Editor plugin'] = 'có thể dịch với plugin LocalFiles Editor';
+$lang['Invalid redirect URL'] = 'Chuyển hướng URL không hợp lệ';
+$lang['Name'] = 'Tên';
 ?>
