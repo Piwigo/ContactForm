@@ -58,4 +58,6 @@ $lang['Redirect after sending email (optional)'] = 'Препращане сле�
 $lang['Tip'] = 'Съвет';
 $lang['Send copy to my email'] = 'Изпращане на копие до моя имейл';
 $lang['Send'] = 'Изпращане';
+$lang['Name'] = 'Име';
+$lang['Invalid redirect URL'] = 'Невалиден пренасочващ URL';
 ?>

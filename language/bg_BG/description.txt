@@ -1,1 +1,1 @@
-Add a "Contact" item in the Menu block to offer a contact form to users
+Добавя елемент "За контакт" в блока МЕНЮ с възможност за добавяне към потребителите.
