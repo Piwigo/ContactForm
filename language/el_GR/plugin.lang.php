@@ -45,8 +45,8 @@ $lang['E-mail address is mandatory'] = 'Η διεύθυνση E-mail είναι 
 $lang['Default e-mail subject'] = 'Προεπιλεγμένο θέμα στο e-mail';
 $lang['Allow guests to see the form'] = 'Επιτρέψτε στους επισκέπτες να δουν τη φόρμα';
 $lang['Active'] = 'Ενεργό';
-$lang['Add link in menu'] = 'Προσθήκη ενός συνδέσμου στο μενού';
-$lang['+ Add an email'] = '+ Προσθήκη ενός e-mail';
+$lang['Add link in menu'] = 'Προσθέστε ένα σύνδεσμο στο μενού';
+$lang['+ Add an email'] = '+Προσθέστε ένα e-mail';
 $lang['%s must not be more than %d characters long'] = '%s δεν πρέπει να είναι περισσότερο από %d χαρακτήρες';
 $lang['%s must not be less than %d characters long'] = '%s πρέπει να είναι τουλάχιστον %d χαρακτήρες';
 $lang['can be translated with LocalFiles Editor plugin'] = 'μπορεί να μεταφραστεί με το πρόσθετο LocalFiles Editor ';
@@ -58,4 +58,6 @@ $lang['Tip'] = 'Πληροφορία';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Κάθε κατηγορία εμφανίζεται ως διακριτή "υπηρεσία" στην φόρμα επικοινωνίας (παράδειγμα: «Τεχνική», «Εμπορική», «Γενική ερώτηση"). Η χρήση κατηγοριών δεν είναι υποχρεωτική.';
 $lang['Send copy to my email'] = 'Αποστολή αντιγράφου στο email μου';
 $lang['Send'] = 'Αποστολή';
+$lang['Name'] = 'Όνομα';
+$lang['Invalid redirect URL'] = 'Μη έγκυρη ανακατεύθυνση URL';
 ?>
