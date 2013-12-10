@@ -59,4 +59,6 @@ $lang['Redirect after sending email (optional)'] = 'Presmerovanie po odoslaní m
 $lang['Tip'] = 'Tip';
 $lang['Send copy to my email'] = 'Poslať kópiu na email';
 $lang['Send'] = 'Poslať';
+$lang['Invalid redirect URL'] = 'Nesprávne presmerovanie URL';
+$lang['Name'] = 'Meno';
 ?>
