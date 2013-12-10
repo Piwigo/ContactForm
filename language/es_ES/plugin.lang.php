@@ -58,4 +58,6 @@ $lang['Each category is displayed as a distinct "service" on the contact form (e
 $lang['Tip'] = 'Consejo ';
 $lang['Send'] = 'Mandar';
 $lang['Send copy to my email'] = 'Mandar una copia a mi dirección de correos.';
+$lang['Invalid redirect URL'] = 'La redirección a la URL especificada no es válida';
+$lang['Name'] = 'Nombre';
 ?>
