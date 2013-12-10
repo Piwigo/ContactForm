@@ -58,4 +58,6 @@ $lang['Each category is displayed as a distinct "service" on the contact form (e
 $lang['Tip'] = 'Tip';
 $lang['Send'] = 'Send';
 $lang['Send copy to my email'] = 'Send kopi til min mailadresse';
+$lang['Invalid redirect URL'] = 'Ugyldig omdirigerings-URL';
+$lang['Name'] = 'Navn';
 ?>
