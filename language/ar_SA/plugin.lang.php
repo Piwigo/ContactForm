@@ -59,4 +59,6 @@ $lang['Plain text'] = 'نص عادي';
 $lang['No active email address'] = 'لا يوجد اي عنوان بريد إلكتروني نشط.';
 $lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'يتم عرض كل فئة بأنها "خدمة" منفصلة في استمارة الاتصال (على سبيل المثال: "التقنية"، "الأعمال"، "مسألة عامة"). استخدام الفئات ليس إلزامي';
 $lang['E-mail format :'] = 'صيغة للبريد الإلكتروني:';
+$lang['Invalid redirect URL'] = 'إعادة توجيه URL غير صحيحة';
+$lang['Name'] = 'الاسم';
 ?>
