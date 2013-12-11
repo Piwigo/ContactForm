@@ -57,4 +57,6 @@ $lang['E-mail address is mandatory'] = '電子郵件地址是必需的';
 $lang['E-mail configuration'] = '電子郵件設定';
 $lang['E-mail format :'] = '電子郵件格式：';
 $lang['E-mail sent successfully'] = '發送的電子郵件成功';
+$lang['Invalid redirect URL'] = '無效重定向URL';
+$lang['Name'] = '姓名';
 ?>
