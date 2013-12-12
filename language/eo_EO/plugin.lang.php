@@ -57,4 +57,6 @@ $lang['Message'] = 'Mesaĝo';
 $lang['Name is mandatory'] = 'Nomo devigas';
 $lang['No active email address'] = 'Retadreso ne aktivas';
 $lang['Plain text'] = 'Plata teksto';
+$lang['Invalid redirect URL'] = 'Nevalida alidirektiga URL';
+$lang['Name'] = 'Nomo';
 ?>
