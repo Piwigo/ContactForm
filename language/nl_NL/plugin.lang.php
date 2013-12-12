@@ -58,4 +58,6 @@ $lang['Redirect after sending email (optional)'] = 'Redirect na het sturen van e
 $lang['Tip'] = 'Tip';
 $lang['Send'] = 'Verstuur';
 $lang['Send copy to my email'] = 'Verstuur een kopie naar mijn email adres ';
+$lang['Invalid redirect URL'] = 'Ongeldige verwijzing URL';
+$lang['Name'] = 'Naam';
 ?>
