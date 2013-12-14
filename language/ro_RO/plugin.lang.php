@@ -57,4 +57,6 @@ $lang['Message'] = 'Mesaj';
 $lang['Name is mandatory'] = 'Numele este obligatoriu';
 $lang['No active email address'] = 'Nicio adresă de e-mail activă';
 $lang['Plain text'] = 'Text simplu';
+$lang['Invalid redirect URL'] = 'URL de redirectare invalid';
+$lang['Name'] = 'Nume';
 ?>
