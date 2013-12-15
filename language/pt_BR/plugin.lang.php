@@ -57,4 +57,6 @@ $lang['Each category is displayed as a distinct "service" on the contact form (e
 $lang['Prefix of the sent e-mail subject'] = 'Prefixo do assunto do email enviado';
 $lang['Send'] = 'Enviar';
 $lang['Send copy to my email'] = 'Enviar cópia para o meu email';
+$lang['Invalid redirect URL'] = 'Redirecionamento de URL inválida';
+$lang['Name'] = 'Nome';
 ?>
