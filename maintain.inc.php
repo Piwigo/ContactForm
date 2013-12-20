@@ -109,6 +109,8 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
       $conf['ContactForm_after'] = null;
       conf_update_param('ContactForm_after', $conf['ContactForm_after']);
     }
+    
+    $this->installed = false;
   }
 
   function activate($plugin_version, &$errors=array())
