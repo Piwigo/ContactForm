@@ -2,33 +2,35 @@
 {combine_script id="livevalidation" load="footer" path=$CONTACT_FORM_PATH|cat:"template/livevalidation.min.js"}
 
 {footer_script require='livevalidation'}
-{if $contact.mandatory_name and !$contact.is_logged}
-var author = new LiveValidation('author', {ldelim} onlyOnSubmit: true });
-author.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a name'|translate}" });
-{/if}
+(function(){
+  {if $contact.mandatory_name and !$contact.is_logged}
+  var author = new LiveValidation('author', {ldelim} onlyOnSubmit: true });
+  author.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a name'|translate}" });
+  {/if}
 
-{if $contact.mandatory_mail and (!$contact.is_logged or empty($contact.email))}
-var email = new LiveValidation('email', {ldelim} onlyOnSubmit: true });
-email.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter an e-mail'|translate}" });
-email.add(Validate.Email, {ldelim} failureMessage: "{'mail address must be like xxx@yyy.eee (example : jack@altern.org)'|translate}" });
-{/if}
+  {if $contact.mandatory_mail and (!$contact.is_logged or empty($contact.email))}
+  var email = new LiveValidation('email', {ldelim} onlyOnSubmit: true });
+  email.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter an e-mail'|translate}" });
+  email.add(Validate.Email, {ldelim} failureMessage: "{'mail address must be like xxx@yyy.eee (example : jack@altern.org)'|translate}" });
+  {/if}
 
-{if $GROUPS}
-var group = new LiveValidation('group', {ldelim} onlyOnSubmit: true })
-group.add(Validate.Exclusion, {ldelim} within: ['-1'], failureMessage: "{'Please choose a category'|translate}" });
-{/if}
+  {if $GROUPS}
+  var group = new LiveValidation('group', {ldelim} onlyOnSubmit: true })
+  group.add(Validate.Exclusion, {ldelim} within: ['-1'], failureMessage: "{'Please choose a category'|translate}" });
+  {/if}
 
-var subject = new LiveValidation('subject', {ldelim} onlyOnSubmit: true });
-subject.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a subject'|translate}" });
-subject.add(Validate.Length, {ldelim} maximum: 100,
-  tooLongMessage: "{'%s must not be more than %d characters long'|translate:'':100}"
-  });
+  var subject = new LiveValidation('subject', {ldelim} onlyOnSubmit: true });
+  subject.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a subject'|translate}" });
+  subject.add(Validate.Length, {ldelim} maximum: 100,
+    tooLongMessage: "{'%s must not be more than %d characters long'|translate:'':100}"
+    });
 
-var content = new LiveValidation('cf_content', {ldelim} onlyOnSubmit: true });
-content.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a message'|translate}" });
-content.add(Validate.Length, {ldelim} maximum: 2000,
-  tooLongMessage: "{'%s must not be more than %d characters long'|translate:'':2000}",
-  });
+  var content = new LiveValidation('cf_content', {ldelim} onlyOnSubmit: true });
+  content.add(Validate.Presence, {ldelim} failureMessage: "{'Please enter a message'|translate}" });
+  content.add(Validate.Length, {ldelim} maximum: 2000,
+    tooLongMessage: "{'%s must not be more than %d characters long'|translate:'':2000}",
+    });
+}());
 {/footer_script}
 
 
@@ -61,7 +63,7 @@ content.add(Validate.Length, {ldelim} maximum: 2000,
         {/if}
         </td>
       </tr>
-      {if $GROUPS}
+    {if $GROUPS}
       <tr>
         <td class="title"><label for="group">{'Category'|translate}</label></td>
         <td>
@@ -71,7 +73,7 @@ content.add(Validate.Length, {ldelim} maximum: 2000,
           </select>
         </td>
       </tr>
-      {/if}
+    {/if}
       <tr>
         <td class="title"><label for="subject">{'Subject'|translate}</label></td>
         <td><input type="text" name="subject" id="subject" style="width:400px;" value="{$contact.subject}"></td>
@@ -80,6 +82,12 @@ content.add(Validate.Length, {ldelim} maximum: 2000,
         <td class="title"><label for="cf_content">{'Message'|translate}</label></td>
         <td><textarea name="content" id="cf_content" rows="10" style="width:400px;">{$contact.content}</textarea></td>
       </tr>
+    {if isset($CRYPTO)}
+      {$CRYPTO.parsed_content}
+    {/if}
+    {if isset($EASYCAPTCHA)}
+      {$EASYCAPTCHA.parsed_content}
+    {/if}
       <tr>
         <td class="title">&nbsp;</td>
         <td>
