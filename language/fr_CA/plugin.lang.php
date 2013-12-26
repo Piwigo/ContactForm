@@ -40,7 +40,6 @@ $lang['Prefix of the sent e-mail subject'] = 'Préfixe du sujet du courriel envo
 $lang['you can use "%gallery_title%"'] = 'vous pouvez utiliser "%gallery_title%"';
 $lang['Text before the contact form'] = 'Texte au-dessus du formulaire de contact';
 $lang['Text after the contact form'] = 'Texte au-dessous du formulaire de contact';
-$lang['E-mails'] = 'Courriels';
 $lang['Active'] = 'Actif';
 $lang['+ Add an email'] = '+ Ajouter un courriel';
 $lang['+ Add a category'] = '+ Ajouter une categorie';
@@ -60,4 +59,6 @@ $lang['Each category is displayed as a distinct "service" on the contact form (e
 $lang['Send'] = 'Envoyer';
 $lang['Send copy to my email'] = 'Envoyer une copie à mon adresse de courriel';
 
+$lang['Invalid redirect URL'] = 'URL de redirection invalide';
+$lang['Name'] = 'Nom';
 ?>
