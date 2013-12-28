@@ -59,4 +59,6 @@ $lang['+ Add a category'] = '+ Lägg till en kategori';
 $lang['+ Add an email'] = '+ Lägg till e-post';
 $lang['Active'] = 'Aktiv';
 $lang['Category'] = 'Kategori';
+$lang['Invalid redirect URL'] = 'Felaktig ompeknings URL';
+$lang['Name'] = 'Namn';
 ?>
