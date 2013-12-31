@@ -1,0 +1,1 @@
+Dodaj "Kontakti" opcijo v polju meni za dostopnost forme uporabnikom.
