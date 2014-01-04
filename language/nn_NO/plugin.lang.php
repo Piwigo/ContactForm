@@ -57,4 +57,6 @@ $lang['Message'] = 'Melding';
 $lang['Name is mandatory'] = 'Namn er påkrevd';
 $lang['No active email address'] = 'Ingen aktiv e-postadresse';
 $lang['Plain text'] = 'Rein tekst';
+$lang['Invalid redirect URL'] = 'Ugyldig redirect URL';
+$lang['Name'] = 'Namn';
 ?>
