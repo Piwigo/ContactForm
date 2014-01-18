@@ -240,7 +240,7 @@ SELECT DISTINCT group_name
 
   if ($comment_action == 'validate')
   {
-    $comm['content'] = trigger_change('render_contact_content', $comm['content']);
+    $comm['content'] = trigger_event('render_contact_content', $comm['content']);
 
     $prefix = str_replace('%gallery_title%', $conf['gallery_title'], $conf['ContactForm']['cf_subject_prefix']);
 
