@@ -8,6 +8,8 @@ if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !$conf[
   redirect(get_absolute_root_url());
 }
 
+$contact = array();
+
 // +-----------------------------------------------------------------------+
 // |                                send email                             |
 // +-----------------------------------------------------------------------+
@@ -50,7 +52,7 @@ if (isset($_POST['send_mail']))
 // +-----------------------------------------------------------------------+
 if (is_classic_user())
 {
-  if (!isset($contact))
+  if (empty($contact))
   {
     $contact = array(
       'author' => $user['username'],
