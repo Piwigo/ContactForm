@@ -29,15 +29,15 @@ $lang['General configuration'] = 'Configuració general';
 $lang['Add link in menu'] = 'Afegeix un enllaç al menú';
 $lang['Allow guests to see the form'] = 'Permet que els convidats vegin el formulari';
 $lang['E-mail address is mandatory'] = 'És obligatori indicar l\'adreça de correu electrònic';
-$lang['Name is mandatory'] = 'És obligatori indicar el nom';
+$lang['Name is mandatory'] = 'Cal indicar un nom';
 $lang['E-mail configuration'] = 'Configuració del correu electròncic';
-$lang['Text before the contact form'] = 'Text abans del formulari de contacte';
-$lang['Text after the contact form'] = 'Text després del formulari de contacte';
+$lang['Text before the contact form'] = 'Text d\'abans del formulari de contacte';
+$lang['Text after the contact form'] = 'Text de després del formulari de contacte';
 $lang['E-mail sent successfully'] = 'El correu electrònic s\'ha enviat correctament';
 $lang['Please enter a name'] = 'Introduïu un nom';
 $lang['Please enter a subject'] = 'Introduïu un assumpte';
 $lang['Please enter a message'] = 'Escriviu el missatge';
-$lang['Error while sending e-mail'] = 'Error en enviar el correu electrònic';
+$lang['Error while sending e-mail'] = 'S\'ha produït un error en enviar el correu electrònic';
 
 $lang['+ Add a category'] = '+ Afegeix una categoria';
 $lang['+ Add an email'] = '+ Afegeix un correu electrònic';
@@ -61,4 +61,3 @@ $lang['Send'] = 'Envia';
 $lang['Send copy to my email'] = 'Envia una còpia al meu correu electrònic';
 $lang['Invalid redirect URL'] = 'Redirecció de la URL no vàlida';
 $lang['Name'] = 'Nom';
-?>
