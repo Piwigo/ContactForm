@@ -158,7 +158,8 @@ SELECT DISTINCT group_name
   $comm = array_merge($comm,
     array(
       'ip' => $_SERVER['REMOTE_ADDR'],
-      'agent' => $_SERVER['HTTP_USER_AGENT']
+      'agent' => $_SERVER['HTTP_USER_AGENT'],
+      'show_ip' => isset($conf['contact_form_show_ip']) && $conf['contact_form_show_ip'],
     )
    );
 

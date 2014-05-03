@@ -8,6 +8,10 @@ Author: Piwigo Team
 Author URI: http://piwigo.org
 */
 
+/*
+ * $conf['contact_form_show_ip'] = true;
+ */
+
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 global $prefixeTable;
