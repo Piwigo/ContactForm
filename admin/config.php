@@ -24,8 +24,8 @@ if (isset($_POST['save_config']))
   $conf['ContactForm'] = array(
     'cf_must_initialize' =>   false,
     'cf_menu_link' =>         isset($_POST['cf_menu_link']),
-    'cf_subject_prefix' =>    trim($_POST['cf_subject_prefix']),
-    'cf_default_subject' =>   trim($_POST['cf_default_subject']),
+    'cf_subject_prefix' =>    stripslashes(trim($_POST['cf_subject_prefix'])),
+    'cf_default_subject' =>   stripslashes(trim($_POST['cf_default_subject'])),
     'cf_allow_guest' =>       isset($_POST['cf_allow_guest']),
     'cf_mandatory_mail' =>    isset($_POST['cf_mandatory_mail']),
     'cf_mandatory_name' =>    isset($_POST['cf_mandatory_name']),
@@ -35,7 +35,7 @@ if (isset($_POST['save_config']))
   $conf['ContactForm_before'] = $_POST['cf_before'];
   $conf['ContactForm_after'] = $_POST['cf_after'];
 
-  conf_update_param('ContactForm', serialize($conf['ContactForm']));
+  conf_update_param('ContactForm', pwg_db_real_escape_string(serialize($conf['ContactForm'])));
   conf_update_param('ContactForm_before', $conf['ContactForm_before']);
   conf_update_param('ContactForm_after', $conf['ContactForm_after']);
 

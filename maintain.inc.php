@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
 
       // save config
       $conf['ContactForm'] = serialize($new_conf);
-      conf_update_param('ContactForm', $conf['ContactForm']);
+      conf_update_param('ContactForm', pwg_db_real_escape_string($conf['ContactForm']));
     }
 
     // just in case something went wrong in a previous version

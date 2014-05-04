@@ -57,13 +57,13 @@
       </li>
       <li>
         <label>
-          <input type="text" name="cf_default_subject" value="{$cf_default_subject}" size="50">
+          <input type="text" name="cf_default_subject" value="{$cf_default_subject|escape:html}" size="50">
           {'Default e-mail subject'|translate} ({'can be translated with LocalFiles Editor plugin'|translate})
         </label>
       </li>
       <li>
         <label>
-          <input type="text" name="cf_subject_prefix" value="{$cf_subject_prefix}" size="50">
+          <input type="text" name="cf_subject_prefix" value="{$cf_subject_prefix|escape:html}" size="50">
           {'Prefix of the sent e-mail subject'|translate} ({'you can use "%gallery_title%"'|translate})
         </label>
       </li>
