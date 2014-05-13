@@ -11,4 +11,4 @@
   {/if}
 </p>
 
-<blockquote>{$CONTACT.content}</blockquote>
+<blockquote>{$CONTENT}</blockquote>

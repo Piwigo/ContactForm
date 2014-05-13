@@ -4,4 +4,4 @@
 {'Browser: %s'|translate:$CONTACT.agent}{/if}
 
 --------------------
-{$CONTACT.content}
+{$CONTENT}

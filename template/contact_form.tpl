@@ -46,9 +46,9 @@
         <td>
         {if $contact.is_logged}
           {$contact.author}
-          <input type="hidden" name="author" value="{$contact.author}">
+          <input type="hidden" name="author" value="{$contact.author|escape:html}">
         {else}
-          <input type="text" name="author" id="author" size="40" value="{$contact.author}">
+          <input type="text" name="author" id="author" size="40" value="{$contact.author|escape:html}">
         {/if}
         </td>
       </tr>
@@ -57,9 +57,9 @@
         <td>
         {if $contact.is_logged and !empty($contact.email)}
           {$contact.email}
-          <input type="hidden" name="email" value="{$contact.email}">
+          <input type="hidden" name="email" value="{$contact.email|escape:html}">
         {else}
-          <input type="text" name="email" id="email" size="40" value="{$contact.email}">
+          <input type="text" name="email" id="email" size="40" value="{$contact.email|escape:html}">
         {/if}
         </td>
       </tr>
@@ -76,7 +76,7 @@
     {/if}
       <tr>
         <td class="title"><label for="subject">{'Subject'|translate}</label></td>
-        <td><input type="text" name="subject" id="subject" style="width:400px;" value="{$contact.subject}"></td>
+        <td><input type="text" name="subject" id="subject" style="width:400px;" value="{$contact.subject|escape:html}"></td>
       </tr>
       <tr>
         <td class="title"><label for="cf_content">{'Message'|translate}</label></td>

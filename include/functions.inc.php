@@ -16,7 +16,10 @@ function contact_form_section_init()
     $page['is_external'] = true;
     $page['is_homepage'] = false;
 
-    $page['section_title'] = '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'.$conf['level_separator'].'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
+    $page['section_title'] = 
+      '<a href="'.get_absolute_root_url().'">'.l10n('Home').'</a>'
+      .$conf['level_separator']
+      .'<a href="'.CONTACT_FORM_PUBLIC.'">'.l10n('Contact').'</a>';
   }
 }
 
@@ -232,8 +235,8 @@ SELECT DISTINCT group_name
   $comment_action = trigger_event('contact_form_check', $comment_action, $comm);
 
   // get admin emails
-  $emails = get_contact_emails($comm['group']);
-  if (!count($emails))
+  $to = get_contact_emails($comm['group']);
+  if (!count($to))
   {
     $page['errors'][] = l10n('Error while sending e-mail');
     $comment_action='reject';
@@ -245,7 +248,7 @@ SELECT DISTINCT group_name
 
     $prefix = str_replace('%gallery_title%', $conf['gallery_title'], $conf['ContactForm']['cf_subject_prefix']);
 
-    $from = $Cc = null;
+    $from = $Cc = $Bcc = null;
     if (!empty($comm['email']))
     {
       $from = array(
@@ -254,6 +257,8 @@ SELECT DISTINCT group_name
         );
       if ($comm['send_copy'])
       {
+        $Bcc = $to;
+        $to = null;
         $Cc = $from;
       }
     }
@@ -262,14 +267,17 @@ SELECT DISTINCT group_name
     load_language('plugin.lang', CONTACT_FORM_PATH);
 
     $result = pwg_mail(
-      $emails,
+      $to,
       array(
         'subject' => '['.$prefix.'] '.$comm['subject'],
+        'content' => $comm['content'],
         'mail_title' => $prefix,
         'mail_subtitle' => $comm['subject'],
         'content_format' => 'text/html',
+        'email_format' => $conf['ContactForm']['cf_mail_type'],
         'from' => $from,
         'Cc' => $Cc,
+        'Bcc' => $Bcc,
         ),
       array(
         'filename' => 'mail',
@@ -327,7 +335,7 @@ SELECT name, email
     AND active = "true"
   ORDER BY name ASC
 ';
-  $emails = array_from_query($query);
+  $emails = query2array($query);
 
   return $emails;
 }

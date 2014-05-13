@@ -16,11 +16,11 @@ $contact = array();
 if (isset($_POST['send_mail']))
 {
   $contact = array(
-    'author' =>  trim($_POST['author']),
-    'email' =>   trim($_POST['email']),
+    'author' =>  stripslashes(trim($_POST['author'])),
+    'email' =>   stripslashes(trim($_POST['email'])),
     'group' =>   @$_POST['group'],
-    'subject' => trim($_POST['subject']),
-    'content' => $_POST['content'],
+    'subject' => stripslashes(trim($_POST['subject'])),
+    'content' => stripslashes($_POST['content']),
     'send_copy' => isset($_POST['send_copy']),
    );
 
