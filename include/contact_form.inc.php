@@ -98,8 +98,8 @@ if (count($groups) > 1)
 
 $template->assign(array(
   'contact' => $contact,
-  'ContactForm_before' => trigger_event('render_contact_form', nl2br($conf['ContactForm_before'])),
-  'ContactForm_after' => trigger_event('render_contact_form', nl2br($conf['ContactForm_after'])),
+  'ContactForm_before' => trigger_change('render_contact_form', nl2br($conf['ContactForm_before'])),
+  'ContactForm_after' => trigger_change('render_contact_form', nl2br($conf['ContactForm_after'])),
   'KEY' => get_ephemeral_key(3),
   'CONTACT_FORM_PATH' => CONTACT_FORM_PATH,
   'CONTACT_FORM_ABS_PATH'=> realpath(CONTACT_FORM_PATH).'/',

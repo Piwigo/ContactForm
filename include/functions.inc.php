@@ -232,7 +232,7 @@ SELECT DISTINCT group_name
     EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
   // perform more spam check
-  $comment_action = trigger_event('contact_form_check', $comment_action, $comm);
+  $comment_action = trigger_change('contact_form_check', $comment_action, $comm);
 
   // get admin emails
   $to = get_contact_emails($comm['group']);
@@ -244,7 +244,7 @@ SELECT DISTINCT group_name
 
   if ($comment_action == 'validate')
   {
-    $comm['content'] = trigger_event('render_contact_content', $comm['content']);
+    $comm['content'] = trigger_change('render_contact_content', $comm['content']);
 
     $prefix = str_replace('%gallery_title%', $conf['gallery_title'], $conf['ContactForm']['cf_subject_prefix']);
 
