@@ -32,12 +32,10 @@ if (isset($_POST['save_config']))
     'cf_mail_type' =>         $_POST['cf_mail_type'],
     'cf_redirect_url' =>      $_POST['cf_redirect_url'],
     );
-  $conf['ContactForm_before'] = $_POST['cf_before'];
-  $conf['ContactForm_after'] = $_POST['cf_after'];
 
-  conf_update_param('ContactForm', pwg_db_real_escape_string(serialize($conf['ContactForm'])));
-  conf_update_param('ContactForm_before', $conf['ContactForm_before']);
-  conf_update_param('ContactForm_after', $conf['ContactForm_after']);
+  conf_update_param('ContactForm', $conf['ContactForm']);
+  conf_update_param('ContactForm_before', trim($_POST['cf_before']), true);
+  conf_update_param('ContactForm_after', trim($_POST['cf_after']), true);
 
   $page['infos'][] = l10n('Information data registered in database');
 }

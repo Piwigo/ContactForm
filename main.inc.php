@@ -12,16 +12,17 @@ Author URI: http://piwigo.org
  * $conf['contact_form_show_ip'] = true;
  */
 
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 global $prefixeTable;
 
-defined('CONTACT_FORM_ID') or define('CONTACT_FORM_ID', basename(dirname(__FILE__)));
-define('CONTACT_FORM_PATH',    PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
-define('CONTACT_FORM_ADMIN',   get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
-define('CONTACT_FORM_PUBLIC',  get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
-define('CONTACT_FORM_TABLE',   $prefixeTable .'contact_form');
-define('CONTACT_FORM_VERSION', 'auto');
+define('CONTACT_FORM_ID',     basename(dirname(__FILE__)));
+define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
+define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
+define('CONTACT_FORM_PUBLIC', get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
+define('CONTACT_FORM_TABLE',  $prefixeTable .'contact_form');
+
+include(CONTACT_FORM_PATH . 'include/functions.inc.php');
 
 
 add_event_handler('init', 'contact_form_init');
@@ -39,21 +40,16 @@ else
 add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 add_event_handler('before_parse_mail_template', 'contact_form_mail_template', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
-include(CONTACT_FORM_PATH . 'include/functions.inc.php');
-
 
 /**
  * update & unserialize conf & load language & init emails
  */
 function contact_form_init()
 {
-  global $conf, $template, $pwg_loaded_plugins;
+  global $conf, $template;
 
-  include_once(CONTACT_FORM_PATH . 'maintain.inc.php');
-  $maintain = new ContactForm_maintain(CONTACT_FORM_ID);
-  $maintain->autoUpdate(CONTACT_FORM_VERSION, 'install');
-
-  $conf['ContactForm'] = unserialize($conf['ContactForm']);
+  $conf['ContactForm'] = safe_unserialize($conf['ContactForm']);
+  
   load_language('plugin.lang', CONTACT_FORM_PATH);
   load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true));
 

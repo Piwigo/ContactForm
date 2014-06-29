@@ -3,15 +3,35 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 class ContactForm_maintain extends PluginMaintain
 {
-  private $installed = false;
+  private $table;
+  
+  private $default_conf = array(
+    'cf_must_initialize' => true,
+    'cf_menu_link' => true,
+    'cf_subject_prefix' => '%gallery_title%',
+    'cf_default_subject' => 'A comment on your site',
+    'cf_allow_guest' => true,
+    'cf_mandatory_mail' => true,
+    'cf_mandatory_name' => true,
+    'cf_mail_type' => 'text/html',
+    'cf_redirect_url' => null,
+    );
+  
+  function __construct($id)
+  {
+    global $prefixeTable;
+    
+    parent::__construct($id);
+    $this->table = $prefixeTable.'contact_form';
+  }
 
   function install($plugin_version, &$errors=array())
   {
-    global $conf, $prefixeTable;
+    global $conf;
 
     // email table
   $query = '
-CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
+CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
   `id` smallint(5) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
@@ -25,28 +45,13 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
     // configuration
     if (empty($conf['ContactForm']))
     {
-      $conf['ContactForm'] = serialize(array(
-        'cf_must_initialize' => true,
-        'cf_menu_link' => true,
-        'cf_subject_prefix' => '%gallery_title%',
-        'cf_default_subject' => 'A comment on your site',
-        'cf_allow_guest' => true,
-        'cf_mandatory_mail' => true,
-        'cf_mandatory_name' => true,
-        'cf_mail_type' => 'text/html',
-        'cf_redirect_url' => null,
-        ));
-
-      $conf['ContactForm_before'] = null;
-      $conf['ContactForm_after'] = null;
-
-      conf_update_param('ContactForm', $conf['ContactForm']);
-      conf_update_param('ContactForm_before', $conf['ContactForm_before']);
-      conf_update_param('ContactForm_after', $conf['ContactForm_after']);
+      conf_update_param('ContactForm', $this->default_conf, true);
+      conf_update_param('ContactForm_before', '', true);
+      conf_update_param('ContactForm_after', '', true);
     }
     else
     {
-      $new_conf = is_string($conf['ContactForm']) ? unserialize($conf['ContactForm']) : $conf['ContactForm'];
+      $new_conf = safe_unserialize($conf['ContactForm']);
 
       // migration 2.4 -> 2.5
       if (!isset($new_conf['cf_must_initialize']))
@@ -70,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
         $new_conf['cf_must_initialize'] = empty($emails);
 
         mass_inserts(
-          $prefixeTable .'contact_form',
+          $this->table,
           array('name','email','active'),
           $emails
           );
@@ -83,54 +88,33 @@ CREATE TABLE IF NOT EXISTS `'. $prefixeTable .'contact_form` (
           );
 
         // save config
-        $conf['ContactForm_before'] = stripslashes(@$conf['persoformtop']);
-        $conf['ContactForm_after'] = stripslashes(@$conf['persoformbottom']);
-
-        conf_update_param('ContactForm_before', $conf['ContactForm_before']);
-        conf_update_param('ContactForm_after', $conf['ContactForm_after']);
-
+        conf_update_param('ContactForm', $new_conf, true);
+        conf_update_param('ContactForm_before', stripslashes(@$conf['persoformtop']), true);
+        conf_update_param('ContactForm_after', stripslashes(@$conf['persoformbottom']), true);
         conf_delete_param(array('persoformtop','persoformbottom'));
       }
-
-      // save config
-      $conf['ContactForm'] = serialize($new_conf);
-      conf_update_param('ContactForm', pwg_db_real_escape_string($conf['ContactForm']));
     }
 
     // just in case something went wrong in a previous version
     if (empty($conf['ContactForm_before']))
     {
-      $conf['ContactForm_before'] = null;
-      conf_update_param('ContactForm_before', $conf['ContactForm_before']);
+      conf_update_param('ContactForm_before', '', true);
     }
 
     if (empty($conf['ContactForm_after']))
     {
-      $conf['ContactForm_after'] = null;
-      conf_update_param('ContactForm_after', $conf['ContactForm_after']);
-    }
-    
-    $this->installed = false;
-  }
-
-  function activate($plugin_version, &$errors=array())
-  {
-    if (!$this->installed)
-    {
-      $this->install($plugin_version, $errors);
+      conf_update_param('ContactForm_after', '', true);
     }
   }
 
-  function deactivate()
+  function update($old_version, $new_version, &$errors=array())
   {
+    $this->install($new_version, $errors);
   }
-
 
   function uninstall()
   {
-    global $prefixeTable;
-
-    pwg_query('DROP TABLE IF EXISTS `'. $prefixeTable .'contact_form`;');
+    pwg_query('DROP TABLE IF EXISTS `'. $this->table .'`;');
 
     conf_delete_param(array('ContactForm','ContactForm_before','ContactForm_after'));
   }

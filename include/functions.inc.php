@@ -140,7 +140,7 @@ SELECT
     );
 
   $conf['ContactForm']['cf_must_initialize'] = false;
-  conf_update_param('ContactForm', serialize($conf['ContactForm']));
+  conf_update_param('ContactForm', $conf['ContactForm']);
 }
 
 
