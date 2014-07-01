@@ -30,7 +30,7 @@ function contact_form_page()
 {
   global $page;
 
-  if (isset($page['section']) and $page['section'] == 'contact')
+  if (isset($page['section']) && $page['section'] == 'contact')
   {
     include(CONTACT_FORM_PATH . 'include/contact_form.inc.php');
   }
@@ -43,14 +43,17 @@ function contact_form_applymenu($menu_ref_arr)
 {
   global $conf;
 
-  if (!$conf['ContactForm']['cf_menu_link']) return;
-  if (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) return;
-  if (!$conf['ContactForm_ready']) return;
+  if (!$conf['ContactForm_ready'] || (
+    !is_classic_user() && !$conf['ContactForm']['cf_allow_guest']
+  ))
+  {
+    return;
+  }
 
   $menu = &$menu_ref_arr[0];
   if (($block = $menu->get_block('mbMenu')) != null)
   {
-    $block->data[] = array(
+    $block->data['contact'] = array(
       'URL' => CONTACT_FORM_PUBLIC,
       'NAME' => l10n('Contact'),
       );
@@ -62,9 +65,9 @@ function contact_form_applymenu($menu_ref_arr)
  */
 function contact_form_footer_link($content, &$smarty)
 {
-  $search = '<a href="mailto:{$CONTACT_MAIL}?subject={\'A comment on your site\'|@translate|@escape:url}">';
+  $search = '#<a href="mailto:{\\$CONTACT_MAIL}\\?subject={\'A comment on your site\'\\|@?translate\\|@?escape:url}">#';
   $replace = '<a href="{$CONTACT_FORM_PUBLIC}">';
-  return str_replace($search, $replace, $content);
+  return preg_replace($search, $replace, $content);
 }
 
 /**

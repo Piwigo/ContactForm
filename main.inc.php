@@ -14,13 +14,15 @@ Author URI: http://piwigo.org
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-global $prefixeTable;
+global $conf, $prefixeTable;
 
 define('CONTACT_FORM_ID',     basename(dirname(__FILE__)));
 define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
 define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
 define('CONTACT_FORM_PUBLIC', get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
 define('CONTACT_FORM_TABLE',  $prefixeTable .'contact_form');
+
+$conf['ContactForm'] = safe_unserialize($conf['ContactForm']);
 
 include(CONTACT_FORM_PATH . 'include/functions.inc.php');
 
@@ -37,8 +39,12 @@ else
   add_event_handler('loc_end_index', 'contact_form_page');
 }
 
-add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
-add_event_handler('before_parse_mail_template', 'contact_form_mail_template', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
+if ($conf['ContactForm']['cf_menu_link'])
+{
+  add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
+}
+
+add_event_handler('before_parse_mail_template', 'contact_form_mail_template');
 
 
 /**
@@ -48,8 +54,6 @@ function contact_form_init()
 {
   global $conf, $template;
 
-  $conf['ContactForm'] = safe_unserialize($conf['ContactForm']);
-  
   load_language('plugin.lang', CONTACT_FORM_PATH);
   load_language('lang', PHPWG_ROOT_PATH.PWG_LOCAL_DIR, array('no_fallback'=>true, 'local'=>true));
 
