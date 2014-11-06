@@ -37,7 +37,7 @@ $lang['Plain text'] = 'Plain text';
 $lang['Default e-mail subject'] = 'Default e-mail subject';
 $lang['can be translated with LocalFiles Editor plugin'] = 'can be translated with LocalFiles Editor plugin';
 $lang['Prefix of the sent e-mail subject'] = 'Prefix of the sent e-mail subject';
-$lang['you can use "%gallery_title%"'] = 'you can use "%gallery_title%"';
+$lang['you can use "%gallery_title%"'] = 'you can use the "%gallery_title%" variable';
 $lang['Text before the contact form'] = 'Text before the contact form';
 $lang['Text after the contact form'] = 'Text after the contact form';
 $lang['Active'] = 'Active';
@@ -60,5 +60,3 @@ $lang['Send'] = 'Send';
 $lang['Send copy to my email'] = 'Send copy to my email';
 $lang['Invalid redirect URL'] = 'Invalid redirect URL';
 $lang['Name'] = 'Name';
-
-?>
