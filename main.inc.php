@@ -14,11 +14,21 @@ Author URI: http://piwigo.org
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+if (basename(dirname(__FILE__)) != 'ContactForm')
+{
+  add_event_handler('init', 'contact_form_error');
+  function contact_form_error()
+  {
+    global $page;
+    $page['errors'][] = 'Contact Form folder name is incorrect, uninstall the plugin and rename it to "ContactForm"';
+  }
+  return;
+}
+
 global $conf, $prefixeTable;
 
-define('CONTACT_FORM_ID',     basename(dirname(__FILE__)));
-define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . CONTACT_FORM_ID . '/');
-define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-' . CONTACT_FORM_ID);
+define('CONTACT_FORM_PATH',   PHPWG_PLUGINS_PATH . 'ContactForm/');
+define('CONTACT_FORM_ADMIN',  get_root_url() . 'admin.php?page=plugin-ContactForm');
 define('CONTACT_FORM_PUBLIC', get_absolute_root_url() . make_index_url(array('section' => 'contact')) . '/');
 define('CONTACT_FORM_TABLE',  $prefixeTable .'contact_form');
 
