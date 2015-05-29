@@ -43,28 +43,29 @@ if (isset($_POST['save_emails']))
 
 // display emails
 $query = '
-SELECT *
-  FROM '. CONTACT_FORM_TABLE .'
-  ORDER BY
-    group_name ASC,
-    name ASC
+SELECT cf.id,
+    cf.user_id,
+    u.' . $conf['user_fields']['username'] . ' AS name,
+    u.' . $conf['user_fields']['email'] . ' AS email
+  FROM '. CONTACT_FORM_TABLE .' AS cf
+  JOIN '. USERS_TABLE .' AS u
+    ON cf.user_id != 0 AND cf.user_id = u.' . $conf['user_fields']['id'] . '
+  ORDER BY u.' . $conf['user_fields']['username'] . '
 ';
-$result = pwg_query($query);
+$users = query2array($query);
 
-$emails = $groups = array();
-while ($data = pwg_db_fetch_assoc($result))
-{
-  $data['active'] = get_boolean($data['active']);
-  $emails[] = $data;
-  if (!empty($data['group_name']))
-  {
-    $groups[] = $data['group_name'];
-  }
-}
+$query = '
+SELECT id, name, email
+  FROM '. CONTACT_FORM_TABLE .'
+  WHERE user_id = 0
+  ORDER BY name
+';
+$emails = query2array($query);
 
 $template->assign(array(
   'EMAILS' => $emails,
-  'GROUPS' => array_unique($groups),
+  'USERS' => $users,
+  'CACHE_KEYS' => get_admin_client_cache_keys(array('users')),
   ));
 
 $template->set_filename('contact_form', realpath(CONTACT_FORM_PATH . 'admin/template/emails.tpl'));

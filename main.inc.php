@@ -42,6 +42,7 @@ add_event_handler('init', 'contact_form_init');
 if (defined('IN_ADMIN'))
 {
   add_event_handler('get_admin_plugin_menu_links', 'contact_form_admin_menu');
+  add_event_handler('delete_user', 'contact_form_delete_user');
 }
 else
 {
@@ -53,6 +54,8 @@ if ($conf['ContactForm']['cf_menu_link'])
 {
   add_event_handler('blockmanager_apply', 'contact_form_applymenu', EVENT_HANDLER_PRIORITY_NEUTRAL+10);
 }
+
+add_event_handler('ws_add_methods', 'contact_form_ws_add_methods');
 
 add_event_handler('before_parse_mail_template', 'contact_form_mail_template');
 

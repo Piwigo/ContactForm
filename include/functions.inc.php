@@ -115,8 +115,7 @@ function contact_form_initialize_emails()
 
   $query = '
 SELECT
-    u.'.$conf['user_fields']['username'].' AS username,
-    u.'.$conf['user_fields']['email'].' AS email
+    u.'.$conf['user_fields']['id'].' AS id
   FROM '.USERS_TABLE.' AS u
     JOIN '.USER_INFOS_TABLE.' AS i
     ON i.user_id =  u.'.$conf['user_fields']['id'].'
@@ -130,15 +129,15 @@ SELECT
   while ($row = pwg_db_fetch_assoc($result))
   {
     $emails[] = array(
-      'name' => $row['username'],
-      'email' => $row['email'],
-      'active' => 'true',
+      'user_id' => $row['id'],
+      'name' => null,
+      'email' => null,
       );
   }
 
   mass_inserts(
     CONTACT_FORM_TABLE,
-    array('name','email','active'),
+    array('user_id','name','email'),
     $emails
     );
 
@@ -153,13 +152,6 @@ SELECT
 function send_contact_form(&$comm, $key)
 {
   global $conf, $page, $template;
-
-  $query = '
-SELECT DISTINCT group_name
-  FROM '. CONTACT_FORM_TABLE .'
-  ORDER BY group_name
-;';
-  $groups = array_from_query($query, 'group_name');
 
   $comm = array_merge($comm,
     array(
@@ -208,14 +200,6 @@ SELECT DISTINCT group_name
     $comment_action='reject';
   }
 
-  // check group
-  if (count($groups) > 1 and $comm['group'] == -1)
-  {
-    $comm['group'] = true;
-    $page['errors'][] = l10n('Please choose a category');
-    $comment_action='reject';
-  }
-
   // check content
   if (empty($comm['content']))
   {
@@ -238,7 +222,7 @@ SELECT DISTINCT group_name
   $comment_action = trigger_change('contact_form_check', $comment_action, $comm);
 
   // get admin emails
-  $to = get_contact_emails($comm['group']);
+  $to = get_contact_emails();
   if (!count($to))
   {
     $page['errors'][] = l10n('Error while sending e-mail');
@@ -306,39 +290,166 @@ SELECT DISTINCT group_name
 
 /**
  * get contact emails
- * @param mixed group:
- *    - bool true:    all emails
- *    - empty string: emails without group
- *    - string:       emails with the specified group
  */
-function get_contact_emails($group=true)
+function get_contact_emails()
 {
   global $conf;
 
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
-
-  $where = '1=1';
-  if ($group!==true)
+  $query = '
+SELECT
+    cf.name AS cf_name,
+    cf.email AS cf_email,
+    u.'.$conf['user_fields']['username'].' AS u_name,
+    u.'.$conf['user_fields']['email'].' AS u_email
+  FROM '. CONTACT_FORM_TABLE .' AS cf
+  LEFT JOIN '. USERS_TABLE .' AS u
+    ON cf.user_id = u.'.$conf['user_fields']['id'].'
+';
+  $result = query2array($query);
+  
+  $emails = array();
+  foreach ($result as $row)
   {
-    if (empty($group))
+    if (!empty($row['u_email']))
     {
-      $where = 'group_name IS NULL';
+      $emails[] = array(
+        'name' => $row['u_name'],
+        'email' => $row['u_email'],
+        );
     }
-    else
+    else if (!empty($row['cf_email']))
     {
-      $where = 'group_name="'.$group.'"';
+      $emails[] = array(
+        'name' => $row['cf_name'],
+        'email' => $row['cf_email'],
+        );
     }
   }
 
-  $query = '
-SELECT name, email
-  FROM '. CONTACT_FORM_TABLE .'
-  WHERE
-    '.$where.'
-    AND active = "true"
-  ORDER BY name ASC
-';
-  $emails = query2array($query);
-
   return $emails;
+}
+
+/**
+ * delete contact entry when the user is deleted
+ */
+function contact_form_delete_user($user_id)
+{
+  pwg_query('DELETE FROM '. CONTACT_FORM_TABLE .' WHERE user_id = '. $user_id .';');
+}
+
+/**
+ * register AJAX methods
+ */
+function contact_form_ws_add_methods($arr)
+{
+  $service = &$arr[0];
+  
+  $service->addMethod(
+    'pwg.cf.addUser',
+    'contact_form_ws_add_user',
+    array('user_id' => array('type' => WS_TYPE_ID)),
+    null, null,
+    array('admin_only'=>true, 'hidden'=>true)
+    );
+  
+  $service->addMethod(
+    'pwg.cf.addEmail',
+    'contact_form_ws_add_email',
+    array(
+      'name' => array(),
+      'email' => array(),
+      ),
+    null, null,
+    array('admin_only'=>true, 'hidden'=>true)
+    );
+  
+  $service->addMethod(
+    'pwg.cf.delete',
+    'contact_form_ws_delete',
+    array('id' => array('type' => WS_TYPE_ID)),
+    null, null,
+    array('admin_only'=>true, 'hidden'=>true)
+    );
+}
+
+/**
+ * AJAX: add user
+ */
+function contact_form_ws_add_user($params)
+{
+  global $conf;
+  
+  $result = pwg_query('SELECT id FROM '.CONTACT_FORM_TABLE.' WHERE user_id = '.$params['user_id'].';');
+  
+  if (pwg_db_num_rows($result))
+  {
+    return new PwgError(WS_ERR_INVALID_PARAM, l10n('User already added'));
+  }
+  
+  $result = pwg_query('SELECT id FROM '.USERS_TABLE.' WHERE '.$conf['user_fields']['id'].' = '.$params['user_id'].' AND '.$conf['user_fields']['email'].' IS NOT NULL;');
+  
+  if (!pwg_db_num_rows($result))
+  {
+    return new PwgError(WS_ERR_INVALID_PARAM, l10n('This user has no e-mail'));
+  }
+  
+  single_insert(CONTACT_FORM_TABLE, array(
+    'user_id' => $params['user_id'],
+    'name' => null,
+    'email' => null,
+    ));
+  
+  $query = '
+SELECT
+    cf.id AS id,
+    u.'.$conf['user_fields']['username'].' AS name,
+    u.'.$conf['user_fields']['email'].' AS email
+  FROM '. CONTACT_FORM_TABLE .' AS cf
+  LEFT JOIN '. USERS_TABLE .' AS u
+    ON cf.user_id = u.'.$conf['user_fields']['id'].'
+  WHERE cf.user_id = '.$params['user_id'].'
+';
+  $result = query2array($query);
+  
+  return $result[0];
+}
+
+/**
+ * AJAX: add email
+ */
+function contact_form_ws_add_email($params)
+{
+  if (!email_check_format($params['email']))
+  {
+    return new PwgError(WS_ERR_INVALID_PARAM, l10n('mail address must be like xxx@yyy.eee (example : jack@altern.org)'));
+  }
+  
+  $params = array_map('pwg_db_real_escape_string', $params);
+  
+  $result = pwg_query('SELECT id FROM '.CONTACT_FORM_TABLE.' WHERE email = \''.$params['email'].'\';');
+  
+  if (pwg_db_num_rows($result))
+  {
+    return new PwgError(WS_ERR_INVALID_PARAM, l10n('E-mail already added'));
+  }
+  
+  single_insert(CONTACT_FORM_TABLE, array(
+    'user_id' => null,
+    'name' => $params['name'],
+    'email' => $params['email'],
+    ));
+  
+  return array(
+    'id' => pwg_db_insert_id(),
+    'name' => $params['name'],
+    'email' => $params['email'],
+    );
+}
+
+/**
+ * AJAX: delete entry
+ */
+function contact_form_ws_delete($params)
+{
+  pwg_query('DELETE FROM '.CONTACT_FORM_TABLE.' WHERE id = '.$params['id'].';');
 }

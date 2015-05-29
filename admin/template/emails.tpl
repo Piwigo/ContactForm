@@ -1,132 +1,149 @@
 {combine_css path=$CONTACT_FORM_PATH|cat:"admin/template/style.css"}
 
+{combine_script id='LocalStorageCache' load='footer' path='admin/themes/default/js/LocalStorageCache.js'}
+
+{combine_script id='jquery.selectize' load='footer' path='themes/default/js/plugins/selectize.min.js'}
+{combine_css id='jquery.selectize' path="themes/default/js/plugins/selectize.{$themeconf.colorscheme}.css"}
+
+{footer_script}
+(function(){
+{* <!-- USERS --> *}
+var usersCache = new UsersCache({
+  serverKey: '{$CACHE_KEYS.users}',
+  serverId: '{$CACHE_KEYS._hash}',
+  rootUrl: '{$ROOT_URL}'
+});
+
+usersCache.selectize(jQuery('[data-selectize=users]'));
+
+$('#users, #emails').on('click', '[data-delete]', function() {
+  var row = $(this).closest('tr');
+  $.ajax({
+    url: 'ws.php?method=pwg.cf.delete&format=json',
+    method: 'post',
+    dataType: 'json',
+    data: {
+      id: $(this).data('delete')
+    },
+    success: function(data) {
+      if (data.stat == 'ok') {
+        row.remove();
+      }
+      else {
+        alert(data.message);
+      }
+    }
+  });
+});
+
+$('[name=add_user]').on('click', function() {
+  $.ajax({
+    url: 'ws.php?method=pwg.cf.addUser&format=json',
+    method: 'post',
+    dataType: 'json',
+    data: {
+      user_id: $('[data-selectize=users]').val()
+    },
+    success: function(data) {
+      if (data.stat == 'ok') {
+        addLine($('#users'), data.result);
+      }
+      else {
+        alert(data.message);
+      }
+    }
+  });
+});
+
+$('[name=add_email]').on('click', function() {
+  $.ajax({
+    url: 'ws.php?method=pwg.cf.addEmail&format=json',
+    method: 'post',
+    dataType: 'json',
+    data: {
+      name: $('[name=new_name]').val(),
+      email: $('[name=new_email]').val()
+    },
+    success: function(data) {
+      if (data.stat == 'ok') {
+        addLine($('#emails'), data.result);
+      }
+      else {
+        alert(data.message);
+      }
+    }
+  });
+});
+
+function addLine(table, data) {
+  table.append('<tr>'+
+    '<td>'+data.name+'</td>'+
+    '<td>'+data.email+'</td>'+
+    '<td><i class="icon-cancel-circled" data-delete="'+data.id+'"></i></td>'+
+  '</tr>');
+}
+
+}());
+{/footer_script}
+
 <div class="titrePage">
 	<h2>Contact Form</h2>
 </div>
 
-<form method="post" action="{$CONTACT_FORM_ADMIN}-emails" class="properties">
-  <table class="table2" id="emails">
-    <tr class="throw">
-      <th>{'Name'|translate}</th>
-      <th>{'Email address'|translate}</th>
-      <th>{'Category'|translate}</th>
-      <th>{'Active'|translate}</th>
-      <th>{'Delete'|translate}</th>
-    </tr>
-  {counter start=0 assign=i}
-  {foreach from=$EMAILS item=entry}
-    <tr class="{if $i is odd}row1{else}row2{/if}">
+<form class="properties">
+<fieldset>
+  <legend>{'Manage contact e-mails'|translate}</legend>
+  
+  <table class="doubleSelect">
+    <tr>
       <td>
-        <input type="text" name="emails[{$i}][name]" value="{$entry.name|escape:html}" size="20">
+        <h3>{'Users'|translate}</h3>
+        
+        <table class="table2" id="users">
+          <tr class="throw">
+            <th>{'Name'|translate}</th>
+            <th>{'Email address'|translate}</th>
+            <th class="delete-row"></th>
+          </tr>
+        {foreach from=$USERS item=entry}
+          <tr>
+            <td>{$entry.name}</td>
+            <td>{$entry.email}</td>
+            <td><i class="icon-cancel-circled" data-delete="{$entry.id}"></i></td>
+          </tr>
+        {/foreach}
+        </table>
+        
+        <div id="add-user">
+          <select name="new_user" data-selectize="users" placeholder="{'Select a new user'|translate|escape:html}"></select>
+          <input type="button" name="add_user" value="{'Add'|translate}" class="submit">
+        </div>
       </td>
+
       <td>
-        <input type="text" name="emails[{$i}][email]" value="{$entry.email}" size="30">
-      </td>
-      <td>
-        <select name="emails[{$i}][group_name]" class="groups">
-          <option value="-1">------------</option>
-          {html_options values=$GROUPS output=$GROUPS selected=$entry.group_name}
-        </select>
-      </td>
-      <td style="text-align:center;">
-        <input type="checkbox" name="emails[{$i}][active]" value="1" {if $entry.active}checked="checked"{/if}>
-      </td>
-      <td style="text-align:center;">
-        <input type="checkbox" name="emails[{$i}][delete]" value="1" class="delete">
-      </td>
-    </tr>
-    {counter}
-  {/foreach}
-    <tr class="{if $i is odd}row1{else}row2{/if}" id="addEntryContainer">
-      <td colspan="2" style="text-align:center;">
-        <a id="addEntry">{'+ Add an email'|translate}</a>
-      </td>
-      <td>
-        <a id="addGroup">{'+ Add a category'|translate}</a>
-      </td>
-      <td colspan="2"  style="text-align:center;">
-        <input type="submit" name="save_emails" value="{'Submit'|translate}" class="submit">
+        <h3>{'Additional emails'|translate}</h3>
+  
+        <table class="table2" id="emails">
+          <tr class="throw">
+            <th>{'Name'|translate}</th>
+            <th>{'Email address'|translate}</th>
+            <th class="delete-row"></th>
+          </tr>
+        {foreach from=$EMAILS item=entry}
+          <tr>
+            <td>{$entry.name}</td>
+            <td>{$entry.email}</td>
+            <td><i class="icon-cancel-circled" data-delete="{$entry.id}"></i></td>
+          </tr>
+        {/foreach}
+        </table>
+        
+        <div id="add-email">
+          <input type="text" name="new_name" placeholder="{'New name'|translate|escape:html}" size="20">
+          <input type="text" name="new_email" placeholder="{'New e-mail'|translate|escape:html}" size="30">
+          <input type="button" name="add_email" value="{'Add'|translate}" class="submit">
+        </div>
       </td>
     </tr>
   </table>
-  {footer_script}var entry = {$i};{/footer_script}
 </form>
-
-<div class="infos tip">
-<b>{'Tip'|translate}:</b>
-{'Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'|translate}
-</div>
-
-
-{footer_script}
-var group_options = new Array;
-{foreach from=$GROUPS item=entry}
-group_options[group_options.length] = '<option value="{$entry|escape:javascript}">{$entry|escape:javascript}</option>';
-{/foreach}
-
-var doBlink = function(obj,start,finish) {
-  jQuery(obj).fadeOut(300).fadeIn(300);
-  if(start!=finish) {
-    start=start+1; doBlink(obj,start,finish);
-  }
-};
-jQuery.fn.blink = function(start,finish) {
-  return this.each(function() {
-    doBlink(this,start,finish);
-  });
-};
-
-jQuery(document).on('change', '.delete', function() {
-  if ($(this).is(':checked')) {
-    $(this).parents('tr').addClass('delete');
-  }
-  else {
-    $(this).parents('tr').removeClass('delete');
-  }
-});
-
-jQuery('#addEntry').click(function() {
-  entry++;
-  i = entry;
-
-  content =
-    '<tr class="row'+ (i%2+1) +'">'+
-      '<td>'+
-        '<input type="text" name="emails['+ i +'][name]" size="20">'+
-      '</td>'+
-      '<td>'+
-        '<input type="text" name="emails['+ i +'][email]" size="30">'+
-      '</td>'+
-      '<td>'+
-        '<select name="emails['+ i +'][group_name]" class="groups">'+
-          '<option value="-1">------------</option>';
-          for (var j in group_options) {
-            content+= group_options[j];
-          }
-        content+= '</select>'+
-      '</td>'+
-      '<td style="text-align:center;">'+
-        '<input type="checkbox" name="emails['+ i +'][active]" value="1" checked="checked">'+
-      '</td>'+
-      '<td style="text-align:center;">'+
-        '<input type="checkbox" name="emails['+ i +'][delete]" value="1" class="delete">'+
-      '</td>'+
-    '</tr>'
-  $('#emails').append(content);
-
-  $('#addEntryContainer')
-    .removeClass('row1 row2')
-    .addClass('row'+ Math.abs(i%2-2))
-    .appendTo($('#emails'));
-});
-
-jQuery('#addGroup').click(function() {
-  name = prompt("{'Name'|translate}:");
-  if (name != null && name != "") {
-    name = name.replace(new RegExp('"','g'),"'");
-    content = '<option value="'+ name +'">'+ name +'</option>';
-    group_options[group_options.length] = content;
-    $("select.groups").append(content).blink(1,2);
-  }
-});
-{/footer_script}

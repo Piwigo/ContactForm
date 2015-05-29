@@ -18,7 +18,6 @@ if (isset($_POST['send_mail']))
   $contact = array(
     'author' =>  stripslashes(trim($_POST['author'])),
     'email' =>   stripslashes(trim($_POST['email'])),
-    'group' =>   @$_POST['group'],
     'subject' => stripslashes(trim($_POST['subject'])),
     'content' => stripslashes($_POST['content']),
     'send_copy' => isset($_POST['send_copy']),
@@ -57,7 +56,6 @@ if (is_classic_user())
     $contact = array(
       'author' => $user['username'],
       'email' => $user['email'],
-      'group' => null,
       'subject' => l10n($conf['ContactForm']['cf_default_subject']),
       'content' => null,
       );
@@ -76,24 +74,6 @@ if ($conf['ContactForm']['cf_mandatory_name'])
 if (!empty($pwg_loaded_plugins['ExtendedDescription']))
 {
   add_event_handler('render_contact_form', 'get_extended_desc');
-}
-
-$query = '
-SELECT DISTINCT group_name
-  FROM '. CONTACT_FORM_TABLE .'
-  ORDER BY group_name
-;';
-$result = pwg_query($query);
-
-$groups = array();
-while ($data = pwg_db_fetch_assoc($result))
-{
-  $groups[ $data['group_name'] ] = !empty($data['group_name']) ? l10n($data['group_name']) : l10n('Default');
-}
-
-if (count($groups) > 1)
-{
-  $template->assign('GROUPS', $groups);
 }
 
 $template->assign(array(
