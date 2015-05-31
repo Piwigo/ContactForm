@@ -21,13 +21,8 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['Subject'] = 'Assunto';
-$lang['Tip'] = 'Dica';
-$lang['+ Add a category'] = '+ Adicionar categoria';
-$lang['+ Add an email'] = '+ Adicionar email';
-$lang['Active'] = 'Ativo';
 $lang['Add link in menu'] = 'Adicionar link ao menu';
 $lang['Allow guests to see the form'] = 'Permitir que convidados vejam o formulário';
-$lang['Category'] = 'Categoria';
 $lang['Default e-mail subject'] = 'Assunto padrão de e-mail';
 $lang['E-mail address is mandatory'] = 'Endereço de email é obrigatório';
 $lang['E-mail configuration'] = 'Configuração de email';
@@ -46,17 +41,21 @@ $lang['Message'] = 'Mensagem';
 $lang['Name is mandatory'] = 'O nome é obrigatório';
 $lang['No active email address'] = 'Endereço de email inativo';
 $lang['Plain text'] = 'Texto pleno';
-$lang['Please choose a category'] = 'Por favor. escolha uma categoria';
 $lang['Please enter a message'] = 'Por favor, entre com a mensagem';
 $lang['Please enter a name'] = 'Por favor, entre com o nome';
 $lang['Please enter a subject'] = 'Por favor, entre com o assunto';
 $lang['Please enter an e-mail'] = 'Por favor, entre com um email';
 $lang['%s must not be less than %d characters long'] = '%s não pode ter menos do que %d caracteres';
 $lang['%s must not be more than %d characters long'] = '%s não pode ter mais do que %d caratcteres';
-$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Cada categoria é mostrada como um "serviço" distinto no formulário de contato (exemplo: "Técnico", "Comercial", "Questões Gerais"). Usar as categorias não é obrigatório.';
 $lang['Prefix of the sent e-mail subject'] = 'Prefixo do assunto do email enviado';
 $lang['Send'] = 'Enviar';
 $lang['Send copy to my email'] = 'Enviar cópia para o meu email';
 $lang['Invalid redirect URL'] = 'Redirecionamento de URL inválida';
 $lang['Name'] = 'Nome';
-?>
+$lang['Additional emails'] = 'Email adicionais';
+$lang['E-mail already added'] = 'Este e-mail já foi adicionado';
+$lang['Manage contact e-mails'] = 'Gerênciar e-mails de contatos';
+$lang['New e-mail'] = 'Novo e-mail';
+$lang['Select a new user'] = 'Selecione um novo usuário';
+$lang['This user has no e-mail'] = 'Este usuário não possui e-mail';
+$lang['User already added'] = 'Este usuário já foi adicionado';
