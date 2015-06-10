@@ -59,3 +59,4 @@ $lang['New e-mail'] = 'Neue E-Mail';
 $lang['Select a new user'] = 'neuen Benutzer auswählen';
 $lang['This user has no e-mail'] = 'Dieser Benutzer besitzt keine E-Mail Adresse';
 $lang['User already added'] = 'Benutzer wurde bereits hinzugefügt';
+$lang['Manage contact e-mails'] = 'Kontakt E-mails verwalten';
