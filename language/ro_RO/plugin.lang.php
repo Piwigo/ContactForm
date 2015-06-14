@@ -20,12 +20,9 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = 'Fiecare categorie este afișată ca un "serviciu" distinct în formularul de contact (exemplu: "Tehnic", "Comercial", "Întrebari generale"). Folosirea categoriilor nu este obligatorie.';
 $lang['Redirect after sending email (optional)'] = 'Redirecționează după trimiterea e-mail-ului (opțional)';
 $lang['Text after the contact form'] = 'Text după formularul de contact';
 $lang['Text before the contact form'] = 'Text înainte de formularul de contact';
-$lang['Tip'] = 'Pont';
-$lang['Please choose a category'] = 'Alege o categorie';
 $lang['Please enter a message'] = 'Introdu un mesaj';
 $lang['Please enter a name'] = 'Introdu un nume';
 $lang['Please enter a subject'] = 'Introdu un subiect';
@@ -40,12 +37,8 @@ $lang['can be translated with LocalFiles Editor plugin'] = 'poate fi tradus cu p
 $lang['you can use "%gallery_title%"'] = 'poți folosi "%gallery_title%"';
 $lang['%s must not be less than %d characters long'] = '%s nu trebuie să fie mai scurt de %d caractere';
 $lang['%s must not be more than %d characters long'] = '%s nu trebuie să fie mai lung de %d caractere';
-$lang['+ Add a category'] = '+ Adaugă o categorie';
-$lang['+ Add an email'] = '+ Adaugă o adresă de e-mail';
-$lang['Active'] = 'Activ';
 $lang['Add link in menu'] = 'Adaugă legătură în meniu';
 $lang['Allow guests to see the form'] = 'Permite oaspeților să vadă formularul';
-$lang['Category'] = 'Categorie';
 $lang['Default e-mail subject'] = 'Subiectul implicit pentru e-mail';
 $lang['E-mail address is mandatory'] = 'Adresa de e-mail este obligatorie';
 $lang['E-mail configuration'] = 'Configurație e-maile';
@@ -59,4 +52,10 @@ $lang['No active email address'] = 'Nicio adresă de e-mail activă';
 $lang['Plain text'] = 'Text simplu';
 $lang['Invalid redirect URL'] = 'URL de redirectare invalid';
 $lang['Name'] = 'Nume';
-?>
+$lang['Manage contact e-mails'] = 'Administreaza e-mail-urile persoanelor de contact';
+$lang['E-mail already added'] = 'E-mail existent';
+$lang['User already added'] = 'Utilizator existent';
+$lang['This user has no e-mail'] = 'Acest utilizator nu are e-mail';
+$lang['Select a new user'] = 'Selecteaza un nou utilizator';
+$lang['New e-mail'] = 'E-mail nou';
+$lang['Additional emails'] = 'Email-uri aditionale';
