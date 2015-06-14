@@ -1,1 +1,1 @@
-Afegeix l'element "contacte" en el menú per oferir un formulari de contacte per als usuaris
+Afegeix l'element "contacte" en el menú per oferir un formulari de contacte als usuaris
