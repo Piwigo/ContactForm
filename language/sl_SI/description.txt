@@ -1,1 +1,1 @@
-Dodaj "Kontakti" opcijo v polju meni za dostopnost forme uporabnikom.
+V meni dodaj zavihek "Kontakt" in s tem omogoči uporabo kontaktnega obrazca.
