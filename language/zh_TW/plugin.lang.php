@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Please choose a category'] = '請選擇類別';
 $lang['Please enter a message'] = '請輸入信息';
 $lang['Please enter a name'] = '請輸入姓名';
 $lang['Please enter a subject'] = '請輸入主旨';
@@ -32,12 +31,10 @@ $lang['Send copy to my email'] = '將副本發送到我的郵箱';
 $lang['Subject'] = '主旨';
 $lang['Text after the contact form'] = '聯絡表格之後的文字';
 $lang['Text before the contact form'] = '聯絡表格之前的文字';
-$lang['Tip'] = '提示';
 $lang['Your e-mail'] = '您的電子信箱';
 $lang['Your name'] = '您的姓名';
 $lang['can be translated with LocalFiles Editor plugin'] = '可以被翻譯在LocalFiles編輯器插件內';
 $lang['you can use "%gallery_title%"'] = '您可以使用 "%gallery_title%"';
-$lang['Each category is displayed as a distinct "service" on the contact form (example: "Technical", "Commercial", "General question"). Using categories is not mandatory.'] = '每個類別將顯示為一個獨特的“服務”上的聯繫方式(例如：“技術”，“商業”，“一般問題”)。通過分類，兒不是強制性的。';
 $lang['Error while sending e-mail'] = '發送電子郵件時發生錯誤';
 $lang['General configuration'] = '一般設定';
 $lang['Message'] = '信息';
@@ -46,12 +43,8 @@ $lang['No active email address'] = '沒有有效的電子郵件地址';
 $lang['Plain text'] = '純文字';
 $lang['%s must not be less than %d characters long'] = '%s 一定不能低於 %d 個字符長度';
 $lang['%s must not be more than %d characters long'] = '%s 一定不能超過 %d 個字符長度';
-$lang['+ Add a category'] = '+ 新增類別';
-$lang['+ Add an email'] = '+ 新增電子郵件';
-$lang['Active'] = '起動';
 $lang['Add link in menu'] = '選單中新增連結';
 $lang['Allow guests to see the form'] = '允許訪客看表格';
-$lang['Category'] = '類別';
 $lang['Default e-mail subject'] = '預設電子郵件的主旨';
 $lang['E-mail address is mandatory'] = '電子郵件地址是必需的';
 $lang['E-mail configuration'] = '電子郵件設定';
@@ -59,4 +52,10 @@ $lang['E-mail format :'] = '電子郵件格式：';
 $lang['E-mail sent successfully'] = '發送的電子郵件成功';
 $lang['Invalid redirect URL'] = '無效重定向URL';
 $lang['Name'] = '姓名';
-?>
+$lang['E-mail already added'] = '電子郵件已添加';
+$lang['Manage contact e-mails'] = '管理聯繫人的電子郵件';
+$lang['Additional emails'] = '額外的電子郵件';
+$lang['New e-mail'] = '新的電子郵件';
+$lang['Select a new user'] = '選擇新的用戶';
+$lang['This user has no e-mail'] = '此用戶沒有電子郵件';
+$lang['User already added'] = '用戶已添加';
