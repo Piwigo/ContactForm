@@ -21,8 +21,8 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['Your name'] = 'Uw naam';
-$lang['Your e-mail'] = 'Uw e-mail';
+$lang['Your name'] = 'Jouw naam';
+$lang['Your e-mail'] = 'Jouw e-mail';
 $lang['Subject'] = 'Onderwerp';
 $lang['Message'] = 'Bericht';
 $lang['General configuration'] = 'Algemene configuratie';
@@ -42,11 +42,11 @@ $lang['%s must not be less than %d characters long'] = '%s mag niet minder zijn 
 $lang['%s must not be more than %d characters long'] = '%s mag niet groter zijn dan %d tekens';
 $lang['Default e-mail subject'] = 'Standaard e-mail onderwerp';
 $lang['E-mail format :'] = 'E-mail formaat:';
-$lang['No active email address'] = 'Geen actief e-mail adres';
+$lang['No active email address'] = 'Geen actief e-mailadres';
 $lang['Plain text'] = 'Platte tekst';
-$lang['Please enter an e-mail'] = 'Geef aub een e-mail adres in';
-$lang['Prefix of the sent e-mail subject'] = 'Voorvoegsel voor het e-mail onderwerp';
-$lang['you can use "%gallery_title%"'] = 'u kunt "%gallery_title%" gebruiken';
+$lang['Please enter an e-mail'] = 'Geef aub een e-mailadres in';
+$lang['Prefix of the sent e-mail subject'] = 'Voorvoegsel voor het e-mailonderwerp';
+$lang['you can use "%gallery_title%"'] = 'je kunt "%gallery_title%" gebruiken';
 $lang['can be translated with LocalFiles Editor plugin'] = 'kan vertaald worden met de LocalFiles Editor plugin';
 $lang['Redirect after sending email (optional)'] = 'Redirect na het sturen van e-mail(optioneel)';
 $lang['Send'] = 'Verstuur';
