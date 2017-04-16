@@ -21,8 +21,8 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 
-$lang['Your name'] = 'Namn';
-$lang['Your e-mail'] = 'E-post';
+$lang['Your name'] = 'Ditt namn';
+$lang['Your e-mail'] = 'Din epostadress';
 $lang['Subject'] = 'Ämne';
 $lang['Message'] = 'Meddelande';
 $lang['General configuration'] = 'Allmäna inställningar';
@@ -48,7 +48,7 @@ $lang['%s must not be less than %d characters long'] = '%s får inte vara färre
 $lang['E-mail format :'] = 'E-post format:';
 $lang['No active email address'] = 'Ingen aktiv e-postadress';
 $lang['Send copy to my email'] = 'Skicka en kopia till min e-postadress';
-$lang['you can use "%gallery_title%"'] = 'du kan använda "%gallery_title%"';
+$lang['you can use "%gallery_title%"'] = 'du kan använda variabeln "%gallery_title%"';
 $lang['Plain text'] = 'Klartext';
 $lang['Please enter an e-mail'] = 'Vänligen ange e-post';
 $lang['Send'] = 'Skicka';
