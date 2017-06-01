@@ -57,7 +57,7 @@ $users = query2array($query);
 $query = '
 SELECT id, name, email
   FROM '. CONTACT_FORM_TABLE .'
-  WHERE user_id = 0
+  WHERE user_id IS NULL
   ORDER BY name
 ';
 $emails = query2array($query);
