@@ -86,5 +86,6 @@ $template->assign(array(
   'F_ACTION' => CONTACT_FORM_PUBLIC,
   ));
 
-$template->set_filename('contactform', realpath(CONTACT_FORM_PATH . 'template/contact_form.tpl'));
+$template->set_template_dir(realpath(CONTACT_FORM_PATH . 'template/'));
+$template->set_filename('contactform', 'contact_form.tpl');
 $template->assign_var_from_handle('CONTENT', 'contactform');
