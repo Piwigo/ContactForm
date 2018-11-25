@@ -10,7 +10,7 @@ function contact_form_section_init()
 
   if ($tokens[0] == 'contact')
   {
-    $page['section'] = 'contact';
+    $page['sectionstring'] = 'contact';
     $page['title'] = l10n('Contact');
     $page['body_id'] = 'theContactPage';
     $page['is_external'] = true;
@@ -30,7 +30,7 @@ function contact_form_page()
 {
   global $page;
 
-  if (isset($page['section']) && $page['section'] == 'contact')
+  if (isset($page['sectionstring']) && $page['sectionstring'] == 'contact')
   {
     include(CONTACT_FORM_PATH . 'include/contact_form.inc.php');
   }
