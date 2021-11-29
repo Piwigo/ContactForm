@@ -6,6 +6,7 @@ Description: Add a "Contact" item in the Menu block to offer a contact form to u
 Plugin URI: auto
 Author: Piwigo Team
 Author URI: http://piwigo.org
+Has Settings: true
 */
 
 /*

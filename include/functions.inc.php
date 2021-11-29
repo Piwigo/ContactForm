@@ -63,7 +63,7 @@ function contact_form_applymenu($menu_ref_arr)
 /**
  * change contact link in footer
  */
-function contact_form_footer_link($content, &$smarty)
+function contact_form_footer_link($content)
 {
   $search = '#<a href="mailto:{\\$CONTACT_MAIL}\\?subject={\'A comment on your site\'\\|@?translate\\|@?escape:url}">#';
   $replace = '<a href="{$CONTACT_FORM_PUBLIC}">';
