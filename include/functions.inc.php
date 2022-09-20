@@ -242,12 +242,6 @@ function send_contact_form(&$comm, $key)
         'name' => $comm['author'],
         'email' => $comm['email'],
         );
-      if ($comm['send_copy'])
-      {
-        $Bcc = $to;
-        $to = null;
-        $Cc = $from;
-      }
     }
 
     switch_lang_to(get_default_language());

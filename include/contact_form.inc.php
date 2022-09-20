@@ -8,6 +8,12 @@ if ( (!is_classic_user() and !$conf['ContactForm']['cf_allow_guest']) or !$conf[
   redirect(get_absolute_root_url());
 }
 
+if (isset($_POST['send_copy']))
+{
+  set_status_header(488);
+  die(0);
+}
+
 $contact = array();
 
 // +-----------------------------------------------------------------------+
@@ -20,7 +26,6 @@ if (isset($_POST['send_mail']))
     'email' =>   stripslashes(trim($_POST['email'])),
     'subject' => stripslashes(trim($_POST['subject'])),
     'content' => stripslashes($_POST['content']),
-    'send_copy' => isset($_POST['send_copy']),
    );
 
   $comment_action = send_contact_form($contact, @$_POST['key']);

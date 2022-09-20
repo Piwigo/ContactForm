@@ -76,7 +76,6 @@
         <td class="title">&nbsp;</td>
         <td>
           <input class="submit" type="submit" name="send_mail" value="{'Send'|translate}">
-          <label><input type="checkbox" name="send_copy"> {'Send copy to my email'|translate}</label>
         </td>
       </tr>
     </table>
