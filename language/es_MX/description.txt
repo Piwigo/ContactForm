@@ -1,0 +1,1 @@
+Agregue un elemento de "Contacto" en el bloque Menú para ofrecer un formulario de contacto a los usuarios
