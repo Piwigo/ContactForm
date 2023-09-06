@@ -26,6 +26,8 @@ if (isset($_POST['send_mail']))
     'email' =>   stripslashes(trim($_POST['email'])),
     'subject' => stripslashes(trim($_POST['subject'])),
     'content' => stripslashes($_POST['content']),
+    /** + mic 2023.09 */
+    'Cc' => !empty($_POST['Cc']) ? $_POST['Cc'] : '',
    );
 
   $comment_action = send_contact_form($contact, @$_POST['key']);
@@ -66,7 +68,19 @@ if (is_classic_user())
       );
   }
   $contact['is_logged'] = true;
+}else{
+  /**
+   * bugfix mic 2023.09
+   */
+  $contact = [
+    'is_logged' => false,
+    'author' => '',
+    'email' => '',
+    'subject' => l10n($conf['ContactForm']['cf_default_subject']),
+    'content' => null,
+  ];
 }
+
 if ($conf['ContactForm']['cf_mandatory_mail'])
 {
   $contact['mandatory_mail'] = true;
