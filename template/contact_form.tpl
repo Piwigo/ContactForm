@@ -54,17 +54,17 @@
           {$contact.email}
           <input type="hidden" name="email" value="{$contact.email|escape:html}">
         {else}
-          <input type="text" name="email" id="email" size="40" value="{$contact.email|escape:html}">
+          <input type="text" name="email" id="email" size="40" value="{if isset($contact.email)}{$contact.email|escape:html}{/if}">
         {/if}
         </td>
       </tr>
       <tr>
         <td class="title"><label for="subject">{'Subject'|translate}</label></td>
-        <td><input type="text" name="subject" id="subject" style="width:400px;" value="{$contact.subject|escape:html}"></td>
+        <td><input type="text" name="subject" id="subject" style="width:400px;" value="{if isset($contact.subject)}{$contact.subject|escape:html}{/if}">"></td>
       </tr>
       <tr>
         <td class="title"><label for="cf_content">{'Message'|translate}</label></td>
-        <td><textarea name="content" id="cf_content" rows="10" style="width:400px;">{$contact.content}</textarea></td>
+        <td><textarea name="content" id="cf_content" rows="10" style="width:400px;">{if isset($contact.content)}{$contact.content|escape:html}{/if}</textarea></td>
       </tr>
     {if isset($CRYPTO)}
       {$CRYPTO.parsed_content}
