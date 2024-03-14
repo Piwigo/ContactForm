@@ -43,7 +43,7 @@
           {$contact.author}
           <input type="hidden" name="author" value="{$contact.author|escape:html}">
         {else}
-          <input type="text" name="author" id="author" size="40" value="{$contact.author|escape:html}">
+          <input type="text" name="author" id="author" size="40" value="{if isset($contact.author)}{$contact.author|escape:html}{/if}">
         {/if}
         </td>
       </tr>
