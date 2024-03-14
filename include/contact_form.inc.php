@@ -14,19 +14,21 @@ if (isset($_POST['send_copy']))
   die(0);
 }
 
-$contact = array();
+$contact = array(
+  'is_logged' => false,
+  'subject' => l10n($conf['ContactForm']['cf_default_subject']),
+  'content' => null,
+);
 
 // +-----------------------------------------------------------------------+
 // |                                send email                             |
 // +-----------------------------------------------------------------------+
 if (isset($_POST['send_mail']))
 {
-  $contact = array(
-    'author' =>  stripslashes(trim($_POST['author'])),
-    'email' =>   stripslashes(trim($_POST['email'])),
-    'subject' => stripslashes(trim($_POST['subject'])),
-    'content' => stripslashes($_POST['content']),
-   );
+  $contact['author'] = stripslashes(trim($_POST['author']));
+  $contact['email'] = stripslashes(trim($_POST['email']));
+  $contact['subject'] = stripslashes(trim($_POST['subject']));
+  $contact['content'] = stripslashes($_POST['content']);
 
   $comment_action = send_contact_form($contact, @$_POST['key']);
 
@@ -54,23 +56,19 @@ if (isset($_POST['send_mail']))
 // +-----------------------------------------------------------------------+
 // |                                template                               |
 // +-----------------------------------------------------------------------+
+
 if (is_classic_user())
 {
-  if (empty($contact))
-  {
-    $contact = array(
-      'author' => $user['username'],
-      'email' => $user['email'],
-      'subject' => l10n($conf['ContactForm']['cf_default_subject']),
-      'content' => null,
-      );
-  }
+  $contact['author'] = $user['username'];
+  $contact['email'] = $user['email'];
   $contact['is_logged'] = true;
 }
+
 if ($conf['ContactForm']['cf_mandatory_mail'])
 {
   $contact['mandatory_mail'] = true;
 }
+
 if ($conf['ContactForm']['cf_mandatory_name'])
 {
   $contact['mandatory_name'] = true;
