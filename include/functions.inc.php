@@ -55,6 +55,7 @@ function contact_form_applymenu($menu_ref_arr)
   {
     $block->data['contact'] = array(
       'URL' => CONTACT_FORM_PUBLIC,
+      'TITLE' => l10n('Contact'),
       'NAME' => l10n('Contact'),
       );
   }
