@@ -6,15 +6,15 @@
 // | file that was distributed with this source code.                      |
 // +-----------------------------------------------------------------------+
 $lang['Send'] = 'Senda';
-$lang['Send copy to my email'] = 'Sendu afrit á netfangið mitt';
-$lang['Subject'] = 'Efni';
-$lang['Text after the contact form'] = 'Texti á eftir tengslaeyðublaðinu';
-$lang['Text before the contact form'] = 'Texti á undan tengslaeyðublaðinu';
+$lang['Send copy to my email'] = 'Senda afrit á netfangið mitt';
+$lang['Subject'] = 'Viðfangsefni';
+$lang['Text after the contact form'] = 'Texti á eftir samskiptaforminu';
+$lang['Text before the contact form'] = 'Texti á undan samskiptaforminu';
 $lang['This user has no e-mail'] = 'Þessi notandi hefur ekkert netfang';
 $lang['User already added'] = 'Notanda þegar bætt við';
-$lang['Your e-mail'] = 'Þitt netfang';
-$lang['Your name'] = 'Þitt nafn';
-$lang['can be translated with LocalFiles Editor plugin'] = 'hægt að þýða með LocalFiles Ritstjóraviðbót';
+$lang['Your e-mail'] = 'Netfangið þitt';
+$lang['Your name'] = 'Nafnið þitt';
+$lang['can be translated with LocalFiles Editor plugin'] = 'hægt að þýða með LocalFiles ritstjóraviðbót';
 $lang['you can use "%gallery_title%"'] = 'þú getur notað "%gallery_title%" breytuna';
 $lang['E-mail configuration'] = 'Tölvupóststillingar';
 $lang['E-mail format :'] = 'Tölvupóstsnið:';
@@ -29,10 +29,10 @@ $lang['Name is mandatory'] = 'Nafn er skilyrt';
 $lang['New e-mail'] = 'Nýr tölvupóstur';
 $lang['No active email address'] = 'Ekkert virkt netfang';
 $lang['Plain text'] = 'Einfaldur texti';
-$lang['Please enter a message'] = 'Vinsamlegast sláðu inn skilaboð';
-$lang['Please enter a name'] = 'Vinsamlegast sláðu inn nafn';
-$lang['Please enter a subject'] = 'Vinsamlegast sláðu inn efni';
-$lang['Please enter an e-mail'] = 'Vinsamlegast sláðu inn netfang';
+$lang['Please enter a message'] = 'Settu inn skilaboð';
+$lang['Please enter a name'] = 'Settu inn nafn';
+$lang['Please enter a subject'] = 'Settu inn efni';
+$lang['Please enter an e-mail'] = 'Settu inn netfang';
 $lang['Prefix of the sent e-mail subject'] = 'Forskeyti á efni sends tölvupósts';
 $lang['Redirect after sending email (optional)'] = 'Tilvísun eftir að hafa sent tölvupóst (valfrjálst)';
 $lang['Select a new user'] = 'Veldu nýjan notanda';
