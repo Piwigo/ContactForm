@@ -66,15 +66,15 @@
         <td class="title"><label for="cf_content">{'Message'|translate}</label></td>
         <td><textarea name="content" id="cf_content" rows="10" style="width:400px;">{if isset($contact.content)}{$contact.content}{/if}</textarea></td>
       </tr>
-    {if isset($CRYPTO)}
-      {$CRYPTO.parsed_content}
-    {/if}
-    {if isset($EASYCAPTCHA)}
-      {$EASYCAPTCHA.parsed_content}
-    {/if}
       <tr>
         <td class="title">&nbsp;</td>
         <td>
+          {if isset($CRYPTO)}
+            {$CRYPTO.parsed_content}
+          {/if}
+          {if isset($EASYCAPTCHA)}
+            {$EASYCAPTCHA.parsed_content}
+          {/if}
           <input class="submit" type="submit" name="send_mail" value="{'Send'|translate}">
         </td>
       </tr>
