@@ -37,8 +37,21 @@ CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
   `name` varchar(128) NULL DEFAULT NULL,
   `email` varchar(128) NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ;');
+
+    // --- charset upgrade (utf8 -> utf8mb4) ---
+$result = pwg_query("SHOW TABLE STATUS LIKE '" . $this->table . "';");
+if ($result and $row = pwg_db_fetch_assoc($result)) {
+  if (strpos($row['Collation'], 'utf8mb4') !== 0) {
+    pwg_query("
+      ALTER TABLE `" . $this->table . "`
+      CONVERT TO CHARACTER SET utf8mb4
+      COLLATE utf8mb4_general_ci
+    ;
+    ");
+  }
+}
 
     // configuration
     if (empty($conf['ContactForm']))
