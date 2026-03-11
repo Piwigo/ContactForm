@@ -236,13 +236,20 @@ function send_contact_form(&$comm, $key)
 
     $prefix = str_replace('%gallery_title%', $conf['gallery_title'], $conf['ContactForm']['cf_subject_prefix']);
 
-    $from = $Cc = $Bcc = null;
+    $from = $Cc = $Bcc = $reply_to_name = $reply_to_mail_address = null;
     if (!empty($comm['email']))
     {
       $from = array(
         'name' => $comm['author'],
         'email' => $comm['email'],
         );
+    }
+
+    if (version_compare(PHPWG_VERSION, '16.3.0', '>'))
+    {
+      $from = null;
+      $reply_to_name = $comm['author'];
+      $reply_to_mail_address = $comm['email'];
     }
 
     switch_lang_to(get_default_language());
@@ -258,6 +265,8 @@ function send_contact_form(&$comm, $key)
         'content_format' => 'text/html',
         'email_format' => $conf['ContactForm']['cf_mail_type'],
         'from' => $from,
+        'reply_to_mail_address' => $reply_to_mail_address,
+        'reply_to_name' => $reply_to_name,
         'Cc' => $Cc,
         'Bcc' => $Bcc,
         ),
